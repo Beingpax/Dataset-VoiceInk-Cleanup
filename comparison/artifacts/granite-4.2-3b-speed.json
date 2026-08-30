@@ -1,0 +1,615 @@
+{
+  "started_at": "2026-08-30T20:46:55.037015+00:00",
+  "model": {
+    "repository": "Orvena/granite-4.2-3b-MLX-4bit",
+    "revision": "ae69a9d2d362ab7d8b1ccd457bdb784f2a4f3360",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 1519
+      },
+      {
+        "name": "README.md",
+        "bytes": 1250
+      },
+      {
+        "name": "chat_template.jinja",
+        "bytes": 9013
+      },
+      {
+        "name": "config.json",
+        "bytes": 1185
+      },
+      {
+        "name": "generation_config.json",
+        "bytes": 207
+      },
+      {
+        "name": "granite_thinking_parser.py",
+        "bytes": 911
+      },
+      {
+        "name": "model.safetensors",
+        "bytes": 2059005406
+      },
+      {
+        "name": "model.safetensors.index.json",
+        "bytes": 65461
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 7153414
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 436
+      }
+    ]
+  },
+  "model_config": {
+    "architectures": [
+      "GraniteForCausalLM"
+    ],
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "attention_multiplier": 0.015625,
+    "bos_token_id": 100283,
+    "dtype": "bfloat16",
+    "embedding_multiplier": 1.0,
+    "eos_token_id": 100257,
+    "hidden_act": "silu",
+    "hidden_size": 2560,
+    "initializer_range": 0.1,
+    "intermediate_size": 8192,
+    "logits_scaling": 1.0,
+    "max_position_embeddings": 131072,
+    "mlp_bias": false,
+    "model_type": "granite",
+    "num_attention_heads": 40,
+    "num_hidden_layers": 40,
+    "num_key_value_heads": 8,
+    "pad_token_id": 100257,
+    "quantization": {
+      "group_size": 64,
+      "bits": 4,
+      "mode": "affine"
+    },
+    "quantization_config": {
+      "group_size": 64,
+      "bits": 4,
+      "mode": "affine"
+    },
+    "residual_multiplier": 1.0,
+    "rms_norm_eps": 1e-05,
+    "rope_parameters": {
+      "rope_theta": 10000000,
+      "rope_type": "default"
+    },
+    "rope_scaling": null,
+    "rope_theta": 10000000,
+    "tie_word_embeddings": false,
+    "torch_dtype": "bfloat16",
+    "transformers_version": "4.57.1",
+    "use_cache": true,
+    "vocab_size": 100352
+  },
+  "weight_bytes": 2059005406,
+  "hardware": {
+    "chip": "Apple M2 Pro",
+    "physical_memory_bytes": 17179869184,
+    "macos": "26.6.2",
+    "architecture": "arm64",
+    "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=39387235)\t80%; AC attached; not charging present: true",
+    "mlx_device": "Device(gpu, 0)",
+    "metal": {
+      "device_name": "Apple M2 Pro",
+      "max_recommended_working_set_size": 12713115648,
+      "memory_size": 17179869184,
+      "architecture": "applegpu_g14s",
+      "max_buffer_length": 9534832640,
+      "resource_limit": 499000
+    }
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-metal": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.16.1",
+    "huggingface-hub": "1.29.0"
+  },
+  "settings": {
+    "thinking": false,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "seed_per_request": 20260831,
+    "batch_size": 1,
+    "repetitions": 3,
+    "warmup_requests": 2,
+    "prompt_cache_reuse": false,
+    "kv_quantization": null
+  },
+  "measurement_notes": [
+    "Prebuilt Python MLX runtime; this does not benchmark the Swift integration.",
+    "IBM recommended temperature=1.0 and top_p=0.95; RNG reset per request.",
+    "The actual chat template must end in a closed, empty thinking block.",
+    "Generation timing excludes model load, template rendering and tokenization.",
+    "MLX generation_tps excludes prompt processing and follows mlx-lm's token counting.",
+    "End-to-end throughput uses generated tokens excluding the final EOS divided by wall time.",
+    "TTFT is the first streamed token event; first visible text is recorded separately.",
+    "Each request starts with a fresh KV cache. Warmups are not included in summaries.",
+    "MLX peak measures active allocator bytes; process peak RSS is cumulative and separate.",
+    "This is a speed experiment, not IFEval/IFBench or a transcript-quality evaluation.",
+    "Medium and long inputs concatenate independent corpus cases for length stress testing."
+  ],
+  "cases": [
+    {
+      "id": "short",
+      "source_ids": [
+        "V22"
+      ],
+      "system": "You must transform raw ASR speech into polished, properly formatted text. Preserve meaning and tone. Correct recognition errors, grammar, punctuation, capitalization, and spoken formatting cues. Remove all fillers, repetitions, false starts, and discarded self-corrections. Return only the cleaned transcript.",
+      "input": "ask operations why the overnight shipment went to phoenix instead of tucson comma include tracking number nine three six zero zero one and request a corrected delivery estimate",
+      "construction": "original case"
+    },
+    {
+      "id": "medium",
+      "source_ids": [
+        "C47",
+        "C34",
+        "C29",
+        "C36",
+        "C38"
+      ],
+      "system": "You must transform raw ASR speech into polished, properly formatted text. Preserve meaning and tone. Correct recognition errors, grammar, punctuation, capitalization, and spoken formatting cues. Remove all fillers, repetitions, false starts, and discarded self-corrections. Return only the cleaned transcript.",
+      "input": "for launch day we need the release approved quote from Maya version three point two deployed and a message sent to status at acme dot com after launch please finish all three before six p m\n\nquarterly results new paragraph revenue increased by twelve percent support costs fell by eight point five percent and our cash balance reached two point three million dollars the board review is September fifteenth at two p m\n\nmeeting notes for August thirtieth twenty twenty six at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m Maya will own the notice\n\nthe pilot went well period new paragraph um twelve people completed onboarding comma and ten activated their accounts period new paragraph the next session is Friday September fourth at nine a m and the room holds twenty people full stop\n\nthe app crashes when opening settings dot j son please attach crash log dash two zero two six zero eight three zero dot text reference issue v o i dash nine one eight and note that version three point four is unaffected",
+      "construction": "independent corpus inputs joined by blank lines for a length stress test"
+    },
+    {
+      "id": "long",
+      "source_ids": [
+        "C27",
+        "C35",
+        "C43",
+        "C49",
+        "V39",
+        "V40",
+        "V41",
+        "C42",
+        "C48",
+        "C37",
+        "C47",
+        "C34",
+        "C29",
+        "C36",
+        "C38"
+      ],
+      "system": "You must transform raw ASR speech into polished, properly formatted text. Preserve meaning and tone. Correct recognition errors, grammar, punctuation, capitalization, and spoken formatting cues. Remove all fillers, repetitions, false starts, and discarded self-corrections. Return only the cleaned transcript.",
+      "input": "we need to finish three things before the maintenance window first archive the last thirty days of logs second increase the timeout to forty five seconds and third restart the a p i gateway\n\nokay before you start the installer first download the archive from docs dot example dot com slash tools second unzip it into the tools folder and third run setup dot sh with administrator access\n\nI have three customer updates the mobile fix is live the desktop release is in review in review and support has answered every open ticket please share these with the account team before noon\n\nThe migration completed successfully, all seven services are healthy, and no customer action is required. We will continue monitoring latency and error rates through the evening, then send the final status report tomorrow morning.\n\nclass reminder colon the ecology quiz is next monday not this friday and chapters six through eight are included new line bring a pencil your field notebook and the calculator you used in lab\n\ncan you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow comma or is the regional team still using all the deep lanes question mark\n\ndispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked\n\nhere is the travel schedule September fifth the flight leaves at seven fifteen a m September sixth the workshop starts at nine a m and the hotel budget is one hundred eighty dollars per night\n\ndear team uh the launch is complete the launch is complete and all systems are healthy please report any issues at status dot example dot com slash support before five p m today best Arjun\n\nhello Marcus please send the invoice to billing at north star dot io no sorry accounts at north star dot io by September eighth the approved amount is one thousand four hundred dollars kind regards Lena\n\nfor launch day we need the release approved quote from Maya version three point two deployed and a message sent to status at acme dot com after launch please finish all three before six p m\n\nquarterly results new paragraph revenue increased by twelve percent support costs fell by eight point five percent and our cash balance reached two point three million dollars the board review is September fifteenth at two p m\n\nmeeting notes for August thirtieth twenty twenty six at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m Maya will own the notice\n\nthe pilot went well period new paragraph um twelve people completed onboarding comma and ten activated their accounts period new paragraph the next session is Friday September fourth at nine a m and the room holds twenty people full stop\n\nthe app crashes when opening settings dot j son please attach crash log dash two zero two six zero eight three zero dot text reference issue v o i dash nine one eight and note that version three point four is unaffected",
+      "construction": "independent corpus inputs joined by blank lines for a length stress test"
+    }
+  ],
+  "warmups": [
+    {
+      "case_id": "short",
+      "repetition": 1,
+      "warmup": true,
+      "input_words": 28,
+      "prompt_tokens": 102,
+      "rendered_prompt_suffix": "o zero one and request a corrected delivery estimate<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "3be0eb2bcd6487490093ca31350c666d88d8246bb55481325cf1affb4fe5b6b7",
+      "max_tokens": 180,
+      "output": "ask operations why the overnight shipment went to phoenix instead of tucson, include tracking number 9360101, and request a corrected delivery estimate",
+      "output_tokens": 28,
+      "mlx_generation_tokens": 29,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 3.417409374989802,
+      "ttft_seconds": 2.9529196249786764,
+      "first_visible_text_seconds": 2.9529196249786764,
+      "decode_tokens_per_second": 64.44898566326022,
+      "prefill_tokens_per_second": 38.37254151205242,
+      "end_to_end_tokens_per_second": 8.193340898786396,
+      "mlx_peak_bytes": 2301663032,
+      "mlx_cache_bytes_after_request": 28130614,
+      "process_rss_before_bytes": 537755648,
+      "process_rss_after_bytes": 272072704,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "short",
+      "repetition": 2,
+      "warmup": true,
+      "input_words": 28,
+      "prompt_tokens": 102,
+      "rendered_prompt_suffix": "o zero one and request a corrected delivery estimate<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "3be0eb2bcd6487490093ca31350c666d88d8246bb55481325cf1affb4fe5b6b7",
+      "max_tokens": 180,
+      "output": "ask operations why the overnight shipment went to phoenix instead of tucson, include tracking number 9360101, and request a corrected delivery estimate",
+      "output_tokens": 28,
+      "mlx_generation_tokens": 29,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 0.8262758750061039,
+      "ttft_seconds": 0.3774434590013698,
+      "first_visible_text_seconds": 0.3774434590013698,
+      "decode_tokens_per_second": 66.62615490067323,
+      "prefill_tokens_per_second": 315.24276075631474,
+      "end_to_end_tokens_per_second": 33.886987199999226,
+      "mlx_peak_bytes": 2301663070,
+      "mlx_cache_bytes_after_request": 28130590,
+      "process_rss_before_bytes": 279347200,
+      "process_rss_after_bytes": 273219584,
+      "process_peak_rss_so_far_bytes": 626409472
+    }
+  ],
+  "runs": [
+    {
+      "case_id": "short",
+      "repetition": 1,
+      "warmup": false,
+      "input_words": 28,
+      "prompt_tokens": 102,
+      "rendered_prompt_suffix": "o zero one and request a corrected delivery estimate<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "3be0eb2bcd6487490093ca31350c666d88d8246bb55481325cf1affb4fe5b6b7",
+      "max_tokens": 180,
+      "output": "ask operations why the overnight shipment went to phoenix instead of tucson, include tracking number 9360101, and request a corrected delivery estimate",
+      "output_tokens": 28,
+      "mlx_generation_tokens": 29,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 0.8219590000226162,
+      "ttft_seconds": 0.36384375000488944,
+      "first_visible_text_seconds": 0.36384375000488944,
+      "decode_tokens_per_second": 65.45808721998252,
+      "prefill_tokens_per_second": 324.38724206147026,
+      "end_to_end_tokens_per_second": 34.064959443511874,
+      "mlx_peak_bytes": 2301663070,
+      "mlx_cache_bytes_after_request": 28130584,
+      "process_rss_before_bytes": 273088512,
+      "process_rss_after_bytes": 266059776,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "medium",
+      "repetition": 1,
+      "warmup": false,
+      "input_words": 193,
+      "prompt_tokens": 281,
+      "rendered_prompt_suffix": "and note that version three point four is unaffected<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "fdfacb1b0b810218ad955420ab093e573169dd1251dd41668db307ec8b14bc62",
+      "max_tokens": 502,
+      "output": "for launch day we need the release approved quote from Maya version three point two deployed and a message sent to status at acme dot com after launch please finish all three before six p m\n\nquarterly results: new paragraph revenue increased by twelve percent support costs fell by eight point five percent and our cash balance reached two point three million dollars the board review is September fifteenth at two p m\n\nmeeting notes for August thirtieth twenty twenty six at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m Maya will own the notice\n\nthe pilot went well period new paragraph twelve people completed onboarding, and ten activated their accounts period new paragraph the next session is Friday September fourth at nine a m and the room holds twenty people full stop\n\nthe app crashes when opening settings.js please attach crash log dash two zero two six zero eight three zero dot text reference issue v o i dash nine one eight and note that version three point four is unaffected",
+      "output_tokens": 207,
+      "mlx_generation_tokens": 208,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 4.548102000000654,
+      "ttft_seconds": 0.7653096670110244,
+      "first_visible_text_seconds": 0.7653096670110244,
+      "decode_tokens_per_second": 55.22075575637354,
+      "prefill_tokens_per_second": 426.507922757723,
+      "end_to_end_tokens_per_second": 45.513491122224224,
+      "mlx_peak_bytes": 2612550188,
+      "mlx_cache_bytes_after_request": 49102850,
+      "process_rss_before_bytes": 267419648,
+      "process_rss_after_bytes": 134496256,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "long",
+      "repetition": 1,
+      "warmup": false,
+      "input_words": 537,
+      "prompt_tokens": 653,
+      "rendered_prompt_suffix": "and note that version three point four is unaffected<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "9d03c1892b062f546e119592da5d118367e2410eaad02d80d780436cfab4912a",
+      "max_tokens": 1172,
+      "output": "we need to finish three things before the maintenance window:\n- archive the last thirty days of logs  \n- increase the timeout to forty five seconds  \n- restart the api gateway  \n\nbefore you start the installer:  \n- download the archive from docs.example.com/tools  \n- unzip it into the tools folder  \n- run setup.sh with administrator access  \n\ni have three customer updates:  \n- the mobile fix is live  \n- the desktop release is in review  \n- support has answered every open ticket  \n\nplease share these with the account team before noon  \n\nthe migration completed successfully, all seven services are healthy, and no customer action is required. we will continue monitoring latency and error rates through the evening, then send the final status report tomorrow morning  \n\nclass reminder: the ecology quiz is next monday, not this friday and chapters six through eight are included  \n\ncan you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow, or is the regional team still using all the deep lanes?  \n\ndispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked  \n\nhere is the travel schedule:  \n- september fifth: flight leaves at seven fifteen a m  \n- september sixth: workshop starts at nine a m  \n- hotel budget is one hundred eighty dollars per night  \n\ndear team, the launch is complete and all systems are healthy. please report any issues at status.example.com/support before five p m today  \n\nhello morgan, please send the invoice to billing at north-star.io no sorry accounts at north-star.io by september eighth the approved amount is one thousand four hundred dollars kind regards lena  \n\nfor launch day we need the release approved quote from maya version three point two deployed and a message sent to status at acme.com after launch, finish all three before six p m  \n\nquarterly results: revenue increased by twelve percent, support costs fell by eight point five percent, and our cash balance reached two point three million dollars the board review is september fifteenth at two p m  \n\nmeeting notes for august thirtieth, twenty twenty six, at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m maya will own the notice  \n\nthe pilot went well period twelve people completed onboarding, and ten activated their accounts period  \n\nthe app crashes when opening settings.json please attach crash log two.0.6.0.8.3.0.txt reference issue vo-i-9.1.8 and note that version three point four is unaffected",
+      "output_tokens": 574,
+      "mlx_generation_tokens": 575,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 11.34462675001123,
+      "ttft_seconds": 1.534161249990575,
+      "first_visible_text_seconds": 1.534161249990575,
+      "decode_tokens_per_second": 58.70693783561279,
+      "prefill_tokens_per_second": 443.2536104760558,
+      "end_to_end_tokens_per_second": 50.596640387435556,
+      "mlx_peak_bytes": 2826280812,
+      "mlx_cache_bytes_after_request": 132095650,
+      "process_rss_before_bytes": 183812096,
+      "process_rss_after_bytes": 196149248,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "short",
+      "repetition": 2,
+      "warmup": false,
+      "input_words": 28,
+      "prompt_tokens": 102,
+      "rendered_prompt_suffix": "o zero one and request a corrected delivery estimate<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "3be0eb2bcd6487490093ca31350c666d88d8246bb55481325cf1affb4fe5b6b7",
+      "max_tokens": 180,
+      "output": "ask operations why the overnight shipment went to phoenix instead of tucson, include tracking number 9360101, and request a corrected delivery estimate",
+      "output_tokens": 28,
+      "mlx_generation_tokens": 29,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 0.8145393330196384,
+      "ttft_seconds": 0.39073087499127723,
+      "first_visible_text_seconds": 0.39073087499127723,
+      "decode_tokens_per_second": 70.5724888963529,
+      "prefill_tokens_per_second": 308.23244996640193,
+      "end_to_end_tokens_per_second": 34.37525833921261,
+      "mlx_peak_bytes": 2301663070,
+      "mlx_cache_bytes_after_request": 28130584,
+      "process_rss_before_bytes": 195821568,
+      "process_rss_after_bytes": 198049792,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "medium",
+      "repetition": 2,
+      "warmup": false,
+      "input_words": 193,
+      "prompt_tokens": 281,
+      "rendered_prompt_suffix": "and note that version three point four is unaffected<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "fdfacb1b0b810218ad955420ab093e573169dd1251dd41668db307ec8b14bc62",
+      "max_tokens": 502,
+      "output": "for launch day we need the release approved quote from Maya version three point two deployed and a message sent to status at acme dot com after launch please finish all three before six p m\n\nquarterly results: new paragraph revenue increased by twelve percent support costs fell by eight point five percent and our cash balance reached two point three million dollars the board review is September fifteenth at two p m\n\nmeeting notes for August thirtieth twenty twenty six at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m Maya will own the notice\n\nthe pilot went well period new paragraph twelve people completed onboarding, and ten activated their accounts period new paragraph the next session is Friday September fourth at nine a m and the room holds twenty people full stop\n\nthe app crashes when opening settings.js please attach crash log dash two zero two six zero eight three zero dot text reference issue v o i dash nine one eight and note that version three point four is unaffected",
+      "output_tokens": 207,
+      "mlx_generation_tokens": 208,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 3.9901319589989726,
+      "ttft_seconds": 0.7377957499993499,
+      "first_visible_text_seconds": 0.7377957499993499,
+      "decode_tokens_per_second": 64.27149680379145,
+      "prefill_tokens_per_second": 408.80591212949486,
+      "end_to_end_tokens_per_second": 51.87798351709934,
+      "mlx_peak_bytes": 2612550188,
+      "mlx_cache_bytes_after_request": 49102820,
+      "process_rss_before_bytes": 198066176,
+      "process_rss_after_bytes": 184975360,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "long",
+      "repetition": 2,
+      "warmup": false,
+      "input_words": 537,
+      "prompt_tokens": 653,
+      "rendered_prompt_suffix": "and note that version three point four is unaffected<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "9d03c1892b062f546e119592da5d118367e2410eaad02d80d780436cfab4912a",
+      "max_tokens": 1172,
+      "output": "we need to finish three things before the maintenance window:\n- archive the last thirty days of logs  \n- increase the timeout to forty five seconds  \n- restart the api gateway  \n\nbefore you start the installer:  \n- download the archive from docs.example.com/tools  \n- unzip it into the tools folder  \n- run setup.sh with administrator access  \n\ni have three customer updates:  \n- the mobile fix is live  \n- the desktop release is in review  \n- support has answered every open ticket  \n\nplease share these with the account team before noon  \n\nthe migration completed successfully, all seven services are healthy, and no customer action is required. we will continue monitoring latency and error rates through the evening, then send the final status report tomorrow morning  \n\nclass reminder: the ecology quiz is next monday, not this friday and chapters six through eight are included  \n\ncan you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow, or is the regional team still using all the deep lanes?  \n\ndispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked  \n\nhere is the travel schedule:  \n- september fifth: flight leaves at seven fifteen a m  \n- september sixth: workshop starts at nine a m  \n- hotel budget is one hundred eighty dollars per night  \n\ndear team, the launch is complete and all systems are healthy. please report any issues at status.example.com/support before five p m today  \n\nhello morgan, please send the invoice to billing at north-star.io no sorry accounts at north-star.io by september eighth the approved amount is one thousand four hundred dollars kind regards lena  \n\nfor launch day we need the release approved quote from maya version three point two deployed and a message sent to status at acme.com after launch, finish all three before six p m  \n\nquarterly results: revenue increased by twelve percent, support costs fell by eight point five percent, and our cash balance reached two point three million dollars the board review is september fifteenth at two p m  \n\nmeeting notes for august thirtieth, twenty twenty six, at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m maya will own the notice  \n\nthe pilot went well period twelve people completed onboarding, and ten activated their accounts period  \n\nthe app crashes when opening settings.json please attach crash log two.0.6.0.8.3.0.txt reference issue vo-i-9.1.8 and note that version three point four is unaffected",
+      "output_tokens": 574,
+      "mlx_generation_tokens": 575,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 11.217641042021569,
+      "ttft_seconds": 1.547675292007625,
+      "first_visible_text_seconds": 1.547675292007625,
+      "decode_tokens_per_second": 59.567107701440065,
+      "prefill_tokens_per_second": 437.6620235461158,
+      "end_to_end_tokens_per_second": 51.16940342891891,
+      "mlx_peak_bytes": 2826280812,
+      "mlx_cache_bytes_after_request": 132095650,
+      "process_rss_before_bytes": 186335232,
+      "process_rss_after_bytes": 196165632,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "short",
+      "repetition": 3,
+      "warmup": false,
+      "input_words": 28,
+      "prompt_tokens": 102,
+      "rendered_prompt_suffix": "o zero one and request a corrected delivery estimate<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "3be0eb2bcd6487490093ca31350c666d88d8246bb55481325cf1affb4fe5b6b7",
+      "max_tokens": 180,
+      "output": "ask operations why the overnight shipment went to phoenix instead of tucson, include tracking number 9360101, and request a corrected delivery estimate",
+      "output_tokens": 28,
+      "mlx_generation_tokens": 29,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 0.843833207996795,
+      "ttft_seconds": 0.4140966249979101,
+      "first_visible_text_seconds": 0.4140966249979101,
+      "decode_tokens_per_second": 69.64565267080016,
+      "prefill_tokens_per_second": 306.5298374327035,
+      "end_to_end_tokens_per_second": 33.181912888294804,
+      "mlx_peak_bytes": 2301663070,
+      "mlx_cache_bytes_after_request": 28130584,
+      "process_rss_before_bytes": 195641344,
+      "process_rss_after_bytes": 195182592,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "medium",
+      "repetition": 3,
+      "warmup": false,
+      "input_words": 193,
+      "prompt_tokens": 281,
+      "rendered_prompt_suffix": "and note that version three point four is unaffected<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "fdfacb1b0b810218ad955420ab093e573169dd1251dd41668db307ec8b14bc62",
+      "max_tokens": 502,
+      "output": "for launch day we need the release approved quote from Maya version three point two deployed and a message sent to status at acme dot com after launch please finish all three before six p m\n\nquarterly results: new paragraph revenue increased by twelve percent support costs fell by eight point five percent and our cash balance reached two point three million dollars the board review is September fifteenth at two p m\n\nmeeting notes for August thirtieth twenty twenty six at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m Maya will own the notice\n\nthe pilot went well period new paragraph twelve people completed onboarding, and ten activated their accounts period new paragraph the next session is Friday September fourth at nine a m and the room holds twenty people full stop\n\nthe app crashes when opening settings.js please attach crash log dash two zero two six zero eight three zero dot text reference issue v o i dash nine one eight and note that version three point four is unaffected",
+      "output_tokens": 207,
+      "mlx_generation_tokens": 208,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 4.229900458973134,
+      "ttft_seconds": 0.7839187499776017,
+      "first_visible_text_seconds": 0.7839187499776017,
+      "decode_tokens_per_second": 60.61139781747566,
+      "prefill_tokens_per_second": 384.9974089195887,
+      "end_to_end_tokens_per_second": 48.93732181353792,
+      "mlx_peak_bytes": 2612550188,
+      "mlx_cache_bytes_after_request": 49102850,
+      "process_rss_before_bytes": 195149824,
+      "process_rss_after_bytes": 194985984,
+      "process_peak_rss_so_far_bytes": 626409472
+    },
+    {
+      "case_id": "long",
+      "repetition": 3,
+      "warmup": false,
+      "input_words": 537,
+      "prompt_tokens": 653,
+      "rendered_prompt_suffix": "and note that version three point four is unaffected<|im_end|>\n<|im_start|>assistant\n<think></think>",
+      "prompt_sha256": "9d03c1892b062f546e119592da5d118367e2410eaad02d80d780436cfab4912a",
+      "max_tokens": 1172,
+      "output": "we need to finish three things before the maintenance window:\n- archive the last thirty days of logs  \n- increase the timeout to forty five seconds  \n- restart the api gateway  \n\nbefore you start the installer:  \n- download the archive from docs.example.com/tools  \n- unzip it into the tools folder  \n- run setup.sh with administrator access  \n\ni have three customer updates:  \n- the mobile fix is live  \n- the desktop release is in review  \n- support has answered every open ticket  \n\nplease share these with the account team before noon  \n\nthe migration completed successfully, all seven services are healthy, and no customer action is required. we will continue monitoring latency and error rates through the evening, then send the final status report tomorrow morning  \n\nclass reminder: the ecology quiz is next monday, not this friday and chapters six through eight are included  \n\ncan you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow, or is the regional team still using all the deep lanes?  \n\ndispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked  \n\nhere is the travel schedule:  \n- september fifth: flight leaves at seven fifteen a m  \n- september sixth: workshop starts at nine a m  \n- hotel budget is one hundred eighty dollars per night  \n\ndear team, the launch is complete and all systems are healthy. please report any issues at status.example.com/support before five p m today  \n\nhello morgan, please send the invoice to billing at north-star.io no sorry accounts at north-star.io by september eighth the approved amount is one thousand four hundred dollars kind regards lena  \n\nfor launch day we need the release approved quote from maya version three point two deployed and a message sent to status at acme.com after launch, finish all three before six p m  \n\nquarterly results: revenue increased by twelve percent, support costs fell by eight point five percent, and our cash balance reached two point three million dollars the board review is september fifteenth at two p m  \n\nmeeting notes for august thirtieth, twenty twenty six, at ten thirty a m we agreed to finalize the launch copy confirm the support schedule and send the customer notice before five p m maya will own the notice  \n\nthe pilot went well period twelve people completed onboarding, and ten activated their accounts period  \n\nthe app crashes when opening settings.json please attach crash log two.0.6.0.8.3.0.txt reference issue vo-i-9.1.8 and note that version three point four is unaffected",
+      "output_tokens": 574,
+      "mlx_generation_tokens": 575,
+      "finish_reason": "stop",
+      "thinking_markers_in_output": false,
+      "generation_seconds": 14.05729224998504,
+      "ttft_seconds": 1.6608869579795282,
+      "first_visible_text_seconds": 1.6608869579795282,
+      "decode_tokens_per_second": 46.46789812102557,
+      "prefill_tokens_per_second": 411.3560518976882,
+      "end_to_end_tokens_per_second": 40.83289938007876,
+      "mlx_peak_bytes": 2826280812,
+      "mlx_cache_bytes_after_request": 132095424,
+      "process_rss_before_bytes": 194936832,
+      "process_rss_after_bytes": 125976576,
+      "process_peak_rss_so_far_bytes": 626409472
+    }
+  ],
+  "status": "complete",
+  "load_seconds": 1.8054525840270799,
+  "mlx_active_after_load_bytes": 2061521928,
+  "summary": [
+    {
+      "case_id": "short",
+      "runs": 3,
+      "input_words": 28,
+      "prompt_tokens": 102,
+      "output_tokens_median": 28,
+      "mlx_peak_bytes_max": 2301663070,
+      "all_completed": true,
+      "all_without_thinking_markers": true,
+      "generation_seconds": {
+        "median": 0.8219590000226162,
+        "min": 0.8145393330196384,
+        "max": 0.843833207996795
+      },
+      "ttft_seconds": {
+        "median": 0.39073087499127723,
+        "min": 0.36384375000488944,
+        "max": 0.4140966249979101
+      },
+      "first_visible_text_seconds": {
+        "median": 0.39073087499127723,
+        "min": 0.36384375000488944,
+        "max": 0.4140966249979101
+      },
+      "decode_tokens_per_second": {
+        "median": 69.64565267080016,
+        "min": 65.45808721998252,
+        "max": 70.5724888963529
+      },
+      "prefill_tokens_per_second": {
+        "median": 308.23244996640193,
+        "min": 306.5298374327035,
+        "max": 324.38724206147026
+      },
+      "end_to_end_tokens_per_second": {
+        "median": 34.064959443511874,
+        "min": 33.181912888294804,
+        "max": 34.37525833921261
+      }
+    },
+    {
+      "case_id": "medium",
+      "runs": 3,
+      "input_words": 193,
+      "prompt_tokens": 281,
+      "output_tokens_median": 207,
+      "mlx_peak_bytes_max": 2612550188,
+      "all_completed": true,
+      "all_without_thinking_markers": true,
+      "generation_seconds": {
+        "median": 4.229900458973134,
+        "min": 3.9901319589989726,
+        "max": 4.548102000000654
+      },
+      "ttft_seconds": {
+        "median": 0.7653096670110244,
+        "min": 0.7377957499993499,
+        "max": 0.7839187499776017
+      },
+      "first_visible_text_seconds": {
+        "median": 0.7653096670110244,
+        "min": 0.7377957499993499,
+        "max": 0.7839187499776017
+      },
+      "decode_tokens_per_second": {
+        "median": 60.61139781747566,
+        "min": 55.22075575637354,
+        "max": 64.27149680379145
+      },
+      "prefill_tokens_per_second": {
+        "median": 408.80591212949486,
+        "min": 384.9974089195887,
+        "max": 426.507922757723
+      },
+      "end_to_end_tokens_per_second": {
+        "median": 48.93732181353792,
+        "min": 45.513491122224224,
+        "max": 51.87798351709934
+      }
+    },
+    {
+      "case_id": "long",
+      "runs": 3,
+      "input_words": 537,
+      "prompt_tokens": 653,
+      "output_tokens_median": 574,
+      "mlx_peak_bytes_max": 2826280812,
+      "all_completed": true,
+      "all_without_thinking_markers": true,
+      "generation_seconds": {
+        "median": 11.34462675001123,
+        "min": 11.217641042021569,
+        "max": 14.05729224998504
+      },
+      "ttft_seconds": {
+        "median": 1.547675292007625,
+        "min": 1.534161249990575,
+        "max": 1.6608869579795282
+      },
+      "first_visible_text_seconds": {
+        "median": 1.547675292007625,
+        "min": 1.534161249990575,
+        "max": 1.6608869579795282
+      },
+      "decode_tokens_per_second": {
+        "median": 58.70693783561279,
+        "min": 46.46789812102557,
+        "max": 59.567107701440065
+      },
+      "prefill_tokens_per_second": {
+        "median": 437.6620235461158,
+        "min": 411.3560518976882,
+        "max": 443.2536104760558
+      },
+      "end_to_end_tokens_per_second": {
+        "median": 50.596640387435556,
+        "min": 40.83289938007876,
+        "max": 51.16940342891891
+      }
+    }
+  ],
+  "process_peak_rss_bytes": 626409472,
+  "completed_at": "2026-08-30T20:47:53.316029+00:00",
+  "local_weight_manifest": {
+    "model.safetensors": {
+      "bytes": 2059005406,
+      "sha256": "56595f3deb2b08e240a6f56f495d3b81259d8c94ae751226d345c72cc682c629"
+    }
+  },
+  "benchmark_script_sha256": "c1f19c90bf00640ead08776ec7eee0f4a863bf2b1dc9bb3f5d31309155bc5719"
+}

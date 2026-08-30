@@ -56,4 +56,4 @@ Include at least 10 extended inputs of 80–200 words per batch, and at least 40
 
 ## Delivery
 
-Write actual independent records using apply_patch. Small writing chunks are fine; do not mark a partial batch complete. You may run non-build mechanical checks for count, quotas, IDs, valid JSON, word bounds, and duplicates. Do not run builds. Notify the foreground agent when the batch is complete, including any uncertainty. Only the foreground agent accepts records after semantic review.
+Write actual independent records using apply_patch. Small writing chunks are fine; continue until the assigned batch is complete. Run one lightweight non-build batch check for count, quotas, IDs, valid JSON, word bounds, and duplicates after authoring. Fix concrete failures and recheck affected content; do not repeatedly audit unchanged records. The foreground agent performs one semantic review pass, with targeted rechecks only for corrections. Do not run builds. Notify the foreground agent when the batch is complete, including any uncertainty. Only the foreground agent accepts records after semantic review.

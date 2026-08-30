@@ -19,7 +19,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 59,
+      "input": "mina where should i return the folding chairs the parish hall or the sports pavilion question mark and who has the storage key i can go tomorrow",
+      "reference": "Mina, where should I return the folding chairs, the parish hall or the sports pavilion? And who has the storage key? I can go tomorrow.",
+      "selection_group": "original_random",
+      "input_words": 27,
+      "input_characters": 144,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "59",
+      "metadata": null
     },
     {
       "id": "V02",
@@ -29,7 +39,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 67,
+      "input": "message to dev colon the freezer door looks shut but it isnt sealing comma so push it until you hear two clicks not one full stop",
+      "reference": "Message to Dev: The freezer door looks shut, but it isn’t sealing, so push it until you hear 2 clicks, not one.",
+      "selection_group": "original_random",
+      "input_words": 26,
+      "input_characters": 129,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "67",
+      "metadata": null
     },
     {
       "id": "V03",
@@ -39,7 +59,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 113,
+      "input": "dear ken we heard about your new house period may we visit next sunday around tea time question mark warm wishes comma lou and fay",
+      "reference": "Dear Ken,\n\nWe heard about your new house. May we visit next Sunday around teatime?\n\nWarm wishes,\nLou and Fay",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 130,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "113",
+      "metadata": null
     },
     {
       "id": "V04",
@@ -49,7 +79,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 213,
+      "input": "can the taxi take four passengers plus a folding wheelchair and two medium cases or should we request a larger car question mark for the airport run",
+      "reference": "Can the taxi take 4 passengers, a folding wheelchair, and 2 medium cases, or should we request a larger car for the airport run?",
+      "selection_group": "original_random",
+      "input_words": 27,
+      "input_characters": 148,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "213",
+      "metadata": null
     },
     {
       "id": "V05",
@@ -59,7 +99,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 426,
+      "input": "before the guests arrive saturday morning comma separate the white laundry wash the towels at sixty and hang the linen shirts instead of machine drying them",
+      "reference": "Before the guests arrive Saturday morning, separate the white laundry, wash the towels at 60 degrees, and hang the linen shirts instead of machine-drying them.",
+      "selection_group": "original_random",
+      "input_words": 26,
+      "input_characters": 156,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "426",
+      "metadata": null
     },
     {
       "id": "V06",
@@ -69,7 +119,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 465,
+      "input": "dear neighbors please collect your post from the lower lobby shelf by friday evening period anything remaining there will move to reception before mondays delivery",
+      "reference": "Dear Neighbors,\n\nPlease collect your post from the lower lobby shelf by Friday evening. Anything remaining there will move to Reception before Monday’s delivery.",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 163,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "465",
+      "metadata": null
     },
     {
       "id": "V07",
@@ -79,7 +139,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 582,
+      "input": "support closed the incident at eleven forty p m utc service had been stable since ten oh five and monitoring continued overnight with the incident commander remaining on call",
+      "reference": "Support closed the incident at 11:40 PM UTC. Service had been stable since 10:05, and monitoring continued overnight. The Incident Commander remained on call.",
+      "selection_group": "original_random",
+      "input_words": 29,
+      "input_characters": 174,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "582",
+      "metadata": null
     },
     {
       "id": "V08",
@@ -89,7 +159,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 650,
+      "input": "the sales manager approved the five percent discount but not the free implementation package shown in the latest quote despite a separate verbal concession request",
+      "reference": "The Sales manager approved the 5% discount, but not the free implementation package shown in the latest quote. A separate verbal concession request remains unapproved.",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 163,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "650",
+      "metadata": null
     },
     {
       "id": "V09",
@@ -99,7 +179,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 948,
+      "input": "why did the nightly pipe line finish green even though the schema validation step logged seventeen errors is continue on error set somewhere question mark",
+      "reference": "Why did the nightly pipeline finish green even though the schema validation step logged 17 errors? Is continue-on-error set somewhere?",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 154,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "948",
+      "metadata": null
     },
     {
       "id": "V10",
@@ -109,7 +199,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1001,
+      "input": "please shorten the permission dialog it currently says in order to continue we need to be able to access your microphone period keep the reason visible though",
+      "reference": "Please shorten the permission dialog. It currently says, “In order to continue, we need to be able to access your microphone.” Keep the reason visible, though.",
+      "selection_group": "original_random",
+      "input_words": 27,
+      "input_characters": 158,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1001",
+      "metadata": null
     },
     {
       "id": "V11",
@@ -119,7 +219,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1107,
+      "input": "the search index skipped records with emoji in the title reprocessing succeeds after unicode normalization form c is applied period existing records need back filling",
+      "reference": "The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode Normalization Form C is applied. Existing records need backfilling.",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 166,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1107",
+      "metadata": null
     },
     {
       "id": "V12",
@@ -129,7 +239,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1111,
+      "input": "paragraph break the tablet layout is usable in portrait period in landscape the sticky footer overlaps the final form field by twenty four pixels period rotation does not recalculate it",
+      "reference": "The tablet layout is usable in portrait. In landscape, the sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.",
+      "selection_group": "original_random",
+      "input_words": 30,
+      "input_characters": 185,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1111",
+      "metadata": null
     },
     {
       "id": "V13",
@@ -139,7 +259,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1211,
+      "input": "can you check whether the variance calculation uses n or n minus one results differ from the published table by point zero three before correcting the published appendix",
+      "reference": "Can you check whether the variance calculation uses n or n−1? Results differ from the published table by 0.03. Check this before correcting the published appendix.",
+      "selection_group": "original_random",
+      "input_words": 28,
+      "input_characters": 169,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1211",
+      "metadata": null
     },
     {
       "id": "V14",
@@ -149,7 +279,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1257,
+      "input": "during the quarterly structural survey inspection at pier two found minor scaling above the water line comma no exposed reinforcement and no measurable change since march",
+      "reference": "During the quarterly structural survey, inspection at Pier 2 found minor scaling above the waterline, no exposed reinforcement, and no measurable change since March.",
+      "selection_group": "original_random",
+      "input_words": 26,
+      "input_characters": 170,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1257",
+      "metadata": null
     },
     {
       "id": "V15",
@@ -159,7 +299,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1368,
+      "input": "thirty minute discharge test reading colon battery bank voltage was twenty five point six at rest comma then dropped to twenty two point nine under inverter load",
+      "reference": "30-minute discharge-test reading: Battery-bank voltage was 25.6 at rest, then dropped to 22.9 under inverter load.",
+      "selection_group": "original_random",
+      "input_words": 27,
+      "input_characters": 161,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1368",
+      "metadata": null
     },
     {
       "id": "V16",
@@ -169,7 +319,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1396,
+      "input": "dear nina before the accessibility review meeting note that the attached screen reader transcript timestamps correspond to build one eighty four not the latest beta",
+      "reference": "Dear Nina,\n\nBefore the accessibility-review meeting, note that the attached screen-reader transcript timestamps correspond to Build 184, not the latest beta.",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 164,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1396",
+      "metadata": null
     },
     {
       "id": "V17",
@@ -179,7 +339,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1605,
+      "input": "dear garden club saturdays seed swap moves indoors to room four because rain is likely period label packets with variety and harvest year cheers comma monica",
+      "reference": "Dear Garden Club,\n\nSaturday’s seed swap moves indoors to Room 4 because rain is likely. Label packets with the variety and harvest year.\n\nCheers,\nMonica",
+      "selection_group": "original_random",
+      "input_words": 26,
+      "input_characters": 157,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1605",
+      "metadata": null
     },
     {
       "id": "V18",
@@ -189,7 +359,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1616,
+      "input": "event recap colon one hundred eighty four attendees checked in and seventeen walk ins paid at the door period the west room session filled first but but no one was turned away",
+      "reference": "Event recap: 184 attendees checked in, and 17 walk-ins paid at the door. The West Room session filled first, but no one was turned away.",
+      "selection_group": "original_random",
+      "input_words": 32,
+      "input_characters": 175,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1616",
+      "metadata": null
     },
     {
       "id": "V19",
@@ -199,7 +379,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1711,
+      "input": "our pickup window was one to three and and no driver came can you reschedule for tomorrow morning without creating a second charge question mark there are seven boxes",
+      "reference": "Our pickup window was 1:00 to 3:00, and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are 7 boxes.",
+      "selection_group": "original_random",
+      "input_words": 29,
+      "input_characters": 166,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1711",
+      "metadata": null
     },
     {
       "id": "V20",
@@ -209,7 +399,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1826,
+      "input": "lock report colon rear office lever sticks when pulled upward latch works from inside but but key rotation outside stops halfway do not force it",
+      "reference": "Lock report: The rear-office lever sticks when pulled upward. The latch works from inside, but key rotation outside stops halfway. Do not force it.",
+      "selection_group": "original_random",
+      "input_words": 25,
+      "input_characters": 144,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1826",
+      "metadata": null
     },
     {
       "id": "V21",
@@ -219,7 +419,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 57,
+      "input": "please ask the bus station whether the midnight coach has under floor luggage storage and um whether bicycles need a separate reservation question mark for next friday night",
+      "reference": "Please ask the bus station whether the midnight coach has underfloor luggage storage and whether bicycles need a separate reservation for next Friday night.",
+      "selection_group": "long_random_addition",
+      "input_words": 28,
+      "input_characters": 173,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "57",
+      "metadata": null
     },
     {
       "id": "V22",
@@ -229,7 +439,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 550,
+      "input": "ask operations why the overnight shipment went to phoenix instead of tucson comma include tracking number nine three six zero zero one and request a corrected delivery estimate",
+      "reference": "Ask Operations why the overnight shipment went to Phoenix instead of Tucson, include tracking number 936001, and request a corrected delivery estimate.",
+      "selection_group": "long_random_addition",
+      "input_words": 28,
+      "input_characters": 176,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "550",
+      "metadata": null
     },
     {
       "id": "V23",
@@ -239,7 +459,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 629,
+      "input": "the budget deck accidentally labels fiscal year twenty twenty six as calendar year twenty twenty six period the underlying numbers are fiscal and the footnote uses the same incorrect label",
+      "reference": "The budget deck accidentally labels fiscal year 2026 as calendar year 2026. The underlying numbers are fiscal-year figures. The footnote uses the same incorrect label.",
+      "selection_group": "long_random_addition",
+      "input_words": 30,
+      "input_characters": 188,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "629",
+      "metadata": null
     },
     {
       "id": "V24",
@@ -249,7 +479,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 652,
+      "input": "the monday notes should say decision deferred pending tax advice comma not decision denied and the follow up owner is casey from treasury before circulating the revised record",
+      "reference": "The Monday notes should say, “Decision deferred pending tax advice,” not “Decision denied,” and the follow-up owner is Casey from Treasury. Circulate the revised record afterward.",
+      "selection_group": "long_random_addition",
+      "input_words": 28,
+      "input_characters": 175,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "652",
+      "metadata": null
     },
     {
       "id": "V25",
@@ -259,7 +499,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 658,
+      "input": "the service report lists priority one downtime as forty eight minutes the incident timeline supports only thirty eight because monitoring recovered earlier and customer success disputes the longer figure",
+      "reference": "The service report lists Priority 1 downtime as 48 minutes. The incident timeline supports only 38 minutes because monitoring recovered earlier. Customer Success disputes the longer figure.",
+      "selection_group": "long_random_addition",
+      "input_words": 29,
+      "input_characters": 203,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "658",
+      "metadata": null
     },
     {
       "id": "V26",
@@ -269,7 +519,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 669,
+      "input": "the investigation scope covers expense approvals from january through april it does not include vendor selection or contract negotiation unless new evidence expands the review",
+      "reference": "The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation. New evidence could expand the review.",
+      "selection_group": "long_random_addition",
+      "input_words": 25,
+      "input_characters": 175,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "669",
+      "metadata": null
     },
     {
       "id": "V27",
@@ -279,7 +539,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 704,
+      "input": "following the latest litigation update the controller approved a two hundred fifty thousand reserve comma subject to receiving counsels final estimate before close by noon tomorrow",
+      "reference": "Following the latest litigation update, the Controller approved a $250,000 reserve, subject to receiving counsel’s final estimate before close. Counsel’s estimate is due by noon tomorrow.",
+      "selection_group": "long_random_addition",
+      "input_words": 26,
+      "input_characters": 180,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "704",
+      "metadata": null
     },
     {
       "id": "V28",
@@ -289,7 +559,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 811,
+      "input": "would you send the customer the maintenance window in both eastern and greenwich mean time comma make clear that service may be intermittent before the maintenance notice is translated",
+      "reference": "Would you send the customer the maintenance window in both Eastern Time and Greenwich Mean Time, and make clear that service may be intermittent? The maintenance notice will be translated afterward.",
+      "selection_group": "long_random_addition",
+      "input_words": 29,
+      "input_characters": 184,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "811",
+      "metadata": null
     },
     {
       "id": "V29",
@@ -299,7 +579,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 813,
+      "input": "who owns the response to the accessibility questionnaire question mark product answered the first section but legal and security sections remain blank before friday afternoons submission deadline",
+      "reference": "Who owns the response to the accessibility questionnaire? Product answered the first section, but the Legal and Security sections remain blank. Friday afternoon’s submission deadline is approaching.",
+      "selection_group": "long_random_addition",
+      "input_words": 27,
+      "input_characters": 195,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "813",
+      "metadata": null
     },
     {
       "id": "V30",
@@ -309,7 +599,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 817,
+      "input": "please route the exception request to ethics and compliance comma not employee relations and attach the original disclosure from february because the reporting path was incorrect",
+      "reference": "Please route the exception request to Ethics and Compliance, not Employee Relations, and attach the original disclosure from February. The reporting path was incorrect.",
+      "selection_group": "long_random_addition",
+      "input_words": 26,
+      "input_characters": 178,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "817",
+      "metadata": null
     },
     {
       "id": "V31",
@@ -319,7 +619,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 840,
+      "input": "can we use the clients logo in the investor presentation question mark the marketing consent covers our website but does not mention fundraising materials before marketing finalizes the presentation",
+      "reference": "Can we use the client’s logo in the investor presentation? The marketing consent covers our website but does not mention fundraising materials. Marketing has not finalized the presentation.",
+      "selection_group": "long_random_addition",
+      "input_words": 29,
+      "input_characters": 198,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "840",
+      "metadata": null
     },
     {
       "id": "V32",
@@ -329,7 +639,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 856,
+      "input": "could you request wheelchair access for the site tour comma including the production floor and emergency assembly area not only the lobby because the full group will participate",
+      "reference": "Could you request wheelchair access for the site tour, including the production floor and emergency-assembly area, not only the lobby? The full group will participate.",
+      "selection_group": "long_random_addition",
+      "input_words": 28,
+      "input_characters": 177,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "856",
+      "metadata": null
     },
     {
       "id": "V33",
@@ -339,7 +659,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 902,
+      "input": "for all three finalists this week ask procurement for the evaluation rubric before vendor presentations we should not change weighting after seeing demonstrations before scoring begins",
+      "reference": "For all 3 finalists this week, ask Procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations. Finalize the rubric before scoring begins.",
+      "selection_group": "long_random_addition",
+      "input_words": 26,
+      "input_characters": 184,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "902",
+      "metadata": null
     },
     {
       "id": "V34",
@@ -349,7 +679,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 926,
+      "input": "before approving reimbursement can you change coding from client entertainment to employee meal question mark all attendees were internal and no customer joined in the expense system",
+      "reference": "Before approving reimbursement, can you change coding from Client Entertainment to Employee Meal? All attendees were internal, and no customer joined. Make the change in the expense system.",
+      "selection_group": "long_random_addition",
+      "input_words": 27,
+      "input_characters": 182,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "926",
+      "metadata": null
     },
     {
       "id": "V35",
@@ -359,7 +699,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1083,
+      "input": "inspection item bullet point north anchor secure bullet point south anchor needs re torque bullet point conduit label missing near junction box four new line photos saved in folder seven",
+      "reference": "Inspection items:\n- North anchor secure\n- South anchor needs retorquing\n- Conduit label missing near Junction Box 4\n\nPhotos are saved in Folder 7.",
+      "selection_group": "long_random_addition",
+      "input_words": 30,
+      "input_characters": 186,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1083",
+      "metadata": null
     },
     {
       "id": "V36",
@@ -369,7 +719,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1100,
+      "input": "sample c twelve was thawed for approximately eighteen minutes comma returned to minus eighty and flagged for sensitivity analysis period no visible leakage occurred afterward",
+      "reference": "Sample C12 was thawed for approximately 18 minutes, returned to −80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.",
+      "selection_group": "long_random_addition",
+      "input_words": 25,
+      "input_characters": 174,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1100",
+      "metadata": null
     },
     {
       "id": "V37",
@@ -379,7 +739,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1177,
+      "input": "for our final storage comparison write this technical question to the vendor colon what is the maximum sustained write rate with encryption enabled and raid six active question mark",
+      "reference": "For our final storage comparison, write this technical question to the vendor: What is the maximum sustained write rate with encryption enabled and RAID 6 active?",
+      "selection_group": "long_random_addition",
+      "input_words": 29,
+      "input_characters": 181,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1177",
+      "metadata": null
     },
     {
       "id": "V38",
@@ -389,7 +759,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1209,
+      "input": "for the production system prompt please turn the model instructions into a numbered priority list colon safety constraints first output schema second and style preferences third",
+      "reference": "For the production system prompt, please turn the model instructions into a numbered priority list:\n1. Safety constraints\n2. Output schema\n3. Style preferences",
+      "selection_group": "long_random_addition",
+      "input_words": 26,
+      "input_characters": 177,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1209",
+      "metadata": null
     },
     {
       "id": "V39",
@@ -399,7 +779,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1412,
+      "input": "class reminder colon the ecology quiz is next monday not this friday and chapters six through eight are included new line bring a pencil your field notebook and the calculator you used in lab",
+      "reference": "Class reminder: The ecology quiz is next Monday, not this Friday, and Chapters 6 through 8 are included.\nBring a pencil, your field notebook, and the calculator you used in lab.",
+      "selection_group": "long_random_addition",
+      "input_words": 34,
+      "input_characters": 191,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1412",
+      "metadata": null
     },
     {
       "id": "V40",
@@ -409,7 +799,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1434,
+      "input": "can you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow comma or is the regional team still using all the deep lanes question mark",
+      "reference": "Can you ask the pool manager whether Lane 4 will be open for lap swimming from 6:00 to 7:00 tomorrow, or is the regional team still using all the deep lanes?",
+      "selection_group": "long_random_addition",
+      "input_words": 34,
+      "input_characters": 178,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1434",
+      "metadata": null
     },
     {
       "id": "V41",
@@ -419,7 +819,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1465,
+      "input": "dispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked",
+      "reference": "Dispatch, this is Unit 46. We have smoke showing from a detached garage at 812 Birch Lane. No visible flames yet. Send 1 additional engine, and advise police that the driveway is blocked.",
+      "selection_group": "long_random_addition",
+      "input_words": 34,
+      "input_characters": 194,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1465",
+      "metadata": null
     },
     {
       "id": "V42",
@@ -429,7 +839,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1469,
+      "input": "radio check colon team bravo can hear command clearly but but command is not receiving bravo on channel three should we switch to channel five or return to the staging area question mark",
+      "reference": "Radio check: Team Bravo can hear Command clearly, but Command is not receiving Bravo on Channel 3. Should we switch to Channel 5 or return to the staging area?",
+      "selection_group": "long_random_addition",
+      "input_words": 33,
+      "input_characters": 186,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1469",
+      "metadata": null
     },
     {
       "id": "V43",
@@ -439,7 +859,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1479,
+      "input": "the boarding reservation is for two rabbits from october six through october tenth can they share the larger enclosure and do we need to bring their usual pellets question mark",
+      "reference": "The boarding reservation is for 2 rabbits from October 6 through October 10. Can they share the larger enclosure, and do we need to bring their usual pellets?",
+      "selection_group": "long_random_addition",
+      "input_words": 30,
+      "input_characters": 176,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1479",
+      "metadata": null
     },
     {
       "id": "V44",
@@ -449,7 +879,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1510,
+      "input": "can you transcribe the handwritten caption exactly comma including the crossed out surname but mark uncertain letters with square brackets question mark dont modernize the spelling",
+      "reference": "Can you transcribe the handwritten caption exactly, including the crossed-out surname, but mark uncertain letters with square brackets? Don’t modernize the spelling.",
+      "selection_group": "long_random_addition",
+      "input_words": 26,
+      "input_characters": 180,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1510",
+      "metadata": null
     },
     {
       "id": "V45",
@@ -459,7 +899,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1544,
+      "input": "could you categorize the bike lock under transportation comma not recreation and split the ninety dollar hardware store purchase into sixty five home repair and twenty five garden question mark",
+      "reference": "Could you categorize the bike lock under Transportation, not Recreation, and split the $90 hardware-store purchase into $65 for Home Repair and $25 for Garden?",
+      "selection_group": "long_random_addition",
+      "input_words": 30,
+      "input_characters": 193,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1544",
+      "metadata": null
     },
     {
       "id": "V46",
@@ -469,7 +919,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1545,
+      "input": "dear loan officer ive attached pay stubs for may and june but the april file is missing from my employers portal period is a bank statement acceptable instead question mark sincerely comma remy",
+      "reference": "Dear Loan Officer,\n\nI’ve attached pay stubs for May and June, but the April file is missing from my employer’s portal. Is a bank statement acceptable instead?\n\nSincerely,\nRemy",
+      "selection_group": "long_random_addition",
+      "input_words": 33,
+      "input_characters": 193,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1545",
+      "metadata": null
     },
     {
       "id": "V47",
@@ -479,7 +939,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1621,
+      "input": "could you explain why the estimate lists three point five labor hours for the alternator the phone quote said two hours and and did not mention a diagnostic fee question mark",
+      "reference": "Could you explain why the estimate lists 3.5 labor hours for the alternator? The phone quote said 2 hours and did not mention a diagnostic fee.",
+      "selection_group": "long_random_addition",
+      "input_words": 31,
+      "input_characters": 174,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1621",
+      "metadata": null
     },
     {
       "id": "V48",
@@ -489,7 +959,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1639,
+      "input": "the accessible shuttle was booked for eight forty five but arrived at nine thirty passenger missed appointment r six one four can you document the delay and reschedule the ride question mark",
+      "reference": "The accessible shuttle was booked for 8:45 but arrived at 9:30. The passenger missed Appointment R614. Can you document the delay and reschedule the ride?",
+      "selection_group": "long_random_addition",
+      "input_words": 32,
+      "input_characters": 190,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1639",
+      "metadata": null
     },
     {
       "id": "V49",
@@ -499,7 +979,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1673,
+      "input": "application checklist bullet point two passport photos next item proof of address next item signed declaration page next item fee receipt new line bring originals and one copy of each",
+      "reference": "Application checklist:\n- 2 passport photos\n- Proof of address\n- Signed declaration page\n- Fee receipt\n\nBring the originals and 1 copy of each.",
+      "selection_group": "long_random_addition",
+      "input_words": 30,
+      "input_characters": 183,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1673",
+      "metadata": null
     },
     {
       "id": "V50",
@@ -509,7 +999,17 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
-      }
+      },
+      "source_index": 1691,
+      "input": "dear costume rental the return sheet lists four hats but we received three period could you check the packing photo before charging the missing item fee question mark regards comma tessa",
+      "reference": "Dear Costume Rental,\n\nThe return sheet lists 4 hats, but we received 3. Could you check the packing photo before charging the missing-item fee?\n\nRegards,\nTessa",
+      "selection_group": "long_random_addition",
+      "input_words": 31,
+      "input_characters": 186,
+      "dataset_id": "voiceink-validation",
+      "dataset_name": "VoiceInk validation sample",
+      "source_record_id": "1691",
+      "metadata": null
     },
     {
       "id": "C01",
@@ -519,6 +1019,30 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the deployment finished successfully all services are healthy and no customer action is required",
+      "reference": "The deployment finished successfully. All services are healthy, and no customer action is required.",
+      "selection_group": "curated_external_pair",
+      "input_words": 14,
+      "input_characters": 96,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_001",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "punctuation_capitalization",
+        "error_types": [
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentences"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -529,6 +1053,29 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "Can we move the review to Friday. because Maya is unavailable Thursday?",
+      "reference": "Can we move the review to Friday because Maya is unavailable Thursday?",
+      "selection_group": "curated_external_pair",
+      "input_words": 12,
+      "input_characters": 71,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_002",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "punctuation_capitalization",
+        "error_types": [
+          "punctuation"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -539,6 +1086,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "uh please send the revised contract to Priya this afternoon",
+      "reference": "Please send the revised contract to Priya this afternoon.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 59,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_003",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "filler_removal",
+        "error_types": [
+          "filler",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -549,6 +1121,30 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "I mean the main issue is basically that the export takes too long",
+      "reference": "The main issue is that the export takes too long.",
+      "selection_group": "curated_external_pair",
+      "input_words": 13,
+      "input_characters": 65,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_004",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "filler_removal",
+        "error_types": [
+          "filler",
+          "punctuation"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -559,6 +1155,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the important thing the important thing is that we keep the existing backup",
+      "reference": "The important thing is that we keep the existing backup.",
+      "selection_group": "curated_external_pair",
+      "input_words": 13,
+      "input_characters": 75,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_005",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "repetition_removal",
+        "error_types": [
+          "repetition",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -569,6 +1190,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "p please confirm that the customer received the refund",
+      "reference": "Please confirm that the customer received the refund.",
+      "selection_group": "curated_external_pair",
+      "input_words": 9,
+      "input_characters": 54,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_006",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "stutter_removal",
+        "error_types": [
+          "stutter",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -579,6 +1225,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "I wanted to ask whether actually please cancel tomorrow's check-in",
+      "reference": "Please cancel tomorrow's check-in.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 66,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_007",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "false_start_removal",
+        "error_types": [
+          "false_start",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -589,6 +1260,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "schedule the review for Tuesday no sorry Thursday",
+      "reference": "Schedule the review for Thursday.",
+      "selection_group": "curated_external_pair",
+      "input_words": 8,
+      "input_characters": 49,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_008",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "self_correction",
+        "error_types": [
+          "self_correction",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -599,6 +1295,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "please review the sight migration plan before lunch",
+      "reference": "Please review the site migration plan before lunch.",
+      "selection_group": "curated_external_pair",
+      "input_words": 8,
+      "input_characters": 51,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_009",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "asr_substitution",
+        "error_types": [
+          "asr_substitution",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -609,6 +1330,33 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "store the session token in red is for fifteen minutes",
+      "reference": "Store the session token in Redis for 15 minutes.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 53,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_010",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "technical_term_correction",
+        "error_types": [
+          "technical_term",
+          "asr_substitution",
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -619,6 +1367,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "we received one thousand two hundred and forty six responses",
+      "reference": "We received 1,246 responses.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 60,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_011",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "number_normalization",
+        "error_types": [
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -629,6 +1402,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the workshop starts on September twenty third twenty twenty six",
+      "reference": "The workshop starts on September 23, 2026.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 63,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_012",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "date_normalization",
+        "error_types": [
+          "date_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -639,6 +1437,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the call begins at four thirty p m",
+      "reference": "The call begins at 4:30 PM.",
+      "selection_group": "curated_external_pair",
+      "input_words": 8,
+      "input_characters": 34,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_013",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "time_normalization",
+        "error_types": [
+          "time_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -649,6 +1472,32 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the replacement costs forty nine dollars and weighs two point five kilograms",
+      "reference": "The replacement costs $49 and weighs 2.5 kilograms.",
+      "selection_group": "curated_external_pair",
+      "input_words": 12,
+      "input_characters": 76,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_014",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "currency_measurement_normalization",
+        "error_types": [
+          "currency_or_measurement",
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -659,6 +1508,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "send the receipt to finance at acme dot com",
+      "reference": "Send the receipt to finance@acme.com.",
+      "selection_group": "curated_external_pair",
+      "input_words": 9,
+      "input_characters": 43,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_015",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "email_formatting",
+        "error_types": [
+          "email_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -669,6 +1543,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the documentation is available at docs dot example dot com slash setup",
+      "reference": "The documentation is available at docs.example.com/setup.",
+      "selection_group": "curated_external_pair",
+      "input_words": 12,
+      "input_characters": 70,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_016",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "url_formatting",
+        "error_types": [
+          "url_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -679,6 +1578,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "yes comma I can send the draft today semicolon the figures will follow tomorrow period great work everyone exclamation mark",
+      "reference": "Yes, I can send the draft today; the figures will follow tomorrow. Great work, everyone!",
+      "selection_group": "curated_external_pair",
+      "input_words": 20,
+      "input_characters": 123,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_017",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "dictated_punctuation",
+        "error_types": [
+          "dictated_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "comma",
+          "semicolon",
+          "period",
+          "exclamation_mark"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -689,6 +1616,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "Maya said open quote the release is ready close quote",
+      "reference": "Maya said, “The release is ready.”",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 53,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_018",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "quotation_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "quotation"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -699,6 +1651,32 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the migration is complete period new paragraph customers do not need to take any action period",
+      "reference": "The migration is complete.\n\nCustomers do not need to take any action.",
+      "selection_group": "curated_external_pair",
+      "input_words": 16,
+      "input_characters": 94,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_019",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "paragraph_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "paragraph_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "paragraphs"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -709,6 +1687,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "bullet list apples new line rice new line olive oil",
+      "reference": "- Apples\n- Rice\n- Olive oil",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 51,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_020",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "unordered_list_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "list_formatting",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "unordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -719,6 +1722,32 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "numbered list first back up the database second deploy the service third run the smoke tests",
+      "reference": "1. Back up the database.\n2. Deploy the service.\n3. Run the smoke tests.",
+      "selection_group": "curated_external_pair",
+      "input_words": 16,
+      "input_characters": 92,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_021",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "ordered_list_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "list_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "ordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -729,6 +1758,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "dear Anika new paragraph thank you for reviewing the proposal new paragraph best regards new line Sam",
+      "reference": "Dear Anika,\n\nThank you for reviewing the proposal.\n\nBest regards,\nSam",
+      "selection_group": "curated_external_pair",
+      "input_words": 17,
+      "input_characters": 101,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_022",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "greeting_signoff_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "greeting_signoff",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "greeting",
+          "paragraphs",
+          "signoff"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -739,6 +1796,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "heading weekly status new paragraph all planned work is complete",
+      "reference": "# Weekly Status\n\nAll planned work is complete.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 64,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_023",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "heading_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "heading_formatting",
+          "paragraph_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "heading",
+          "paragraphs"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -749,6 +1834,31 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the word comma appears twice in the first paragraph",
+      "reference": "The word “comma” appears twice in the first paragraph.",
+      "selection_group": "curated_external_pair",
+      "input_words": 9,
+      "input_characters": 51,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_024",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "literal_command_disambiguation",
+        "error_types": [
+          "capitalization",
+          "punctuation"
+        ],
+        "formatting_features": [
+          "literal_formatting_word",
+          "quotation"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -759,6 +1869,33 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "attach the file quarterly report final dot pdf and reference ticket a c m e dash four two seven",
+      "reference": "Attach the file quarterly-report-final.pdf and reference ticket ACME-427.",
+      "selection_group": "curated_external_pair",
+      "input_words": 19,
+      "input_characters": 95,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_025",
+      "metadata": {
+        "language": "en",
+        "record_type": "single_principal_error",
+        "primary_category": "filename_identifier_formatting",
+        "error_types": [
+          "filename_formatting",
+          "identifier_formatting",
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -769,6 +1906,39 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "hi Priya comma new paragraph um could you send the revised budget to finance at acme dot com by four p m question mark new paragraph thanks comma new line Daniel",
+      "reference": "Hi Priya,\n\nCould you send the revised budget to finance@acme.com by 4:00 PM?\n\nThanks,\nDaniel",
+      "selection_group": "curated_external_pair",
+      "input_words": 31,
+      "input_characters": 161,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_026",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "formatted_email_message",
+        "error_types": [
+          "filler",
+          "email_formatting",
+          "time_normalization",
+          "dictated_formatting",
+          "greeting_signoff",
+          "paragraph_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "greeting",
+          "paragraphs",
+          "question_mark",
+          "signoff"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -779,6 +1949,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "numbered list first archive the last thirty days of logs second increase the time out to forty five seconds third restart the a p i gateway",
+      "reference": "1. Archive the last 30 days of logs.\n2. Increase the timeout to 45 seconds.\n3. Restart the API gateway.",
+      "selection_group": "curated_external_pair",
+      "input_words": 26,
+      "input_characters": 139,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_027",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "ordered_list_with_normalization",
+        "error_types": [
+          "dictated_formatting",
+          "list_formatting",
+          "number_normalization",
+          "acronym",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "ordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -789,6 +1987,33 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "okay bullet list um coffee beans new line coffee filters coffee filters new line oat milk new line dish soap",
+      "reference": "- Coffee beans\n- Coffee filters\n- Oat milk\n- Dish soap",
+      "selection_group": "curated_external_pair",
+      "input_words": 20,
+      "input_characters": 108,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_028",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "unordered_list_with_cleanup",
+        "error_types": [
+          "filler",
+          "repetition",
+          "dictated_formatting",
+          "list_formatting",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "unordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -799,6 +2024,39 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "heading meeting notes new paragraph date August thirtieth twenty twenty six new line time ten thirty a m new paragraph bullet list finalize the launch copy new line confirm the support schedule new line send the customer notice",
+      "reference": "# Meeting Notes\n\nDate: August 30, 2026\nTime: 10:30 AM\n\n- Finalize the launch copy.\n- Confirm the support schedule.\n- Send the customer notice.",
+      "selection_group": "curated_external_pair",
+      "input_words": 38,
+      "input_characters": 227,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_029",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "structured_meeting_notes",
+        "error_types": [
+          "dictated_formatting",
+          "heading_formatting",
+          "paragraph_formatting",
+          "list_formatting",
+          "date_normalization",
+          "time_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "heading",
+          "paragraphs",
+          "labeled_lines",
+          "unordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -809,6 +2067,33 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "Ravi said open quote we can launch on Monday no Tuesday close quote",
+      "reference": "Ravi said, “We can launch on Tuesday.”",
+      "selection_group": "curated_external_pair",
+      "input_words": 13,
+      "input_characters": 67,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_030",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "quotation_with_self_correction",
+        "error_types": [
+          "self_correction",
+          "dictated_formatting",
+          "quotation_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "quotation"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -819,6 +2104,35 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "uh upgrade the service to version two point four point one comma then check the guide at docs dot example dot com slash upgrade",
+      "reference": "Upgrade the service to version 2.4.1, then check the guide at docs.example.com/upgrade.",
+      "selection_group": "curated_external_pair",
+      "input_words": 24,
+      "input_characters": 127,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_031",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "technical_normalization",
+        "error_types": [
+          "filler",
+          "version_normalization",
+          "url_formatting",
+          "dictated_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "comma",
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -829,6 +2143,32 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "ship three boxes to twenty four lake view road apartment seven b Kathmandu",
+      "reference": "Ship 3 boxes to 24 Lake View Road, Apartment 7B, Kathmandu.",
+      "selection_group": "curated_external_pair",
+      "input_words": 13,
+      "input_characters": 74,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_032",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "address_and_number_formatting",
+        "error_types": [
+          "number_normalization",
+          "address_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -839,6 +2179,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "move the demo from September tenth at two p m no make that September eleventh at three thirty p m",
+      "reference": "Move the demo to September 11 at 3:30 PM.",
+      "selection_group": "curated_external_pair",
+      "input_words": 20,
+      "input_characters": 97,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_033",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "schedule_self_correction",
+        "error_types": [
+          "self_correction",
+          "date_normalization",
+          "time_normalization",
+          "grammar_repair",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -849,6 +2217,38 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "heading quarterly results new paragraph bullet list revenue increased by twelve percent new line support costs fell by eight point five percent new line cash balance is two point three million dollars",
+      "reference": "# Quarterly Results\n\n- Revenue increased by 12%.\n- Support costs fell by 8.5%.\n- Cash balance is $2.3 million.",
+      "selection_group": "curated_external_pair",
+      "input_words": 32,
+      "input_characters": 200,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_034",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "financial_list_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "heading_formatting",
+          "list_formatting",
+          "percentage_normalization",
+          "currency_or_measurement",
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "heading",
+          "paragraphs",
+          "unordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -859,6 +2259,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "okay steps colon first download the archive second unzip it into the tools folder third run setup dot sh",
+      "reference": "Steps:\n\n1. Download the archive.\n2. Unzip it into the tools folder.\n3. Run setup.sh.",
+      "selection_group": "curated_external_pair",
+      "input_words": 19,
+      "input_characters": 104,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_035",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "procedure_formatting",
+        "error_types": [
+          "filler",
+          "dictated_formatting",
+          "list_formatting",
+          "filename_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "label",
+          "colon",
+          "paragraphs",
+          "ordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -869,6 +2300,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the pilot went well period new paragraph um twelve people completed onboarding comma and ten activated their accounts period new paragraph the next session is Friday at nine a m full stop",
+      "reference": "The pilot went well.\n\nTwelve people completed onboarding, and 10 activated their accounts.\n\nThe next session is Friday at 9:00 AM.",
+      "selection_group": "curated_external_pair",
+      "input_words": 32,
+      "input_characters": 187,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_036",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "multi_paragraph_status_update",
+        "error_types": [
+          "filler",
+          "dictated_formatting",
+          "paragraph_formatting",
+          "number_normalization",
+          "time_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "paragraphs",
+          "comma",
+          "period"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -879,6 +2341,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "hello Marcus comma new paragraph please send the invoice to billing at north star dot io no sorry accounts at north star dot io new paragraph kind regards comma new line Lena",
+      "reference": "Hello Marcus,\n\nPlease send the invoice to accounts@northstar.io.\n\nKind regards,\nLena",
+      "selection_group": "curated_external_pair",
+      "input_words": 32,
+      "input_characters": 174,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_037",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "email_self_correction",
+        "error_types": [
+          "self_correction",
+          "email_formatting",
+          "dictated_formatting",
+          "greeting_signoff",
+          "paragraph_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "greeting",
+          "paragraphs",
+          "signoff"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -889,6 +2382,36 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "bug report colon the app crashes when opening settings dot j son period attach crash log dash two zero two six zero eight three zero dot text and reference issue v o i dash nine one eight",
+      "reference": "Bug report: The app crashes when opening settings.json. Attach crash-log-20260830.txt and reference issue VOI-918.",
+      "selection_group": "curated_external_pair",
+      "input_words": 37,
+      "input_characters": 187,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_038",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "technical_bug_report",
+        "error_types": [
+          "dictated_formatting",
+          "filename_formatting",
+          "identifier_formatting",
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "label",
+          "colon",
+          "sentences"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -899,6 +2422,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "note colon the trial period ends tomorrow comma but the word period in the heading should remain lowercase period",
+      "reference": "Note: The trial period ends tomorrow, but the word “period” in the heading should remain lowercase.",
+      "selection_group": "curated_external_pair",
+      "input_words": 19,
+      "input_characters": 113,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_039",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "mixed_literal_and_dictated_punctuation",
+        "error_types": [
+          "literal_command_disambiguation",
+          "dictated_formatting",
+          "quotation_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "label",
+          "colon",
+          "comma",
+          "quotation",
+          "period"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -909,6 +2463,35 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "open quote good writing is clear writing close quote new line dash Maya Chen",
+      "reference": "“Good writing is clear writing.”\n—Maya Chen",
+      "selection_group": "curated_external_pair",
+      "input_words": 14,
+      "input_characters": 76,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_040",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "display_quote_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "quotation_formatting",
+          "attribution_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "quotation",
+          "new_line",
+          "em_dash_attribution"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -919,6 +2502,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "recipe colon new paragraph numbered list first mix two cups of flour and one teaspoon of salt second add three hundred milliliters of water third bake for forty minutes at two hundred degrees Celsius",
+      "reference": "Recipe:\n\n1. Mix 2 cups of flour and 1 teaspoon of salt.\n2. Add 300 milliliters of water.\n3. Bake for 40 minutes at 200 degrees Celsius.",
+      "selection_group": "curated_external_pair",
+      "input_words": 34,
+      "input_characters": 199,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_041",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "recipe_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "list_formatting",
+          "number_normalization",
+          "currency_or_measurement",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "label",
+          "colon",
+          "paragraphs",
+          "ordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -929,6 +2543,38 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "travel plan colon new paragraph September fifth flight at seven fifteen a m new line September sixth workshop at nine a m new line hotel budget one hundred eighty dollars per night",
+      "reference": "Travel Plan:\n\n- September 5: Flight at 7:15 AM.\n- September 6: Workshop at 9:00 AM.\n- Hotel budget: $180 per night.",
+      "selection_group": "curated_external_pair",
+      "input_words": 32,
+      "input_characters": 180,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_042",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "itinerary_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "list_formatting",
+          "date_normalization",
+          "time_normalization",
+          "currency_or_measurement",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "heading",
+          "paragraphs",
+          "unordered_list",
+          "labels"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -939,6 +2585,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "heading customer update new paragraph um three updates colon the mobile fix is live comma the desktop release is in review in review comma and support has answered all open tickets",
+      "reference": "# Customer Update\n\n- The mobile fix is live.\n- The desktop release is in review.\n- Support has answered all open tickets.",
+      "selection_group": "curated_external_pair",
+      "input_words": 31,
+      "input_characters": 180,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_043",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "inferred_list_cleanup",
+        "error_types": [
+          "filler",
+          "repetition",
+          "dictated_formatting",
+          "heading_formatting",
+          "list_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "heading",
+          "paragraphs",
+          "inferred_unordered_list"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -949,6 +2626,35 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "the c c d n cache cache should expire after three hundred seconds and the key belongs in red is",
+      "reference": "The CDN cache should expire after 300 seconds, and the key belongs in Redis.",
+      "selection_group": "curated_external_pair",
+      "input_words": 20,
+      "input_characters": 95,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_044",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "technical_asr_cleanup",
+        "error_types": [
+          "acronym",
+          "repetition",
+          "technical_term",
+          "asr_substitution",
+          "number_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "sentence"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -959,6 +2665,37 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "question colon are we still planning to launch Friday question mark new paragraph answer colon yes comma assuming the final review passes period",
+      "reference": "Question: Are we still planning to launch Friday?\n\nAnswer: Yes, assuming the final review passes.",
+      "selection_group": "curated_external_pair",
+      "input_words": 23,
+      "input_characters": 144,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_045",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "question_answer_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "paragraph_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "labels",
+          "colon",
+          "question_mark",
+          "paragraphs",
+          "comma",
+          "period"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -969,6 +2706,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "hello this is Nina from Acme support comma I'm calling about ticket a c dash seven four two period please call me back at five p m period thank you",
+      "reference": "Hello, this is Nina from Acme Support. I'm calling about ticket AC-742. Please call me back at 5:00 PM. Thank you.",
+      "selection_group": "curated_external_pair",
+      "input_words": 30,
+      "input_characters": 147,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_046",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "voicemail_cleanup",
+        "error_types": [
+          "dictated_formatting",
+          "identifier_formatting",
+          "time_normalization",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "greeting",
+          "sentences"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -979,6 +2744,39 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "heading launch checklist new paragraph bullet list open quote release approved close quote from Maya new line deploy version three point two new line email status at acme dot com after launch",
+      "reference": "# Launch Checklist\n\n- “Release approved,” from Maya.\n- Deploy version 3.2.\n- Email status@acme.com after launch.",
+      "selection_group": "curated_external_pair",
+      "input_words": 32,
+      "input_characters": 191,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_047",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "checklist_with_mixed_formatting",
+        "error_types": [
+          "dictated_formatting",
+          "heading_formatting",
+          "list_formatting",
+          "quotation_formatting",
+          "version_normalization",
+          "email_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "heading",
+          "paragraphs",
+          "unordered_list",
+          "quotation"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -989,6 +2787,38 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "dear team comma uh the launch is complete period the launch is complete and all systems are healthy period please report issues at status dot example dot com slash support period best comma Arjun",
+      "reference": "Dear Team,\n\nThe launch is complete, and all systems are healthy.\n\nPlease report issues at status.example.com/support.\n\nBest,\nArjun",
+      "selection_group": "curated_external_pair",
+      "input_words": 34,
+      "input_characters": 195,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_048",
+      "metadata": {
+        "language": "en",
+        "record_type": "natural_multi_error",
+        "primary_category": "inferred_document_formatting",
+        "error_types": [
+          "filler",
+          "repetition",
+          "dictated_formatting",
+          "greeting_signoff",
+          "paragraph_formatting",
+          "url_formatting",
+          "punctuation",
+          "capitalization"
+        ],
+        "formatting_features": [
+          "greeting",
+          "inferred_paragraphs",
+          "signoff"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -999,6 +2829,29 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "The migration completed successfully, and no customer action is required.",
+      "reference": "The migration completed successfully, and no customer action is required.",
+      "selection_group": "curated_external_pair",
+      "input_words": 10,
+      "input_characters": 73,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_049",
+      "metadata": {
+        "language": "en",
+        "record_type": "no_change",
+        "primary_category": "no_change",
+        "error_types": [
+          "no_change"
+        ],
+        "formatting_features": [
+          "natural_asr_punctuation"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     },
     {
@@ -1009,7 +2862,34 @@
         "output_tokens": null,
         "generation_seconds": null,
         "tokens_per_second": null
+      },
+      "source_index": null,
+      "input": "Could you send the revised proposal before Friday afternoon?",
+      "reference": "Could you send the revised proposal before Friday afternoon?",
+      "selection_group": "curated_external_pair",
+      "input_words": 9,
+      "input_characters": 60,
+      "dataset_id": "curated-sample-50",
+      "dataset_name": "Curated transcript cleanup sample",
+      "source_record_id": "sample_050",
+      "metadata": {
+        "language": "en",
+        "record_type": "no_change",
+        "primary_category": "no_change",
+        "error_types": [
+          "no_change"
+        ],
+        "formatting_features": [
+          "natural_asr_punctuation"
+        ],
+        "edit_support": "direct",
+        "source": "curated_sample",
+        "policy_version": "polished-clean-v1"
       }
     }
-  ]
+  ],
+  "recorded_source_provenance": {
+    "source": "public/data/benchmark.json",
+    "git_revision": "eaa844565295e8ed5483e3376010aa1ef5a971a7"
+  }
 }

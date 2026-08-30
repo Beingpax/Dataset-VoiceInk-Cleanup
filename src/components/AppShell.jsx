@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useBenchmark } from '../context/BenchmarkContext.jsx';
 
 const navigation = [
   ['/', 'Overview'],
@@ -10,6 +11,7 @@ const navigation = [
 ];
 
 export default function AppShell({ children }) {
+  const { data } = useBenchmark();
   return (
     <div className="app-shell">
       <header className="topbar">
@@ -19,7 +21,7 @@ export default function AppShell({ children }) {
             <NavLink key={to} to={to} end={to === '/'} className={({ isActive }) => isActive ? 'active' : undefined}>{label}</NavLink>
           ))}
         </nav>
-        <div className="project-state"><span />100 cases · 3 systems</div>
+        <div className="project-state"><span />{data ? `${data.benchmark.sample_count} cases · ${data.models.length} systems` : 'Benchmark corpus'}</div>
       </header>
       <main className="page" id="main-content">{children}</main>
     </div>

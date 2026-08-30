@@ -15,7 +15,7 @@ import psutil
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models" / "speakoflow-mini" / "SpeakoFlow-Mini-0.8B-Q8_0.gguf"
-SAMPLE_PATH = ROOT / "artifacts" / "sample.jsonl"
+SAMPLE_PATH = ROOT / "artifacts" / "benchmark-corpus.jsonl"
 OUT_PATH = ROOT / "artifacts" / "results-speakoflow.json"
 LOG_PATH = ROOT / "logs" / "speakoflow-server.log"
 PORT = 8999
@@ -115,6 +115,8 @@ def main() -> None:
             output_tokens = usage.get("completion_tokens")
             results.append({
                 "id": case["id"],
+                "input": case["input"],
+                "reference": case["reference"],
                 "output": output,
                 "performance": {
                     "input_tokens": usage.get("prompt_tokens"),

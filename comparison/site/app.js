@@ -9,7 +9,7 @@ const colors = [
 
 const formatPercent = value => value == null ? 'Unavailable' : `${(value * 100).toFixed(1)}%`;
 const formatNumber = (value, digits = 1) => value == null ? 'Unavailable' : Number(value).toFixed(digits);
-const shortName = model => model.name.replace(' (low reasoning)', '');
+const shortName = model => model.short_name || model.name.replace(' (low reasoning)', '');
 
 let benchmark;
 let models;

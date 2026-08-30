@@ -23,8 +23,8 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="edition">Edition 01 · 30 August 2026</p>
-        <h1>Three cleanup systems,<br><em>one hundred transcripts.</em></h1>
-        <p class="dek">An inspectable comparison of two on-device models and GPT-5.6 Sol at low reasoning across two separately labeled 50-case datasets. Every output, prompt choice, score, and local runtime measurement is included.</p>
+        <h1>Four cleanup configurations,<br><em>one hundred transcripts.</em></h1>
+        <p class="dek">An inspectable comparison of three on-device configurations and GPT-5.6 Sol at low reasoning across two separately labeled 50-case datasets. Every output, prompt choice, score, and local runtime measurement is included.</p>
       </div>
       <aside class="hero-note" aria-label="Benchmark scope">
         <p>Two 50-case sources sit side by side: the enriched VoiceInk validation sample and a separately curated cleanup set. It is an evidence browser, not a universal leaderboard.</p>
@@ -93,8 +93,8 @@
 
     <section class="models" aria-labelledby="models-title">
       <div class="section-heading">
-        <h2 id="models-title">Three deliberately different runs</h2>
-          <p>The prompt is part of each model. Giving every model the same wrapper would be a different experiment.</p>
+        <h2 id="models-title">Four recorded configurations</h2>
+          <p>Prompt and runtime choices are recorded for each run. Fluid-1 Mini 2B 6-bit uses the existing dataset cleanup instructions and standard MLX without DFlash.</p>
       </div>
       <div class="model-strata" id="model-strata"></div>
     </section>
@@ -161,7 +161,7 @@
       <div class="viewer-load">
         <label>Repository dataset
           <select id="jsonl-source">
-            <option value="../artifacts/sample.jsonl">Benchmark corpus · 100 cases</option>
+            <option value="../artifacts/benchmark-corpus.jsonl">Benchmark corpus · 100 cases</option>
             <option value="../validation.jsonl">Validation split · 1,829 pairs</option>
             <option value="../training.jsonl">Training split · full JSONL</option>
           </select>
@@ -234,7 +234,7 @@
       </div>
       <div class="downloads">
         <h3>Reproduce or audit</h3>
-        <a href="../artifacts/sample.jsonl" download>Download sampled cases <span>JSONL</span></a>
+        <a href="../artifacts/benchmark-corpus.jsonl" download>Download sampled cases <span>JSONL</span></a>
         <a href="../artifacts/benchmark-results.json" download>Download complete results <span>JSON</span></a>
         <a href="../artifacts/case-results.csv" download>Download flat case results <span>CSV</span></a>
         <a href="../benchmark/README.md">Read reproduction notes <span>MD</span></a>

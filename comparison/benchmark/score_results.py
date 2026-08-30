@@ -2,6 +2,7 @@
 """Score all completed model outputs and publish site-ready JSON."""
 
 import csv
+import hashlib
 import json
 import math
 import platform
@@ -21,6 +22,7 @@ CHRF = CHRF(word_order=2)
 
 METRIC_KEYS = ("exact_match", "edit_similarity", "chrf", "wer", "length_ratio")
 REFERENCE_BLIND_MODELS = {"gpt-5.6-sol-low", "voiceink-refine-v1", "speakoflow-mini"}
+FLUID_MODELS = {"fluid-1-mini-2b-6bit"}
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -87,6 +89,13 @@ def summarize_cases(cases: list[dict]) -> dict:
 
 
 def comparison_context(model: dict) -> dict:
+    if model["id"] in FLUID_MODELS:
+        known = model.get("prompt_policy") == "dataset-system-input-only-v1"
+        return {
+            "reference_blind": known,
+            "context_source": "dataset_system_prompt" if known else "unverified",
+            "note": None if known else "Fluid prompt provenance must be recorded before ranking.",
+        }
     known = model["id"] in REFERENCE_BLIND_MODELS
     return {
         "reference_blind": known,
@@ -113,7 +122,11 @@ def summarize(model: dict) -> dict:
 
 
 def main() -> None:
-    sample = load_jsonl(ARTIFACTS / "sample.jsonl")
+    # Freeze the displayed benchmark's case content, not merely its IDs.
+    # Sampling/integration may change sample.jsonl without rerunning baselines.
+    corpus_path = ARTIFACTS / "benchmark-corpus.jsonl"
+    sample = load_jsonl(corpus_path)
+    sample_sha256 = hashlib.sha256(corpus_path.read_bytes()).hexdigest()
     by_id = {case["id"]: case for case in sample}
     if len(by_id) != len(sample):
         raise ValueError("Benchmark sample contains duplicate case IDs.")
@@ -121,6 +134,8 @@ def main() -> None:
     models = []
     for path in result_paths:
         model = json.loads(path.read_text())
+        if model.get("sample_sha256") and model["sample_sha256"] != sample_sha256:
+            raise ValueError(f"Corpus fingerprint mismatch in {path.name}; do not score outputs against changed inputs.")
         recorded = {}
         for case in model.get("cases", []):
             if case["id"] not in by_id or case["id"] in recorded:
@@ -129,6 +144,8 @@ def main() -> None:
         model["cases"] = []
         for source in sample:
             case = recorded.get(source["id"], {"id": source["id"], "output": "", "error": "No result recorded for this expected case."})
+            if any(key in case and case[key] != source[key] for key in ("input", "reference")):
+                raise ValueError(f"Recorded source mismatch for {case['id']} in {path.name}; rerun the affected input instead of relabeling its output.")
             case.update({key: source.get(key) for key in (
                 "source_index", "input", "reference", "selection_group",
                 "input_words", "input_characters", "dataset_id", "dataset_name",
@@ -144,6 +161,8 @@ def main() -> None:
             "exact_match_scope": "all_expected_cases",
             "ranking_scope": "complete_reference_blind_configurations",
             "case_manifest": [{"id": case["id"], "dataset_id": case["dataset_id"]} for case in sample],
+            "corpus_sha256": sample_sha256,
+            "corpus_source": "comparison/artifacts/benchmark-corpus.jsonl",
             "name": "Transcript Cleanup: 100-case model comparison",
             "sample_seed": "20260830 + 20260831",
             "sample_count": len(sample),
@@ -161,6 +180,7 @@ def main() -> None:
                 "Local peak memory is process RSS and is not comparable to provider-side hosted memory.",
                 "Model-native prompts and settings differ; rankings compare configurations, not isolated model capability.",
                 "Quality means use successful cases only. Exact-match and completion rates include every expected case, including failed or missing results.",
+                "Fluid-1 Mini 2B 6-bit uses the existing dataset cleanup instructions and standard MLX target decoding without DFlash; these are not FluidVoice application or FluidDecode speed measurements.",
             ],
         },
         "models": models,
@@ -208,6 +228,7 @@ def main() -> None:
                 })
     for filename in ("aggregate-results.csv", "case-results.csv"):
         shutil.copyfile(ARTIFACTS / filename, PUBLIC_DOWNLOADS / filename)
+    shutil.copyfile(corpus_path, PUBLIC_DATA / "benchmark-sample.jsonl")
     print(json.dumps({model["id"]: model["summary"] for model in models}, indent=2))
 
 

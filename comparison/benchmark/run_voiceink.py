@@ -11,7 +11,7 @@ from mlx_lm import generate, load
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models" / "voiceink-refine-v1"
-SAMPLE_PATH = ROOT / "artifacts" / "sample.jsonl"
+SAMPLE_PATH = ROOT / "artifacts" / "benchmark-corpus.jsonl"
 OUT_PATH = ROOT / "artifacts" / "results-voiceink.json"
 
 
@@ -35,6 +35,8 @@ def main() -> None:
         output_tokens = len(tokenizer.encode(output))
         results.append({
             "id": case["id"],
+            "input": case["input"],
+            "reference": case["reference"],
             "output": output,
             "performance": {
                 "input_tokens": input_tokens,

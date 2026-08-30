@@ -1,10 +1,13 @@
+import { useBenchmark } from '../context/BenchmarkContext.jsx';
+
 export default function MethodologyPage() {
+  const { data } = useBenchmark();
   return (
     <div className="page-stack methodology-page">
-      <header className="page-heading"><div><h1>Methodology</h1></div><div className="header-facts"><div><strong>100</strong><span>cases</span></div><div><strong>3</strong><span>systems</span></div><div><strong>2</strong><span>sources</span></div></div></header>
+      <header className="page-heading"><div><h1>Methodology</h1></div><div className="header-facts"><div><strong>{data?.benchmark.sample_count ?? '—'}</strong><span>cases</span></div><div><strong>{data?.models.length ?? '—'}</strong><span>systems</span></div><div><strong>{data?.benchmark.datasets.length ?? '—'}</strong><span>sources</span></div></div></header>
       <section className="method-sections">
-        <article><span>Sampling</span><h2>Two labeled 50-case sources</h2><p>The VoiceInk validation source preserves the original 20 fixed-seed random cases and adds 30 fixed-seed cases from the longest 30 percent of remaining inputs. The curated source includes all 50 supplied cleanup pairs with category metadata intact.</p></article>
-        <article><span>Local runs</span><h2>Sequential Apple Silicon inference</h2><p>VoiceInk uses MLX LM 4-bit. SpeakoFlow uses its Q8_0 GGUF through a persistent llama.cpp server.</p></article>
+        <article><span>Sampling</span><h2>Two labeled 50-case sources</h2><p>The VoiceInk validation source preserves the original 20 fixed-seed random cases and adds 30 fixed-seed cases from the longest 30 percent of remaining inputs. The curated source includes 50 cleanup pairs. The comparison corpus is frozen to the original published inputs and references; later working-sample revisions do not silently change what a saved output is scored against.</p></article>
+        <article><span>Local runs</span><h2>Sequential Apple Silicon inference</h2><p>VoiceInk uses MLX LM 4-bit. SpeakoFlow uses its Q8_0 GGUF through a persistent llama.cpp server. Fluid-1 Mini 2B uses its published 6-bit weights through MLX LM, the existing dataset cleanup instructions, thinking disabled, and greedy decoding. DFlash acceleration is disabled; these timings do not represent FluidVoice’s private runtime.</p></article>
         <article><span>Measurement</span><h2>Quality and completion remain distinct</h2><p>Outputs are compared with the stored reference. Completion and exact-match totals include every expected case, including failures and missing results. Edit similarity, chrF++, WER, and runtime averages describe successful cases only. An all-failed run has unavailable quality scores, not a fabricated zero score.</p></article>
         <article><span>Limitations</span><h2>Compare recorded configurations</h2><p>Ranks and the chart require complete runs with no known reference-derived hints. Model-native prompts differ, the two datasets have different construction, and ranking eligibility does not establish human-reviewed references or rule out training-data overlap. Hosted runtime and memory remain unavailable.</p></article>
       </section>

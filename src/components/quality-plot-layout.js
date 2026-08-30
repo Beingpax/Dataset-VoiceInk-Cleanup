@@ -17,7 +17,7 @@ export function qualityPlotLayout(models, summaryFor, width, height = 560) {
   const points = entries.map(({ model, summary }) => ({
     id: model.id,
     name: model.name,
-    label: model.name.replace(' (low reasoning)', ''),
+    label: model.short_name || model.name.replace(' (low reasoning)', ''),
     similarity: summary.mean_edit_similarity,
     accuracy: 1 - summary.mean_wer,
     wer: summary.mean_wer,

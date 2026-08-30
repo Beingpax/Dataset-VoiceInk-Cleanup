@@ -28,10 +28,11 @@ The build command is documented in `package.json` but was not run during this mi
 
 ## 1. Dataset comparison application
 
-[`comparison/`](comparison/) contains the complete work from the **Benchmark 3 transcript models** task:
+[`comparison/`](comparison/) contains the transcript-cleanup benchmark:
 
 - A 100-case benchmark across two labeled 50-case datasets.
 - VoiceInk Refine V1, SpeakoFlow Mini, and GPT-5.6 Sol low-reasoning outputs.
+- Fluid-1 Mini 2B 6-bit, evaluated on all 100 cases with standard MLX target decoding and no DFlash acceleration.
 - Aggregate quality, latency, throughput, exact-match, WER, chrF++, edit-similarity, and peak-memory data where available.
 - Every raw input, human reference, model output, prompt configuration, and per-case score.
 - Reproducible sampling, model-running, dataset-integration, and scoring scripts.
@@ -52,7 +53,7 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 - Product, design, and implementation summaries.
 - The original dataset overview page, retained as a separate generator/authoring surface.
 
-The previous 180-pair generator collection and its viewer copies have been removed. The **JSONL Dataset Viewer** defaults to the unchanged 100 labeled benchmark cases in `public/data/benchmark-sample.jsonl` and accepts future generated JSONL through its local file picker. Benchmark source snapshots and results remain intact.
+The previous 180-pair generator collection and its viewer copies have been removed. The **JSONL Dataset Viewer** defaults to the fixed 100-case comparison corpus in `public/data/benchmark-sample.jsonl` and accepts future generated JSONL through its local file picker. Benchmark source snapshots and results remain intact. The fixed corpus matches the original published baselines; newer working-sample revisions and the initial Fluid runs on that expanded sample are preserved separately under `comparison/artifacts/`.
 
 ## Repository structure
 
