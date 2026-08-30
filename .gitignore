@@ -1,0 +1,41 @@
+# macOS and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Temporary and generated files
+tmp/
+temp/
+dist/
+coverage/
+*.log
+
+# Local model directories and caches
+model/
+models/
+local-models/
+weights/
+checkpoints/
+huggingface/
+.cache/
+
+# Model weights and packaged runtimes
+*.gguf
+*.ggml
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.mlmodel
+*.mlpackage
+*.h5
+*.pb
+*.params
+
+# Common large model shards
+pytorch_model*.bin
+model-*.bin
+consolidated*.pth
