@@ -1,0 +1,5 @@
+model_id,model_name,runtime,case_count,successful_cases,exact_match_rate,mean_edit_similarity,mean_chrf,mean_wer,median_tokens_per_second,mean_generation_seconds,median_generation_seconds,peak_memory_gib,memory_scope
+gpt-5.6-sol-low,GPT-5.6 Sol (low reasoning),Codex hosted,100,100,0.67,0.9868909380610994,0.9709691964954226,0.044432569070611334,,,,,unavailable
+s1-mini,S1-mini by Superwhisper,Transformers BF16 on MPS,100,100,0.2,0.9359620841247103,0.8575764003157701,0.2434393236322094,32.92720637318663,0.7986449116596487,0.8241103749896865,1.0491485595703125,process peak RSS
+speakoflow-mini,SpeakoFlow Mini,llama.cpp Q8_0 on Metal,100,100,0.03,0.8757963348132362,0.7425100638193715,0.4640404374929588,69.14349631509702,0.37049393118999435,0.36428260398679413,1.5953521728515625,llama-server process-tree peak RSS
+voiceink-refine-v1,VoiceInk Refine V1,MLX LM 4-bit,100,100,0.25,0.9566027460703581,0.8916424129805312,0.1928994291107005,48.33907763346866,0.6085611812994466,0.5784483329916839,0.7807769775390625,process peak RSS

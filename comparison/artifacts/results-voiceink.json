@@ -1,0 +1,1016 @@
+{
+  "id": "voiceink-refine-v1",
+  "name": "VoiceInk Refine V1",
+  "family": "Qwen3.5 task fine-tune",
+  "runtime": "MLX LM 4-bit",
+  "prompt_mode": "Dataset default cleanup system prompt",
+  "source_url": "https://huggingface.co/beingpax/VoiceInk-Refine-V1",
+  "generation": {
+    "decoding": "greedy",
+    "load_seconds": 1.5856890410068445,
+    "peak_memory_gib": 0.7807769775390625,
+    "memory_scope": "process peak RSS"
+  },
+  "cases": [
+    {
+      "id": "V01",
+      "output": "Where should I return the folding chairs: the parish hall or the sports pavilion?\n\nWho has the storage key? I can go tomorrow.",
+      "performance": {
+        "input_tokens": 102,
+        "output_tokens": 29,
+        "generation_seconds": 0.8609752500196919,
+        "tokens_per_second": 33.68273362020189
+      }
+    },
+    {
+      "id": "V02",
+      "output": "Message to Dev: The freezer door looks shut but it isn’t sealing. Push it until you hear two clicks.",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 23,
+        "generation_seconds": 0.5072074579948094,
+        "tokens_per_second": 45.34633637077824
+      }
+    },
+    {
+      "id": "V03",
+      "output": "Dear Ken,\n\nWe heard about your new house. May we visit next Sunday around tea time?\n\nWarm wishes,\nLou and Fay",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 28,
+        "generation_seconds": 0.5580674590019044,
+        "tokens_per_second": 50.173145823764024
+      }
+    },
+    {
+      "id": "V04",
+      "output": "Can the taxi take 4 passengers plus a folding wheelchair and 2 medium cases, or should we request a larger car?",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 25,
+        "generation_seconds": 0.5214866249880288,
+        "tokens_per_second": 47.939868065789604
+      }
+    },
+    {
+      "id": "V05",
+      "output": "Before the guests arrive Saturday morning, separate the white laundry. Wash the towels at 60 and hang the linen shirts instead of machine drying them.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 30,
+        "generation_seconds": 0.558363415999338,
+        "tokens_per_second": 53.72844842692123
+      }
+    },
+    {
+      "id": "V06",
+      "output": "Dear neighbors, please collect your post from the lower lobby shelf by Friday evening. Anything remaining there will be moved to reception before Monday.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 27,
+        "generation_seconds": 0.5381960829836316,
+        "tokens_per_second": 50.16758919968052
+      }
+    },
+    {
+      "id": "V07",
+      "output": "Support closed the incident at 11:40 PM UTC. Service had been stable since 10:05 and monitoring continued overnight with the incident commander remaining on call.",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 37,
+        "generation_seconds": 0.6357486659835558,
+        "tokens_per_second": 58.19909970673385
+      }
+    },
+    {
+      "id": "V08",
+      "output": "The sales manager approved the 5% discount but not the free implementation package shown in the latest quote despite a separate verbal concession request.",
+      "performance": {
+        "input_tokens": 99,
+        "output_tokens": 27,
+        "generation_seconds": 0.5570870419905987,
+        "tokens_per_second": 48.46639387540385
+      }
+    },
+    {
+      "id": "V09",
+      "output": "Why did the nightly pipeline finish green even though the schema validation step logged 17 errors? Is it continuing on error set somewhere?",
+      "performance": {
+        "input_tokens": 99,
+        "output_tokens": 27,
+        "generation_seconds": 0.5432181250071153,
+        "tokens_per_second": 49.703790718776816
+      }
+    },
+    {
+      "id": "V10",
+      "output": "Please shorten the permission dialog. It currently says, “In order to continue, we need to be able to access your microphone.” Keep the reason visible though.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 32,
+        "generation_seconds": 0.6278143340023234,
+        "tokens_per_second": 50.9704832573663
+      }
+    },
+    {
+      "id": "V11",
+      "output": "The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode normalization from C is applied. Existing records need backfilling.",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 29,
+        "generation_seconds": 0.5584587079938501,
+        "tokens_per_second": 51.928637847150114
+      }
+    },
+    {
+      "id": "V12",
+      "output": "The tablet layout is usable in portrait. In landscape, the sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.",
+      "performance": {
+        "input_tokens": 105,
+        "output_tokens": 32,
+        "generation_seconds": 0.575307499995688,
+        "tokens_per_second": 55.6224280063094
+      }
+    },
+    {
+      "id": "V13",
+      "output": "Can you check whether the variance calculation uses n or n minus 1? Results differ from the published table by 0.03 before correcting the published appendix.",
+      "performance": {
+        "input_tokens": 102,
+        "output_tokens": 33,
+        "generation_seconds": 0.5779031660058536,
+        "tokens_per_second": 57.10299223324508
+      }
+    },
+    {
+      "id": "V14",
+      "output": "During the quarterly structural survey inspection at Pier 2, minor scaling was found above the waterline, no exposed reinforcement, and no measurable change since March.",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 31,
+        "generation_seconds": 0.5520491250208579,
+        "tokens_per_second": 56.15442284928671
+      }
+    },
+    {
+      "id": "V15",
+      "output": "30-minute discharge test:\nBattery bank voltage was 25.6V at rest, then dropped to 22.9V under inverter load.",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 34,
+        "generation_seconds": 0.5688283329945989,
+        "tokens_per_second": 59.77198748347656
+      }
+    },
+    {
+      "id": "V16",
+      "output": "Dear Nina,\n\nBefore the accessibility review meeting, note that the attached screen reader transcript timestamps correspond to build 184, not the latest beta.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 31,
+        "generation_seconds": 0.5575566670158878,
+        "tokens_per_second": 55.59972973853193
+      }
+    },
+    {
+      "id": "V17",
+      "output": "Dear Garden Club, Saturdays seed swap moves indoors to Room 4 because rain is likely.\n\nLabel packets with variety and harvest year.\n\nCheers,\nMonica",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 33,
+        "generation_seconds": 0.5789934999775141,
+        "tokens_per_second": 56.99545850045224
+      }
+    },
+    {
+      "id": "V18",
+      "output": "Event recap: 184 attendees checked in and 17 walked-ins paid at the door. The west room session filled first but no one was turned away.",
+      "performance": {
+        "input_tokens": 106,
+        "output_tokens": 34,
+        "generation_seconds": 0.5893649170175195,
+        "tokens_per_second": 57.68921599890432
+      }
+    },
+    {
+      "id": "V19",
+      "output": "Our pickup window was 1 to 3 and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are 7 boxes.",
+      "performance": {
+        "input_tokens": 104,
+        "output_tokens": 33,
+        "generation_seconds": 0.5678384999919217,
+        "tokens_per_second": 58.11511547820282
+      }
+    },
+    {
+      "id": "V20",
+      "output": "Lock report: rear office lever sticks. When pulled upward, the latch works from inside. But key rotation outside stops halfway. Do not force it.",
+      "performance": {
+        "input_tokens": 99,
+        "output_tokens": 30,
+        "generation_seconds": 0.5501563750149217,
+        "tokens_per_second": 54.52995068754102
+      }
+    },
+    {
+      "id": "V21",
+      "output": "Please ask the bus station whether the midnight coach has under-floor luggage storage and whether bicycles need a separate reservation for next Friday night.",
+      "performance": {
+        "input_tokens": 102,
+        "output_tokens": 26,
+        "generation_seconds": 0.539013374975184,
+        "tokens_per_second": 48.23627985334693
+      }
+    },
+    {
+      "id": "V22",
+      "output": "Ask operations why the overnight shipment went to Phoenix instead of Tucson. Include tracking number 936001 and request a corrected delivery estimate.",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 30,
+        "generation_seconds": 0.5540289169875905,
+        "tokens_per_second": 54.14879815862023
+      }
+    },
+    {
+      "id": "V23",
+      "output": "The budget deck accidentally labels fiscal year 2026 as calendar year 2026. The underlying numbers are fiscal, and the footnote uses the same incorrect label.",
+      "performance": {
+        "input_tokens": 104,
+        "output_tokens": 36,
+        "generation_seconds": 0.6052007499965839,
+        "tokens_per_second": 59.484394228201474
+      }
+    },
+    {
+      "id": "V24",
+      "output": "The Monday notes should say “Decision deferred pending tax advice,” not “Decision denied,” and the follow-up owner is Casey from Treasury before circulating the revised record.",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 32,
+        "generation_seconds": 0.5845950420189183,
+        "tokens_per_second": 54.73874682461716
+      }
+    },
+    {
+      "id": "V25",
+      "output": "The service report lists priority 1 downtime as 48 minutes. The incident timeline supports only 38 because monitoring recovered earlier. Customer success disputes the longer figure.",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 34,
+        "generation_seconds": 0.5911435839952901,
+        "tokens_per_second": 57.51563735194137
+      }
+    },
+    {
+      "id": "V26",
+      "output": "The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation unless new evidence expands the review.",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 27,
+        "generation_seconds": 0.5430845000082627,
+        "tokens_per_second": 49.71602025023585
+      }
+    },
+    {
+      "id": "V27",
+      "output": "Following the latest litigation update, the controller approved a $250,000 reserve, subject to receiving counsel's final estimate before close by noon tomorrow.",
+      "performance": {
+        "input_tokens": 102,
+        "output_tokens": 33,
+        "generation_seconds": 0.5842688749835361,
+        "tokens_per_second": 56.480845400039314
+      }
+    },
+    {
+      "id": "V28",
+      "output": "Would you send the customer the maintenance window in both Eastern and Greenwich Mean Time, make clear that service may be intermittent before the maintenance notice is translated.",
+      "performance": {
+        "input_tokens": 104,
+        "output_tokens": 30,
+        "generation_seconds": 0.5376639589958359,
+        "tokens_per_second": 55.796933192303385
+      }
+    },
+    {
+      "id": "V29",
+      "output": "Who owns the response to the accessibility questionnaire? Product answered the first section but legal and security sections remain blank before Friday afternoon's submission deadline.",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 28,
+        "generation_seconds": 0.5410162080079317,
+        "tokens_per_second": 51.754456863868114
+      }
+    },
+    {
+      "id": "V30",
+      "output": "Please route the exception request to ethics and compliance, not employee relations, and attach the original disclosure from February because the reporting path was incorrect.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 28,
+        "generation_seconds": 0.5354227090138011,
+        "tokens_per_second": 52.29512967721037
+      }
+    },
+    {
+      "id": "V31",
+      "output": "Can we use the client's logo in the investor presentation?\n\nThe marketing consent covers our website but does not mention fundraising materials before marketing finalizes the presentation.",
+      "performance": {
+        "input_tokens": 104,
+        "output_tokens": 32,
+        "generation_seconds": 0.5792748329986352,
+        "tokens_per_second": 55.241481550909
+      }
+    },
+    {
+      "id": "V32",
+      "output": "Could you request wheelchair access for the site tour, including the production floor and emergency assembly area? Not only the lobby because the full group will participate.",
+      "performance": {
+        "input_tokens": 102,
+        "output_tokens": 30,
+        "generation_seconds": 0.5573613749875221,
+        "tokens_per_second": 53.82504304441911
+      }
+    },
+    {
+      "id": "V33",
+      "output": "For all three finalists this week, ask procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations before scoring begins.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 30,
+        "generation_seconds": 0.5536674580071121,
+        "tokens_per_second": 54.18414892575217
+      }
+    },
+    {
+      "id": "V34",
+      "output": "Before approving reimbursement, can you change coding from client entertainment to employee meal? All attendees were internal and no customer joined in the expense system.",
+      "performance": {
+        "input_tokens": 101,
+        "output_tokens": 28,
+        "generation_seconds": 0.5306527090142481,
+        "tokens_per_second": 52.76520693169249
+      }
+    },
+    {
+      "id": "V35",
+      "output": "- North anchor secure\n- South anchor needs re-torque\n- Conduit label missing near junction box 4\n- Photos saved in folder 7",
+      "performance": {
+        "input_tokens": 104,
+        "output_tokens": 31,
+        "generation_seconds": 0.5466987079998944,
+        "tokens_per_second": 56.70399352764885
+      }
+    },
+    {
+      "id": "V36",
+      "output": "Sample C-12 was thawed for approximately 18 minutes, returned to -80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 34,
+        "generation_seconds": 0.5861203340173233,
+        "tokens_per_second": 58.00856586387446
+      }
+    },
+    {
+      "id": "V37",
+      "output": "For our final storage comparison, write this technical question to the vendor: What is the maximum sustained write rate with encryption enabled and RAID 6 active?",
+      "performance": {
+        "input_tokens": 103,
+        "output_tokens": 30,
+        "generation_seconds": 0.5523187919752672,
+        "tokens_per_second": 54.316457154590886
+      }
+    },
+    {
+      "id": "V38",
+      "output": "For the production system prompt, please turn the model instructions into a numbered priority list:\n1. Safety constraints\n2. Output schema\n3. Style preferences",
+      "performance": {
+        "input_tokens": 100,
+        "output_tokens": 32,
+        "generation_seconds": 0.5774773329903837,
+        "tokens_per_second": 55.41343040131563
+      }
+    },
+    {
+      "id": "V39",
+      "output": "Class reminder: The ecology quiz is next Monday. Not this Friday.\n\nChapters 6 through 8 are included.\n\nBring a pencil, your field notebook, and the calculator you used in lab.",
+      "performance": {
+        "input_tokens": 108,
+        "output_tokens": 42,
+        "generation_seconds": 0.6802337910048664,
+        "tokens_per_second": 61.743477838635535
+      }
+    },
+    {
+      "id": "V40",
+      "output": "Can you ask the pool manager whether Lane 4 will be open for lap swimming from 6 to 7 tomorrow, or is the regional team still using all the deep lanes?",
+      "performance": {
+        "input_tokens": 108,
+        "output_tokens": 36,
+        "generation_seconds": 0.6085967920080293,
+        "tokens_per_second": 59.152464279708276
+      }
+    },
+    {
+      "id": "V41",
+      "output": "Dispatch this is Unit 46. We have smoke showing from a detached garage at 812 Birch Lane. No visible flames yet. Send one additional engine and advise police. The driveway is blocked.",
+      "performance": {
+        "input_tokens": 109,
+        "output_tokens": 42,
+        "generation_seconds": 0.6775976249773521,
+        "tokens_per_second": 61.98368833037719
+      }
+    },
+    {
+      "id": "V42",
+      "output": "Radio check. Command, Bravo. Can you hear command? Command is not receiving. Bravo on channel 3. Should we switch to channel 5 or return to the staging area?",
+      "performance": {
+        "input_tokens": 107,
+        "output_tokens": 37,
+        "generation_seconds": 0.6134671669860836,
+        "tokens_per_second": 60.31292625125827
+      }
+    },
+    {
+      "id": "V43",
+      "output": "The boarding reservation is for 2 rabbits from October 6 through October 10. Can they share the larger enclosure and do we need to bring their usual pellets?",
+      "performance": {
+        "input_tokens": 106,
+        "output_tokens": 34,
+        "generation_seconds": 0.6093171249958687,
+        "tokens_per_second": 55.80017138075765
+      }
+    },
+    {
+      "id": "V44",
+      "output": "Can you transcribe the handwritten caption exactly, including the crossed out surname but mark uncertain letters with square brackets? Don't modernize the spelling.",
+      "performance": {
+        "input_tokens": 102,
+        "output_tokens": 29,
+        "generation_seconds": 0.6551574580080342,
+        "tokens_per_second": 44.26416832401284
+      }
+    },
+    {
+      "id": "V45",
+      "output": "Could you categorize the bike lock under transportation, not recreation, and split the $90 hardware store purchase into $65 home repair and $25 garden?",
+      "performance": {
+        "input_tokens": 105,
+        "output_tokens": 34,
+        "generation_seconds": 0.7018720829801168,
+        "tokens_per_second": 48.441875413590395
+      }
+    },
+    {
+      "id": "V46",
+      "output": "Dear Loan Officer,\n\nI have attached the pay stubs for May and June. However, the April file is missing from my employer's portal. A bank statement is acceptable instead.\n\nSincerely,\nRemy",
+      "performance": {
+        "input_tokens": 111,
+        "output_tokens": 44,
+        "generation_seconds": 0.7012854999920819,
+        "tokens_per_second": 62.74192180003265
+      }
+    },
+    {
+      "id": "V47",
+      "output": "Could you explain why the estimate lists 3.5 labor hours for the alternator? The phone quote said 2 hours and did not mention a diagnostic fee.",
+      "performance": {
+        "input_tokens": 106,
+        "output_tokens": 33,
+        "generation_seconds": 0.5919808329781517,
+        "tokens_per_second": 55.745048085396256
+      }
+    },
+    {
+      "id": "V48",
+      "output": "The accessible shuttle was booked for 8:45 but arrived at 9:30. Passenger missed appointment R614. Can you document the delay and reschedule the ride?",
+      "performance": {
+        "input_tokens": 107,
+        "output_tokens": 39,
+        "generation_seconds": 0.693281540996395,
+        "tokens_per_second": 56.254202216243335
+      }
+    },
+    {
+      "id": "V49",
+      "output": "Application checklist:\n- 2 passport photos\n- Proof of address\n- Signed declaration page\n- Fee receipt\n\nBring originals and 1 copy of each.",
+      "performance": {
+        "input_tokens": 104,
+        "output_tokens": 33,
+        "generation_seconds": 0.5742239160172176,
+        "tokens_per_second": 57.46887073057843
+      }
+    },
+    {
+      "id": "V50",
+      "output": "Dear Costume Rental,\n\nThe return sheet lists 4 hats, but we received 3. Could you check the packing photo before charging the missing item fee?\n\nRegards,\nTessa",
+      "performance": {
+        "input_tokens": 107,
+        "output_tokens": 38,
+        "generation_seconds": 0.6354466659831814,
+        "tokens_per_second": 59.800455387086345
+      }
+    },
+    {
+      "id": "C01",
+      "output": "The deployment finished successfully. All services are healthy and no customer action is required.",
+      "performance": {
+        "input_tokens": 269,
+        "output_tokens": 16,
+        "generation_seconds": 0.6602462920127437,
+        "tokens_per_second": 24.233381078482722
+      }
+    },
+    {
+      "id": "C02",
+      "output": "Can we move the review to Friday? Because Maya is unavailable Thursday.",
+      "performance": {
+        "input_tokens": 269,
+        "output_tokens": 14,
+        "generation_seconds": 0.5752000840147957,
+        "tokens_per_second": 24.339356667479002
+      }
+    },
+    {
+      "id": "C03",
+      "output": "Please send the revised contract to Priya this afternoon.",
+      "performance": {
+        "input_tokens": 266,
+        "output_tokens": 11,
+        "generation_seconds": 0.5527794169902336,
+        "tokens_per_second": 19.89943847745392
+      }
+    },
+    {
+      "id": "C04",
+      "output": "The main issue is that the export takes too long.",
+      "performance": {
+        "input_tokens": 268,
+        "output_tokens": 11,
+        "generation_seconds": 0.566649000014877,
+        "tokens_per_second": 19.4123699145524
+      }
+    },
+    {
+      "id": "C05",
+      "output": "The important thing is that we keep the existing backup.",
+      "performance": {
+        "input_tokens": 268,
+        "output_tokens": 11,
+        "generation_seconds": 0.57010874999105,
+        "tokens_per_second": 19.29456441454843
+      }
+    },
+    {
+      "id": "C06",
+      "output": "Please confirm that the customer received the refund.",
+      "performance": {
+        "input_tokens": 264,
+        "output_tokens": 9,
+        "generation_seconds": 0.5708631669986062,
+        "tokens_per_second": 15.76559939454278
+      }
+    },
+    {
+      "id": "C07",
+      "output": "I wanted to ask whether actually please cancel tomorrow's check-in.",
+      "performance": {
+        "input_tokens": 267,
+        "output_tokens": 13,
+        "generation_seconds": 0.5663592919881921,
+        "tokens_per_second": 22.953627112506233
+      }
+    },
+    {
+      "id": "C08",
+      "output": "Schedule the review for Thursday.",
+      "performance": {
+        "input_tokens": 263,
+        "output_tokens": 6,
+        "generation_seconds": 0.5088049579935614,
+        "tokens_per_second": 11.792337919938127
+      }
+    },
+    {
+      "id": "C09",
+      "output": "Please review the sight migration plan before lunch.",
+      "performance": {
+        "input_tokens": 263,
+        "output_tokens": 9,
+        "generation_seconds": 0.5277593339851592,
+        "tokens_per_second": 17.053227523311
+      }
+    },
+    {
+      "id": "C10",
+      "output": "Store the session token in Redis for 15 minutes.",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 12,
+        "generation_seconds": 0.564576709002722,
+        "tokens_per_second": 21.254861932219992
+      }
+    },
+    {
+      "id": "C11",
+      "output": "We received 1,246 responses.",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 10,
+        "generation_seconds": 0.544781292002881,
+        "tokens_per_second": 18.355990095098782
+      }
+    },
+    {
+      "id": "C12",
+      "output": "The workshop starts on September 23, 2026.",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 15,
+        "generation_seconds": 0.5827042500022799,
+        "tokens_per_second": 25.742046672804104
+      }
+    },
+    {
+      "id": "C13",
+      "output": "The call begins at 4:30 PM.",
+      "performance": {
+        "input_tokens": 263,
+        "output_tokens": 11,
+        "generation_seconds": 0.5380317500093952,
+        "tokens_per_second": 20.444890101388843
+      }
+    },
+    {
+      "id": "C14",
+      "output": "The replacement costs $49 and weighs 2.5 kilograms.",
+      "performance": {
+        "input_tokens": 267,
+        "output_tokens": 14,
+        "generation_seconds": 0.5547827920236159,
+        "tokens_per_second": 25.23510137892678
+      }
+    },
+    {
+      "id": "C15",
+      "output": "Send the receipt to finance@acme.com",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 9,
+        "generation_seconds": 0.5373278750048485,
+        "tokens_per_second": 16.749549797539892
+      }
+    },
+    {
+      "id": "C16",
+      "output": "The documentation is available at docs.example.com/setup",
+      "performance": {
+        "input_tokens": 267,
+        "output_tokens": 9,
+        "generation_seconds": 0.538967957982095,
+        "tokens_per_second": 16.698580809323342
+      }
+    },
+    {
+      "id": "C17",
+      "output": "Yes, I can send the draft today; the figures will follow tomorrow. Great work everyone!",
+      "performance": {
+        "input_tokens": 277,
+        "output_tokens": 19,
+        "generation_seconds": 0.6075061669980641,
+        "tokens_per_second": 31.275402674324695
+      }
+    },
+    {
+      "id": "C18",
+      "output": "Maya said, “The release is ready.”",
+      "performance": {
+        "input_tokens": 266,
+        "output_tokens": 10,
+        "generation_seconds": 0.5342518329853192,
+        "tokens_per_second": 18.71776451214308
+      }
+    },
+    {
+      "id": "C19",
+      "output": "The migration is complete.\n\nCustomers do not need to take any action.",
+      "performance": {
+        "input_tokens": 271,
+        "output_tokens": 15,
+        "generation_seconds": 0.5587900420068763,
+        "tokens_per_second": 26.84371386814265
+      }
+    },
+    {
+      "id": "C20",
+      "output": "- Apples\n- Rice\n- Olive oil",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 10,
+        "generation_seconds": 0.5284887090092525,
+        "tokens_per_second": 18.92188012634519
+      }
+    },
+    {
+      "id": "C21",
+      "output": "1. Back up the database\n2. Deploy the service\n3. Run the smoke tests",
+      "performance": {
+        "input_tokens": 272,
+        "output_tokens": 19,
+        "generation_seconds": 0.6002045840141363,
+        "tokens_per_second": 31.65587285743306
+      }
+    },
+    {
+      "id": "C22",
+      "output": "Dear Anika,\n\nThank you for reviewing the proposal.\n\nBest regards,\n\nSam",
+      "performance": {
+        "input_tokens": 274,
+        "output_tokens": 18,
+        "generation_seconds": 0.6339090830006171,
+        "tokens_per_second": 28.39523913239539
+      }
+    },
+    {
+      "id": "C23",
+      "output": "# Weekly Status\n\nAll planned work is complete.",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 10,
+        "generation_seconds": 0.5465105840121396,
+        "tokens_per_second": 18.297907291357912
+      }
+    },
+    {
+      "id": "C24",
+      "output": "The word comma appears twice in the first paragraph.",
+      "performance": {
+        "input_tokens": 264,
+        "output_tokens": 10,
+        "generation_seconds": 0.5396753750101198,
+        "tokens_per_second": 18.529657759189927
+      }
+    },
+    {
+      "id": "C25",
+      "output": "Attach the file quarterly report final.pdf and reference ticket ACM-4-2-7.",
+      "performance": {
+        "input_tokens": 274,
+        "output_tokens": 18,
+        "generation_seconds": 0.6108412079920527,
+        "tokens_per_second": 29.467560086801132
+      }
+    },
+    {
+      "id": "C26",
+      "output": "Hi Priya,\n\nCould you send the revised budget to finance at acme.com by 4:00 PM?\n\nThanks,\nDaniel",
+      "performance": {
+        "input_tokens": 288,
+        "output_tokens": 30,
+        "generation_seconds": 0.7075822080078069,
+        "tokens_per_second": 42.397900428368324
+      }
+    },
+    {
+      "id": "C27",
+      "output": "1. Archive the last 30 days of logs.\n2. Increase the timeout to 45 seconds.\n3. Restart the API gateway.",
+      "performance": {
+        "input_tokens": 282,
+        "output_tokens": 32,
+        "generation_seconds": 0.7281060839886777,
+        "tokens_per_second": 43.949639624900605
+      }
+    },
+    {
+      "id": "C28",
+      "output": "- Coffee beans\n- Coffee filters\n- Oat milk\n- Dish soap",
+      "performance": {
+        "input_tokens": 275,
+        "output_tokens": 16,
+        "generation_seconds": 0.5868372500117403,
+        "tokens_per_second": 27.26479956696666
+      }
+    },
+    {
+      "id": "C29",
+      "output": "# Meeting Notes\n\n**Date:** August 30, 2026\n**Time:** 10:30 AM\n\n- Finalize the launch copy\n- Confirm the support schedule\n- Send the customer notice",
+      "performance": {
+        "input_tokens": 295,
+        "output_tokens": 47,
+        "generation_seconds": 0.8677194170013536,
+        "tokens_per_second": 54.164974390479365
+      }
+    },
+    {
+      "id": "C30",
+      "output": "Ravi said, “We can launch on Monday. No, Tuesday.”",
+      "performance": {
+        "input_tokens": 269,
+        "output_tokens": 15,
+        "generation_seconds": 0.587268416013103,
+        "tokens_per_second": 25.541983173270676
+      }
+    },
+    {
+      "id": "C31",
+      "output": "Upgrade the service to version 2.4.1, then check the guide at docs.example.com/upgrade.",
+      "performance": {
+        "input_tokens": 279,
+        "output_tokens": 23,
+        "generation_seconds": 0.6459473339782562,
+        "tokens_per_second": 35.60661804786429
+      }
+    },
+    {
+      "id": "C32",
+      "output": "Ship 3 boxes to 24 Lake View Road, Apartment 7, Kathmandu.",
+      "performance": {
+        "input_tokens": 270,
+        "output_tokens": 20,
+        "generation_seconds": 0.6268558750161901,
+        "tokens_per_second": 31.90526051858962
+      }
+    },
+    {
+      "id": "C33",
+      "output": "Move the demo from September 10th at 2:00 PM. No, make that September 11th at 3:30 PM.",
+      "performance": {
+        "input_tokens": 276,
+        "output_tokens": 34,
+        "generation_seconds": 0.7380234590091277,
+        "tokens_per_second": 46.068996296741695
+      }
+    },
+    {
+      "id": "C34",
+      "output": "**Quarterly results**\n\n*   Revenue increased by 12%\n*   Support costs fell by 8.5%\n*   Cash balance is $2.3 million",
+      "performance": {
+        "input_tokens": 287,
+        "output_tokens": 38,
+        "generation_seconds": 0.7615003749961033,
+        "tokens_per_second": 49.90148560359468
+      }
+    },
+    {
+      "id": "C35",
+      "output": "Steps:\n1. Download the archive.\n2. Unzip it into the tools folder.\n3. Run setup.sh",
+      "performance": {
+        "input_tokens": 274,
+        "output_tokens": 26,
+        "generation_seconds": 0.6851355830149259,
+        "tokens_per_second": 37.94869314127212
+      }
+    },
+    {
+      "id": "C36",
+      "output": "The pilot went well.\n\n12 people completed onboarding, and 10 activated their accounts.\n\nThe next session is Friday at 9 AM.",
+      "performance": {
+        "input_tokens": 288,
+        "output_tokens": 32,
+        "generation_seconds": 0.7549262919928879,
+        "tokens_per_second": 42.38824417616319
+      }
+    },
+    {
+      "id": "C37",
+      "output": "Hello Marcus,\n\nPlease send the invoice to billing@northstar.io.\n\nKind regards,\n\nLena",
+      "performance": {
+        "input_tokens": 287,
+        "output_tokens": 22,
+        "generation_seconds": 0.6410265419981442,
+        "tokens_per_second": 34.319951762720756
+      }
+    },
+    {
+      "id": "C38",
+      "output": "Bug report: The app crashes when opening settings.json.\n\nAttach crash log 20260830.0 and reference issue VOI-918.",
+      "performance": {
+        "input_tokens": 292,
+        "output_tokens": 36,
+        "generation_seconds": 0.7920382499869447,
+        "tokens_per_second": 45.452350313376144
+      }
+    },
+    {
+      "id": "C39",
+      "output": "Note: The trial period ends tomorrow, but the word \"period\" in the heading should remain lowercase.",
+      "performance": {
+        "input_tokens": 274,
+        "output_tokens": 21,
+        "generation_seconds": 0.6557822079921607,
+        "tokens_per_second": 32.02282670079856
+      }
+    },
+    {
+      "id": "C40",
+      "output": "\"Good writing is clear writing.\"\n- Maya Chen",
+      "performance": {
+        "input_tokens": 269,
+        "output_tokens": 11,
+        "generation_seconds": 0.5603045000170823,
+        "tokens_per_second": 19.632182143217904
+      }
+    },
+    {
+      "id": "C41",
+      "output": "Recipe:\n\n1. Mix 2 cups of flour and 1 teaspoon of salt.\n2. Add 300 milliliters of water.\n3. Bake for 40 minutes at 200 degrees Celsius.",
+      "performance": {
+        "input_tokens": 291,
+        "output_tokens": 49,
+        "generation_seconds": 0.8879239580128342,
+        "tokens_per_second": 55.18490582195975
+      }
+    },
+    {
+      "id": "C42",
+      "output": "Travel plan:\n- September 5th flight at 7:15 AM\n- September 6th workshop at 9:00 AM\n- Hotel budget: $180 per night",
+      "performance": {
+        "input_tokens": 287,
+        "output_tokens": 42,
+        "generation_seconds": 0.7966200420050882,
+        "tokens_per_second": 52.72275085407873
+      }
+    },
+    {
+      "id": "C43",
+      "output": "**Customer Update**\n\n3. Updates:\n- The mobile fix is live.\n- The desktop release is in review.\n- Support has answered all open tickets.",
+      "performance": {
+        "input_tokens": 286,
+        "output_tokens": 35,
+        "generation_seconds": 0.7388053329777904,
+        "tokens_per_second": 47.373778230499255
+      }
+    },
+    {
+      "id": "C44",
+      "output": "The CCDN cache should expire after 300 seconds and the key belongs in red.",
+      "performance": {
+        "input_tokens": 275,
+        "output_tokens": 19,
+        "generation_seconds": 0.6147652080107946,
+        "tokens_per_second": 30.906108140827612
+      }
+    },
+    {
+      "id": "C45",
+      "output": "Question: Are we still planning to launch Friday?\n\nAnswer: Yes, assuming the final review passes.",
+      "performance": {
+        "input_tokens": 278,
+        "output_tokens": 21,
+        "generation_seconds": 0.6467371670005377,
+        "tokens_per_second": 32.470686812997926
+      }
+    },
+    {
+      "id": "C46",
+      "output": "Hello, this is Nina from Acme Support. I'm calling about ticket A-C-7-4-2. Please call me back at 5:00 PM. Thank you.",
+      "performance": {
+        "input_tokens": 287,
+        "output_tokens": 39,
+        "generation_seconds": 0.7852571659896057,
+        "tokens_per_second": 49.66525832445092
+      }
+    },
+    {
+      "id": "C47",
+      "output": "**Launch Checklist**\n\n*   Release approved\n*   Deploy version 3.2\n*   Email status at acme.com after launch",
+      "performance": {
+        "input_tokens": 288,
+        "output_tokens": 29,
+        "generation_seconds": 0.6947388749977108,
+        "tokens_per_second": 41.74230209889371
+      }
+    },
+    {
+      "id": "C48",
+      "output": "Dear team,\n\nThe launch is complete. All systems are healthy. Please report issues at status.example.com/support. Best, Arjun",
+      "performance": {
+        "input_tokens": 291,
+        "output_tokens": 27,
+        "generation_seconds": 0.7108974999864586,
+        "tokens_per_second": 37.980158884388125
+      }
+    },
+    {
+      "id": "C49",
+      "output": "The migration completed successfully, and no customer action is required.",
+      "performance": {
+        "input_tokens": 267,
+        "output_tokens": 12,
+        "generation_seconds": 0.5490404590091202,
+        "tokens_per_second": 21.856312778218527
+      }
+    },
+    {
+      "id": "C50",
+      "output": "Could you send the revised proposal before Friday afternoon?",
+      "performance": {
+        "input_tokens": 265,
+        "output_tokens": 10,
+        "generation_seconds": 0.5460669169842731,
+        "tokens_per_second": 18.31277392746355
+      }
+    }
+  ]
+}

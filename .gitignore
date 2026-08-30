@@ -1,15 +1,23 @@
-# macOS and editor files
+# macOS and editors
 .DS_Store
 .idea/
 .vscode/
 *.swp
+
+# Python and local environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
 
 # Temporary and generated files
 tmp/
 temp/
 dist/
 coverage/
-*.log
+*.log.tmp
 
 # Local model directories and caches
 model/
@@ -34,8 +42,6 @@ huggingface/
 *.h5
 *.pb
 *.params
-
-# Common large model shards
 pytorch_model*.bin
 model-*.bin
 consolidated*.pth

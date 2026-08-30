@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reproducible 100-case comparison of transcript cleanup models across two labeled datasets on Apple Silicon.">
+  <title>VoiceInk Cleanup Benchmark</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="#top" aria-label="VoiceInk Cleanup Benchmark home">V/C&nbsp; Benchmark</a>
+    <nav aria-label="Benchmark sections">
+      <a href="#results">Results</a>
+      <a href="#cases">Case file</a>
+      <a href="#viewer">JSONL viewer</a>
+      <a href="#methods">Method</a>
+      <a href="../../dataset-generator/README.md">Dataset generator</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="edition">Edition 01 · 30 August 2026</p>
+        <h1>Four cleanup systems,<br><em>one hundred transcripts.</em></h1>
+        <p class="dek">An inspectable comparison of three on-device models and GPT-5.6 Sol at low reasoning across two separately labeled 50-case datasets. Every output, prompt choice, score, and local runtime measurement is included.</p>
+      </div>
+      <aside class="hero-note" aria-label="Benchmark scope">
+        <p>Two 50-case sources sit side by side: the enriched VoiceInk validation sample and a separately curated cleanup set. It is an evidence browser, not a universal leaderboard.</p>
+        <dl>
+          <div><dt>Seeds</dt><dd>20260830 · 20260831</dd></div>
+          <div><dt>Machine</dt><dd>M2 Pro · 16 GB</dd></div>
+          <div><dt>Decoding</dt><dd>Deterministic</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="verdict" id="results">
+      <div class="section-heading">
+        <h2>What the sample says</h2>
+        <p>Similarity measures closeness to the human reference. Exact match demands every character, space, and line break agree.</p>
+      </div>
+      <div class="dataset-switch">
+        <label for="dataset-view">Results dataset</label>
+        <select id="dataset-view">
+          <option value="all">Combined · 100 cases</option>
+          <option value="voiceink-validation">VoiceInk validation · 50 cases</option>
+          <option value="curated-sample-50">Curated cleanup pairs · 50 cases</option>
+        </select>
+      </div>
+      <div class="verdict-layout">
+        <div class="lead-finding" id="lead-finding"></div>
+        <div class="metric-key">
+          <p><b>Edit similarity</b> uses normalized Levenshtein similarity. Higher is closer.</p>
+          <p><b>chrF++</b> compares character and word n-grams. Higher is closer.</p>
+          <p><b>WER</b> counts word substitutions, insertions, and deletions. Lower is better.</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="ranking-table">
+          <thead>
+            <tr>
+              <th scope="col">Model / configuration</th>
+              <th scope="col">Edit similarity</th>
+              <th scope="col">chrF++</th>
+              <th scope="col">WER ↓</th>
+              <th scope="col">Exact</th>
+              <th scope="col">Mean latency</th>
+              <th scope="col">Median latency</th>
+              <th scope="col">Median tok/s</th>
+              <th scope="col">Peak memory</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="field" aria-labelledby="field-title">
+      <div class="section-heading split">
+        <div>
+          <h2 id="field-title">Quality field</h2>
+          <p>Each point is one model. Rightward is closer to the reference; upward means fewer word errors.</p>
+        </div>
+        <div class="legend" id="chart-legend"></div>
+      </div>
+      <div class="chart-shell">
+        <svg id="quality-chart" viewBox="0 0 1000 560" role="img" aria-label="Scatter plot of edit similarity against one minus word error rate"></svg>
+      </div>
+    </section>
+
+    <section class="models" aria-labelledby="models-title">
+      <div class="section-heading">
+        <h2 id="models-title">Four deliberately different runs</h2>
+          <p>The prompt is part of each model. Giving every model the same wrapper would be a different experiment.</p>
+      </div>
+      <div class="model-strata" id="model-strata"></div>
+    </section>
+
+    <section class="case-file" id="cases">
+      <div class="section-heading case-heading">
+        <div>
+          <h2>The case file</h2>
+          <p>Inspect the source, reference, and every response. Sort toward failures or longer inputs to see where models diverge.</p>
+        </div>
+        <div class="case-count" id="case-count">100 cases</div>
+      </div>
+
+      <div class="case-tools">
+        <label>Dataset
+          <select id="case-dataset">
+            <option value="all">Both datasets</option>
+            <option value="voiceink-validation">VoiceInk validation</option>
+            <option value="curated-sample-50">Curated cleanup pairs</option>
+          </select>
+        </label>
+        <label>Case
+          <select id="case-select"></select>
+        </label>
+        <label>Order by
+          <select id="case-order">
+            <option value="source">Validation order</option>
+            <option value="hardest">Hardest average case</option>
+            <option value="spread">Largest model spread</option>
+            <option value="longest">Longest input first</option>
+          </select>
+        </label>
+        <div class="case-nav" aria-label="Case navigation">
+          <button id="previous-case" type="button">Previous case</button>
+          <button id="next-case" type="button">Next case</button>
+        </div>
+      </div>
+
+      <article class="case-stage">
+        <header class="case-meta" id="case-meta"></header>
+        <div class="source-reference">
+          <section>
+            <h3>Raw ASR</h3>
+            <pre id="case-input"></pre>
+          </section>
+          <section>
+            <h3>Human reference</h3>
+            <pre id="case-reference"></pre>
+          </section>
+        </div>
+        <div class="outputs" id="case-outputs"></div>
+      </article>
+    </section>
+
+    <section class="dataset-viewer" id="viewer" aria-labelledby="viewer-title">
+      <div class="section-heading viewer-heading">
+        <div>
+          <h2 id="viewer-title">JSONL Dataset Viewer</h2>
+          <p>Open generated cleanup pairs as readable records. Search and filter the metadata, then compare raw ASR with the target transcript. Files selected from your computer stay in the browser.</p>
+        </div>
+        <div class="viewer-count" id="jsonl-count">0 records</div>
+      </div>
+
+      <div class="viewer-load">
+        <label>Repository dataset
+          <select id="jsonl-source">
+            <option value="../../dataset-generator/data/sample-50.jsonl">Generator sample · 50 pairs</option>
+            <option value="../artifacts/sample.jsonl">Benchmark corpus · 100 cases</option>
+            <option value="../validation.jsonl">Validation split · 1,829 pairs</option>
+            <option value="../training.jsonl">Training split · full JSONL</option>
+          </select>
+        </label>
+        <label class="viewer-file-label">Or choose local JSONL
+          <input id="jsonl-file" type="file" accept=".jsonl,.ndjson,application/json,application/x-ndjson">
+        </label>
+      </div>
+      <p class="viewer-status" id="jsonl-status" aria-live="polite"></p>
+
+      <div class="viewer-empty" id="jsonl-empty">
+        <p>Choose a repository dataset or a local JSONL file to begin.</p>
+      </div>
+
+      <div id="jsonl-workspace" hidden>
+        <div class="viewer-filters" aria-label="JSONL record filters">
+          <label>Search
+            <input id="jsonl-search" type="search" placeholder="Content, ID, category, or metadata">
+          </label>
+          <label>Record type
+            <select id="jsonl-type"><option value="">All record types</option></select>
+          </label>
+          <label>Category
+            <select id="jsonl-category"><option value="">All categories</option></select>
+          </label>
+          <label>Language
+            <select id="jsonl-language"><option value="">All languages</option></select>
+          </label>
+          <button id="jsonl-clear" type="button">Clear filters</button>
+        </div>
+
+        <div class="viewer-table-wrap">
+          <table class="viewer-table">
+            <thead><tr><th>ID</th><th>Raw ASR preview</th><th>Category</th><th>Record type</th><th>Language</th></tr></thead>
+            <tbody id="jsonl-rows"></tbody>
+          </table>
+        </div>
+        <p class="viewer-limit" id="jsonl-limit-note" hidden>Showing the first 500 matching rows. Narrow the filters to inspect later records.</p>
+
+        <article class="viewer-detail" id="jsonl-detail" hidden>
+          <header>
+            <span id="jsonl-detail-id"></span>
+            <h3 id="jsonl-detail-title"></h3>
+          </header>
+          <div class="viewer-pair">
+            <section><h4>Raw ASR</h4><div class="viewer-rich" id="jsonl-input"></div></section>
+            <section><h4>Target transcript</h4><div class="viewer-rich" id="jsonl-output"></div></section>
+          </div>
+          <div class="viewer-metadata" id="jsonl-metadata"></div>
+          <details><summary>System instruction</summary><p id="jsonl-system"></p></details>
+          <details><summary>Raw JSON</summary><pre id="jsonl-raw"></pre></details>
+        </article>
+      </div>
+    </section>
+
+    <section class="methods" id="methods">
+      <div class="method-intro">
+        <h2>Method, without the black box</h2>
+        <p>The first dataset contains the original twenty seeded-random validation rows plus thirty longer additions. The second contains all fifty supplied curated input/reference pairs, preserved with their category metadata. Local models ran sequentially on the same machine. Hosted-provider memory and throughput are not exposed.</p>
+      </div>
+      <div class="method-columns">
+        <section>
+          <h3>S1-mini configuration</h3>
+          <p>Its README is followed exactly: required system prompt, required control line, greedy decoding, and <code>enable_thinking=False</code>. Styling is <code>semi-formal</code>, structure is <code>prose</code>, and context switches to <code>email</code> only for email-shaped references.</p>
+        </section>
+        <section>
+          <h3>Local measurements</h3>
+          <p>Response latency is wall-clock generation time for each local response. The table reports arithmetic mean and median for the selected dataset view. Tokens per second is output tokens divided by the same measured interval. Peak memory is process peak RSS or the llama.cpp server process-tree peak.</p>
+        </section>
+        <section>
+          <h3>Read the scores carefully</h3>
+          <p>References encode one preferred rendering. A colon instead of a comma can be sensible and still lose exact match. Dataset-level results remain separate because the validation sample and curated pairs have different construction and difficulty.</p>
+        </section>
+      </div>
+      <div class="downloads">
+        <h3>Reproduce or audit</h3>
+        <a href="../artifacts/sample.jsonl" download>Download sampled cases <span>JSONL</span></a>
+        <a href="../artifacts/benchmark-results.json" download>Download complete results <span>JSON</span></a>
+        <a href="../artifacts/case-results.csv" download>Download flat case results <span>CSV</span></a>
+        <a href="../benchmark/README.md">Read reproduction notes <span>MD</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>VoiceInk Cleanup Benchmark · fixed-seed exploratory comparison</p>
+    <a href="#top">Return to top</a>
+  </footer>
+
+  <template id="output-template">
+    <section class="output-row">
+      <header>
+        <div><span class="model-dot"></span><h3></h3></div>
+        <div class="output-score"></div>
+      </header>
+      <pre></pre>
+      <dl class="output-metrics"></dl>
+    </section>
+  </template>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
