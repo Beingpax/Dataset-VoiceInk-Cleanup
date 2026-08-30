@@ -24,7 +24,7 @@ The default cleanup policy is:
 1. Restore punctuation, capitalization, and paragraph structure.
 2. Remove unintentional fillers, repetitions, abandoned false starts, and stutters.
 3. Resolve explicit self-corrections in favor of the speaker's final intended wording.
-4. Apply clearly dictated formatting commands, such as "new paragraph" or "open quote."
+4. Infer document structure from the content and natural discourse: paragraphs, email layout, greetings, sign-offs, quotations, and lists should not require the speaker to name the structure. Long passages should be divided into coherent paragraphs at genuine topic, purpose, speaker, or discourse shifts even when the raw ASR contains no spoken "new paragraph" or "new line" command. Do not add paragraph breaks merely because a passage is long; keep closely related sentences together. Apply naturally dictatable control phrases such as "new paragraph," "new line," or literal punctuation when they are actually spoken.
 5. Normalize numbers, dates, times, currency, measurements, email addresses, URLs, and common identifiers when the intended representation is unambiguous.
 6. Correct obvious spelling and speech-recognition substitutions when the intended wording is strongly supported by context.
 7. Preserve meaning, factual content, names, technical terms, tone, and useful detail.
@@ -232,15 +232,22 @@ The taxonomy should be versioned. New categories may be added without rewriting 
 ## 10. Pair construction rules
 
 1. Preserve a coherent semantic unit; do not split in the middle of a self-correction or dictated structure.
-2. Match the length distribution of real deployment traffic.
+2. Match the length distribution of real deployment traffic. Within every principal category that has enough records to measure, at least 20% should be longer utterances of roughly 30-40 words or more; do not let a category collapse into short template fragments.
 3. Correct every issue covered by the active policy.
 4. Use one canonical output per identical input and instruction.
 5. Do not include chain-of-thought, edit explanations, or markup in the target.
 6. Do not silently turn ambiguous content into a confident assertion.
 7. Preserve personal voice unless a style transformation is explicitly requested.
-8. Keep unusual but intentional grammar when changing it would alter tone or identity.
-9. Normalize representations consistently according to a written style guide.
-10. Prefer authentic recognition errors over generic grammatical mistakes.
+8. Preserve punctuation and capitalization that the recognizer already placed correctly. Raw ASR inputs must reflect a realistic mixture: some may be lowercase and unpunctuated, some may contain partial or imperfect punctuation, and some may already have correct punctuation and capitalization even when another cleanup behavior is required.
+9. Do not manufacture a punctuation or capitalization error merely to make an example look like ASR. Label `punctuation` or `capitalization` only when the target actually changes that feature.
+10. For longer inputs, infer paragraph boundaries from semantic organization rather than requiring dictated layout commands. Use multiple paragraphs when the speaker moves between distinct but related ideas, stages, audiences, or purposes. Do not split every sentence into its own paragraph, and do not break one continuous idea into arbitrary chunks based only on word count.
+11. Formatting must not become summarization. Do not replace complete sentences with shorter labels, telegraphic bullets, headings, or fragments that omit the speaker's verbs, qualifiers, relationships, or useful detail. A list or structured layout may reorganize presentation only when every substantive statement remains recoverable in the target.
+12. Keep unusual but intentional grammar when changing it would alter tone or identity.
+13. Normalize representations consistently according to a written style guide.
+14. Prefer authentic recognition errors over generic grammatical mistakes.
+15. Raw inputs must sound like plausible speech captured by a recognizer. Do not manufacture telegraphic templates by deleting subjects, verbs, articles, or connective language merely to make the target look more structured. Genuine spoken fragments are allowed when the source naturally contains them, but itinerary, note, checklist, and report examples should normally retain the complete phrases and relationships a person would actually dictate.
+16. Version 1 self-corrections and false starts must be local and bounded. Use repairs to a date, time, number, name, entity, word, or short phrase, or a brief abandoned opening immediately replaced by the intended wording. Do not create examples where cleanup discards or replaces an entire paragraph, reverses the speaker's overall intent, substitutes a different request, or requires deciding which of two substantially different meanings the speaker intended.
+17. Design false-start inputs with one short, unfinished phrase followed immediately by its completion or replacement. Keep the surrounding request intact. Do not chain abandoned openings, introduce a different document or action, or use a complete rejected statement followed by “let me start again.” For example, “The legal team has to—needs to review the draft before I send it” becomes “The legal team needs to review the draft before I send it.” The raw input itself must satisfy this constraint, not merely the target.
 
 ## 11. Contrastive coverage
 
@@ -297,6 +304,9 @@ An annotator produces the clean transcript using the active policy and style gui
 A second reviewer checks:
 
 - Meaning preservation.
+- Wording and detail preservation: formatting has not compressed full statements into shorthand labels, summaries, or fragments.
+- Raw-input plausibility: the ASR text reflects natural speech or a credible recognition failure rather than an author-created sequence of keywords or template fields.
+- Correction scope: every false start or self-correction is an explicit, local repair, not a paragraph-scale retraction, broad intent change, or inferred replacement of meaning.
 - Names, numbers, and identifiers.
 - Completeness of cleanup.
 - Policy consistency.
@@ -328,6 +338,9 @@ Before training, validate that:
 - Identical inputs do not have conflicting outputs under the same policy.
 - Session and document groups do not cross dataset splits.
 - Outputs do not contain analysis prefixes or edit explanations.
+- Changed outputs are flagged for review when content-word loss is unusually high relative to the declared disfluency or self-correction edits. Structured targets must not delete verbs, qualifiers, relationships, or useful detail merely to create headings or bullets.
+- Inputs with unusually high fragment or keyword density are flagged for human review, especially when omitted subjects, verbs, articles, or connectives appear designed to force an itinerary, list, note, or form-like target.
+- False-start and self-correction records are flagged when the removed span crosses a sentence boundary, contains multiple independent claims, or changes the document's overall request or intent. Such records are excluded from version 1 unless a later policy explicitly supports broad retractions.
 - No-change records have identical input and output after permitted whitespace normalization.
 - Error-category values come from the controlled taxonomy.
 - Email addresses, URLs, numbers, and identifiers receive additional review when changed.
@@ -700,19 +713,33 @@ Version 1 has one behavior named `polished-clean-v1`.
 
 The target should look ready to paste into its destination while preserving the original meaning, information, order, and voice.
 
-### 23.2 Automatic formatting is part of the task
+### 23.2 Natural dictation and automatic formatting are part of the task
 
-The model should apply formatting when it is clearly requested or structurally implied, including:
+The model should infer formatting from meaning and discourse structure. Raw ASR must resemble something a person would naturally say, not a written annotation recipe. In particular, authors must not manufacture structure by prefixing content with phrases such as `heading`, `bullet list`, `unordered list`, `numbered list`, `recipe`, `travel plan`, `question`, or `answer` merely to force a target layout.
+
+Natural dictation must remain linguistically complete enough to be credible. Authors must not convert “On Monday, my flight departs at 6:05 AM and arrives at 9:40 AM” into an artificial keyword stream such as “Monday depart six oh five arrive nine forty.” Missing punctuation and capitalization are common ASR conditions; systematic removal of subjects, verbs, articles, and connective language is not a substitute for realistic ASR noise. Real source fragments may be retained when they genuinely occur, but synthetic examples must not create fragmentary input solely to justify aggressive formatting.
+
+Self-correction coverage is deliberately conservative in version 1. Valid patterns include “Tuesday, no, Thursday,” “three thirty, sorry, four,” a corrected name, or a brief abandoned opening such as “Could you—please send the report.” Invalid patterns include retracting a full paragraph, replacing one multi-step request with a different request, or using “let me start again” to erase several complete claims. If resolving the correction would require interpreting a major intent change rather than applying the speaker's explicit nearby replacement, the pair must not be generated for this policy.
+
+The model should apply formatting when it is structurally implied, including:
 
 - Paragraph breaks and new lines.
 - Ordered lists.
 - Unordered or bulleted lists.
 - Greetings and sign-offs.
-- Headings when explicitly dictated.
+- Headings only when a genuinely title-like standalone phrase is present; do not teach a spoken `heading` command.
 - Quotation marks.
 - Commas, periods, colons, semicolons, question marks, and exclamation marks.
 - Parentheses and dashes when clearly dictated.
-- Commands such as `new paragraph`, `new line`, `open quote`, `close quote`, `comma`, `period`, `full stop`, `colon`, `question mark`, and `exclamation mark`.
+- Naturally spoken controls such as `new paragraph`, `new line`, `open quote`, `close quote`, `comma`, `period`, `full stop`, `colon`, `question mark`, and `exclamation mark`.
+
+Most list examples must contain no spoken list or line-break instruction. Unordered lists should be inferred from a natural enumeration. Ordered lists should normally be signaled by the speaker's own sequence words—`first`, `second`, `third`, and so on—and may follow an introductory sentence. Email greetings, body paragraphs, and sign-offs should likewise receive conventional line breaks without requiring the speaker to say `new paragraph` or `new line`.
+
+Long-form examples must also teach implicit paragraphing. When an extended dictation moves from context to findings, from findings to a decision, or from a decision to next steps, the polished target should use separate coherent paragraphs even if the raw input is one uninterrupted ASR block and contains no formatting command. Paragraph boundaries must follow semantic transitions, not a fixed sentence count or word threshold. Closely related sentences should remain in the same paragraph, and short passages should not be fragmented unnecessarily.
+
+Formatting is presentation, not compression. When prose is converted into paragraphs, headings, notes, or lists, the target must retain the speaker's complete substantive statements. Authors must not shorten “The morning session starts at 9:15 and covers safety” to “9:15 AM: Safety,” because that deletes the stated subject, action, and relationship. Concision is acceptable only when it removes an eligible speech artifact or performs an unambiguous normalization, not when it summarizes content.
+
+Literal punctuation and paragraph commands remain valuable, but they are a distinct behavior and should also appear naturally inside mixed examples. Formatting words used as content must be preserved. Prosodic or lexical emphasis—repetition for emphasis, contrastive wording, a stressed name or number, or a specifically named function or variable—must survive cleanup when it is intentional rather than a disfluency.
 
 The model must distinguish a formatting command from a literal use of the same word. For example, the word `period` in "the trial period ends tomorrow" remains a word, while `period` at the end of a dictated sentence becomes punctuation when used as a command.
 
@@ -721,7 +748,7 @@ The model must distinguish a formatting command from a literal use of the same w
 Every version-1 record uses the same system instruction:
 
 ```text
-You are a transcript cleanup editor. Convert the raw ASR dictation into the finest final polished version while preserving exactly the speaker's meaning, intent, tone, information, and order. Remove filler words, repetitions, stutters, abandoned false starts, and verbal editing artifacts; resolve explicit self-corrections; correct obvious ASR spelling errors; and repair grammar only where necessary for clear, natural writing. Restore punctuation and capitalization. Apply appropriate paragraph breaks, greetings, sign-offs, quotations, headings, ordered lists, unordered lists, and clearly dictated formatting commands such as comma, period, full stop, colon, semicolon, question mark, exclamation mark, open quote, close quote, new line, and new paragraph. Normalize unambiguous dates, times, numbers, currency, measurements, email addresses, URLs, filenames, and identifiers. Do not summarize, creatively rewrite, add facts, change the speaker's meaning, alter the order of ideas, or explain your edits. Do not change wording unnecessarily. When a word such as comma, period, colon, quote, or new line is being used literally rather than as a formatting command, keep the word. Return only the polished transcript.
+You are a transcript cleanup editor. Return only the polished transcript. Faithfully preserve the speaker's meaning, information, tone, order, and intentional emphasis. Restore punctuation, capitalization, and natural document structure. Infer paragraphs, email layout, greetings, sign-offs, quotations, and ordered or unordered lists from the content without requiring spoken labels such as heading, bullet list, or numbered list. In longer passages, create coherent paragraphs at genuine topic or discourse shifts even when no new-line or new-paragraph command is spoken; keep closely related sentences together and do not split text arbitrarily by length. Formatting must not compress or summarize the content: retain complete substantive statements, including their subjects, actions, qualifiers, relationships, and useful detail, rather than replacing them with shorter labels or telegraphic bullets. Apply naturally spoken punctuation, new-line, and new-paragraph commands when present. Normalize unambiguous dates, times, numbers, currency, measurements, identifiers, email addresses, URLs, and filenames. Remove unintentional fillers, repetitions, stutters, and brief abandoned openings; resolve only explicit, local self-corrections to a word or short phrase. Do not discard complete sentences or paragraphs, infer a broad change of intent, or replace one substantive request with another. Correct obvious ASR errors. Do not summarize, creatively rewrite, add facts, reorder ideas, erase intentional emphasis, or explain edits. Preserve formatting words when they are used literally. Return only the polished transcript.
 ```
 
 ### 23.4 Approved production mixture
@@ -744,11 +771,19 @@ Because 50 examples cannot represent 45% and 5% exactly with whole records, the 
 
 This rounding applies only to the 50-pair demonstration. The full dataset should use the exact 50/45/5 allocation.
 
+The additional batch in `data/sample-50-additional.jsonl` contains 100 records, retaining its historical filename. It uses the exact allocation: 50 single-principal-error, 45 natural multi-error, and 5 no-change records. The appended half contributes 25, 22, and 3 records respectively to balance the original 25/23/2 batch.
+
+### Combined curated collection
+
+`data/curated-180.jsonl` combines the original 50, additional 30, and additional 100 records in that order. IDs are sequential across the entire collection: `sample_001` through `sample_180`. The component files use the same IDs: `sample-50.jsonl` has 001–050, `sample-30.jsonl` has 051–080, and `sample-50-additional.jsonl` has 081–180. Their historical filenames describe batches, not ID prefixes. The viewer loads the matching repository-root `public/data/curated-180.jsonl` directly. Keep it synchronized when editing component records. Benchmark artifacts retain their own existing identifiers.
+
 ### 23.5 No-change input policy
 
 No-change records must look like natural ASR output that already happens to be correct. They should not be artificial formatting demonstrations or inputs that still contain spoken formatting commands requiring conversion.
 
 The raw ASR input may already contain proper punctuation and capitalization because some recognizers produce them correctly. It may also be plain natural text whose existing presentation is already acceptable. For a genuine no-change record, the assistant output must be identical to the input.
+
+Correct or partially correct punctuation and capitalization are not limited to no-change records. A transcript can contain a filler, repetition, self-correction, normalization issue, or ASR substitution while its sentence boundaries, commas, question marks, and capitalization are already correct. Authors must preserve those correct features in the target and must not systematically lowercase or strip punctuation from raw inputs. Across each split, examples should include fully punctuated, partially punctuated, and unpunctuated ASR output in proportions informed by production traffic.
 
 ### 23.6 Approved sample schema
 
@@ -769,6 +804,16 @@ There is no `speaker_id` field.
 
 ### 23.7 Demonstration coverage
 
+#### Current authoring priorities
+
+The historical coverage list below describes existing samples, not a requirement to generate equal amounts of every niche transformation. Future generation should emphasize representative everyday dictation, including emails, messages, work updates, and conversational technical explanations. These are scenarios in which errors occur, not additional error categories.
+
+Use a small set of main authoring groups: filler removal; repetition and stutter cleanup; brief false starts and local self-corrections; punctuation, capitalization, and natural dictated formatting; and entity/technical normalization (names, numbers, dates, times, acronyms, technical terms, and addresses). Preserve no-change examples separately. Detailed error labels may remain for diagnostics without each becoming a generation quota.
+
+Prioritize fillers, repetitions, and short local false starts. Within formatting, favor ordinary punctuation and naturally spoken comma, colon, new-line, and new-paragraph commands. Do not deliberately generate open/close-quote command examples as a focus area. Filename formatting is incidental only, not a primary category to target or fill a quota for. Preserve clearly supported incidental filenames or quotations without manufacturing examples around them.
+
+Long context is a length/structure dimension across the main groups, not another error type. Keep extended passages a minority and avoid manufacturing lengthy inputs solely to exercise formatting. A smaller long-context share and revised category percentages are pending user agreement; the historical distributions below do not establish new quotas for these priorities.
+
 The sample set covers:
 
 - Punctuation and capitalization.
@@ -786,6 +831,8 @@ The sample set covers:
 - Multi-paragraph messages and emails.
 - Literal uses of words that can otherwise be formatting commands.
 - Natural correct ASR outputs requiring no change.
+
+At least 20% of the examples in each sufficiently populated record type are 30 words or longer. These longer records are distributed across categories rather than isolated in a single long-form bucket. Dates, times, numbers, currency, and measurements use forms a speaker would naturally dictate. List, heading, and email examples are driven primarily by content cues, with explicit line or punctuation commands retained only where a person might plausibly say them.
 
 ## 24. Local JSONL visualizer
 

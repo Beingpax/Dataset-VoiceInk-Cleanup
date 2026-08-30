@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import RichText from '../components/RichText.jsx';
-import { asList, humanize, parseJsonl, truncate } from '../utils/jsonl.js';
+import Picker from '../components/Picker.jsx';
+import { asList, humanize, parseJsonl } from '../utils/jsonl.js';
+import useArrowNavigation from '../hooks/useArrowNavigation.js';
 
 const sources = [
-  { id: 'generator', label: 'Generator sample', detail: '50 curated pairs', path: 'data/generator-sample.jsonl' },
-  { id: 'benchmark', label: 'Benchmark corpus', detail: '100 labeled cases', path: 'data/benchmark-sample.jsonl' },
+  { id: 'curated', label: 'Curated pairs', detail: '180 pairs', paths: ['data/curated-180.jsonl'] },
+  { id: 'benchmark', label: 'Benchmark corpus', detail: '100 labeled cases', paths: ['data/benchmark-sample.jsonl'] },
 ];
 
 function unique(records, key, flatten = false) {
@@ -12,7 +14,7 @@ function unique(records, key, flatten = false) {
 }
 
 function FilterSelect({ label, value, onChange, options, allLabel }) {
-  return <label>{label}<select value={value} onChange={event => onChange(event.target.value)}><option value="">{allLabel}</option>{options.map(option => <option key={option} value={option}>{humanize(option)}</option>)}</select></label>;
+  return <Picker label={label} value={value} onChange={onChange} options={[{ value: '', label: allLabel }, ...options.map(option => ({ value: option, label: humanize(option) }))]} />;
 }
 
 function MetaChip({ label, value }) {
@@ -21,9 +23,9 @@ function MetaChip({ label, value }) {
 
 export default function JsonlViewerPage() {
   const [records, setRecords] = useState([]);
-  const [source, setSource] = useState('generator');
-  const [sourceName, setSourceName] = useState('Generator sample');
-  const [status, setStatus] = useState('Loading generator sample…');
+  const [source, setSource] = useState('curated');
+  const [sourceName, setSourceName] = useState('Curated pairs');
+  const [status, setStatus] = useState('Loading curated pairs…');
   const [loadError, setLoadError] = useState(false);
   const [query, setQuery] = useState('');
   const [type, setType] = useState('');
@@ -31,6 +33,7 @@ export default function JsonlViewerPage() {
   const [language, setLanguage] = useState('');
   const [errorType, setErrorType] = useState('');
   const [selectedId, setSelectedId] = useState('');
+  const recordRailRef = useRef(null);
 
   const acceptText = (text, name) => {
     try {
@@ -52,15 +55,18 @@ export default function JsonlViewerPage() {
     if (!item) return;
     setSource(sourceId); setStatus(`Loading ${item.label}…`); setLoadError(false);
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}${item.path}`);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      acceptText(await response.text(), item.label);
+      const texts = await Promise.all(item.paths.map(async path => {
+        const response = await fetch(`${import.meta.env.BASE_URL}${path}`);
+        if (!response.ok) throw new Error(`HTTP ${response.status} (${path})`);
+        return response.text();
+      }));
+      acceptText(texts.join('\n'), item.label);
     } catch (error) {
       setLoadError(true); setStatus(`Could not load ${item.label}: ${error.message}`);
     }
   };
 
-  useEffect(() => { loadSource('generator'); }, []);
+  useEffect(() => { loadSource('curated'); }, []);
 
   const filtered = useMemo(() => records.filter(record =>
     (!query || record.search.includes(query.toLocaleLowerCase())) &&
@@ -71,12 +77,17 @@ export default function JsonlViewerPage() {
   ), [records, query, type, category, language, errorType]);
 
   useEffect(() => { if (!filtered.some(record => record.id === selectedId)) setSelectedId(filtered[0]?.id || ''); }, [filtered, selectedId]);
+  useEffect(() => {
+    const selectedButton = recordRailRef.current?.querySelector('[aria-selected="true"]');
+    selectedButton?.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
+  }, [selectedId]);
   const selectedIndex = filtered.findIndex(record => record.id === selectedId);
   const selected = filtered[selectedIndex];
   const move = delta => {
     if (!filtered.length) return;
     setSelectedId(filtered[(selectedIndex + delta + filtered.length) % filtered.length].id);
   };
+  useArrowNavigation({ previous: () => move(-1), next: () => move(1), enabled: filtered.length > 1 });
 
   const handleFile = async event => {
     const file = event.target.files[0];
@@ -88,11 +99,13 @@ export default function JsonlViewerPage() {
   return (
     <div className="viewer-page">
       <header className="viewer-page-head">
-        <div><p className="page-context">Dataset review workspace</p><h1>JSONL Viewer</h1><p>Filter the dataset, select a record, then review the input and expected output at full reading size.</p></div>
-        <div className="viewer-source-controls"><label>Repository dataset<select value={source} onChange={event => loadSource(event.target.value)}><option value="local" disabled>Local file</option>{sources.map(item => <option key={item.id} value={item.id}>{item.label} · {item.detail}</option>)}</select></label><label className="file-button">Choose local JSONL<input type="file" accept=".jsonl,.ndjson,application/json,application/x-ndjson" onChange={handleFile} /></label></div>
+        <div><h1>JSONL Viewer</h1></div>
+        <section className="viewer-source-bar" aria-label="Dataset source">
+          <Picker label="Dataset source" value={source} onChange={loadSource} options={[{ value: 'local', label: 'Local file', disabled: true }, ...sources.map(item => ({ value: item.id, label: `${item.label} · ${item.detail}` }))]} />
+          <label className="file-button">Open local JSONL<input type="file" accept=".jsonl,.ndjson,application/json,application/x-ndjson" onChange={handleFile} /></label>
+          <div className={`load-status ${loadError ? 'is-error' : ''}`} role={loadError ? 'alert' : 'status'}>{status}</div>
+        </section>
       </header>
-
-      <div className={`load-status ${loadError ? 'is-error' : ''}`} role={loadError ? 'alert' : 'status'}>{status}</div>
 
       <section className="filter-strip" aria-label="Dataset filters">
         <label className="search-field">Search records<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Input, output, ID, category, or metadata" /></label>
@@ -103,19 +116,21 @@ export default function JsonlViewerPage() {
         <button type="button" onClick={() => { setQuery(''); setType(''); setCategory(''); setLanguage(''); setErrorType(''); }}>Clear filters</button>
       </section>
 
-      <div className="review-workspace">
-        <aside className="record-browser" aria-label="Filtered records">
-          <header><strong>{filtered.length.toLocaleString()}</strong><span>matching records</span></header>
-          <div className="record-list">{filtered.slice(0, 1000).map((record, index) => <button key={record.id} type="button" className={record.id === selectedId ? 'is-selected' : ''} onClick={() => setSelectedId(record.id)}><span className="record-ordinal">{String(index + 1).padStart(3, '0')}</span><span className="record-copy"><strong>{record.id}</strong><small>{humanize(record.category)}</small><span className="record-preview">{truncate(record.input, 92)}</span></span></button>)}</div>
-        </aside>
+      <div className="record-selector">
+        <header><strong>{filtered.length.toLocaleString()}</strong><span>matching records</span><small>Scroll horizontally to select</small></header>
+        <div className="record-rail" ref={recordRailRef} role="listbox" aria-label="Filtered records" aria-orientation="horizontal">
+          {filtered.slice(0, 1000).map((record, index) => <button key={record.id} type="button" role="option" aria-selected={record.id === selectedId} className={record.id === selectedId ? 'is-selected' : ''} onClick={() => setSelectedId(record.id)}><span className="record-ordinal">{String(index + 1).padStart(3, '0')}</span><span className="record-copy"><strong>{record.id}</strong><small>{humanize(record.category)}</small></span></button>)}
+        </div>
+      </div>
 
+      <div className="review-workspace">
         <article className="record-review">
           {selected ? <>
-            <header className="record-review-head"><div><p>Record <strong>{selectedIndex + 1}</strong> of <strong>{filtered.length}</strong></p><h2>{selected.id}</h2><span>{humanize(selected.category)} · {humanize(selected.recordType)}</span></div><div className="record-navigation"><button type="button" onClick={() => move(-1)}>Previous</button><button type="button" onClick={() => move(1)}>Next</button></div></header>
-            <div className="transcript-comparison">
+            <header className="record-review-head"><div><p>Record <strong>{selectedIndex + 1}</strong> of <strong>{filtered.length}</strong></p><h2>{selected.id}</h2><span>{humanize(selected.category)} · {humanize(selected.recordType)}</span></div><div className="record-navigation"><button type="button" onClick={() => move(-1)}>Previous</button><button className="primary-action" type="button" onClick={() => move(1)}>Next record</button></div></header>
+            <div className="transcript-comparison-scroll" tabIndex="0" aria-label="Side-by-side transcript comparison. Scroll horizontally on narrow screens."><div className="transcript-comparison">
               <section><header><h3>Raw ASR input</h3><span>{selected.input.split(/\s+/).filter(Boolean).length} words</span></header><div className="transcript-body"><RichText text={selected.input} /></div></section>
               <section><header><h3>Target output</h3><span>{selected.output.split(/\s+/).filter(Boolean).length} words</span></header><div className="transcript-body"><RichText text={selected.output} /></div></section>
-            </div>
+            </div></div>
             <div className="record-metadata"><MetaChip label="Language" value={selected.language} /><MetaChip label="Type" value={selected.recordType} /><MetaChip label="Category" value={selected.category} />{selected.errorTypes.map(value => <MetaChip key={`error-${value}`} label="Error" value={value} />)}{selected.formattingFeatures.map(value => <MetaChip key={`format-${value}`} label="Formatting" value={value} />)}{Object.entries(selected.metadata).filter(([key]) => !['language', 'record_type', 'primary_category', 'error_types', 'formatting_features'].includes(key)).flatMap(([key, value]) => asList(value).map(item => <MetaChip key={`${key}-${item}`} label={humanize(key)} value={item} />))}</div>
             <details className="record-disclosure"><summary>System instruction</summary><p>{selected.system || 'No system instruction in this record.'}</p></details>
             <details className="record-disclosure"><summary>Raw JSON</summary><pre>{JSON.stringify(selected.raw, null, 2)}</pre></details>

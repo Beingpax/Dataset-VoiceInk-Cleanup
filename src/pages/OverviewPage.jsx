@@ -10,21 +10,20 @@ export default function OverviewPage() {
   return (
     <div className="page-stack overview-page">
       <header className="page-hero">
-        <p className="page-context">Transcript cleanup research</p>
-        <h1>Compare the systems. Inspect every transcript.</h1>
-        <p>One application for benchmark evidence, model outputs, JSONL review, and the separate dataset-authoring project.</p>
-        <div className="hero-actions">
-          <Link className="button primary" to="/viewer">Open JSONL viewer</Link>
-          <Link className="button" to="/benchmark">View benchmark</Link>
+        <div className="hero-copy">
+          <h1>Compare the systems. Inspect every transcript.</h1>
+          <div className="hero-actions">
+            <Link className="button primary" to="/viewer">Open JSONL viewer</Link>
+            <Link className="button" to="/benchmark">View benchmark</Link>
+          </div>
         </div>
+        <section className="fact-line" aria-label="Research scope">
+          <div><strong>{data.benchmark.sample_count}</strong><span>benchmark cases</span></div>
+          <div><strong>{data.models.length}</strong><span>cleanup systems</span></div>
+          <div><strong>{data.benchmark.datasets.length}</strong><span>labeled datasets</span></div>
+          <div><strong>{(leader.summary.mean_edit_similarity * 100).toFixed(1)}%</strong><span>best similarity</span></div>
+        </section>
       </header>
-
-      <section className="fact-line" aria-label="Research scope">
-        <div><strong>{data.benchmark.sample_count}</strong><span>benchmark cases</span></div>
-        <div><strong>{data.models.length}</strong><span>cleanup systems</span></div>
-        <div><strong>{data.benchmark.datasets.length}</strong><span>labeled datasets</span></div>
-        <div><strong>{(leader.summary.mean_edit_similarity * 100).toFixed(1)}%</strong><span>best mean similarity</span></div>
-      </section>
 
       <section className="editorial-split">
         <div>

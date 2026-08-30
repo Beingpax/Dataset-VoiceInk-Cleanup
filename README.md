@@ -52,7 +52,7 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 - Product, design, and implementation summaries.
 - The original dataset overview page, retained as a separate generator/authoring surface.
 
-Generated JSONL can be opened from the comparison website's **JSONL Dataset Viewer**. The viewer includes the curated generator sample as a built-in source and also accepts local JSONL files through its file picker.
+Generated JSONL can be opened from the comparison website's **JSONL Dataset Viewer**. The built-in curated source loads all 180 pairs from `public/data/curated-180.jsonl`, synchronized with `dataset-generator/data/curated-180.jsonl`. Records are numbered sequentially from `sample_001` through `sample_180`. The viewer also accepts local JSONL files through its file picker.
 
 ## Repository structure
 
