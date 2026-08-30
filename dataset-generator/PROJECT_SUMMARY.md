@@ -7,10 +7,10 @@
 ## Current scope
 
 - Text-only ASR cleanup under `polished-clean-v1`, not speech recognition, summarization, or answering the dictated request.
-- Current generator collection: none. The previous 180 pairs and their authoring/viewer copies have been removed.
-- Next planned dataset: 2,000 generated draft pairs. It has not been created by the documentation update.
-- Record-type target: 50% single-principal-error, 45% natural multi-error, and 5% unchanged.
-- The agreed 2,000-pair category allocation is 300 fillers, 300 repetition/stutters, 200 local repairs, 300 punctuation/dictated formatting, 200 lists, 250 email layout, 250 entity normalization, 100 context-inferred quotation, and 100 unchanged. This does not rebalance the benchmark; the extended-length share remains provisional.
+- Current generator collection: 5,000-pair authoring run in progress; drafts are not accepted until foreground review. The previous 180 pairs remain removed.
+- Approved target: 5,000 synthetic, AI-reviewed pairs in 50 batches. Do not describe unfinished batches as complete or human-reviewed.
+- Record-type target: 500 single-principal-error (10%), 4,250 natural multi-error (85%), and 250 unchanged (5%).
+- The agreed 5,000-pair category allocation is 750 fillers, 750 repetition/stutters, 500 local repairs, 750 punctuation/dictated formatting, 500 lists, 625 email layout, 625 entity normalization, 250 context-inferred quotation, and 250 unchanged. This does not rebalance the benchmark. Target approximately 500 extended inputs.
 
 ## Authoring decisions
 
@@ -20,14 +20,14 @@
 - Email layout means greeting, body, and sign-off, not email-address normalization. Filename and URL handling are incidental, not generation quotas.
 - Remove filler uses of “basically,” “actually,” “like,” and “I mean.” Preserve meaningful clarification and ordinary lexical uses. Conversational “like” before a number is removed under this policy; explicit “about” or “roughly” remains.
 - Keep ASR input plausible: correct, partial, and missing punctuation/capitalization all occur across categories. Never strip them systematically or manufacture keyword templates.
-- Every future raw input must contain at least 20 whitespace-separated words, including no-change records, without artificial padding. Cleaned outputs have no minimum. Preserve length variety, the 30+ word coverage rule, and the provisional extended-length allocation.
+- Every future raw input must contain 20–200 whitespace-separated words inclusive, including no-change records, without artificial padding. Cleaned outputs have no minimum. Preserve length variety, the 30+ word coverage rule, and the extended-length coverage target.
 - False starts are one brief unfinished phrase immediately repaired, not chained restarts or complete rejected claims. Self-corrections stay explicit and local.
 - Infer paragraphs from meaningful discourse changes in shorter and longer passages without requiring spoken commands. Length alone does not determine paragraph breaks. Distinguish punctuation restoration, spoken punctuation commands, and literal words such as “period.” Quotation commands are supported occasionally.
 - Context-inferred quotation adds double quotes around clearly identified phrases, speech, labels, or messages without spoken quote commands. Textual evidence must identify the span; emphasis alone does not justify quotes or other decoration.
 - Entity normalization includes currency, units/measurements, percentages, dates/times, numbers, names, acronyms, technical terms, and physical/email addresses.
 - Lists and emails preserve complete substantive wording. Do not invent headings, greetings, signatures, or list content; do not summarize full statements into labels.
 - No-change input and target are identical. Preserve intentional emphasis, uncertainty, and supported names/numbers; do not guess corrections from unavailable context.
-- Use quick mechanical checks before delivery. The user performs detailed content review unless another review is requested. Generated drafts are not human-reviewed gold data.
+- For this run, review every pair in the foreground and record acceptance against the batch content hash. Run mechanical checks for schema, counts, word bounds, duplicates, and distributions. Correct failures and recheck. Generated drafts are not human-reviewed gold data.
 - Keep privacy, provenance, licensing, versioning, and split-leakage safeguards. Training and evaluation are separate workflows described in the README.
 
 ## Data and viewer

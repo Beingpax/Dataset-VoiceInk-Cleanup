@@ -31,7 +31,7 @@ The build command is documented in `package.json` but was not run during this mi
 [`comparison/`](comparison/) contains the complete work from the **Benchmark 3 transcript models** task:
 
 - A 100-case benchmark across two labeled 50-case datasets.
-- VoiceInk Refine V1, SpeakoFlow Mini, S1-mini, and GPT-5.6 Sol low-reasoning outputs.
+- VoiceInk Refine V1, SpeakoFlow Mini, and GPT-5.6 Sol low-reasoning outputs.
 - Aggregate quality, latency, throughput, exact-match, WER, chrF++, edit-similarity, and peak-memory data where available.
 - Every raw input, human reference, model output, prompt configuration, and per-case score.
 - Reproducible sampling, model-running, dataset-integration, and scoring scripts.
@@ -48,7 +48,7 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 - The concise active authoring guide in `dataset-generator/README.md`.
 - The `polished-clean-v1` cleanup contract.
 - Dataset schema and category strategy.
-- The planned 2,000-pair composition and future generation rules.
+- The approved 5,000-pair composition and generation rules.
 - Product, design, and implementation summaries.
 - The original dataset overview page, retained as a separate generator/authoring surface.
 

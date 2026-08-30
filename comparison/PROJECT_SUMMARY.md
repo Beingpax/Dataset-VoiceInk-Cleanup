@@ -2,12 +2,11 @@
 
 ## Benchmark created
 
-The benchmark compares four transcript-cleanup systems across 100 cases:
+The benchmark compares three transcript-cleanup systems across 100 cases:
 
 1. VoiceInk Refine V1, running locally through MLX LM with 4-bit weights.
 2. SpeakoFlow Mini, running locally as Q8_0 GGUF through a persistent llama.cpp server.
-3. S1-mini by Superwhisper, running locally in BF16 through Transformers on MPS with its documented control-line format and thinking disabled.
-4. GPT-5.6 Sol at low reasoning as a hosted reference configuration.
+3. GPT-5.6 Sol at low reasoning as a hosted reference configuration.
 
 ## Datasets
 
@@ -54,7 +53,6 @@ The JSONL viewer understands both chat-message training records and benchmark-st
 - `benchmark/integrate_curated_sample.py`: curated generator-sample integration.
 - `benchmark/run_voiceink.py`: VoiceInk local inference.
 - `benchmark/run_speakoflow.py`: SpeakoFlow local inference and process-tree memory monitoring.
-- `benchmark/run_s1.py`: documented S1-mini configuration.
 - `benchmark/score_results.py`: scoring and website-data generation.
 - `artifacts/`: complete model results, combined benchmark JSON, sampled JSONL, and CSV exports.
 

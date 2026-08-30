@@ -184,7 +184,7 @@ pre { white-space: pre-wrap; word-break: break-word; font: 0.88rem/1.7 var(--mon
 .methods { background: var(--primary); color: oklch(0.12 0.02 210); }
 .method-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; align-items: end; margin-bottom: 72px; }
 .method-intro p { max-width: 62ch; font-size: 1.1rem; }
-.method-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: color-mix(in oklch, var(--ink) 28%, transparent); border-top: 1px solid color-mix(in oklch, var(--ink) 38%, transparent); border-bottom: 1px solid color-mix(in oklch, var(--ink) 38%, transparent); }
+.method-columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: color-mix(in oklch, var(--ink) 28%, transparent); border-top: 1px solid color-mix(in oklch, var(--ink) 38%, transparent); border-bottom: 1px solid color-mix(in oklch, var(--ink) 38%, transparent); }
 .method-columns section { padding: 34px 34px 34px 0; background: var(--primary); }
 .method-columns section + section { padding-left: 34px; }
 .method-columns h3, .downloads h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; margin: 0 0 14px; }

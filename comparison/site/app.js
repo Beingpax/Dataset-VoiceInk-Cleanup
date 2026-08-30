@@ -9,7 +9,7 @@ const colors = [
 
 const formatPercent = value => value == null ? 'Unavailable' : `${(value * 100).toFixed(1)}%`;
 const formatNumber = (value, digits = 1) => value == null ? 'Unavailable' : Number(value).toFixed(digits);
-const shortName = model => model.name.replace(' by Superwhisper', '').replace(' (low reasoning)', '');
+const shortName = model => model.name.replace(' (low reasoning)', '');
 
 let benchmark;
 let models;
@@ -168,7 +168,7 @@ function renderCase() {
   document.querySelector('#case-select').value = currentCaseId;
   const origin = source.source_index == null ? source.source_record_id : `validation row ${source.source_index}`;
   const group = source.dataset_id === 'curated-sample-50' ? (source.metadata?.primary_category || 'curated pair').replaceAll('_', ' ') : (source.selection_group === 'long_random_addition' ? 'long-sample addition' : 'original sample');
-  document.querySelector('#case-meta').innerHTML = `<strong>${source.id}</strong><span>${source.dataset_name}</span><span>${origin}</span><span>${group}</span><span>${source.input_words} words</span><span>${source.s1_context} context</span><span>mean difficulty ${formatPercent(caseDifficulty(source.id))}</span>`;
+  document.querySelector('#case-meta').innerHTML = `<strong>${source.id}</strong><span>${source.dataset_name}</span><span>${origin}</span><span>${group}</span><span>${source.input_words} words</span><span>mean difficulty ${formatPercent(caseDifficulty(source.id))}</span>`;
   document.querySelector('#case-input').textContent = source.input;
   document.querySelector('#case-reference').textContent = source.reference;
   const container = document.querySelector('#case-outputs');

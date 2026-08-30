@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { normalizeBenchmarkFairness } from '../lib/benchmarkFairness.js';
 
 const BenchmarkContext = createContext(null);
 
@@ -13,7 +14,7 @@ export function BenchmarkProvider({ children }) {
         if (!response.ok) throw new Error(`Benchmark data returned HTTP ${response.status}`);
         return response.json();
       })
-      .then(payload => { if (!cancelled) setData(payload); })
+      .then(payload => { if (!cancelled) setData(normalizeBenchmarkFairness(payload)); })
       .catch(reason => { if (!cancelled) setError(reason.message); });
     return () => { cancelled = true; };
   }, []);

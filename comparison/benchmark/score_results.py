@@ -5,6 +5,7 @@ import csv
 import json
 import math
 import platform
+import shutil
 from pathlib import Path
 
 import jiwer
@@ -14,7 +15,12 @@ from sacrebleu.metrics import CHRF
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = ROOT / "artifacts"
 SITE_DATA = ROOT / "site" / "data"
+PUBLIC_DATA = ROOT.parent / "public" / "data"
+PUBLIC_DOWNLOADS = ROOT.parent / "public" / "downloads"
 CHRF = CHRF(word_order=2)
+
+METRIC_KEYS = ("exact_match", "edit_similarity", "chrf", "wer", "length_ratio")
+REFERENCE_BLIND_MODELS = {"gpt-5.6-sol-low", "voiceink-refine-v1", "speakoflow-mini"}
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -39,8 +45,14 @@ def percentile(values: list[float], q: float) -> float | None:
 
 
 def score_case(case: dict) -> dict:
+    if not isinstance(case.get("output"), str):
+        case["error"] = case.get("error") or "No text output was recorded."
+    if case.get("error"):
+        # Failure is not a measured text score, even if a partial output exists.
+        case["metrics"] = {key: False if key == "exact_match" else None for key in METRIC_KEYS}
+        return case
     reference = case["reference"].strip()
-    output = case.get("output", "").strip()
+    output = case["output"].strip()
     case["metrics"] = {
         "exact_match": output == reference,
         "edit_similarity": ratio(reference, output) / 100.0,
@@ -51,67 +63,87 @@ def score_case(case: dict) -> dict:
     return case
 
 
-def summarize(model: dict) -> dict:
-    cases = [score_case(case) for case in model["cases"]]
+def summarize_cases(cases: list[dict]) -> dict:
     measured = [case for case in cases if not case.get("error")]
-    generation = model.get("generation", {})
-    per_case_tps = [case.get("performance", {}).get("tokens_per_second") for case in measured]
+    per_case_tps = [(case.get("performance") or {}).get("tokens_per_second") for case in measured]
     per_case_tps = [value for value in per_case_tps if isinstance(value, (int, float))]
-    latencies = [case.get("performance", {}).get("generation_seconds") for case in measured]
+    latencies = [(case.get("performance") or {}).get("generation_seconds") for case in measured]
     latencies = [value for value in latencies if isinstance(value, (int, float))]
-    summary = {
+    exact_matches = sum(case["metrics"]["exact_match"] for case in measured)
+    return {
         "case_count": len(cases),
         "successful_cases": len(measured),
-        "exact_match_rate": sum(case["metrics"]["exact_match"] for case in measured) / len(measured),
-        "mean_edit_similarity": sum(case["metrics"]["edit_similarity"] for case in measured) / len(measured),
-        "mean_chrf": sum(case["metrics"]["chrf"] for case in measured) / len(measured),
-        "mean_wer": sum(case["metrics"]["wer"] for case in measured) / len(measured),
+        "failed_cases": len(cases) - len(measured),
+        "success_rate": len(measured) / len(cases) if cases else None,
+        "exact_matches": exact_matches,
+        "exact_match_rate": exact_matches / len(cases) if cases else None,
+        "mean_edit_similarity": sum(case["metrics"]["edit_similarity"] for case in measured) / len(measured) if measured else None,
+        "mean_chrf": sum(case["metrics"]["chrf"] for case in measured) / len(measured) if measured else None,
+        "mean_wer": sum(case["metrics"]["wer"] for case in measured) / len(measured) if measured else None,
         "median_tokens_per_second": percentile(per_case_tps, 0.5),
         "mean_generation_seconds": sum(latencies) / len(latencies) if latencies else None,
         "median_generation_seconds": percentile(latencies, 0.5),
+    }
+
+
+def comparison_context(model: dict) -> dict:
+    known = model["id"] in REFERENCE_BLIND_MODELS
+    return {
+        "reference_blind": known,
+        "context_source": "native_prompt" if known else "unverified",
+        "note": None if known else "Inference context provenance must be recorded before ranking.",
+    }
+
+
+def summarize(model: dict) -> dict:
+    cases = [score_case(case) for case in model["cases"]]
+    generation = model.get("generation", {})
+    model["cases"] = cases
+    model["summary"] = {
+        **summarize_cases(cases),
         "peak_memory_gib": generation.get("peak_memory_gib"),
         "memory_scope": generation.get("memory_scope", "unavailable"),
     }
-    model["cases"] = cases
-    model["summary"] = summary
-    dataset_summaries = {}
-    for dataset_id in sorted({case["dataset_id"] for case in measured}):
-        subset = [case for case in measured if case["dataset_id"] == dataset_id]
-        subset_tps = [case.get("performance", {}).get("tokens_per_second") for case in subset]
-        subset_tps = [value for value in subset_tps if isinstance(value, (int, float))]
-        subset_latency = [case.get("performance", {}).get("generation_seconds") for case in subset]
-        subset_latency = [value for value in subset_latency if isinstance(value, (int, float))]
-        dataset_summaries[dataset_id] = {
-            "case_count": len(subset),
-            "exact_match_rate": sum(case["metrics"]["exact_match"] for case in subset) / len(subset),
-            "mean_edit_similarity": sum(case["metrics"]["edit_similarity"] for case in subset) / len(subset),
-            "mean_chrf": sum(case["metrics"]["chrf"] for case in subset) / len(subset),
-            "mean_wer": sum(case["metrics"]["wer"] for case in subset) / len(subset),
-            "median_tokens_per_second": percentile(subset_tps, 0.5),
-            "mean_generation_seconds": sum(subset_latency) / len(subset_latency) if subset_latency else None,
-            "median_generation_seconds": percentile(subset_latency, 0.5),
-        }
-    model["dataset_summaries"] = dataset_summaries
+    model["dataset_summaries"] = {
+        dataset_id: summarize_cases([case for case in cases if case["dataset_id"] == dataset_id])
+        for dataset_id in sorted({case["dataset_id"] for case in cases})
+    }
+    model["comparison"] = comparison_context(model)
     return model
 
 
 def main() -> None:
     sample = load_jsonl(ARTIFACTS / "sample.jsonl")
     by_id = {case["id"]: case for case in sample}
+    if len(by_id) != len(sample):
+        raise ValueError("Benchmark sample contains duplicate case IDs.")
     result_paths = sorted(ARTIFACTS.glob("results-*.json"))
     models = []
     for path in result_paths:
         model = json.loads(path.read_text())
-        for case in model["cases"]:
-            source = by_id[case["id"]]
+        recorded = {}
+        for case in model.get("cases", []):
+            if case["id"] not in by_id or case["id"] in recorded:
+                raise ValueError(f"Unexpected or duplicate case ID in {path.name}: {case['id']}")
+            recorded[case["id"]] = case
+        model["cases"] = []
+        for source in sample:
+            case = recorded.get(source["id"], {"id": source["id"], "output": "", "error": "No result recorded for this expected case."})
             case.update({key: source.get(key) for key in (
-                "source_index", "input", "reference", "s1_context", "selection_group",
+                "source_index", "input", "reference", "selection_group",
                 "input_words", "input_characters", "dataset_id", "dataset_name",
                 "source_record_id", "metadata",
             )})
+            # Run context belongs to the recorded run, never to a regenerated sample.
+            model["cases"].append(case)
         models.append(summarize(model))
     payload = {
         "benchmark": {
+            "scoring_version": "fairness-v1",
+            "quality_scope": "successful_cases",
+            "exact_match_scope": "all_expected_cases",
+            "ranking_scope": "complete_reference_blind_configurations",
+            "case_manifest": [{"id": case["id"], "dataset_id": case["dataset_id"]} for case in sample],
             "name": "Transcript Cleanup: 100-case model comparison",
             "sample_seed": "20260830 + 20260831",
             "sample_count": len(sample),
@@ -127,26 +159,39 @@ def main() -> None:
                 "The two 50-case datasets have different construction and difficulty; combined scores are descriptive, not population-weighted estimates.",
                 "String metrics penalize valid wording or punctuation variants even when meaning is preserved.",
                 "Local peak memory is process RSS and is not comparable to provider-side hosted memory.",
+                "Model-native prompts and settings differ; rankings compare configurations, not isolated model capability.",
+                "Quality means use successful cases only. Exact-match and completion rates include every expected case, including failed or missing results.",
             ],
         },
         "models": models,
     }
-    SITE_DATA.mkdir(parents=True, exist_ok=True)
-    (ARTIFACTS / "benchmark-results.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
-    (SITE_DATA / "benchmark.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    for directory in (ARTIFACTS, SITE_DATA, PUBLIC_DATA, PUBLIC_DOWNLOADS):
+        directory.mkdir(parents=True, exist_ok=True)
+    encoded = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    for destination in (ARTIFACTS / "benchmark-results.json", SITE_DATA / "benchmark.json", PUBLIC_DATA / "benchmark.json", PUBLIC_DOWNLOADS / "benchmark-results.json"):
+        destination.write_text(encoded)
     with (ARTIFACTS / "aggregate-results.csv").open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=[
-            "model_id", "model_name", "runtime", "case_count", "successful_cases", "exact_match_rate",
+            "model_id", "model_name", "runtime", "reference_blind", "context_source", "comparison_note", "rank_eligible",
+            "case_count", "successful_cases", "failed_cases", "success_rate", "exact_matches", "exact_match_rate",
             "mean_edit_similarity", "mean_chrf", "mean_wer", "median_tokens_per_second",
             "mean_generation_seconds", "median_generation_seconds", "peak_memory_gib", "memory_scope",
         ])
         writer.writeheader()
         for model in models:
-            writer.writerow({"model_id": model["id"], "model_name": model["name"], "runtime": model["runtime"], **model["summary"]})
+            summary = model["summary"]
+            writer.writerow({
+                "model_id": model["id"], "model_name": model["name"], "runtime": model["runtime"],
+                "reference_blind": model["comparison"]["reference_blind"],
+                "context_source": model["comparison"]["context_source"],
+                "comparison_note": model["comparison"]["note"],
+                "rank_eligible": model["comparison"]["reference_blind"] and summary["case_count"] > 0 and summary["successful_cases"] == summary["case_count"],
+                **summary,
+            })
     with (ARTIFACTS / "case-results.csv").open("w", newline="") as handle:
         fields = [
             "case_id", "dataset_id", "dataset_name", "source_record_id", "source_index", "model_id", "model_name", "input", "reference", "output",
-            "exact_match", "edit_similarity", "chrf", "wer", "length_ratio", "input_tokens",
+            "error", "context_source", "exact_match", "edit_similarity", "chrf", "wer", "length_ratio", "input_tokens",
             "output_tokens", "generation_seconds", "tokens_per_second",
         ]
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -157,9 +202,12 @@ def main() -> None:
                     "case_id": case["id"], "dataset_id": case["dataset_id"], "dataset_name": case["dataset_name"],
                     "source_record_id": case["source_record_id"], "source_index": case["source_index"],
                     "model_id": model["id"], "model_name": model["name"],
-                    "input": case["input"], "reference": case["reference"], "output": case["output"],
-                    **case["metrics"], **case.get("performance", {}),
+                    "input": case["input"], "reference": case["reference"], "output": case.get("output", ""),
+                    "error": case.get("error"), "context_source": model["comparison"]["context_source"],
+                    **case["metrics"], **(case.get("performance") or {}),
                 })
+    for filename in ("aggregate-results.csv", "case-results.csv"):
+        shutil.copyfile(ARTIFACTS / filename, PUBLIC_DOWNLOADS / filename)
     print(json.dumps({model["id"]: model["summary"] for model in models}, indent=2))
 
 

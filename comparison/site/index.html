@@ -23,8 +23,8 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="edition">Edition 01 · 30 August 2026</p>
-        <h1>Four cleanup systems,<br><em>one hundred transcripts.</em></h1>
-        <p class="dek">An inspectable comparison of three on-device models and GPT-5.6 Sol at low reasoning across two separately labeled 50-case datasets. Every output, prompt choice, score, and local runtime measurement is included.</p>
+        <h1>Three cleanup systems,<br><em>one hundred transcripts.</em></h1>
+        <p class="dek">An inspectable comparison of two on-device models and GPT-5.6 Sol at low reasoning across two separately labeled 50-case datasets. Every output, prompt choice, score, and local runtime measurement is included.</p>
       </div>
       <aside class="hero-note" aria-label="Benchmark scope">
         <p>Two 50-case sources sit side by side: the enriched VoiceInk validation sample and a separately curated cleanup set. It is an evidence browser, not a universal leaderboard.</p>
@@ -93,7 +93,7 @@
 
     <section class="models" aria-labelledby="models-title">
       <div class="section-heading">
-        <h2 id="models-title">Four deliberately different runs</h2>
+        <h2 id="models-title">Three deliberately different runs</h2>
           <p>The prompt is part of each model. Giving every model the same wrapper would be a different experiment.</p>
       </div>
       <div class="model-strata" id="model-strata"></div>
@@ -223,10 +223,6 @@
         <p>The first dataset contains the original twenty seeded-random validation rows plus thirty longer additions. The second contains all fifty supplied curated input/reference pairs, preserved with their category metadata. Local models ran sequentially on the same machine. Hosted-provider memory and throughput are not exposed.</p>
       </div>
       <div class="method-columns">
-        <section>
-          <h3>S1-mini configuration</h3>
-          <p>Its README is followed exactly: required system prompt, required control line, greedy decoding, and <code>enable_thinking=False</code>. Styling is <code>semi-formal</code>, structure is <code>prose</code>, and context switches to <code>email</code> only for email-shaped references.</p>
-        </section>
         <section>
           <h3>Local measurements</h3>
           <p>Response latency is wall-clock generation time for each local response. The table reports arithmetic mean and median for the selected dataset view. Tokens per second is output tokens divided by the same measured interval. Peak memory is process peak RSS or the llama.cpp server process-tree peak.</p>

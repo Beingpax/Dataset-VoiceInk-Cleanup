@@ -10,7 +10,7 @@ Model developers, transcription-tool builders, and technical reviewers comparing
 
 ## Product Purpose
 
-Create a reproducible benchmark and editorial showcase for one hundred cases across two labeled sources: fifty VoiceInk validation cases (the original twenty random cases plus thirty longer-input additions) and fifty supplied curated input/reference pairs. Compare three local cleanup models and a hosted GPT-5.6 Sol low-reasoning baseline while preserving the evidence needed to reproduce and audit every claim.
+Create a reproducible benchmark and editorial showcase for one hundred cases across two labeled sources: fifty VoiceInk validation cases (the original twenty random cases plus thirty longer-input additions) and fifty supplied curated input/reference pairs. Compare two local cleanup models and a hosted GPT-5.6 Sol low-reasoning baseline while preserving the evidence needed to reproduce and audit every claim.
 
 ## Brand Personality
 

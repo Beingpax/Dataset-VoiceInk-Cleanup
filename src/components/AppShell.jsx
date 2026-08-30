@@ -19,7 +19,7 @@ export default function AppShell({ children }) {
             <NavLink key={to} to={to} end={to === '/'} className={({ isActive }) => isActive ? 'active' : undefined}>{label}</NavLink>
           ))}
         </nav>
-        <div className="project-state"><span />100 cases · 4 systems</div>
+        <div className="project-state"><span />100 cases · 3 systems</div>
       </header>
       <main className="page" id="main-content">{children}</main>
     </div>

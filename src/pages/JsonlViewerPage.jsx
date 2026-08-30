@@ -129,7 +129,7 @@ export default function JsonlViewerPage() {
       <div className="record-selector">
         <header><strong>{filtered.length.toLocaleString()}</strong><span>matching records</span><small>Scroll horizontally to select</small></header>
         <div className="record-rail" ref={recordRailRef} role="listbox" aria-label="Filtered records" aria-orientation="horizontal">
-          {filtered.slice(0, 1000).map((record, index) => <button key={record.id} type="button" role="option" aria-selected={record.id === selectedId} className={record.id === selectedId ? 'is-selected' : ''} onClick={() => setSelectedId(record.id)}><span className="record-ordinal">{String(index + 1).padStart(3, '0')}</span><span className="record-copy"><strong>{record.id}</strong><small>{humanize(record.category)}</small></span></button>)}
+          {filtered.map((record, index) => <button key={record.id} type="button" role="option" aria-selected={record.id === selectedId} className={record.id === selectedId ? 'is-selected' : ''} onClick={() => setSelectedId(record.id)}><span className="record-ordinal">{String(index + 1).padStart(3, '0')}</span><span className="record-copy"><strong>{record.id}</strong><small>{humanize(record.category)}</small></span></button>)}
         </div>
       </div>
 

@@ -17,6 +17,7 @@ export function humanize(value) {
     list_formatting: 'List formatting',
     email_formatting: 'Email formatting',
     entity_normalization: 'Names, numbers, acronyms, terms and addresses',
+    context_inferred_quotation: 'Context-inferred quotation',
     no_change: 'Already correct',
   };
   if (categoryLabels[value]) return categoryLabels[value];

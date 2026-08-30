@@ -32,11 +32,6 @@ def main() -> None:
         messages = rows[source_index]["messages"]
         by_role = {message["role"]: message["content"] for message in messages}
         reference = by_role["assistant"]
-        # Dataset examples with email formatting use blank-line paragraph structure.
-        is_email = "\n\n" in reference and any(
-            reference.lower().startswith(prefix)
-            for prefix in ("dear ", "hi ", "hello ", "hey ")
-        )
         sample.append(
             {
                 "id": f"V{ordinal:02d}",
@@ -44,7 +39,6 @@ def main() -> None:
                 "system": by_role["system"],
                 "input": by_role["user"],
                 "reference": reference,
-                "s1_context": "email" if is_email else "general",
                 "selection_group": "original_random" if ordinal <= ORIGINAL_COUNT else "long_random_addition",
                 "input_words": len(by_role["user"].split()),
                 "input_characters": len(by_role["user"]),

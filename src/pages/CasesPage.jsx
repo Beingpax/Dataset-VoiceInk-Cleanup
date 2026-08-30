@@ -4,8 +4,9 @@ import Picker from '../components/Picker.jsx';
 import RichText from '../components/RichText.jsx';
 import { useBenchmark } from '../context/BenchmarkContext.jsx';
 import useArrowNavigation from '../hooks/useArrowNavigation.js';
+import { hasRecordedOutput } from '../lib/benchmarkFairness.js';
 
-const percent = value => `${(value * 100).toFixed(1)}%`;
+const percent = value => value == null ? 'Unavailable' : `${(value * 100).toFixed(1)}%`;
 
 export default function CasesPage() {
   const { data, loading, error } = useBenchmark();
@@ -16,8 +17,16 @@ export default function CasesPage() {
 
   const cases = useMemo(() => {
     if (!models.length) return [];
-    const items = models[0].cases.filter(item => dataset === 'all' || item.dataset_id === dataset).map(item => ({ ...item }));
-    const scores = id => models.map(model => model.cases.find(item => item.id === id)?.metrics.edit_similarity ?? 0);
+    const recordedCases = new Map();
+    for (const model of models) for (const item of model.cases) {
+      if ((dataset === 'all' || item.dataset_id === dataset) && !recordedCases.has(item.id)) recordedCases.set(item.id, { ...item });
+    }
+    const items = [...recordedCases.values()];
+    const scores = id => {
+      const values = models.map(model => model.cases.find(item => item.id === id))
+        .filter(hasRecordedOutput).map(result => result.metrics?.edit_similarity).filter(Number.isFinite);
+      return values.length ? values : [0];
+    };
     if (order === 'hardest') items.sort((a, b) => Math.min(...scores(a.id)) - Math.min(...scores(b.id)));
     if (order === 'spread') items.sort((a, b) => (Math.max(...scores(b.id)) - Math.min(...scores(b.id))) - (Math.max(...scores(a.id)) - Math.min(...scores(a.id))));
     if (order === 'longest') items.sort((a, b) => b.input_characters - a.input_characters);
@@ -45,8 +54,19 @@ export default function CasesPage() {
         </section>
       </header>
       {selected && <>
-        <section className="case-reference"><header><span>{selected.id}</span><strong>{selected.dataset_name}</strong><span>{selected.input_words} words</span></header><div className="case-reference-scroll" tabIndex="0" aria-label="Side-by-side transcript comparison. Scroll horizontally on narrow screens."><div className="case-reference-pair"><article><h2>Raw ASR</h2><RichText text={selected.input} /></article><article><h2>Human reference</h2><RichText text={selected.reference} /></article></div></div></section>
-        <section className="case-results"><h2>Model responses</h2>{models.map(model => { const result = model.cases.find(item => item.id === selected.id); return <article key={model.id}><header><div><h3>{model.name}</h3><span>{result.metrics.exact_match ? 'Exact match' : `${percent(result.metrics.edit_similarity)} similar`}</span></div><dl><div><dt>chrF++</dt><dd>{percent(result.metrics.chrf)}</dd></div><div><dt>WER</dt><dd>{percent(result.metrics.wer)}</dd></div><div><dt>Latency</dt><dd>{result.performance?.generation_seconds == null ? 'Unavailable' : `${result.performance.generation_seconds.toFixed(3)} s`}</dd></div></dl></header><div className="model-output"><RichText text={result.output || '(empty output)'} /></div></article>; })}</section>
+        <section className="case-reference"><header><span>{selected.id}</span><strong>{selected.dataset_name}</strong><span>{selected.input_words} words</span></header><div className="case-reference-scroll" tabIndex="0" aria-label="Side-by-side transcript comparison. Scroll horizontally on narrow screens."><div className="case-reference-pair"><article><h2>Raw ASR</h2><RichText text={selected.input} /></article><article><h2>Reference</h2><RichText text={selected.reference} /></article></div></div></section>
+        <section className="case-results"><h2>Model responses</h2>{models.map(model => {
+          const result = model.cases.find(item => item.id === selected.id);
+          const completed = hasRecordedOutput(result);
+          const metrics = completed ? result.metrics : null;
+          return <article key={model.id}>
+            <header><div><h3>{model.name}</h3><span>{!completed ? 'Failed / missing result' : metrics?.exact_match ? 'Exact match' : metrics?.edit_similarity == null ? 'Quality unavailable' : `${percent(metrics.edit_similarity)} similar`}</span></div>
+              {model.comparison?.note && <p className="empty-copy">{model.comparison.note}</p>}
+              <dl><div><dt>chrF++</dt><dd>{percent(metrics?.chrf)}</dd></div><div><dt>WER</dt><dd>{percent(metrics?.wer)}</dd></div><div><dt>Latency</dt><dd>{!completed || result.performance?.generation_seconds == null ? 'Unavailable' : `${result.performance.generation_seconds.toFixed(3)} s`}</dd></div></dl>
+            </header>
+            <div className="model-output">{!completed && <p className="empty-copy">{result?.error || 'No text output was recorded for this case.'}</p>}<RichText text={typeof result?.output === 'string' && result.output ? result.output : completed ? '(empty output)' : '(no completed output)'} /></div>
+          </article>;
+        })}</section>
       </>}
     </div>
   );

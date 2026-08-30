@@ -34,7 +34,6 @@ def main() -> None:
         messages = by_role(row["messages"])
         reference = messages["assistant"]
         metadata = row.get("metadata", {})
-        email_markers = ("dear ", "hi ", "hello ", "hey ")
         curated.append({
             "id": f"C{ordinal:02d}",
             "dataset_id": "curated-sample-50",
@@ -44,7 +43,6 @@ def main() -> None:
             "system": messages["system"],
             "input": messages["user"],
             "reference": reference,
-            "s1_context": "email" if "\n\n" in reference and reference.lower().startswith(email_markers) else "general",
             "selection_group": "curated_external_pair",
             "input_words": len(messages["user"].split()),
             "input_characters": len(messages["user"]),

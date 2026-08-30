@@ -1,0 +1,29 @@
+{
+  "target_pairs": 5000,
+  "batch_size": 100,
+  "batch_count": 50,
+  "input_words": {"min": 20, "max": 200},
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": "medium",
+  "service_tier": "priority",
+  "configured_agent_cap": 32,
+  "prompt_revision": "5000-v1",
+  "policy_version": "polished-clean-v1",
+  "record_types": {"single_principal_error": 500, "natural_multi_error": 4250, "no_change": 250},
+  "categories": {
+    "filler_words": 750,
+    "repetition_stutters": 750,
+    "false_starts_self_corrections": 500,
+    "punctuation_capitalization_dictated_formatting": 750,
+    "list_formatting": 500,
+    "email_formatting": 625,
+    "entity_normalization": 625,
+    "context_inferred_quotation": 250,
+    "no_change": 250
+  },
+  "benchmark_sha256": {
+    "public/data/benchmark-sample.jsonl": "9b831a9c32e6482dff4560371bbbb5ce8c042e6daa80a8add73dbf6778d8dd2b",
+    "public/data/benchmark.json": "ec06df23d81a791e35a64d9b87d63331a0999747bfa48181fd7475b3fa31a5a1",
+    "comparison/artifacts/curated-sample-50.source.jsonl": "5cb251cd4332d7bc8b52aefcb3e416f9e3bcfedb1e9410bd1f63c5225c3f2525"
+  }
+}

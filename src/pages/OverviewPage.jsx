@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import PageState from '../components/PageState.jsx';
 import { useBenchmark } from '../context/BenchmarkContext.jsx';
+import { isRanked } from '../lib/benchmarkFairness.js';
 
 export default function OverviewPage() {
   const { data, loading, error } = useBenchmark();
   if (!data) return <PageState loading={loading} error={error} />;
-  const leader = [...data.models].sort((a, b) => b.summary.mean_edit_similarity - a.summary.mean_edit_similarity)[0];
+  const leader = data.models.filter(model => isRanked(model)).sort((a, b) => b.summary.mean_edit_similarity - a.summary.mean_edit_similarity)[0];
 
   return (
     <div className="page-stack overview-page">
@@ -21,7 +22,7 @@ export default function OverviewPage() {
           <div><strong>{data.benchmark.sample_count}</strong><span>benchmark cases</span></div>
           <div><strong>{data.models.length}</strong><span>cleanup systems</span></div>
           <div><strong>{data.benchmark.datasets.length}</strong><span>labeled datasets</span></div>
-          <div><strong>{(leader.summary.mean_edit_similarity * 100).toFixed(1)}%</strong><span>best similarity</span></div>
+          <div><strong>{leader ? `${(leader.summary.mean_edit_similarity * 100).toFixed(1)}%` : 'Unavailable'}</strong><span>best ranked similarity</span></div>
         </section>
       </header>
 
@@ -36,8 +37,8 @@ export default function OverviewPage() {
       </section>
 
       <section className="finding-band">
-        <div><span>Current benchmark leader</span><strong>{leader.name}</strong></div>
-        <p>The ranking is evidence from a fixed 100-case experiment. Dataset-specific views remain available because the two sources were constructed differently.</p>
+        <div><span>Highest ranked configuration</span><strong>{leader?.name || 'No eligible complete run'}</strong></div>
+        <p>Ranks require complete runs with no known reference-derived hints. Model-native prompts differ, and the two dataset sources remain separately labeled. Historical and incomplete results remain available for inspection.</p>
         <Link to="/methodology">Read methodology</Link>
       </section>
     </div>
