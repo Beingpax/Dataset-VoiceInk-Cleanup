@@ -1,0 +1,492 @@
+[
+  {
+    "id": "sample_2484",
+    "file": "batch-025.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "We need the PostgreSQL connection string moved from the old .env file before the service is restarted. The deployment script currently reads the retired variable first, so it connects to the empty database on the test host. Copy the approved value from the secrets manager, then remove the old key from both the worker and scheduler settings. Do not restart production until the smoke check creates a record in the staging database. I added the expected host name to the change ticket, and the on-call engineer will watch the error stream during the maintenance window.",
+    "paragraphs": [
+      "We need the PostgreSQL connection string moved from the old .env file before the service is restarted. The deployment script currently reads the retired variable first, so it connects to the empty database on the test host. Copy the approved value from the secrets manager, then remove the old key from both the worker and scheduler settings. Do not restart production until the smoke check creates a record in the staging database. I added the expected host name to the change ticket, and the on-call engineer will watch the error stream during the maintenance window."
+    ]
+  },
+  {
+    "id": "sample_2491",
+    "file": "batch-025.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "single_principal_error",
+    "output": "For the poster, use the phrase \"doors open at seven\" beneath the event title, and keep the rest of the wording exactly as approved. The venue manager wants that phrase visible from the entrance because parents often arrive before the volunteers finish setting up. Put the band name above the date, and leave enough space at the bottom for the sponsor logos. Please send me a proof before it goes to print, especially if the phrase wraps onto a second line. The printer said the navy background may make the smaller yellow text hard to read, so we may need a lighter border.",
+    "paragraphs": [
+      "For the poster, use the phrase \"doors open at seven\" beneath the event title, and keep the rest of the wording exactly as approved. The venue manager wants that phrase visible from the entrance because parents often arrive before the volunteers finish setting up. Put the band name above the date, and leave enough space at the bottom for the sponsor logos. Please send me a proof before it goes to print, especially if the phrase wraps onto a second line. The printer said the navy background may make the smaller yellow text hard to read, so we may need a lighter border."
+    ]
+  },
+  {
+    "id": "sample_2501",
+    "file": "batch-026.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "I reserved the library's small meeting room for Tuesday at 6:30, and the caretaker said the projector is already stored there. Please tell me by Monday if you need extra chairs, because I have to submit the setup request before noon. The room closes at eight, so we should begin on time and leave a few minutes to put the tables back. I will bring the printed survey forms, but someone else should bring pens for the group. The front desk will unlock the side entrance at 6:15.",
+    "paragraphs": [
+      "I reserved the library's small meeting room for Tuesday at 6:30, and the caretaker said the projector is already stored there. Please tell me by Monday if you need extra chairs, because I have to submit the setup request before noon. The room closes at eight, so we should begin on time and leave a few minutes to put the tables back. I will bring the printed survey forms, but someone else should bring pens for the group. The front desk will unlock the side entrance at 6:15."
+    ]
+  },
+  {
+    "id": "sample_2503",
+    "file": "batch-026.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The florist can deliver the centerpieces on Friday morning, but she needs the final table count by Wednesday. I counted 14 place settings in the dining room and six at the patio table, although two guests may bring children. Please keep the extra vases at the shop unless we confirm those seats. The bakery is bringing the cake at 3:00, so I will be home to receive both deliveries and check that the ribbons match the invitations. I also asked the florist to avoid lilies because of the allergy.",
+    "paragraphs": [
+      "The florist can deliver the centerpieces on Friday morning, but she needs the final table count by Wednesday. I counted 14 place settings in the dining room and six at the patio table, although two guests may bring children. Please keep the extra vases at the shop unless we confirm those seats. The bakery is bringing the cake at 3:00, so I will be home to receive both deliveries and check that the ribbons match the invitations. I also asked the florist to avoid lilies because of the allergy."
+    ]
+  },
+  {
+    "id": "sample_2516",
+    "file": "batch-026.jsonl",
+    "category": "repetition_stutters",
+    "type": "single_principal_error",
+    "output": "Please leave the side gate unlatched from 1:00 until the plumber finishes carrying the water heater into the yard. The driveway will be blocked by his van, so park on the street if you come home during that window. He said he only needs access to the utility closet and the outdoor faucet, and I will be there to show him where the shutoff valve is. After he leaves, please check that the gate catches properly because the dog can push it open.",
+    "paragraphs": [
+      "Please leave the side gate unlatched from 1:00 until the plumber finishes carrying the water heater into the yard. The driveway will be blocked by his van, so park on the street if you come home during that window. He said he only needs access to the utility closet and the outdoor faucet, and I will be there to show him where the shutoff valve is. After he leaves, please check that the gate catches properly because the dog can push it open."
+    ]
+  },
+  {
+    "id": "sample_2520",
+    "file": "batch-026.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "The courier left a notice in the lobby and will try again on Monday morning. The package needs a signature, so please use the building entrance rather than the side door if you are home. I asked the neighbor in 4B whether she could accept it, but her building authorization has expired. The tracking page says the parcel contains the replacement router, which is why I do not want it returned to the depot across town after another missed delivery.",
+    "paragraphs": [
+      "The courier left a notice in the lobby and will try again on Monday morning. The package needs a signature, so please use the building entrance rather than the side door if you are home. I asked the neighbor in 4B whether she could accept it, but her building authorization has expired. The tracking page says the parcel contains the replacement router, which is why I do not want it returned to the depot across town after another missed delivery."
+    ]
+  },
+  {
+    "id": "sample_2531",
+    "file": "batch-026.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "single_principal_error",
+    "output": "I can pick up the folding chairs on Thursday after lunch, if the storage office is open. The school auditorium needs 36 chairs for the recital, and the rest can stay stacked in the basement. I will borrow the van from my sister, but it only fits 12 chairs at a time, so I may need to make three trips. Could you call the custodian beforehand to confirm that the loading door will be unlocked? I do not want to leave the chairs outside if the weather turns rainy.",
+    "paragraphs": [
+      "I can pick up the folding chairs on Thursday after lunch, if the storage office is open. The school auditorium needs 36 chairs for the recital, and the rest can stay stacked in the basement. I will borrow the van from my sister, but it only fits 12 chairs at a time, so I may need to make three trips. Could you call the custodian beforehand to confirm that the loading door will be unlocked? I do not want to leave the chairs outside if the weather turns rainy."
+    ]
+  },
+  {
+    "id": "sample_2541",
+    "file": "batch-026.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "single_principal_error",
+    "output": "The spare key is inside the blue flowerpot beside the garage.\n\nPlease return it there after you feed the cat, and pull the gate shut even if you arrive before dark. The back porch light is on a timer, so do not worry if it switches off while you are outside. Her medication is in the kitchen drawer, and the note on the refrigerator lists the feeding amounts for Saturday and Sunday. Call me only if she refuses water or seems unusually sleepy.",
+    "paragraphs": [
+      "Please return it there after you feed the cat, and pull the gate shut even if you arrive before dark. The back porch light is on a timer, so do not worry if it switches off while you are outside. Her medication is in the kitchen drawer, and the note on the refrigerator lists the feeding amounts for Saturday and Sunday. Call me only if she refuses water or seems unusually sleepy."
+    ]
+  },
+  {
+    "id": "sample_2551",
+    "file": "batch-026.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "Yesterday, I visited the community center and spoke with the coordinator about the room reservation. She said the kitchen is available from five until nine, but the piano room is booked for a lesson at seven. We can still use the main hall if we keep the music low and return the chairs to the storage rack before closing. Please let me know whether that arrangement works for the group.",
+    "paragraphs": [
+      "Yesterday, I visited the community center and spoke with the coordinator about the room reservation. She said the kitchen is available from five until nine, but the piano room is booked for a lesson at seven. We can still use the main hall if we keep the music low and return the chairs to the storage rack before closing. Please let me know whether that arrangement works for the group."
+    ]
+  },
+  {
+    "id": "sample_2561",
+    "file": "batch-026.jsonl",
+    "category": "list_formatting",
+    "type": "single_principal_error",
+    "output": "For the neighborhood food drive, we still need people to:\n\n- Sort canned goods.\n- Label the allergy-free boxes.\n- Load the van.\n- Call the shelter with the final count.\n\nMaya can bring the packing tape if someone else has a hand truck. Please arrive by 8:30 because the gym opens to donors at ten, and the shelter driver may leave early if the rain gets worse. Put fragile jars in the small crates, save dented cans for the community pantry, and tell me if you need a ride from the bus stop.",
+    "paragraphs": [
+      "Maya can bring the packing tape if someone else has a hand truck. Please arrive by 8:30 because the gym opens to donors at ten, and the shelter driver may leave early if the rain gets worse. Put fragile jars in the small crates, save dented cans for the community pantry, and tell me if you need a ride from the bus stop."
+    ]
+  },
+  {
+    "id": "sample_2571",
+    "file": "batch-026.jsonl",
+    "category": "email_formatting",
+    "type": "single_principal_error",
+    "output": "Hi Amina,\n\nI spoke with the neighborhood center about the mural workshop. They can offer us Tuesday at 6:30, but the room only holds 24 people and we need to bring our own drop cloths. I attached the updated budget and the draft signup form. Could you tell me whether that evening still works for the teaching artists? If it does, I will ask the center to reserve the room before the weekend. The canvas covers are stored in the art cupboard beside the easels.\n\nThanks,\nJordan",
+    "paragraphs": [
+      "I spoke with the neighborhood center about the mural workshop. They can offer us Tuesday at 6:30, but the room only holds 24 people and we need to bring our own drop cloths. I attached the updated budget and the draft signup form. Could you tell me whether that evening still works for the teaching artists? If it does, I will ask the center to reserve the room before the weekend. The canvas covers are stored in the art cupboard beside the easels."
+    ]
+  },
+  {
+    "id": "sample_2583",
+    "file": "batch-026.jsonl",
+    "category": "entity_normalization",
+    "type": "single_principal_error",
+    "output": "The bike shop receipt lists $94 for the brake repair, but the estimate I approved was $80 before tax. The mechanic said the difference may be the replacement cable, although I was not called before it was installed. Please compare the invoice with the signed estimate and ask whether the extra labor charge can be removed. I need the bicycle back before my commute on Monday, but I do not want to pay an amount that was never authorized.",
+    "paragraphs": [
+      "The bike shop receipt lists $94 for the brake repair, but the estimate I approved was $80 before tax. The mechanic said the difference may be the replacement cable, although I was not called before it was installed. Please compare the invoice with the signed estimate and ask whether the extra labor charge can be removed. I need the bicycle back before my commute on Monday, but I do not want to pay an amount that was never authorized."
+    ]
+  },
+  {
+    "id": "sample_2596",
+    "file": "batch-026.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "single_principal_error",
+    "output": "For the neighborhood theater invitation, please use the phrase \"doors open at seven\" beneath the show title so guests understand when the lobby will be available. The orchestra is beginning at seven thirty, and the box office has asked us not to imply that seating starts earlier. Include the wheelchair entrance information on the next line, then list the ticket desk phone number exactly as it appears on the poster. I will send the final artwork to the printer after the volunteer coordinator approves the proof tomorrow morning. The hall doors will be staffed by two ushers.",
+    "paragraphs": [
+      "For the neighborhood theater invitation, please use the phrase \"doors open at seven\" beneath the show title so guests understand when the lobby will be available. The orchestra is beginning at seven thirty, and the box office has asked us not to imply that seating starts earlier. Include the wheelchair entrance information on the next line, then list the ticket desk phone number exactly as it appears on the poster. I will send the final artwork to the printer after the volunteer coordinator approves the proof tomorrow morning. The hall doors will be staffed by two ushers."
+    ]
+  },
+  {
+    "id": "sample_2675",
+    "file": "batch-027.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The community art room is reserved for Saturday.\n\nPlease arrange 16 chairs, three folding tables, and the easel cart.\n\nAfter the printmaking class ends, lock the paint cabinet and check that the side exit is shut because the alarm will not set while that door is ajar. The custodian will collect the drying racks on Monday morning, so leave the labeled work on the back counter and do not stack it. The volunteer host will collect the room key from the desk before locking up.",
+    "paragraphs": [
+      "After the printmaking class ends, lock the paint cabinet and check that the side exit is shut because the alarm will not set while that door is ajar. The custodian will collect the drying racks on Monday morning, so leave the labeled work on the back counter and do not stack it. The volunteer host will collect the room key from the desk before locking up."
+    ]
+  },
+  {
+    "id": "sample_2676",
+    "file": "batch-027.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hi team,\n\nI am writing with the search migration status before the morning support shift begins. The new index is serving most queries, although a few saved searches may show yesterday's results until the backfill completes. If you receive a stale-result report, please send the query text, the approximate time, and a screenshot in the support channel. Do not ask customers to rebuild their saved searches; engineering is comparing the reports with the worker logs.\n\nThanks,\nElian The engineering lead will post another update once the backfill queue is empty.",
+    "paragraphs": [
+      "I am writing with the search migration status before the morning support shift begins. The new index is serving most queries, although a few saved searches may show yesterday's results until the backfill completes. If you receive a stale-result report, please send the query text, the approximate time, and a screenshot in the support channel. Do not ask customers to rebuild their saved searches; engineering is comparing the reports with the worker logs."
+    ]
+  },
+  {
+    "id": "sample_2677",
+    "file": "batch-027.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Dear Rosa,\n\nI am sending the moving plan for Saturday so you can follow it while you are traveling. The movers will arrive between 8:00 and 9:00, and Sam will meet them with the loading-dock key. The blue labels mark boxes that stay in the apartment; everything else goes into storage. Please ask the movers to leave the lamp shades in the hall closet, not the storage unit, because we will need them when the painters finish.\n\nWarmly,\nKeira The superintendent must approve any extra storage charges before the truck leaves.",
+    "paragraphs": [
+      "I am sending the moving plan for Saturday so you can follow it while you are traveling. The movers will arrive between 8:00 and 9:00, and Sam will meet them with the loading-dock key. The blue labels mark boxes that stay in the apartment; everything else goes into storage. Please ask the movers to leave the lamp shades in the hall closet, not the storage unit, because we will need them when the painters finish."
+    ]
+  },
+  {
+    "id": "sample_2678",
+    "file": "batch-027.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello Morgan,\n\nThe attached renovation budget reflects the vendor's lower shipping estimate and the revised lighting quote from yesterday. I left the contingency line unchanged because the installation date is not fixed. Could you review the highlighted cells before Wednesday's call and tell me whether the difference should remain available for repairs or move into staff training? The contractor needs our answer before ordering the fixtures, but no payment is due this week.\n\nBest regards,\nNoel I will update the worksheet after your decision so the forecast remains consistent. Finance can archive the approved version afterward.",
+    "paragraphs": [
+      "The attached renovation budget reflects the vendor's lower shipping estimate and the revised lighting quote from yesterday. I left the contingency line unchanged because the installation date is not fixed. Could you review the highlighted cells before Wednesday's call and tell me whether the difference should remain available for repairs or move into staff training? The contractor needs our answer before ordering the fixtures, but no payment is due this week."
+    ]
+  },
+  {
+    "id": "sample_2679",
+    "file": "batch-027.jsonl",
+    "category": "entity_normalization",
+    "type": "single_principal_error",
+    "output": "The library survey has 36 responses from the morning workshop and 42 from the afternoon workshop, which brings the total to 78. Please enter 78 beside the attendance graph, but do not calculate the satisfaction percentage until we receive the three paper forms from the bookmobile. The program director will use the final count in Tuesday's grant update, so the workshop totals need to remain separate from the online responses. The paper forms must be entered separately so the source totals remain auditable. The final spreadsheet will accompany the grant file for future review.",
+    "paragraphs": [
+      "The library survey has 36 responses from the morning workshop and 42 from the afternoon workshop, which brings the total to 78. Please enter 78 beside the attendance graph, but do not calculate the satisfaction percentage until we receive the three paper forms from the bookmobile. The program director will use the final count in Tuesday's grant update, so the workshop totals need to remain separate from the online responses. The paper forms must be entered separately so the source totals remain auditable. The final spreadsheet will accompany the grant file for future review."
+    ]
+  },
+  {
+    "id": "sample_2680",
+    "file": "batch-027.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "We traced the failed report requests to an expired API token on the reporting worker. The replacement secret is already stored, but the worker will load it only after a restart. Schedule that restart for 14:30 UTC, watch the error dashboard for 20 minutes afterward, and add the exact start time to the incident notes. If the failure rate does not fall, leave the worker paused and notify the on-call engineer before changing the token scope. Include the worker version in that notification so the responder can identify the affected release.",
+    "paragraphs": [
+      "We traced the failed report requests to an expired API token on the reporting worker. The replacement secret is already stored, but the worker will load it only after a restart. Schedule that restart for 14:30 UTC, watch the error dashboard for 20 minutes afterward, and add the exact start time to the incident notes. If the failure rate does not fall, leave the worker paused and notify the on-call engineer before changing the token scope. Include the worker version in that notification so the responder can identify the affected release."
+    ]
+  },
+  {
+    "id": "sample_2681",
+    "file": "batch-027.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "I checked the pharmacy receipt, and the amount charged was $17.50, not seventeen dollars and fifty cents as I first remembered. The insurance portal should show the remaining balance within three business days, but I will keep the receipt until it does. If the balance is different, I will call the billing number printed at the bottom of the statement and ask whether the copay was processed twice. I saved a photo of the receipt in the household medical folder for reference. The photo includes the transaction date and prescription number.",
+    "paragraphs": [
+      "I checked the pharmacy receipt, and the amount charged was $17.50, not seventeen dollars and fifty cents as I first remembered. The insurance portal should show the remaining balance within three business days, but I will keep the receipt until it does. If the balance is different, I will call the billing number printed at the bottom of the statement and ask whether the copay was processed twice. I saved a photo of the receipt in the household medical folder for reference. The photo includes the transaction date and prescription number."
+    ]
+  },
+  {
+    "id": "sample_2682",
+    "file": "batch-027.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The property manager asked us to send the renewal notice to 1140 Cedar Avenue, Suite 6, before the lease meeting. The old draft still says Suite 6 and lists 1040 Cedar Avenue in the footer, so please correct both references before printing. Mail sent to the wrong building may be returned to the leasing office, and the manager wants the notice delivered before the tenant's response deadline next Friday. Please keep the address block aligned with the envelope window when you make the correction. The postal clerk requested that detail when the envelope is mailed.",
+    "paragraphs": [
+      "The property manager asked us to send the renewal notice to 1140 Cedar Avenue, Suite 6, before the lease meeting. The old draft still says Suite 6 and lists 1040 Cedar Avenue in the footer, so please correct both references before printing. Mail sent to the wrong building may be returned to the leasing office, and the manager wants the notice delivered before the tenant's response deadline next Friday. Please keep the address block aligned with the envelope window when you make the correction. The postal clerk requested that detail when the envelope is mailed."
+    ]
+  },
+  {
+    "id": "sample_2683",
+    "file": "batch-027.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "For the vibration test report, record the bracket gap as 3.8 mm and the replacement lead as 1.6 m long. The field technician used 3.8 mm on the paper worksheet but wrote 1.6 meter in the inventory app, so the two records do not match. Please use the abbreviated units throughout the final report and leave the serial number untouched because it was copied directly from the device label. The maintenance supervisor needs the corrected version before she compares the readings with last month's test results.",
+    "paragraphs": [
+      "For the vibration test report, record the bracket gap as 3.8 mm and the replacement lead as 1.6 m long. The field technician used 3.8 mm on the paper worksheet but wrote 1.6 meter in the inventory app, so the two records do not match. Please use the abbreviated units throughout the final report and leave the serial number untouched because it was copied directly from the device label. The maintenance supervisor needs the corrected version before she compares the readings with last month's test results."
+    ]
+  },
+  {
+    "id": "sample_2684",
+    "file": "batch-027.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The account memo shows a refund of $875 on April 17, 2026 and a processing charge of $9 on the following line. Please write the refund as $875 and the date as April 17, 2026 in the customer letter because those are the forms on the payment portal. Keep the charge description as processing charge, even though the exported spreadsheet wraps it onto two lines. The bookkeeper will compare this letter with the weekly reconciliation before sending the adjustment notice to the customer. The notice will be mailed after the review is complete.",
+    "paragraphs": [
+      "The account memo shows a refund of $875 on April 17, 2026 and a processing charge of $9 on the following line. Please write the refund as $875 and the date as April 17, 2026 in the customer letter because those are the forms on the payment portal. Keep the charge description as processing charge, even though the exported spreadsheet wraps it onto two lines. The bookkeeper will compare this letter with the weekly reconciliation before sending the adjustment notice to the customer. The notice will be mailed after the review is complete."
+    ]
+  },
+  {
+    "id": "sample_2703",
+    "file": "batch-028.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The service account is still missing the storage permission, and the nightly import stopped after the first archive. The job created its summary file, but it could not copy the three image folders that follow it in the queue. I checked the bucket name against the deployment settings, and that value looks right. Could someone compare the account role with the role in production before we rerun the import tonight? I do not want the retry to create duplicate records for yesterday's submissions.",
+    "paragraphs": [
+      "The service account is still missing the storage permission, and the nightly import stopped after the first archive. The job created its summary file, but it could not copy the three image folders that follow it in the queue. I checked the bucket name against the deployment settings, and that value looks right. Could someone compare the account role with the role in production before we rerun the import tonight? I do not want the retry to create duplicate records for yesterday's submissions."
+    ]
+  },
+  {
+    "id": "sample_2710",
+    "file": "batch-028.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The route is about twenty minutes longer after the bridge closure, so we should leave before the school traffic begins. The detour uses the road behind the sports fields, where the morning buses stop frequently and there is only one lane through the construction zone. If we leave at seven fifteen, we should still reach the appointment before the receptionist opens the waiting room. Please bring the parking pass, because the temporary lot is farther from the main entrance than usual.",
+    "paragraphs": [
+      "The route is about twenty minutes longer after the bridge closure, so we should leave before the school traffic begins. The detour uses the road behind the sports fields, where the morning buses stop frequently and there is only one lane through the construction zone. If we leave at seven fifteen, we should still reach the appointment before the receptionist opens the waiting room. Please bring the parking pass, because the temporary lot is farther from the main entrance than usual."
+    ]
+  },
+  {
+    "id": "sample_2720",
+    "file": "batch-028.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "We should check the retry queue before releasing the patch because yesterday's timeout left several jobs marked as pending. Most of them were created during the payment-provider outage, when the worker could not get a response before its deadline. I do not know whether they will recover on their own after the patch. Please compare the pending jobs with the completed orders first, then cancel only the entries that have no matching payment confirmation. That will keep us from sending duplicate receipts to customers who already received one.",
+    "paragraphs": [
+      "We should check the retry queue before releasing the patch because yesterday's timeout left several jobs marked as pending. Most of them were created during the payment-provider outage, when the worker could not get a response before its deadline. I do not know whether they will recover on their own after the patch. Please compare the pending jobs with the completed orders first, then cancel only the entries that have no matching payment confirmation. That will keep us from sending duplicate receipts to customers who already received one."
+    ]
+  },
+  {
+    "id": "sample_2733",
+    "file": "batch-028.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "The meeting is at 10:30, and the video link is already in the calendar invite. I moved it because the product manager is finishing a customer call that was delayed by the outage this morning. Please use the same document for the agenda, but add your comments before the meeting so we can spend the call deciding which fixes belong in this week's patch. The accessibility reviewer will join for the second half, and she needs the current prototype link rather than the link from last month's planning session. I will send a reminder to the vendor after lunch.",
+    "paragraphs": [
+      "The meeting is at 10:30, and the video link is already in the calendar invite. I moved it because the product manager is finishing a customer call that was delayed by the outage this morning. Please use the same document for the agenda, but add your comments before the meeting so we can spend the call deciding which fixes belong in this week's patch. The accessibility reviewer will join for the second half, and she needs the current prototype link rather than the link from last month's planning session. I will send a reminder to the vendor after lunch."
+    ]
+  },
+  {
+    "id": "sample_2778",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "single_principal_error",
+    "output": "The field team will arrive at 8:45 AM on September 14, 2027, and they need access to 47 Willow Lane before they unload the meter cases. Please leave the side gate unlatched, but do not remove the chain because the neighbor's dog gets through the gap. Their coordinator, Elena Park, will call the office from the curb if the delivery van cannot clear the low branch near the driveway. Could someone also put the orange cones beside the mailbox before they arrive?",
+    "paragraphs": [
+      "The field team will arrive at 8:45 AM on September 14, 2027, and they need access to 47 Willow Lane before they unload the meter cases. Please leave the side gate unlatched, but do not remove the chain because the neighbor's dog gets through the gap. Their coordinator, Elena Park, will call the office from the curb if the delivery van cannot clear the low branch near the driveway. Could someone also put the orange cones beside the mailbox before they arrive?"
+    ]
+  },
+  {
+    "id": "sample_2779",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The API gateway returned error 503 during the 3:30 PM rehearsal, and the monitoring page labeled it as a client failure instead of a server failure. I copied the request ID into the incident note, but I did not change the original log because the on-call engineer may need the exact text. Please check whether the alert rule recognizes 503 after the next deploy, and let Dana know before 4 PM if the dashboard still groups it with 403 responses.",
+    "paragraphs": [
+      "The API gateway returned error 503 during the 3:30 PM rehearsal, and the monitoring page labeled it as a client failure instead of a server failure. I copied the request ID into the incident note, but I did not change the original log because the on-call engineer may need the exact text. Please check whether the alert rule recognizes 503 after the next deploy, and let Dana know before 4 PM if the dashboard still groups it with 403 responses."
+    ]
+  },
+  {
+    "id": "sample_2780",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The clinic said the follow-up is on March 3 at 1:05 PM, not at the time printed on the old card. Please bring the medication list, including the inhaler strength, because the nurse wants to compare it with the discharge note. The parking entrance is on Cedar Avenue, behind the pharmacy, and the accessible spaces fill quickly after lunch. If the bus is late, call the reception desk rather than canceling online, since they said they can usually hold the slot for a few minutes.",
+    "paragraphs": [
+      "The clinic said the follow-up is on March 3 at 1:05 PM, not at the time printed on the old card. Please bring the medication list, including the inhaler strength, because the nurse wants to compare it with the discharge note. The parking entrance is on Cedar Avenue, behind the pharmacy, and the accessible spaces fill quickly after lunch. If the bus is late, call the reception desk rather than canceling online, since they said they can usually hold the slot for a few minutes."
+    ]
+  },
+  {
+    "id": "sample_2781",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "We received a payment of $1,250 from Northstar Studio on June 6, but the memo says invoice 2018 instead of invoice 2018. Could you ask them to confirm which reference they intended before we close the monthly report? The amount itself matches the signed estimate, so I do not think we need to reverse anything. Please keep the email thread with the bank notice attached, because the auditor asked for the original wording whenever an invoice number differs from the remittance memo.",
+    "paragraphs": [
+      "We received a payment of $1,250 from Northstar Studio on June 6, but the memo says invoice 2018 instead of invoice 2018. Could you ask them to confirm which reference they intended before we close the monthly report? The amount itself matches the signed estimate, so I do not think we need to reverse anything. Please keep the email thread with the bank notice attached, because the auditor asked for the original wording whenever an invoice number differs from the remittance memo."
+    ]
+  },
+  {
+    "id": "sample_2782",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The landlord's attorney asked that the notice list the inspection at 9:15 AM on October 2, 2027, at 18 Harbor Road, Unit 4B. Please make sure the address uses the unit number exactly as it appears in the lease, because the mail carrier has delivered notices to Unit 48 before. The tenant said she will be there, although she may arrive by bus a few minutes late. Attach the photo inventory from last spring too, since the attorney mentioned that the condition of the entryway is still disputed.",
+    "paragraphs": [
+      "The landlord's attorney asked that the notice list the inspection at 9:15 AM on October 2, 2027, at 18 Harbor Road, Unit 4B. Please make sure the address uses the unit number exactly as it appears in the lease, because the mail carrier has delivered notices to Unit 48 before. The tenant said she will be there, although she may arrive by bus a few minutes late. Attach the photo inventory from last spring too, since the attorney mentioned that the condition of the entryway is still disputed."
+    ]
+  },
+  {
+    "id": "sample_2783",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The facilities quote says the replacement fan costs $3,750 and weighs 42 lb, but the loading dock limit is 1,000 kilograms. Before we approve it, can you ask whether the quoted price includes the mounting bracket and the disposal fee for the damaged fan? The vendor expects delivery on November 18 between 7 AM and 9 AM, which overlaps with the school drop-off traffic. We should reserve the east loading area and ask security to direct the truck through the wider gate.",
+    "paragraphs": [
+      "The facilities quote says the replacement fan costs $3,750 and weighs 42 lb, but the loading dock limit is 1,000 kilograms. Before we approve it, can you ask whether the quoted price includes the mounting bracket and the disposal fee for the damaged fan? The vendor expects delivery on November 18 between 7 AM and 9 AM, which overlaps with the school drop-off traffic. We should reserve the east loading area and ask security to direct the truck through the wider gate."
+    ]
+  },
+  {
+    "id": "sample_2784",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The README says to set MAX_UPLOAD_MB to 25, but the deployment dashboard currently shows MAX_UPLOAD_MB as 20, and the mobile client rejects files above that limit. The product team wants the change in tomorrow's release because several customers are trying to submit larger photo sets. Please confirm whether the environment variable name is case-sensitive in the new container image, and add the setting to the rollback checklist so the old limit does not come back during an emergency deploy.",
+    "paragraphs": [
+      "The README says to set MAX_UPLOAD_MB to 25, but the deployment dashboard currently shows MAX_UPLOAD_MB as 20, and the mobile client rejects files above that limit. The product team wants the change in tomorrow's release because several customers are trying to submit larger photo sets. Please confirm whether the environment variable name is case-sensitive in the new container image, and add the setting to the rollback checklist so the old limit does not come back during an emergency deploy."
+    ]
+  },
+  {
+    "id": "sample_2785",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "For the neighborhood grant, the final receipt total is $2,486.50, and the city office needs it by December 1. I entered the amount in the spreadsheet, but I left the original vendor receipt in the folder because the handwritten tax line is hard to read. Could you compare the total against the approved budget before you submit it? Do not change the program name on the form; it has to remain exactly as Community Garden Access, even though the flyer uses a shorter name.",
+    "paragraphs": [
+      "For the neighborhood grant, the final receipt total is $2,486.50, and the city office needs it by December 1. I entered the amount in the spreadsheet, but I left the original vendor receipt in the folder because the handwritten tax line is hard to read. Could you compare the total against the approved budget before you submit it? Do not change the program name on the form; it has to remain exactly as Community Garden Access, even though the flyer uses a shorter name."
+    ]
+  },
+  {
+    "id": "sample_2786",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The lab courier will collect the frozen samples from 1120 Pine Street at 6:40 AM on Friday. They need the manifest to show the temperature range as −20 °C, not room temperature, because the receiving lab will reject anything that was stored incorrectly. Please place the manifest in the outer pouch, not inside the insulated box. Call the courier if the dry ice shipment has not arrived by five, since the samples cannot wait on the counter while we look for another container.",
+    "paragraphs": [
+      "The lab courier will collect the frozen samples from 1120 Pine Street at 6:40 AM on Friday. They need the manifest to show the temperature range as −20 °C, not room temperature, because the receiving lab will reject anything that was stored incorrectly. Please place the manifest in the outer pouch, not inside the insulated box. Call the courier if the dry ice shipment has not arrived by five, since the samples cannot wait on the counter while we look for another container."
+    ]
+  },
+  {
+    "id": "sample_2787",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The client sent the revised exhibit list at 4:20 PM, but page 7 refers to the case as Henson versus Valee, with an extra e in Vale. Please do not correct the scanned exhibit itself because it is the filed copy; just flag the spelling in the cover email and ask whether they want an amended list. The hearing is on April 11, and the clerk said late additions may require a written motion. Include the date and page number when you reply so the paralegal can find the issue quickly.",
+    "paragraphs": [
+      "The client sent the revised exhibit list at 4:20 PM, but page 7 refers to the case as Henson versus Valee, with an extra e in Vale. Please do not correct the scanned exhibit itself because it is the filed copy; just flag the spelling in the cover email and ask whether they want an amended list. The hearing is on April 11, and the clerk said late additions may require a written motion. Include the date and page number when you reply so the paralegal can find the issue quickly."
+    ]
+  },
+  {
+    "id": "sample_2788",
+    "file": "batch-028.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The museum wants 3 QR codes printed for the children's trail, one at the entrance, one beside the fossil table, and one near the exit map. The vendor quoted $0.75 per waterproof label, plus $18 for setup, and said the files are due by August 9. Could you send them the final SVG files instead of the PNG previews? Ask whether the labels can be ready by the 16th, because the volunteers need a day to place them before the opening event.",
+    "paragraphs": [
+      "The museum wants 3 QR codes printed for the children's trail, one at the entrance, one beside the fossil table, and one near the exit map. The vendor quoted $0.75 per waterproof label, plus $18 for setup, and said the files are due by August 9. Could you send them the final SVG files instead of the PNG previews? Ask whether the labels can be ready by the 16th, because the volunteers need a day to place them before the opening event."
+    ]
+  },
+  {
+    "id": "sample_2801",
+    "file": "batch-029.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "Can you bring the blue cooler to Maya's picnic on Saturday? I put the ice packs in the freezer, and the folding chairs are already in my car. We are meeting by the east gate at eleven because the usual lawn is being reseeded. Please pack the cooler with the fruit tray after you pick it up, but leave room for the lemonade bottles. Maya said her cousin is bringing a canopy, although we should still take sunscreen since the forecast looks clear. I will text when I leave home so you know whether we need anything else from the market.",
+    "paragraphs": [
+      "Can you bring the blue cooler to Maya's picnic on Saturday? I put the ice packs in the freezer, and the folding chairs are already in my car. We are meeting by the east gate at eleven because the usual lawn is being reseeded. Please pack the cooler with the fruit tray after you pick it up, but leave room for the lemonade bottles. Maya said her cousin is bringing a canopy, although we should still take sunscreen since the forecast looks clear. I will text when I leave home so you know whether we need anything else from the market."
+    ]
+  },
+  {
+    "id": "sample_2804",
+    "file": "batch-029.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I can't make the pottery class tomorrow because the plumber moved our appointment to the afternoon. Can we switch my spot to Lena if she still wants it? I already paid for the clay, and the instructor said the materials will stay labeled with my name until next week. If Lena takes the place, please ask her to bring an apron because the studio ones are usually gone by the evening session. I am disappointed to miss the glazing demonstration, but I do not want the seat to sit empty.",
+    "paragraphs": [
+      "I can't make the pottery class tomorrow because the plumber moved our appointment to the afternoon. Can we switch my spot to Lena if she still wants it? I already paid for the clay, and the instructor said the materials will stay labeled with my name until next week. If Lena takes the place, please ask her to bring an apron because the studio ones are usually gone by the evening session. I am disappointed to miss the glazing demonstration, but I do not want the seat to sit empty."
+    ]
+  },
+  {
+    "id": "sample_2806",
+    "file": "batch-029.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The dentist said my cleaning is at 2:30 on Thursday, and I should bring the insurance card, not the old membership card. They also asked me to arrive 10 minutes early because the office changed its check-in tablet last month. I wrote the address in my calendar since the construction near the bridge makes the usual route slower. If you are using the car that day, please leave the parking pass in the console. I will call them in the morning if the mild tooth sensitivity gets worse before then.",
+    "paragraphs": [
+      "The dentist said my cleaning is at 2:30 on Thursday, and I should bring the insurance card, not the old membership card. They also asked me to arrive 10 minutes early because the office changed its check-in tablet last month. I wrote the address in my calendar since the construction near the bridge makes the usual route slower. If you are using the car that day, please leave the parking pass in the console. I will call them in the morning if the mild tooth sensitivity gets worse before then."
+    ]
+  },
+  {
+    "id": "sample_2832",
+    "file": "batch-029.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "The garage opens at 7:30 on weekdays, so we can drop the car off before the meeting. The mechanic said the earliest appointment is usually before the commuters arrive, and the service desk opens at the same time. We need the car checked before lunch because the warning light came on during yesterday's drive home. I can bring the registration papers, the spare key, and the note describing the noise from the front wheel. If the garage cannot finish by noon, please call me before approving any extra work.",
+    "paragraphs": [
+      "The garage opens at 7:30 on weekdays, so we can drop the car off before the meeting. The mechanic said the earliest appointment is usually before the commuters arrive, and the service desk opens at the same time. We need the car checked before lunch because the warning light came on during yesterday's drive home. I can bring the registration papers, the spare key, and the note describing the noise from the front wheel. If the garage cannot finish by noon, please call me before approving any extra work."
+    ]
+  },
+  {
+    "id": "sample_2858",
+    "file": "batch-029.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "The picnic checklist is:\n- Sandwiches\n- Fruit\n- Sunscreen\n- A blanket\n\nPlease bring the blanket from the hall closet. The blanket is needed because the grass stays damp after sunset, and the playground does not have much shade during the afternoon. We are meeting near the east gate at eleven, so leave enough room in the tote for the reusable cups and the small speaker. If you have a folding table, bring it only if it fits in your car; otherwise, the park benches will be enough. I will pack the sandwiches separately so they stay cool on the drive.",
+    "paragraphs": [
+      "Please bring the blanket from the hall closet. The blanket is needed because the grass stays damp after sunset, and the playground does not have much shade during the afternoon. We are meeting near the east gate at eleven, so leave enough room in the tote for the reusable cups and the small speaker. If you have a folding table, bring it only if it fits in your car; otherwise, the park benches will be enough. I will pack the sandwiches separately so they stay cool on the drive."
+    ]
+  },
+  {
+    "id": "sample_2864",
+    "file": "batch-029.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "The onboarding notes need three links:\n- The VPN guide\n- The password manager setup\n- The request-access form\n\nPlease put the links near the top because new hires often ask for them while they are setting up their laptops. The VPN guide should mention that access may take an hour after the request is approved, and the password manager page should explain how to invite a recovery contact. The request-access form also needs the team's shared folder listed beside it so managers know where to check the status.",
+    "paragraphs": [
+      "Please put the links near the top because new hires often ask for them while they are setting up their laptops. The VPN guide should mention that access may take an hour after the request is approved, and the password manager page should explain how to invite a recovery contact. The request-access form also needs the team's shared folder listed beside it so managers know where to check the status."
+    ]
+  },
+  {
+    "id": "sample_2866",
+    "file": "batch-029.jsonl",
+    "category": "email_formatting",
+    "type": "single_principal_error",
+    "output": "Hi Nora,\n\nThanks for covering the afternoon reception shift. Could you send me the visitor count before you leave? The supply cabinet key is taped inside the lower desk drawer if anyone asks for extra badges. Please write down any deliveries that arrive after four, especially the parcel for the arts program, because the courier did not leave a tracking email. I will be back before the evening workshop starts, but call the office phone if the lobby gets too busy.\n\nBest,\nSam",
+    "paragraphs": [
+      "Thanks for covering the afternoon reception shift. Could you send me the visitor count before you leave? The supply cabinet key is taped inside the lower desk drawer if anyone asks for extra badges. Please write down any deliveries that arrive after four, especially the parcel for the arts program, because the courier did not leave a tracking email. I will be back before the evening workshop starts, but call the office phone if the lobby gets too busy."
+    ]
+  },
+  {
+    "id": "sample_2867",
+    "file": "batch-029.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello Priya,\n\nI am sending the revised volunteer schedule. The Saturday slots changed because two people canceled. I moved Dana to the morning table and left the noon shift open because it is the busiest time for registration. Could you ask the new volunteers to arrive 15 minutes early for badges and a quick safety briefing? The snack table still has coverage, so nobody needs to bring extra supplies. If the weather turns rainy, we may move the check-in table inside the library entrance.\n\nThanks,\nElise",
+    "paragraphs": [
+      "I am sending the revised volunteer schedule. The Saturday slots changed because two people canceled. I moved Dana to the morning table and left the noon shift open because it is the busiest time for registration. Could you ask the new volunteers to arrive 15 minutes early for badges and a quick safety briefing? The snack table still has coverage, so nobody needs to bring extra supplies. If the weather turns rainy, we may move the check-in table inside the library entrance."
+    ]
+  },
+  {
+    "id": "sample_2868",
+    "file": "batch-029.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hi Marco,\n\nThe landlord confirmed the elevator will be off from 10 to 1 tomorrow, so please use the stairs if you need to move boxes. The maintenance crew is replacing a control panel and asked residents not to hold the lobby doors open while they bring equipment through. If your delivery arrives during that window, the concierge can keep it in the package room until the elevator is running again. I will move the two storage bins tonight so the hallway stays clear.\n\nRegards,\nTessa",
+    "paragraphs": [
+      "The landlord confirmed the elevator will be off from 10 to 1 tomorrow, so please use the stairs if you need to move boxes. The maintenance crew is replacing a control panel and asked residents not to hold the lobby doors open while they bring equipment through. If your delivery arrives during that window, the concierge can keep it in the package room until the elevator is running again. I will move the two storage bins tonight so the hallway stays clear."
+    ]
+  },
+  {
+    "id": "sample_2876",
+    "file": "batch-029.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello Morgan,\n\nThe overnight import completed, but the reporting table is still two hours behind. I checked the job history, and the last successful run finished at 1:40 UTC. Could you look at the queue consumer before the support team starts their shift? If it needs a restart, please post the incident link in the data channel so nobody launches a second import.\n\nThanks,\nCelia",
+    "paragraphs": [
+      "The overnight import completed, but the reporting table is still two hours behind. I checked the job history, and the last successful run finished at 1:40 UTC. Could you look at the queue consumer before the support team starts their shift? If it needs a restart, please post the incident link in the data channel so nobody launches a second import."
+    ]
+  },
+  {
+    "id": "sample_2885",
+    "file": "batch-029.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "I transferred $1,250.00 to the joint account yesterday, but the banking app still shows the balance as pending. The teller said transfers after 4 PM can take one business day, so I will check again tomorrow morning before we pay the contractor. If the deposit is still missing, I saved the confirmation number in the Notes app and can call the branch.",
+    "paragraphs": [
+      "I transferred $1,250.00 to the joint account yesterday, but the banking app still shows the balance as pending. The teller said transfers after 4 PM can take one business day, so I will check again tomorrow morning before we pay the contractor. If the deposit is still missing, I saved the confirmation number in the Notes app and can call the branch."
+    ]
+  }
+]

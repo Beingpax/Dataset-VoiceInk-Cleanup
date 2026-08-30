@@ -1,0 +1,492 @@
+[
+  {
+    "id": "sample_3893",
+    "file": "batch-039.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "On the booking page, please use the status text “awaiting host approval” beneath the reservation number. Guests have been asking whether their payment failed, but the charge is only authorized until the host confirms the accessible room. I also moved the accessibility note into the confirmation email so the front desk can prepare the shower chair before arrival. If the host declines the request, the page should still explain that the temporary charge will disappear rather than telling guests to contact their bank. The support team needs that wording before tomorrow morning.",
+    "paragraphs": [
+      "On the booking page, please use the status text “awaiting host approval” beneath the reservation number. Guests have been asking whether their payment failed, but the charge is only authorized until the host confirms the accessible room. I also moved the accessibility note into the confirmation email so the front desk can prepare the shower chair before arrival. If the host declines the request, the page should still explain that the temporary charge will disappear rather than telling guests to contact their bank. The support team needs that wording before tomorrow morning."
+    ]
+  },
+  {
+    "id": "sample_3901",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "The laser cutter orientation starts at 8:30 in the fabrication lab on Thursday. Bring the safety goggles you were issued, because the spare pairs are being cleaned after the afternoon workshop. Jordan will demonstrate the material presets first, then each new member can make one test cut from the scrap acrylic bin. If you cannot attend, tell me before Wednesday evening so I can offer the place to someone on the waitlist. The session is required before anyone can reserve the machine independently.",
+    "paragraphs": [
+      "The laser cutter orientation starts at 8:30 in the fabrication lab on Thursday. Bring the safety goggles you were issued, because the spare pairs are being cleaned after the afternoon workshop. Jordan will demonstrate the material presets first, then each new member can make one test cut from the scrap acrylic bin. If you cannot attend, tell me before Wednesday evening so I can offer the place to someone on the waitlist. The session is required before anyone can reserve the machine independently."
+    ]
+  },
+  {
+    "id": "sample_3902",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "Could you water the balcony herbs while I am away this weekend? The basil dries out fastest, so give that pot a thorough drink on Saturday morning and check it again Sunday. The rosemary and thyme only need water if the soil feels dry a finger deep. I moved the small watering can beside the recycling box because the kitchen sink hose is leaking. Please leave the kitchen window closed after you finish; the forecast says there may be strong rain overnight.",
+    "paragraphs": [
+      "Could you water the balcony herbs while I am away this weekend? The basil dries out fastest, so give that pot a thorough drink on Saturday morning and check it again Sunday. The rosemary and thyme only need water if the soil feels dry a finger deep. I moved the small watering can beside the recycling box because the kitchen sink hose is leaking. Please leave the kitchen window closed after you finish; the forecast says there may be strong rain overnight."
+    ]
+  },
+  {
+    "id": "sample_3903",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The community pantry received 45 boxes of pasta this morning, but the shelf labels still show last week’s count. Could you update the inventory sheet before the volunteer shift at 4:00? The canned soup delivery is delayed until Friday, so please do not promise it to the families collecting parcels today. I put the delivery note in the blue binder by the register. If the count changes while you are there, write the revised total in the margin rather than estimating from memory.",
+    "paragraphs": [
+      "The community pantry received 45 boxes of pasta this morning, but the shelf labels still show last week’s count. Could you update the inventory sheet before the volunteer shift at 4:00? The canned soup delivery is delayed until Friday, so please do not promise it to the families collecting parcels today. I put the delivery note in the blue binder by the register. If the count changes while you are there, write the revised total in the margin rather than estimating from memory."
+    ]
+  },
+  {
+    "id": "sample_3904",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I left the folding tables in the church hall after the neighborhood meeting. The key is with Priya at the bakery until six, and she said you can pick it up through the side window if the shop is busy. Please stack the tables against the far wall, not beside the piano, because the music group rehearses there tomorrow morning. There are two extension cords under the stage that also need to go into the storage cupboard. Text me afterward so I can let the caretaker know the room is clear.",
+    "paragraphs": [
+      "I left the folding tables in the church hall after the neighborhood meeting. The key is with Priya at the bakery until six, and she said you can pick it up through the side window if the shop is busy. Please stack the tables against the far wall, not beside the piano, because the music group rehearses there tomorrow morning. There are two extension cords under the stage that also need to go into the storage cupboard. Text me afterward so I can let the caretaker know the room is clear."
+    ]
+  },
+  {
+    "id": "sample_3905",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "Could you ask the database team to restore yesterday’s backup to the staging cluster? The production copy must remain untouched while we compare the missing customer notes. I attached the incident number and the table names that appeared in the error log. Please request a temporary database name so the analysts cannot connect to it by accident. Once the restore finishes, send me the start and end times, even if the job reports a warning but completes.",
+    "paragraphs": [
+      "Could you ask the database team to restore yesterday’s backup to the staging cluster? The production copy must remain untouched while we compare the missing customer notes. I attached the incident number and the table names that appeared in the error log. Please request a temporary database name so the analysts cannot connect to it by accident. Once the restore finishes, send me the start and end times, even if the job reports a warning but completes."
+    ]
+  },
+  {
+    "id": "sample_3907",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The pharmacist said my inhaler refill will be ready after 2:00, but they need the insurance card when I collect it. Please remind me to call first if I cannot get there before closing, because the prescription has been waiting since Monday. The note on the bag says use the phrase “refill authorization” when I speak to the counter staff. I also need to ask whether the spacer is covered this time. Do not pick up the cough medicine; that was for my brother and he already collected it.",
+    "paragraphs": [
+      "The pharmacist said my inhaler refill will be ready after 2:00, but they need the insurance card when I collect it. Please remind me to call first if I cannot get there before closing, because the prescription has been waiting since Monday. The note on the bag says use the phrase “refill authorization” when I speak to the counter staff. I also need to ask whether the spacer is covered this time. Do not pick up the cough medicine; that was for my brother and he already collected it."
+    ]
+  },
+  {
+    "id": "sample_3908",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "Hi Marisol,\n\nThe plumber can return on Thursday between 10 and noon, but someone needs to move the boxes away from the utility closet before then. He could not reach the shutoff valve during the first visit, which is why the kitchen tap is still dripping. I will be at work, so could you let him in and ask for the invoice before he leaves? The replacement cartridge is in the small envelope beside the sink, underneath the folded dish towel.\n\nThanks,\nDevon",
+    "paragraphs": [
+      "The plumber can return on Thursday between 10 and noon, but someone needs to move the boxes away from the utility closet before then. He could not reach the shutoff valve during the first visit, which is why the kitchen tap is still dripping. I will be at work, so could you let him in and ask for the invoice before he leaves? The replacement cartridge is in the small envelope beside the sink, underneath the folded dish towel."
+    ]
+  },
+  {
+    "id": "sample_3909",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "For Saturday’s camping trip, please bring:\n\n- A torch with fresh batteries\n- A mug\n- Your own sleeping bag\n\nThe cabin has beds but no bedding, and the path from the car park is dark after sunset. I will bring the breakfast supplies and the first-aid kit. If you are arriving after 7:00, call me before you turn off the main road because the gate is normally locked. We are still going if it rains, although the outdoor cooking plan may change.",
+    "paragraphs": [
+      "The cabin has beds but no bedding, and the path from the car park is dark after sunset. I will bring the breakfast supplies and the first-aid kit. If you are arriving after 7:00, call me before you turn off the main road because the gate is normally locked. We are still going if it rains, although the outdoor cooking plan may change."
+    ]
+  },
+  {
+    "id": "sample_3910",
+    "file": "batch-040.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I told accounting the catering invoice was approved on Tuesday and will be paid next week. Please do not mark the event budget as settled until the bank transfer appears. The vendor included the service charge in the final amount, so there is no separate tip receipt to upload. I forwarded their revised invoice to you because the original had the wrong event date. Let me know if the purchase order needs a new note explaining the delayed payment.",
+    "paragraphs": [
+      "I told accounting the catering invoice was approved on Tuesday and will be paid next week. Please do not mark the event budget as settled until the bank transfer appears. The vendor included the service charge in the final amount, so there is no separate tip receipt to upload. I forwarded their revised invoice to you because the original had the wrong event date. Let me know if the purchase order needs a new note explaining the delayed payment."
+    ]
+  },
+  {
+    "id": "sample_4001",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "please ask the volunteer keyholder to check the community garden gate Saturday morning, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the notice once more before you leave, because several people are making plans around this change. If anything still looks unclear, send one message to the group instead of asking everyone to check separately. The coordinator will be available by phone until the final arrangement is confirmed.",
+    "paragraphs": [
+      "please ask the volunteer keyholder to check the community garden gate Saturday morning, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the notice once more before you leave, because several people are making plans around this change. If anything still looks unclear, send one message to the group instead of asking everyone to check separately. The coordinator will be available by phone until the final arrangement is confirmed."
+    ]
+  },
+  {
+    "id": "sample_4002",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "please ask the children’s reading group to check the library display shelves next Tuesday, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the notice once more before you leave, because several people are making plans around this change. If anything still looks unclear, send one message to the group instead of asking everyone to check separately. The coordinator will be available by phone until the final arrangement is confirmed.",
+    "paragraphs": [
+      "please ask the children’s reading group to check the library display shelves next Tuesday, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the notice once more before you leave, because several people are making plans around this change. If anything still looks unclear, send one message to the group instead of asking everyone to check separately. The coordinator will be available by phone until the final arrangement is confirmed."
+    ]
+  },
+  {
+    "id": "sample_4003",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "please ask the caretaker to check the rehearsal room lights before the choir arrives, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the notice once more before you leave, because several people are making plans around this change. If anything still looks unclear, send one message to the group instead of asking everyone to check separately. The coordinator will be available by phone until the final arrangement is confirmed.",
+    "paragraphs": [
+      "please ask the caretaker to check the rehearsal room lights before the choir arrives, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the notice once more before you leave, because several people are making plans around this change. If anything still looks unclear, send one message to the group instead of asking everyone to check separately. The coordinator will be available by phone until the final arrangement is confirmed."
+    ]
+  },
+  {
+    "id": "sample_4004",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "please ask the delivery driver to check the parcel locker code this afternoon, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again.",
+    "paragraphs": [
+      "please ask the delivery driver to check the parcel locker code this afternoon, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again."
+    ]
+  },
+  {
+    "id": "sample_4005",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "please ask the transport coordinator to check the school bus stop tomorrow morning, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again.",
+    "paragraphs": [
+      "please ask the transport coordinator to check the school bus stop tomorrow morning, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again."
+    ]
+  },
+  {
+    "id": "sample_4006",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "please ask the release manager to check the staging dashboard after lunch, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans today. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again.",
+    "paragraphs": [
+      "please ask the release manager to check the staging dashboard after lunch, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans today. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again."
+    ]
+  },
+  {
+    "id": "sample_4007",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "please ask the lifeguard to check the swimming pool lane ropes before lessons begin, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again.",
+    "paragraphs": [
+      "please ask the lifeguard to check the swimming pool lane ropes before lessons begin, because there are 20 people waiting for the update. The group needs a clear answer before anyone changes their plans. Please check the details with the person on duty before leaving, then send one clear update to everyone affected. That will prevent separate plans based on the earlier schedule. The coordinator will remain available until the final message is confirmed, and everyone should use that message rather than repeating yesterday’s instructions. Please keep the contact number handy in case the arrangements change again."
+    ]
+  },
+  {
+    "id": "sample_4008",
+    "file": "batch-041.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The community theater needs 18 more folding chairs for the Saturday matinee, and the rental company needs the final count by noon. Please ask the stage manager to check the storage room before placing another order, because some chairs may still be stacked behind the scenery. If we do need more, use the delivery entrance on Pine Street so the lobby stays clear for the audience. The ushers are arriving early to set up the seating map, and they need one confirmed number rather than several estimates. Also, send the revised count to the volunteer coordinator after the order is placed so nobody brings extra chairs from home.",
+    "paragraphs": [
+      "The community theater needs 18 more folding chairs for the Saturday matinee, and the rental company needs the final count by noon. Please ask the stage manager to check the storage room before placing another order, because some chairs may still be stacked behind the scenery. If we do need more, use the delivery entrance on Pine Street so the lobby stays clear for the audience. The ushers are arriving early to set up the seating map, and they need one confirmed number rather than several estimates. Also, send the revised count to the volunteer coordinator after the order is placed so nobody brings extra chairs from home."
+    ]
+  },
+  {
+    "id": "sample_4033",
+    "file": "batch-041.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "Please send the patient forms to the clinic desk by Thursday before the appointment, because the schedule changed after the last update. The recipient needs the final version, not the earlier draft. Please check the attachment names against the booking reference, then tell the family which desk will receive them. The receptionist is handling several arrivals that morning, so a complete message will prevent another call while the appointment is prepared.",
+    "paragraphs": [
+      "Please send the patient forms to the clinic desk by Thursday before the appointment, because the schedule changed after the last update. The recipient needs the final version, not the earlier draft. Please check the attachment names against the booking reference, then tell the family which desk will receive them. The receptionist is handling several arrivals that morning, so a complete message will prevent another call while the appointment is prepared."
+    ]
+  },
+  {
+    "id": "sample_4043",
+    "file": "batch-041.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "Please tell the parents the update for the gym doors is ready, but they should wait until the practice begins before changing their plans. The coordinator will send the final notice after checking the schedule. The revised arrangement affects the after-school pickup, so families need time to decide whether someone else should collect the children. Please include the entrance location and expected finish time, because the previous message did not say where people should wait.",
+    "paragraphs": [
+      "Please tell the parents the update for the gym doors is ready, but they should wait until the practice begins before changing their plans. The coordinator will send the final notice after checking the schedule. The revised arrangement affects the after-school pickup, so families need time to decide whether someone else should collect the children. Please include the entrance location and expected finish time, because the previous message did not say where people should wait."
+    ]
+  },
+  {
+    "id": "sample_4053",
+    "file": "batch-041.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "Please tell everyone the update about the school pickup is ready, but they should wait for the final confirmation before changing their plans. The coordinator will send the notice after checking the details. The revised pickup affects families using the late bus, so please state the new collection point and the expected finish time. The school office will answer questions until four, but families need the notice before they leave work to make other plans.",
+    "paragraphs": [
+      "Please tell everyone the update about the school pickup is ready, but they should wait for the final confirmation before changing their plans. The coordinator will send the notice after checking the details. The revised pickup affects families using the late bus, so please state the new collection point and the expected finish time. The school office will answer questions until four, but families need the notice before they leave work to make other plans."
+    ]
+  },
+  {
+    "id": "sample_4058",
+    "file": "batch-041.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "For Saturday's shelter meal service, bring:\n\n- a clean apron\n- closed-toe shoes\n- your food-handler card\n\nThe kitchen opens at ten for setup, and the lead volunteer will assign stations after checking everyone in. If you have not completed the allergy briefing, wait near the storage room until a supervisor can review it with you. Do not leave personal bags beside the emergency exit, because the delivery carts need that path clear. We also need two people to label takeaway containers before the lunch queue begins, so tell Marisol if you can help with that task.",
+    "paragraphs": [
+      "The kitchen opens at ten for setup, and the lead volunteer will assign stations after checking everyone in. If you have not completed the allergy briefing, wait near the storage room until a supervisor can review it with you. Do not leave personal bags beside the emergency exit, because the delivery carts need that path clear. We also need two people to label takeaway containers before the lunch queue begins, so tell Marisol if you can help with that task."
+    ]
+  },
+  {
+    "id": "sample_4068",
+    "file": "batch-041.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello Residents,\n\nThe water will be off from nine until noon while the valve is replaced. Bottled water is available downstairs. The maintenance team will post another notice in the lobby before they begin, and the office will remain open for residents who need help. Please avoid using the lifts during the interruption because the system may reset while the valve work is underway.\n\nThanks,\nBuilding Office Please arrive ten minutes early so reception can check the documents before the scheduled handover begins.",
+    "paragraphs": [
+      "The water will be off from nine until noon while the valve is replaced. Bottled water is available downstairs. The maintenance team will post another notice in the lobby before they begin, and the office will remain open for residents who need help. Please avoid using the lifts during the interruption because the system may reset while the valve work is underway."
+    ]
+  },
+  {
+    "id": "sample_4081",
+    "file": "batch-041.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The parents' open house is on October 14 at the east library entrance. Please bring the yellow permission slips, because the school needs a count before ordering chairs. The caretaker will unlock the hall 10 minutes early for families using the accessible ramp. If rain is heavy, staff will move the bicycle rack away from the doorway and direct everyone through reception. The principal will speak first, followed by the reading coordinator and the after-school club leader. Children may wait with a parent in the art room, but they should not use the science lab while equipment is being stored.",
+    "paragraphs": [
+      "The parents' open house is on October 14 at the east library entrance. Please bring the yellow permission slips, because the school needs a count before ordering chairs. The caretaker will unlock the hall 10 minutes early for families using the accessible ramp. If rain is heavy, staff will move the bicycle rack away from the doorway and direct everyone through reception. The principal will speak first, followed by the reading coordinator and the after-school club leader. Children may wait with a parent in the art room, but they should not use the science lab while equipment is being stored."
+    ]
+  },
+  {
+    "id": "sample_4093",
+    "file": "batch-041.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "Please use the phrase “payment received” in the notice because the reader needs the exact wording before the message is posted. The coordinator will check the final draft before distribution. The notice will be placed beside the front desk, where visitors stop before entering the building. Keep the wording unchanged in the printed version and the message sent to the group, because people are comparing both while making their arrangements.",
+    "paragraphs": [
+      "Please use the phrase “payment received” in the notice because the reader needs the exact wording before the message is posted. The coordinator will check the final draft before distribution. The notice will be placed beside the front desk, where visitors stop before entering the building. Keep the wording unchanged in the printed version and the message sent to the group, because people are comparing both while making their arrangements."
+    ]
+  },
+  {
+    "id": "sample_4101",
+    "file": "batch-042.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "The museum's children’s trail will start at the fountain tomorrow because the west gallery is being painted. Please tell families to collect wristbands from the information desk, then meet the guide beside the sculpture garden. The café has agreed to hold packed lunches in its refrigerator until noon, but parents should label every container. We may need to shorten the outdoor portion if the forecast changes, so bring a light jacket even if the morning seems warm. The final headcount goes to the education office at four today, and late registrations cannot be guaranteed a place.",
+    "paragraphs": [
+      "The museum's children’s trail will start at the fountain tomorrow because the west gallery is being painted. Please tell families to collect wristbands from the information desk, then meet the guide beside the sculpture garden. The café has agreed to hold packed lunches in its refrigerator until noon, but parents should label every container. We may need to shorten the outdoor portion if the forecast changes, so bring a light jacket even if the morning seems warm. The final headcount goes to the education office at four today, and late registrations cannot be guaranteed a place."
+    ]
+  },
+  {
+    "id": "sample_4111",
+    "file": "batch-042.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The florist needs the wedding table plan by Thursday because the venue has moved two family groups away from the windows. Please mark the two allergy-free centerpieces on the sketch, and leave the extra candle holders with the concierge. I spoke with the photographer, who will take the room shots before guests enter, so the arrangements must be finished by three. The couple has not chosen between cream and pale yellow ribbons yet, and we should not order either color until they reply. Call me if the delivery driver says the loading bay is full.",
+    "paragraphs": [
+      "The florist needs the wedding table plan by Thursday because the venue has moved two family groups away from the windows. Please mark the two allergy-free centerpieces on the sketch, and leave the extra candle holders with the concierge. I spoke with the photographer, who will take the room shots before guests enter, so the arrangements must be finished by three. The couple has not chosen between cream and pale yellow ribbons yet, and we should not order either color until they reply. Call me if the delivery driver says the loading bay is full."
+    ]
+  },
+  {
+    "id": "sample_4116",
+    "file": "batch-042.jsonl",
+    "category": "repetition_stutters",
+    "type": "single_principal_error",
+    "output": "The image-processing worker stopped halfway through the archive job, but the original files are still in cold storage. Please leave the queue paused until Rowan checks whether the failed thumbnails can be retried safely. The release notes can mention the delay after we know whether customer galleries were affected. Support already has the incident number, so there is no need to open a second ticket. If the retry succeeds overnight, save the worker logs before scaling the job back up. We should also tell the design team that previews may remain stale until the cache clears.",
+    "paragraphs": [
+      "The image-processing worker stopped halfway through the archive job, but the original files are still in cold storage. Please leave the queue paused until Rowan checks whether the failed thumbnails can be retried safely. The release notes can mention the delay after we know whether customer galleries were affected. Support already has the incident number, so there is no need to open a second ticket. If the retry succeeds overnight, save the worker logs before scaling the job back up. We should also tell the design team that previews may remain stale until the cache clears."
+    ]
+  },
+  {
+    "id": "sample_4119",
+    "file": "batch-042.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "The deployment dashboard still shows yesterday's canary as active although the rollback completed before lunch. Please compare the API response with the audit log before telling the release manager that production is clear. The customer-status page should remain unchanged until we confirm whether the display is stale or the job actually resumed. Maya can check the Kubernetes events after her planning call, and I will update the incident channel with what she finds. If the dashboard needs a manual refresh, document the command in the runbook so the on-call engineer can repeat it later.",
+    "paragraphs": [
+      "The deployment dashboard still shows yesterday's canary as active although the rollback completed before lunch. Please compare the API response with the audit log before telling the release manager that production is clear. The customer-status page should remain unchanged until we confirm whether the display is stale or the job actually resumed. Maya can check the Kubernetes events after her planning call, and I will update the incident channel with what she finds. If the dashboard needs a manual refresh, document the command in the runbook so the on-call engineer can repeat it later."
+    ]
+  },
+  {
+    "id": "sample_4131",
+    "file": "batch-042.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "single_principal_error",
+    "output": "Please send the final picnic map to the families before noon, because the park service may close the south footbridge after the rain. Mark the accessible entrance and the first-aid tent clearly so nobody follows the cycling route by mistake. The volunteer table will be beside the playground, where we will hand out wristbands and spare water bottles. Ask families to use the toilets near the café before the walk begins, since the portable units will not arrive until later. The ranger has asked us not to place signs on the old oak trees, so tie the direction arrows to the temporary fence instead.",
+    "paragraphs": [
+      "Please send the final picnic map to the families before noon, because the park service may close the south footbridge after the rain. Mark the accessible entrance and the first-aid tent clearly so nobody follows the cycling route by mistake. The volunteer table will be beside the playground, where we will hand out wristbands and spare water bottles. Ask families to use the toilets near the café before the walk begins, since the portable units will not arrive until later. The ranger has asked us not to place signs on the old oak trees, so tie the direction arrows to the temporary fence instead."
+    ]
+  },
+  {
+    "id": "sample_4159",
+    "file": "batch-042.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "Please prepare the following for Mr. Chen's discharge:\n\n- his medication list\n- the wound-care instructions\n- the follow-up appointment card\n- a taxi voucher\n\nHis sister will collect him at 11:30 from the main entrance, but she may need help finding the accessible pickup bay. The nurse should review the dressing schedule with them before they leave. If the pharmacy has not delivered the antibiotics, call the ward clerk rather than sending him home without them. Please also return the borrowed hearing amplifier to the labeled drawer once he is settled in the car.",
+    "paragraphs": [
+      "His sister will collect him at 11:30 from the main entrance, but she may need help finding the accessible pickup bay. The nurse should review the dressing schedule with them before they leave. If the pharmacy has not delivered the antibiotics, call the ward clerk rather than sending him home without them. Please also return the borrowed hearing amplifier to the labeled drawer once he is settled in the car."
+    ]
+  },
+  {
+    "id": "sample_4161",
+    "file": "batch-042.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "Please pack the following for the youth camping trip:\n\n- a rain jacket\n- a refillable bottle\n- a packed lunch\n- a copy of the medical form\n\nMeet outside the community center at 8:20, where Noor will divide everyone into car groups. The woodland path is muddy after the recent storm, so children need shoes that can get wet. Parents should tell the leader about any late pickup before the coach leaves. We will send one text when the group reaches the campsite and another before the return journey. Do not pack sweets containing peanuts because a participant has a severe allergy.",
+    "paragraphs": [
+      "Meet outside the community center at 8:20, where Noor will divide everyone into car groups. The woodland path is muddy after the recent storm, so children need shoes that can get wet. Parents should tell the leader about any late pickup before the coach leaves. We will send one text when the group reaches the campsite and another before the return journey. Do not pack sweets containing peanuts because a participant has a severe allergy."
+    ]
+  },
+  {
+    "id": "sample_4171",
+    "file": "batch-042.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello families,\n\nThe science fair setup begins at 8:00 on Saturday in the west hall. Please bring your display board, extension lead, and any table sign you plan to use. The caretaker will unlock the side door at 7:45, but cars cannot stop in the bus lane. Judges arrive at ten, so all exhibits need to be ready before then. If your project requires water, tell me by Friday because the sink nearest the hall is being repaired.\n\nThanks,\nRina",
+    "paragraphs": [
+      "The science fair setup begins at 8:00 on Saturday in the west hall. Please bring your display board, extension lead, and any table sign you plan to use. The caretaker will unlock the side door at 7:45, but cars cannot stop in the bus lane. Judges arrive at ten, so all exhibits need to be ready before then. If your project requires water, tell me by Friday because the sink nearest the hall is being repaired."
+    ]
+  },
+  {
+    "id": "sample_4178",
+    "file": "batch-042.jsonl",
+    "category": "entity_normalization",
+    "type": "single_principal_error",
+    "output": "The permit packet must reach the parks office by September 2 at 8:30 a.m., before the morning courier collects outgoing mail. I placed the trail map, insurance certificate, and vendor invoice in the blue folder, with the original application clipped to the front. The ranger asked us not to staple the photographs because the office scans them separately. If the weather notice changes overnight, I will call the contractor before printing the route signs. The volunteer roster is already attached, so no one needs to recreate it from the sign-in sheets.",
+    "paragraphs": [
+      "The permit packet must reach the parks office by September 2 at 8:30 a.m., before the morning courier collects outgoing mail. I placed the trail map, insurance certificate, and vendor invoice in the blue folder, with the original application clipped to the front. The ranger asked us not to staple the photographs because the office scans them separately. If the weather notice changes overnight, I will call the contractor before printing the route signs. The volunteer roster is already attached, so no one needs to recreate it from the sign-in sheets."
+    ]
+  },
+  {
+    "id": "sample_4181",
+    "file": "batch-042.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The data migration will begin on October 14 at 7:45 p.m. after the store closes. The support desk should keep the status page open and record any failed imports in the incident channel. We tested the rollback script against last week's backup, but the team still needs to pause the overnight report before moving customer attachments. Priya will watch the database lag from home while Evan checks the queue at the office. If the error rate climbs, stop the job before retrying the affected accounts. The on-call engineer has the rollback phone number.",
+    "paragraphs": [
+      "The data migration will begin on October 14 at 7:45 p.m. after the store closes. The support desk should keep the status page open and record any failed imports in the incident channel. We tested the rollback script against last week's backup, but the team still needs to pause the overnight report before moving customer attachments. Priya will watch the database lag from home while Evan checks the queue at the office. If the error rate climbs, stop the job before retrying the affected accounts. The on-call engineer has the rollback phone number."
+    ]
+  },
+  {
+    "id": "sample_4187",
+    "file": "batch-042.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The migration summary needs to be in the shared drive by September 10 at 5:30 p.m., before the support handoff starts. Priya has finished the API notes, but she still needs the final error-rate chart from the analytics folder. Please check that the chart uses the August data only, because the September import is incomplete. If the upload link fails again, send the PDF to the release mailbox and mention incident number 2841 in the subject line. I will review the customer-impact paragraph after the afternoon stand-up today.",
+    "paragraphs": [
+      "The migration summary needs to be in the shared drive by September 10 at 5:30 p.m., before the support handoff starts. Priya has finished the API notes, but she still needs the final error-rate chart from the analytics folder. Please check that the chart uses the August data only, because the September import is incomplete. If the upload link fails again, send the PDF to the release mailbox and mention incident number 2841 in the subject line. I will review the customer-impact paragraph after the afternoon stand-up today."
+    ]
+  },
+  {
+    "id": "sample_4191",
+    "file": "batch-042.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "single_principal_error",
+    "output": "For the museum audio guide, use the phrase “please touch only the bronze rail” before the stairs description. It should be easy for visitors using the tactile map to find the handhold without confusing it with the display barrier. The education team will record the sentence in English and Nepali, then ask two volunteers to try the route with the headset. Keep the rest of the description as it is, including the note about the narrow landing. The facilities manager is replacing the loose rail cover on Thursday, so the guide should not promise that work is already finished.",
+    "paragraphs": [
+      "For the museum audio guide, use the phrase “please touch only the bronze rail” before the stairs description. It should be easy for visitors using the tactile map to find the handhold without confusing it with the display barrier. The education team will record the sentence in English and Nepali, then ask two volunteers to try the route with the headset. Keep the rest of the description as it is, including the note about the narrow landing. The facilities manager is replacing the loose rail cover on Thursday, so the guide should not promise that work is already finished."
+    ]
+  },
+  {
+    "id": "sample_4195",
+    "file": "batch-042.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "Please put the label “staff only beyond this point” on the temporary door sign. The school is using the east corridor during the roof repair, and parents keep trying that entrance after drop-off. The custodian will move the sign each morning until the contractor finishes, but leave the arrow toward the gym where it is. The office also needs a copy of the wording for the family newsletter so the directions match the sign. The principal asked that the message remain firm but not alarming, since construction is confined to one wing. A volunteer will stand near the corridor during arrival for the first week.",
+    "paragraphs": [
+      "Please put the label “staff only beyond this point” on the temporary door sign. The school is using the east corridor during the roof repair, and parents keep trying that entrance after drop-off. The custodian will move the sign each morning until the contractor finishes, but leave the arrow toward the gym where it is. The office also needs a copy of the wording for the family newsletter so the directions match the sign. The principal asked that the message remain firm but not alarming, since construction is confined to one wing. A volunteer will stand near the corridor during arrival for the first week."
+    ]
+  },
+  {
+    "id": "sample_4196",
+    "file": "batch-042.jsonl",
+    "category": "no_change",
+    "type": "no_change",
+    "output": "I spoke with the community garden treasurer, and she has reserved the small pavilion for the seed swap on Saturday. The rain barrels will be moved away from the entrance before volunteers arrive, but the potting table should stay under the awning. Please bring the labeled envelopes from the tool shed and leave the extra tomato seeds with Luis, who is coordinating the children's table. We do not need to buy more compost unless the nursery confirms that its donated bags are torn. I will send the final attendance estimate after the neighborhood association meeting tonight.",
+    "paragraphs": [
+      "I spoke with the community garden treasurer, and she has reserved the small pavilion for the seed swap on Saturday. The rain barrels will be moved away from the entrance before volunteers arrive, but the potting table should stay under the awning. Please bring the labeled envelopes from the tool shed and leave the extra tomato seeds with Luis, who is coordinating the children's table. We do not need to buy more compost unless the nursery confirms that its donated bags are torn. I will send the final attendance estimate after the neighborhood association meeting tonight."
+    ]
+  },
+  {
+    "id": "sample_4203",
+    "file": "batch-043.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The staging deploy completed, but the health check is reading the old cache key. Please clear it before you ask Nora to retest the payment route. The issue started after the configuration change this morning, and it only affects the checkout flow when a customer returns from the hosted payment page. I saved the request ID in the incident channel, along with the screenshot from the failed check. It happened twice in the last hour for two separate test accounts.",
+    "paragraphs": [
+      "The staging deploy completed, but the health check is reading the old cache key. Please clear it before you ask Nora to retest the payment route. The issue started after the configuration change this morning, and it only affects the checkout flow when a customer returns from the hosted payment page. I saved the request ID in the incident channel, along with the screenshot from the failed check. It happened twice in the last hour for two separate test accounts."
+    ]
+  },
+  {
+    "id": "sample_4213",
+    "file": "batch-043.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I found the bug after tracing the import job from the nightly run. The worker accepts rows with an empty account code, then writes a duplicate ledger entry instead of rejecting the row. Could you add validation before the transaction starts and leave the existing error message unchanged so support can match it to their runbook? I also attached the smallest CSV that reproduces it without customer data. The affected accounts are test records, so no customer balances changed.",
+    "paragraphs": [
+      "I found the bug after tracing the import job from the nightly run. The worker accepts rows with an empty account code, then writes a duplicate ledger entry instead of rejecting the row. Could you add validation before the transaction starts and leave the existing error message unchanged so support can match it to their runbook? I also attached the smallest CSV that reproduces it without customer data. The affected accounts are test records, so no customer balances changed."
+    ]
+  },
+  {
+    "id": "sample_4225",
+    "file": "batch-043.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "We should use the phrase “family friendly” in the flyer, not kid safe, because the venue manager asked us to match the website wording. Also, the final proof needs to reach the printer by 10:00 tomorrow, and I still need confirmation on whether the outdoor seating is covered if the weather turns. If you hear back tonight, send me the revised PDF so I can approve it before breakfast. The printer closes at noon, so the timing is important.",
+    "paragraphs": [
+      "We should use the phrase “family friendly” in the flyer, not kid safe, because the venue manager asked us to match the website wording. Also, the final proof needs to reach the printer by 10:00 tomorrow, and I still need confirmation on whether the outdoor seating is covered if the weather turns. If you hear back tonight, send me the revised PDF so I can approve it before breakfast. The printer closes at noon, so the timing is important."
+    ]
+  },
+  {
+    "id": "sample_4233",
+    "file": "batch-043.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "The test is failing in the invoice export step after the billing module finishes. It produces a file with the customer name but omits the tax amount whenever the order includes a discount. Please compare the output with yesterday's successful run, then add a case for discounted orders before merging the fix. I left the sample data in the shared test folder, and none of it contains production accounts or real payment details. The failure appears only when a promotion supplies the tax field.",
+    "paragraphs": [
+      "The test is failing in the invoice export step after the billing module finishes. It produces a file with the customer name but omits the tax amount whenever the order includes a discount. Please compare the output with yesterday's successful run, then add a case for discounted orders before merging the fix. I left the sample data in the shared test folder, and none of it contains production accounts or real payment details. The failure appears only when a promotion supplies the tax field."
+    ]
+  },
+  {
+    "id": "sample_4268",
+    "file": "batch-043.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Dear Ms. Alvarez,\n\nI wanted to follow up about the permit application we submitted last Thursday. The portal now shows that one attachment is missing, although we uploaded the drainage sketch with the other documents. Could you tell us which file is not visible on your side and whether a replacement upload will change the review date? We are trying to schedule the contractor without assuming that approval is complete.\n\nThank you for your help with this.\n\nSincerely,\nJonah Reed",
+    "paragraphs": [
+      "I wanted to follow up about the permit application we submitted last Thursday. The portal now shows that one attachment is missing, although we uploaded the drainage sketch with the other documents. Could you tell us which file is not visible on your side and whether a replacement upload will change the review date? We are trying to schedule the contractor without assuming that approval is complete."
+    ]
+  },
+  {
+    "id": "sample_4282",
+    "file": "batch-043.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The revised survey recorded 42.5% support in the north district and 40% support in the south district. Please use 42.5% and 40% in the summary, then note that the sample included 1,200 responses collected between May 3 and May 10. The spreadsheet tab called Final Results has the district totals, but the chart on the first page still rounds the north result to 43%. Could you correct that chart before the committee meeting and keep the explanatory sentence about the margin of error exactly as it is?",
+    "paragraphs": [
+      "The revised survey recorded 42.5% support in the north district and 40% support in the south district. Please use 42.5% and 40% in the summary, then note that the sample included 1,200 responses collected between May 3 and May 10. The spreadsheet tab called Final Results has the district totals, but the chart on the first page still rounds the north result to 43%. Could you correct that chart before the committee meeting and keep the explanatory sentence about the margin of error exactly as it is?"
+    ]
+  },
+  {
+    "id": "sample_4288",
+    "file": "batch-043.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "For the warehouse handoff, label the first pallet A17, the second pallet A18, and the return pallet R03. The manifest currently says the delivery arrives at 14:00 on 2026-09-18, but the carrier confirmed 2:00 PM on September 18, 2026. Please use the confirmed time and date in the dispatch note, and change the weight from 1,200 kg to 1,200 kg. Also, make sure the driver’s number is written as +1 202-555-0148, because the current version drops the country code.",
+    "paragraphs": [
+      "For the warehouse handoff, label the first pallet A17, the second pallet A18, and the return pallet R03. The manifest currently says the delivery arrives at 14:00 on 2026-09-18, but the carrier confirmed 2:00 PM on September 18, 2026. Please use the confirmed time and date in the dispatch note, and change the weight from 1,200 kg to 1,200 kg. Also, make sure the driver’s number is written as +1 202-555-0148, because the current version drops the country code."
+    ]
+  },
+  {
+    "id": "sample_4293",
+    "file": "batch-043.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "In the deployment guide, add the message “service unavailable” after the health-check section, because that is the exact text users see during the brief maintenance window. Also include the label “retry later” in the button description, but do not imply that the user’s work was saved. The support team needs the wording to match the screen so they can identify the problem quickly when a caller reads it aloud. Leave the troubleshooting steps in their current order; we only need the two visible messages quoted in the guide for this revision.",
+    "paragraphs": [
+      "In the deployment guide, add the message “service unavailable” after the health-check section, because that is the exact text users see during the brief maintenance window. Also include the label “retry later” in the button description, but do not imply that the user’s work was saved. The support team needs the wording to match the screen so they can identify the problem quickly when a caller reads it aloud. Leave the troubleshooting steps in their current order; we only need the two visible messages quoted in the guide for this revision."
+    ]
+  },
+  {
+    "id": "sample_4320",
+    "file": "batch-044.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "The server was stable during the morning test, but the backup job failed after the database snapshot finished.\n\nI copied the error message into the incident ticket and asked Priya to check whether the storage volume is full. Before we restart anything, please save the current logs and tell the support team that the customer portal may be unavailable for a few minutes. The vendor call is at 3 PM, and I will send the ticket number beforehand. Our monitoring dashboard shows no unusual traffic, but the nightly archive process is still running on the secondary node.",
+    "paragraphs": [
+      "I copied the error message into the incident ticket and asked Priya to check whether the storage volume is full. Before we restart anything, please save the current logs and tell the support team that the customer portal may be unavailable for a few minutes. The vendor call is at 3 PM, and I will send the ticket number beforehand. Our monitoring dashboard shows no unusual traffic, but the nightly archive process is still running on the secondary node."
+    ]
+  },
+  {
+    "id": "sample_4325",
+    "file": "batch-044.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "I spoke with the clinic receptionist about the forms for my aunt's appointment.\n\nShe said the referral is already attached to the file, but the insurance card needs to be copied again because the first scan was too dark. Please bring the medication list and the photo ID, and call the office if the transportation service is running late. The appointment begins at 10 AM on Thursday, so I will meet her in the lobby fifteen minutes early. Her neighbor offered to wait with her if I am delayed by the school pickup.",
+    "paragraphs": [
+      "She said the referral is already attached to the file, but the insurance card needs to be copied again because the first scan was too dark. Please bring the medication list and the photo ID, and call the office if the transportation service is running late. The appointment begins at 10 AM on Thursday, so I will meet her in the lobby fifteen minutes early. Her neighbor offered to wait with her if I am delayed by the school pickup."
+    ]
+  }
+]

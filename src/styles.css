@@ -182,6 +182,9 @@ td:first-child small { margin: 3px 0 0 30px; color: var(--muted); }
 .file-button input { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
 .load-status { grid-column: 1 / -1; justify-self: end; color: var(--muted); font-size: .72rem; }
 .load-status.is-error { color: var(--coral); }
+.viewer-draft-notice { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: .875rem; }
+.viewer-draft-notice p { flex: 1 1 480px; max-width: 75ch; margin: 0; }
+.viewer-draft-notice a { white-space: nowrap; }
 .filter-strip { display: grid; grid-template-columns: minmax(220px, 1.4fr) repeat(3, minmax(115px, .7fr)) auto; gap: 7px; align-items: end; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .filter-strip button { min-height: 40px; }
 .error-filter { padding: 10px 0; border-bottom: 1px solid var(--line); }

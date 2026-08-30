@@ -46,6 +46,26 @@ export function nearDuplicates(rows) {
   return matches;
 }
 
+export function repeatedBoilerplate(rows) {
+  // Whole-record similarity misses a stock sentence appended to otherwise
+  // distinct messages. Group long repeated target sentences within a batch.
+  const sentences = new Map();
+  for (const row of rows) {
+    const batch = Math.ceil(Number(row.id.slice(7)) / 100);
+    const seen = new Set();
+    for (const sentence of row.output.split(/(?<=[.!?])\s+|\n+/u)) {
+      const text = normalized(sentence);
+      if (text.split(' ').length < 12 || seen.has(text)) continue;
+      seen.add(text);
+      const key = `${batch}:${text}`;
+      const entry = sentences.get(key) || {batch, text, ids: []};
+      entry.ids.push(row.id);
+      sentences.set(key, entry);
+    }
+  }
+  return [...sentences.values()].filter(entry => entry.ids.length >= 5);
+}
+
 export function audit() {
   const failures = [], rows = [], batchReviews = [], batches = [];
   const benchmark = {};
@@ -84,17 +104,19 @@ export function audit() {
   failures.push(...findDuplicates(rows, benchmarkInputs));
   const near = nearDuplicates(rows);
   if (near.length) failures.push(`${near.length} near-duplicate input pairs require reauthoring`);
-  return {failures, rows, report:{target_pairs:config.target_pairs, records:rows.length, accepted_batches:batchReviews.filter(review=>review.status==='accepted').length, batches, categories:counts(rows,'category'), record_types:counts(rows,'type'), domains:counts(rows,'domain'), asr_presentation:counts(rows,'presentation'), lengths:{minimum:rows.length?Math.min(...rows.map(row=>words(row.input).length)):null, maximum:rows.length?Math.max(...rows.map(row=>words(row.input).length)):null, extended:rows.filter(row=>words(row.input).length>=80).length}, near_duplicates:near, benchmark, review_method:'Every pair reviewed by the foreground AI agent; content-hash-bound batch acceptance. Not human review or a guarantee of error-free data.'}};
+  const boilerplate = repeatedBoilerplate(rows);
+  if (boilerplate.length) failures.push(`${boilerplate.length} repeated long-sentence groups require content review and reauthoring`);
+  return {failures, rows, report:{target_pairs:config.target_pairs, records:rows.length, accepted_batches:batchReviews.filter(review=>review.status==='accepted').length, batches, categories:counts(rows,'category'), record_types:counts(rows,'type'), domains:counts(rows,'domain'), asr_presentation:counts(rows,'presentation'), lengths:{minimum:rows.length?Math.min(...rows.map(row=>words(row.input).length)):null, maximum:rows.length?Math.max(...rows.map(row=>words(row.input).length)):null, extended:rows.filter(row=>words(row.input).length>=80).length}, near_duplicates:near, repeated_boilerplate:boilerplate, benchmark, review_method:'Every pair reviewed by the foreground AI agent; content-hash-bound batch acceptance. Not human review or a guarantee of error-free data.'}};
 }
 
-export function canonicalRecords(rows) {
+export function canonicalRecords(rows, {reviewedIds} = {}) {
   const readme = fs.readFileSync(path.join(directory, '../README.md'), 'utf8');
   const system = readme.match(/```text\n([\s\S]*?)\n```/u)?.[1];
   if (!system?.startsWith('You are a transcript cleanup editor.')) throw new Error('Canonical README system instruction not found');
   return rows.map(row => ({
     id:row.id,
     messages:[{role:'system',content:system},{role:'user',content:row.input},{role:'assistant',content:row.output}],
-    metadata:{language:'en',record_type:row.type,primary_category:row.category,error_types:row.errors,formatting_features:row.features,edit_support:'direct',source:'synthetic_generated',policy_version:config.policy_version,domain:row.domain,scenario:row.scenario,asr_presentation:row.presentation,generation_batch:`batch-${String(Math.ceil(Number(row.id.slice(7))/100)).padStart(3,'0')}`,generation_model:config.model,prompt_revision:config.prompt_revision,review_status:'ai_foreground_reviewed',human_reviewed:false},
+    metadata:{language:'en',record_type:row.type,primary_category:row.category,error_types:row.errors,formatting_features:row.features,edit_support:'direct',source:'synthetic_generated',policy_version:config.policy_version,domain:row.domain,scenario:row.scenario,asr_presentation:row.presentation,generation_batch:`batch-${String(Math.ceil(Number(row.id.slice(7))/100)).padStart(3,'0')}`,generation_model:config.model,prompt_revision:config.prompt_revision,review_status:reviewedIds && !reviewedIds.has(row.id) ? 'synthetic_draft' : 'ai_foreground_reviewed',human_reviewed:false},
   }));
 }
 

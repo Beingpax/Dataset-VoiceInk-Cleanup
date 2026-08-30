@@ -1,0 +1,15 @@
+{
+  "collection_status": "draft",
+  "target": 5000,
+  "generated": 5000,
+  "batch_checks_passed": 5000,
+  "foreground_reviewed": 0,
+  "awaiting_foreground_review": 5000,
+  "human_reviewed": false,
+  "note": "Review snapshot only. Cross-batch corrections and full semantic review may still be in progress. Batch checks do not certify naturalness or faithfulness.",
+  "dataset_sha256": "d9de04554d1c4a6e6c4cdd57f943312294b940058d6e6e5c4a153ba8dfd294e1",
+  "outputs": [
+    "dataset-generator/data/cleanup-dataset.jsonl",
+    "public/data/cleanup-dataset.jsonl"
+  ]
+}

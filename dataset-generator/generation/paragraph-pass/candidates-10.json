@@ -1,0 +1,402 @@
+[
+  {
+    "id": "sample_4343",
+    "file": "batch-044.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The orientation starts at nine. Please bring the access badge and the completed tax form.\n\nThe first hour covers safety rules and the building map, then the team lead will show you where to collect equipment. If you have a question about parking, ask the receptionist before the session begins because visitor spaces fill quickly. After lunch, the software trainer will help everyone sign in and set up two-factor authentication. The final part is a short tour of the loading area and the break room.",
+    "paragraphs": [
+      "The first hour covers safety rules and the building map, then the team lead will show you where to collect equipment. If you have a question about parking, ask the receptionist before the session begins because visitor spaces fill quickly. After lunch, the software trainer will help everyone sign in and set up two-factor authentication. The final part is a short tour of the loading area and the break room."
+    ]
+  },
+  {
+    "id": "sample_4393",
+    "file": "batch-044.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "For the volunteer handbook, use the sentence “please ask before entering the storage room” in the safety section, because the shelves are being reorganized this month.\n\nThe coordinator also wants the phrase “report damaged equipment immediately” beside the equipment checkout instructions, so new volunteers know who to contact. Please keep the rest of the wording conversational, since many of the readers are joining for the first time. We will review the draft at the Monday meeting, then send the final version to the neighborhood groups. If anyone has questions about the key cabinet, they should speak with the building manager before their first shift.",
+    "paragraphs": [
+      "The coordinator also wants the phrase “report damaged equipment immediately” beside the equipment checkout instructions, so new volunteers know who to contact. Please keep the rest of the wording conversational, since many of the readers are joining for the first time. We will review the draft at the Monday meeting, then send the final version to the neighborhood groups. If anyone has questions about the key cabinet, they should speak with the building manager before their first shift."
+    ]
+  },
+  {
+    "id": "sample_4403",
+    "file": "batch-045.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I reviewed the installation notes for the lobby display, and the power adapter is listed as optional even though it is required for the media player to boot. Could someone update the checklist before the vendor arrives on Thursday? Also, please put the serial number from the shipping label into the asset tracker so facilities can match the replacement unit to the old mount. The instructions also say the screen can be mounted without an inspection, which conflicts with the building manager's email.",
+    "paragraphs": [
+      "I reviewed the installation notes for the lobby display, and the power adapter is listed as optional even though it is required for the media player to boot. Could someone update the checklist before the vendor arrives on Thursday? Also, please put the serial number from the shipping label into the asset tracker so facilities can match the replacement unit to the old mount. The instructions also say the screen can be mounted without an inspection, which conflicts with the building manager's email."
+    ]
+  },
+  {
+    "id": "sample_4411",
+    "file": "batch-045.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The test environment is still accepting passwords that are shorter than the requirement, and that makes the onboarding walkthrough misleading for new support staff. I reproduced it in Firefox and Safari with a fresh account, then saved screenshots in the shared folder. Could Priya check whether the validation rule changed during last night's deployment? The help article currently tells customers that every password needs at least 12 characters. The affected form is the one used in the welcome email.",
+    "paragraphs": [
+      "The test environment is still accepting passwords that are shorter than the requirement, and that makes the onboarding walkthrough misleading for new support staff. I reproduced it in Firefox and Safari with a fresh account, then saved screenshots in the shared folder. Could Priya check whether the validation rule changed during last night's deployment? The help article currently tells customers that every password needs at least 12 characters. The affected form is the one used in the welcome email."
+    ]
+  },
+  {
+    "id": "sample_4420",
+    "file": "batch-045.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "I spoke with the claims representative this morning, and she said the repair estimate was received but has not been assigned for review. The policy number is written correctly in the email, although the shop's address is missing the unit number. Could you forward the original estimate again and ask whether they need photographs of the damage before they approve the rental extension? I do not want the car returned while the rear door still will not close.",
+    "paragraphs": [
+      "I spoke with the claims representative this morning, and she said the repair estimate was received but has not been assigned for review. The policy number is written correctly in the email, although the shop's address is missing the unit number. Could you forward the original estimate again and ask whether they need photographs of the damage before they approve the rental extension? I do not want the car returned while the rear door still will not close."
+    ]
+  },
+  {
+    "id": "sample_4433",
+    "file": "batch-045.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "The vendor needs the revised wiring diagram before they can schedule the inspection, and they also asked for a photo of the panel label. The drawing in the shared folder still has the old breaker numbers, and the notes call the conduit route optional, even though it is required by the building manager. Could you replace that file today and let Omar know when the corrected version is ready for the inspector to review?",
+    "paragraphs": [
+      "The vendor needs the revised wiring diagram before they can schedule the inspection, and they also asked for a photo of the panel label. The drawing in the shared folder still has the old breaker numbers, and the notes call the conduit route optional, even though it is required by the building manager. Could you replace that file today and let Omar know when the corrected version is ready for the inspector to review?"
+    ]
+  },
+  {
+    "id": "sample_4478",
+    "file": "batch-045.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Dear Mateo,\n\nI wanted to follow up on the staging server request. The operations team can reserve it from September 12 through September 16, and they need the final list of test accounts by Thursday afternoon. Please confirm whether the payment sandbox, the reporting export, and the mobile login flow are all included in this round. If any of those items must wait, let me know which one is most important to keep.\n\nWe can adjust the schedule, but I would rather not ask the team to hold the server without a clear plan.\n\nBest,\nRina",
+    "paragraphs": [
+      "I wanted to follow up on the staging server request. The operations team can reserve it from September 12 through September 16, and they need the final list of test accounts by Thursday afternoon. Please confirm whether the payment sandbox, the reporting export, and the mobile login flow are all included in this round. If any of those items must wait, let me know which one is most important to keep."
+    ]
+  },
+  {
+    "id": "sample_4482",
+    "file": "batch-045.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "For the neighborhood grant application, we received a pledge of $1,200 from the garden club and a separate contribution of $415 from the bookstore. Please update the draft total before tomorrow's committee meeting, but keep the note that the raffle gift card is still available. Also, make sure the public summary says the grant will support the tool shed, seed library, and weekend workshops rather than implying that the money is only for landscaping.",
+    "paragraphs": [
+      "For the neighborhood grant application, we received a pledge of $1,200 from the garden club and a separate contribution of $415 from the bookstore. Please update the draft total before tomorrow's committee meeting, but keep the note that the raffle gift card is still available. Also, make sure the public summary says the grant will support the tool shed, seed library, and weekend workshops rather than implying that the money is only for landscaping."
+    ]
+  },
+  {
+    "id": "sample_4488",
+    "file": "batch-045.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "I checked the delivery log for the robotics kits. The first shipment of 24 units reached the school on August 3, but the second shipment of 16 units is still listed as pending. The supplier said it left their warehouse yesterday and should arrive by 11:30 on Friday, although they could not promise a delivery window. Please tell the teachers that the introductory lesson can still happen with the first shipment, but the programming exercises that use the extra sensors should wait until both cartons are here. If the second shipment does not arrive Friday, I will ask the supplier for a tracking update before Monday morning.",
+    "paragraphs": [
+      "I checked the delivery log for the robotics kits. The first shipment of 24 units reached the school on August 3, but the second shipment of 16 units is still listed as pending. The supplier said it left their warehouse yesterday and should arrive by 11:30 on Friday, although they could not promise a delivery window. Please tell the teachers that the introductory lesson can still happen with the first shipment, but the programming exercises that use the extra sensors should wait until both cartons are here. If the second shipment does not arrive Friday, I will ask the supplier for a tracking update before Monday morning."
+    ]
+  },
+  {
+    "id": "sample_4493",
+    "file": "batch-045.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "For the volunteer orientation notes, please include the sentence “your first shift is a chance to observe and ask questions” after the section about arriving early. Also, put the label “safety contact” above Rowan's phone number so new volunteers can find it. The notes should explain that people may step outside if they need a quiet moment, but they should tell the shift lead before leaving the welcome desk unattended. Keep the tone warm because people are joining for the first time, and do not make the reminder sound like a warning. I will send the room map once the community center confirms which entrance is open Saturday morning.",
+    "paragraphs": [
+      "For the volunteer orientation notes, please include the sentence “your first shift is a chance to observe and ask questions” after the section about arriving early. Also, put the label “safety contact” above Rowan's phone number so new volunteers can find it. The notes should explain that people may step outside if they need a quiet moment, but they should tell the shift lead before leaving the welcome desk unattended. Keep the tone warm because people are joining for the first time, and do not make the reminder sound like a warning. I will send the room map once the community center confirms which entrance is open Saturday morning."
+    ]
+  },
+  {
+    "id": "sample_4511",
+    "file": "batch-046.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The museum's west gallery will close at 3:15 for a lighting check, and the docent tour should start at the east entrance instead. Please tell the volunteers that the school group still arrives at 2:45, so they should meet the bus as usual and then guide everyone through the sculpture courtyard. The café and restrooms remain open, but visitors will not be able to cross the central hallway during the check. Security will post signs at both doors.",
+    "paragraphs": [
+      "The museum's west gallery will close at 3:15 for a lighting check, and the docent tour should start at the east entrance instead. Please tell the volunteers that the school group still arrives at 2:45, so they should meet the bus as usual and then guide everyone through the sculpture courtyard. The café and restrooms remain open, but visitors will not be able to cross the central hallway during the check. Security will post signs at both doors."
+    ]
+  },
+  {
+    "id": "sample_4522",
+    "file": "batch-046.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "We saw three failed checkout requests after the release. The error page says “payment could not be processed,” although the gateway dashboard shows no declined transactions. Please compare the browser logs with the request IDs from 9:00 to 9:20 and let me know whether the retry button sent a second charge. If it did, pause the promotion banner until we can explain the behavior to support. I will also ask the payments team to check the webhook delivery history.",
+    "paragraphs": [
+      "We saw three failed checkout requests after the release. The error page says “payment could not be processed,” although the gateway dashboard shows no declined transactions. Please compare the browser logs with the request IDs from 9:00 to 9:20 and let me know whether the retry button sent a second charge. If it did, pause the promotion banner until we can explain the behavior to support. I will also ask the payments team to check the webhook delivery history."
+    ]
+  },
+  {
+    "id": "sample_4525",
+    "file": "batch-046.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "Our overnight backup finished at 2:10, but the report says it copied only 87% of the archive before the connection dropped. Could you check whether the remote storage quota changed after last night's maintenance? The team needs to know before the 9:00 deployment, because the release package includes customer exports that cannot be recreated quickly. If the quota is unchanged, please leave the backup job paused and post the error code in the incident channel. The on-call engineer is already watching the storage dashboard.",
+    "paragraphs": [
+      "Our overnight backup finished at 2:10, but the report says it copied only 87% of the archive before the connection dropped. Could you check whether the remote storage quota changed after last night's maintenance? The team needs to know before the 9:00 deployment, because the release package includes customer exports that cannot be recreated quickly. If the quota is unchanged, please leave the backup job paused and post the error code in the incident channel. The on-call engineer is already watching the storage dashboard."
+    ]
+  },
+  {
+    "id": "sample_4533",
+    "file": "batch-046.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "I told the volunteers to meet at the north entrance because the construction crew will block the path beside the fountain. The parking lot stays open, but the closest accessible spaces are on the library side, so please mention that in the reminder. We also need two people at the welcome table by 8:30 to hand out maps and name tags. If anyone arrives late, ask them to enter through the side gate near the bicycle racks rather than walking around the closed courtyard.",
+    "paragraphs": [
+      "I told the volunteers to meet at the north entrance because the construction crew will block the path beside the fountain. The parking lot stays open, but the closest accessible spaces are on the library side, so please mention that in the reminder. We also need two people at the welcome table by 8:30 to hand out maps and name tags. If anyone arrives late, ask them to enter through the side gate near the bicycle racks rather than walking around the closed courtyard."
+    ]
+  },
+  {
+    "id": "sample_4543",
+    "file": "batch-046.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The neighborhood cleanup begins at nine on Saturday. Please meet beside the playground and sign in with Marisol before you collect gloves and bags. The city will pick up the filled bags at noon, so keep them along the curb rather than near the swings. If you find broken glass, do not put it in the regular trash; mark the spot with a flag and tell the parks supervisor. We also need to return the borrowed litter grabbers to the storage shed before the volunteer lunch starts at one.",
+    "paragraphs": [
+      "The neighborhood cleanup begins at nine on Saturday. Please meet beside the playground and sign in with Marisol before you collect gloves and bags. The city will pick up the filled bags at noon, so keep them along the curb rather than near the swings. If you find broken glass, do not put it in the regular trash; mark the spot with a flag and tell the parks supervisor. We also need to return the borrowed litter grabbers to the storage shed before the volunteer lunch starts at one."
+    ]
+  },
+  {
+    "id": "sample_4558",
+    "file": "batch-046.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "For Saturday's shelter drive, we need:\n- canned soup\n- boxes of pasta\n- peanut butter\n- baby wipes\n- unopened toiletries\n\nPlease place the food donations on the long table by the entrance, because the volunteers will sort them by type before the afternoon pickup. The toiletries should stay in the labeled bins near the coat rack so the caseworkers can count them separately. Bring any paper bags you have as well; the shelter ran short last month when several families arrived at once. Do not include glass jars, since the storage room has limited shelving and the staff asked us to avoid breakable donations.",
+    "paragraphs": [
+      "Please place the food donations on the long table by the entrance, because the volunteers will sort them by type before the afternoon pickup. The toiletries should stay in the labeled bins near the coat rack so the caseworkers can count them separately. Bring any paper bags you have as well; the shelter ran short last month when several families arrived at once. Do not include glass jars, since the storage room has limited shelving and the staff asked us to avoid breakable donations."
+    ]
+  },
+  {
+    "id": "sample_4582",
+    "file": "batch-046.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The contractor measured the hallway at 12 ft. 6 in. wide, but the drawings list it as 11 ft. 8 in. Please confirm the actual width before ordering the handrail, because the accessibility consultant needs enough clearance beside the doorway. The crew will arrive on April 14 at 7:30, and the building manager must unlock the service elevator before they unload the materials. If the measurement is correct, update the permit sketch and send the revised version to the architect before the city review on Friday.",
+    "paragraphs": [
+      "The contractor measured the hallway at 12 ft. 6 in. wide, but the drawings list it as 11 ft. 8 in. Please confirm the actual width before ordering the handrail, because the accessibility consultant needs enough clearance beside the doorway. The crew will arrive on April 14 at 7:30, and the building manager must unlock the service elevator before they unload the materials. If the measurement is correct, update the permit sketch and send the revised version to the architect before the city review on Friday."
+    ]
+  },
+  {
+    "id": "sample_4588",
+    "file": "batch-046.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "For the grant budget, list the van rental as $1,875, the printing estimate as $240, and the insurance fee as $95. The coordinator also needs the event date written as October 22 and the setup time as 6:15, because those details appear in the permit application. Please check the final total before sending the spreadsheet to the foundation; the award covers only the approved expenses, and any extra cost must be paid from the neighborhood association's donation account. The treasurer will review the figures after lunch, so leave the formulas visible for her notes.",
+    "paragraphs": [
+      "For the grant budget, list the van rental as $1,875, the printing estimate as $240, and the insurance fee as $95. The coordinator also needs the event date written as October 22 and the setup time as 6:15, because those details appear in the permit application. Please check the final total before sending the spreadsheet to the foundation; the award covers only the approved expenses, and any extra cost must be paid from the neighborhood association's donation account. The treasurer will review the figures after lunch, so leave the formulas visible for her notes."
+    ]
+  },
+  {
+    "id": "sample_4593",
+    "file": "batch-046.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "In the volunteer guide, use the sentence “please check in at the welcome table before collecting supplies.” The phrase needs to appear near the top because new helpers often walk straight to the storage shed. Also add the label “return tools here” above the bins, so people know where to leave the litter grabbers after the cleanup. The park supervisor will review the guide on Thursday, and she asked us not to change the safety instructions at the end because those came from the city office.",
+    "paragraphs": [
+      "In the volunteer guide, use the sentence “please check in at the welcome table before collecting supplies.” The phrase needs to appear near the top because new helpers often walk straight to the storage shed. Also add the label “return tools here” above the bins, so people know where to leave the litter grabbers after the cleanup. The park supervisor will review the guide on Thursday, and she asked us not to change the safety instructions at the end because those came from the city office."
+    ]
+  },
+  {
+    "id": "sample_4611",
+    "file": "batch-047.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "Hi Rowan,\n\nThanks for sending the draft schedule. The Tuesday shift needs to start at 7:15 because the delivery truck arrives before the café opens. I can cover the register until nine, then I need to leave for my dentist appointment. I also checked with Niko, and he can unlock the back door for the bakery delivery if you put his name on the morning sheet.\n\nPlease let me know whether you still need someone for the closing shift on Friday.\n\nThanks,\nElena",
+    "paragraphs": [
+      "Thanks for sending the draft schedule. The Tuesday shift needs to start at 7:15 because the delivery truck arrives before the café opens. I can cover the register until nine, then I need to leave for my dentist appointment. I also checked with Niko, and he can unlock the back door for the bakery delivery if you put his name on the morning sheet."
+    ]
+  },
+  {
+    "id": "sample_4625",
+    "file": "batch-047.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "The clinic receptionist said the appointment is on Monday at 2:40, not 2:14. Please bring the insurance card, the medication list, and the referral letter, because the specialist's office said they cannot request those documents from our regular doctor on the same day. They also asked us to arrive fifteen minutes early to complete the consent form and update the pharmacy information at the desk. If traffic is heavy, call before the appointment instead of arriving late without notice, since they may give the slot to someone on the waiting list.",
+    "paragraphs": [
+      "The clinic receptionist said the appointment is on Monday at 2:40, not 2:14. Please bring the insurance card, the medication list, and the referral letter, because the specialist's office said they cannot request those documents from our regular doctor on the same day. They also asked us to arrive fifteen minutes early to complete the consent form and update the pharmacy information at the desk. If traffic is heavy, call before the appointment instead of arriving late without notice, since they may give the slot to someone on the waiting list."
+    ]
+  },
+  {
+    "id": "sample_4682",
+    "file": "batch-047.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "I reviewed the contractor's estimate for the roof work. The total is $12,480, including $1,150 for permit fees and disposal. The proposal says the crew will begin on September 9, but the building manager asked whether they can start on September 16 instead because the elevator inspection is scheduled that week. Please call Maren at 555-014-8821 after you confirm the new date, and ask her to send the revised timeline as a PDF. We need the corrected estimate before the owners' meeting on Friday evening.",
+    "paragraphs": [
+      "I reviewed the contractor's estimate for the roof work. The total is $12,480, including $1,150 for permit fees and disposal. The proposal says the crew will begin on September 9, but the building manager asked whether they can start on September 16 instead because the elevator inspection is scheduled that week. Please call Maren at 555-014-8821 after you confirm the new date, and ask her to send the revised timeline as a PDF. We need the corrected estimate before the owners' meeting on Friday evening."
+    ]
+  },
+  {
+    "id": "sample_4688",
+    "file": "batch-047.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The customer reported that invoice 2026-00418 was paid twice, once for $4,600 on July 2 and again for $4,600 on July 5. Our processor record shows the second charge under transaction code TXN-88A-194, while the bank reference is 73590144. Please ask Jae Kim whether the refund should return to the original card or go by bank transfer. The account is in a temporary hold state until we resolve the duplicate payment, so do not issue a credit memo as well. I have attached the reconciliation report for the finance lead.",
+    "paragraphs": [
+      "The customer reported that invoice 2026-00418 was paid twice, once for $4,600 on July 2 and again for $4,600 on July 5. Our processor record shows the second charge under transaction code TXN-88A-194, while the bank reference is 73590144. Please ask Jae Kim whether the refund should return to the original card or go by bank transfer. The account is in a temporary hold state until we resolve the duplicate payment, so do not issue a credit memo as well. I have attached the reconciliation report for the finance lead."
+    ]
+  },
+  {
+    "id": "sample_4693",
+    "file": "batch-047.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "Hi Rhea,\n\nI spoke with the building inspector this morning about the stairwell repair. He asked us to include the sentence “work area secured” at the entrance of the daily log, followed by the date and the foreman's initials. He also said the log should use the label “corrective action” whenever a loose handrail or damaged step is found, rather than describing the repair informally.\n\nCould you update yesterday's entry and send me a copy before the inspection visit on Thursday?\n\nThanks,\nOmar",
+    "paragraphs": [
+      "I spoke with the building inspector this morning about the stairwell repair. He asked us to include the sentence “work area secured” at the entrance of the daily log, followed by the date and the foreman's initials. He also said the log should use the label “corrective action” whenever a loose handrail or damaged step is found, rather than describing the repair informally."
+    ]
+  },
+  {
+    "id": "sample_4781",
+    "file": "batch-048.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The insurance claim number is 008421, and the adjuster asked for photos of the damage by Friday. I uploaded the exterior pictures this morning, but the portal rejected two files because they were larger than 10 MB. Could you ask whether I should resend those as smaller images or bring printed copies to the inspection? The repair shop says the estimate expires on September 12, so I do not want the review delayed. I also saved the receipt for the temporary window covering in the claim folder, in case the adjuster needs it.",
+    "paragraphs": [
+      "The insurance claim number is 008421, and the adjuster asked for photos of the damage by Friday. I uploaded the exterior pictures this morning, but the portal rejected two files because they were larger than 10 MB. Could you ask whether I should resend those as smaller images or bring printed copies to the inspection? The repair shop says the estimate expires on September 12, so I do not want the review delayed. I also saved the receipt for the temporary window covering in the claim folder, in case the adjuster needs it."
+    ]
+  },
+  {
+    "id": "sample_4788",
+    "file": "batch-048.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The analytics export covers January 1 through March 31, but the dashboard labels the period as Q2. The report should show 18,450 active users, 1,275 trial users, and 640 cancelled accounts. Please verify the percentage calculation too, because the summary says retention improved by 7.5% while the source sheet shows 7.05%. Once you confirm the figures, send the corrected PDF to Priya before the board meeting on Thursday. I saved the original export in the shared finance folder for comparison.",
+    "paragraphs": [
+      "The analytics export covers January 1 through March 31, but the dashboard labels the period as Q2. The report should show 18,450 active users, 1,275 trial users, and 640 cancelled accounts. Please verify the percentage calculation too, because the summary says retention improved by 7.5% while the source sheet shows 7.05%. Once you confirm the figures, send the corrected PDF to Priya before the board meeting on Thursday. I saved the original export in the shared finance folder for comparison."
+    ]
+  },
+  {
+    "id": "sample_4804",
+    "file": "batch-049.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I checked the staging notes after lunch, and the migration is not blocked by the database change. The only remaining issue is that the worker still reads the old queue name from the environment file, which is why the smoke test passes locally but fails in the shared sandbox. Please ask Dev to update that variable, restart the worker, and post the new log link before tomorrow's handoff. Support also needs a clear rollback point for this handoff, today.",
+    "paragraphs": [
+      "I checked the staging notes after lunch, and the migration is not blocked by the database change. The only remaining issue is that the worker still reads the old queue name from the environment file, which is why the smoke test passes locally but fails in the shared sandbox. Please ask Dev to update that variable, restart the worker, and post the new log link before tomorrow's handoff. Support also needs a clear rollback point for this handoff, today."
+    ]
+  },
+  {
+    "id": "sample_4810",
+    "file": "batch-049.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "We can still publish the release note this afternoon if the screenshots arrive, but please do not say the new search is complete. It only works for accounts with the preview flag, and the results page occasionally shows an empty state after a filter changes. Add a short note that the team is collecting feedback, then send the draft to Lena before she leaves for the airport. Keep the tone practical rather than promotional throughout, today and tomorrow.",
+    "paragraphs": [
+      "We can still publish the release note this afternoon if the screenshots arrive, but please do not say the new search is complete. It only works for accounts with the preview flag, and the results page occasionally shows an empty state after a filter changes. Add a short note that the team is collecting feedback, then send the draft to Lena before she leaves for the airport. Keep the tone practical rather than promotional throughout, today and tomorrow."
+    ]
+  },
+  {
+    "id": "sample_4821",
+    "file": "batch-049.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "We deployed the patch to the test cluster, and the payment service is stable again. However, the alert rule still reports the old endpoint name, so the on-call page links to a retired dashboard and makes the incident look unresolved. Please change the rule before the evening coverage starts, then add the final latency graph to the incident ticket so the next person can see what improved. Confirm that the page routes to the current dashboard afterward, today too.",
+    "paragraphs": [
+      "We deployed the patch to the test cluster, and the payment service is stable again. However, the alert rule still reports the old endpoint name, so the on-call page links to a retired dashboard and makes the incident look unresolved. Please change the rule before the evening coverage starts, then add the final latency graph to the incident ticket so the next person can see what improved. Confirm that the page routes to the current dashboard afterward, today too."
+    ]
+  },
+  {
+    "id": "sample_4833",
+    "file": "batch-049.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "Please publish the patch after the database backup finishes tonight. The dashboard shows that the backup is at 82%, but the operations note says it will take another 40 minutes. Ask Elena to post the maintenance message once the backup completes, then have her verify that the checkout worker reconnects before the team removes the temporary banner from the site. If anything fails, keep the banner visible and page the overnight engineer through the normal channel.",
+    "paragraphs": [
+      "Please publish the patch after the database backup finishes tonight. The dashboard shows that the backup is at 82%, but the operations note says it will take another 40 minutes. Ask Elena to post the maintenance message once the backup completes, then have her verify that the checkout worker reconnects before the team removes the temporary banner from the site. If anything fails, keep the banner visible and page the overnight engineer through the normal channel."
+    ]
+  },
+  {
+    "id": "sample_4882",
+    "file": "batch-049.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The purchase agreement needs three corrections before it goes back to the buyer. The closing date should be written as November 6, 2026, not November 6, 2026, because the lender's checklist uses the first format. The deposit amount is $12,500, and the escrow reference must be ES-41072. Please make sure the property address reads 93 Juniper Avenue, Suite 200, not 39 Juniper Avenue, Suite 200. The seller is Meera K. Shah, and her middle initial is required on the signature page. Send the revised PDF to counsel before 3:00 PM so they can circulate it to both parties.",
+    "paragraphs": [
+      "The purchase agreement needs three corrections before it goes back to the buyer. The closing date should be written as November 6, 2026, not November 6, 2026, because the lender's checklist uses the first format. The deposit amount is $12,500, and the escrow reference must be ES-41072. Please make sure the property address reads 93 Juniper Avenue, Suite 200, not 39 Juniper Avenue, Suite 200. The seller is Meera K. Shah, and her middle initial is required on the signature page. Send the revised PDF to counsel before 3:00 PM so they can circulate it to both parties."
+    ]
+  },
+  {
+    "id": "sample_4888",
+    "file": "batch-049.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "For the quarterly forecast, update the regional sales table before the board meeting. The northeast target is $1.25 million, while the southwest target is $980,000. Use the reporting date September 30, 2026, in the title and confirm that the workbook tab is named FY26 Q3 Forecast. The finance director also asked for the margin assumption to show 18.5%, not 18%, and for the appendix to cite the exchange rate of 1.07 USD per EUR. Please send the final workbook to Ishan Rao at 2:15 PM and copy the planning group after the controller approves the numbers.",
+    "paragraphs": [
+      "For the quarterly forecast, update the regional sales table before the board meeting. The northeast target is $1.25 million, while the southwest target is $980,000. Use the reporting date September 30, 2026, in the title and confirm that the workbook tab is named FY26 Q3 Forecast. The finance director also asked for the margin assumption to show 18.5%, not 18%, and for the appendix to cite the exchange rate of 1.07 USD per EUR. Please send the final workbook to Ishan Rao at 2:15 PM and copy the planning group after the controller approves the numbers."
+    ]
+  },
+  {
+    "id": "sample_4893",
+    "file": "batch-049.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "For the mediation summary, please include the exact sentence \"the parties agree to pause all collection activity until May 30, 2026.\" Do not shorten that sentence, because the date and the phrase \"all collection activity\" are both important to the proposed arrangement. The next paragraph should explain that the parties will exchange updated payment records by May 15 and meet again on June 2. Make sure the draft does not imply that either side has accepted the disputed balance, since that question remains open. Send the revised version to both representatives after the mediator reviews the final wording.",
+    "paragraphs": [
+      "For the mediation summary, please include the exact sentence \"the parties agree to pause all collection activity until May 30, 2026.\" Do not shorten that sentence, because the date and the phrase \"all collection activity\" are both important to the proposed arrangement. The next paragraph should explain that the parties will exchange updated payment records by May 15 and meet again on June 2. Make sure the draft does not imply that either side has accepted the disputed balance, since that question remains open. Send the revised version to both representatives after the mediator reviews the final wording."
+    ]
+  },
+  {
+    "id": "sample_4903",
+    "file": "batch-050.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I spoke with the apartment manager this morning about the leaking kitchen tap. She said the plumber can come between 10 and noon on Wednesday, but someone needs to be home to let him in. Could you work from home that morning if your schedule allows it? If not, I can ask whether he has an afternoon opening, although that might push the repair to Thursday. Please text me after you check your calendar so I can reply before the office closes at five.",
+    "paragraphs": [
+      "I spoke with the apartment manager this morning about the leaking kitchen tap. She said the plumber can come between 10 and noon on Wednesday, but someone needs to be home to let him in. Could you work from home that morning if your schedule allows it? If not, I can ask whether he has an afternoon opening, although that might push the repair to Thursday. Please text me after you check your calendar so I can reply before the office closes at five."
+    ]
+  },
+  {
+    "id": "sample_4907",
+    "file": "batch-050.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The clinic called about Dad's follow-up appointment. They said the blood work is back, and the nurse wants to review it with him on Friday afternoon. They offered 2:15 or 3:40, and he preferred the later time because his neighbor drives him. Can you call the clinic before lunch tomorrow and confirm that the 3:40 slot is still open? They also asked him to bring the medication list, including vitamins, since the last copy in their system may be old.",
+    "paragraphs": [
+      "The clinic called about Dad's follow-up appointment. They said the blood work is back, and the nurse wants to review it with him on Friday afternoon. They offered 2:15 or 3:40, and he preferred the later time because his neighbor drives him. Can you call the clinic before lunch tomorrow and confirm that the 3:40 slot is still open? They also asked him to bring the medication list, including vitamins, since the last copy in their system may be old."
+    ]
+  },
+  {
+    "id": "sample_4918",
+    "file": "batch-050.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "We should leave earlier for the cabin on Friday because the highway construction starts near the bridge after three. I checked the rental email, and the host said the key box code will arrive on the morning of our stay. Please pack a flashlight and the printed directions anyway, since the last stretch has poor signal. If your sister still wants to come, ask her to bring her sleeping bag because there are only two spare blankets in the hall closet.",
+    "paragraphs": [
+      "We should leave earlier for the cabin on Friday because the highway construction starts near the bridge after three. I checked the rental email, and the host said the key box code will arrive on the morning of our stay. Please pack a flashlight and the printed directions anyway, since the last stretch has poor signal. If your sister still wants to come, ask her to bring her sleeping bag because there are only two spare blankets in the hall closet."
+    ]
+  },
+  {
+    "id": "sample_4933",
+    "file": "batch-050.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "I thought the maintenance crew would arrive on Tuesday after checking the parts shipment. They need access to the boiler room between 8 and 10, and the building manager asked us to keep the side entrance unlocked for them. Please move any deliveries away from that doorway before you leave Monday evening. If the forecast calls for heavy rain, they may postpone the exterior valve work, but the indoor inspection should still happen as planned. I will update the tenant group once the manager sends the final notice.",
+    "paragraphs": [
+      "I thought the maintenance crew would arrive on Tuesday after checking the parts shipment. They need access to the boiler room between 8 and 10, and the building manager asked us to keep the side entrance unlocked for them. Please move any deliveries away from that doorway before you leave Monday evening. If the forecast calls for heavy rain, they may postpone the exterior valve work, but the indoor inspection should still happen as planned. I will update the tenant group once the manager sends the final notice."
+    ]
+  },
+  {
+    "id": "sample_4968",
+    "file": "batch-050.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello everyone,\n\nI wanted to share the plan for Saturday's volunteer shift. We will meet at the library courtyard at nine, then walk to the food pantry together so nobody has to find the entrance alone. Please wear closed shoes because the storage room floor can be dusty, and bring a water bottle if you have one. We still need one person to drive the donated boxes to the west side location after noon.\n\nIf you cannot come after all, please reply by Friday evening so I can adjust the sign-in sheet.\n\nThank you for helping with this.\n\nWarmly,\nRina",
+    "paragraphs": [
+      "I wanted to share the plan for Saturday's volunteer shift. We will meet at the library courtyard at nine, then walk to the food pantry together so nobody has to find the entrance alone. Please wear closed shoes because the storage room floor can be dusty, and bring a water bottle if you have one. We still need one person to drive the donated boxes to the west side location after noon."
+    ]
+  },
+  {
+    "id": "sample_4982",
+    "file": "batch-050.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The monitoring report shows that the API began returning 500 errors at 13:12, shortly after the payment gateway updated its certificate chain. The on-call engineer restarted the worker at 13:24, but the error rate did not fall until the gateway rolled back at 13:37. Please add those times to the incident timeline, along with the ticket number SR-1842, so the morning team can compare them with the provider's status page. We do not yet know whether any checkout attempts were duplicated, and support should avoid promising refunds until finance verifies the affected orders.",
+    "paragraphs": [
+      "The monitoring report shows that the API began returning 500 errors at 13:12, shortly after the payment gateway updated its certificate chain. The on-call engineer restarted the worker at 13:24, but the error rate did not fall until the gateway rolled back at 13:37. Please add those times to the incident timeline, along with the ticket number SR-1842, so the morning team can compare them with the provider's status page. We do not yet know whether any checkout attempts were duplicated, and support should avoid promising refunds until finance verifies the affected orders."
+    ]
+  },
+  {
+    "id": "sample_4988",
+    "file": "batch-050.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The records office asked us to mail the original authorization to 48 Willow Lane, Apartment 3B, Fairview, NY 10016, and to include the reference number MP-7206 on the envelope. They said the request will be reviewed within seven business days after it arrives, but the copy sent by email is not enough for their archive. Please double-check the apartment number before mailing it, because the previous form listed 3D and was returned to us. I will scan the receipt from the post office and add it to the case folder once the package is accepted.",
+    "paragraphs": [
+      "The records office asked us to mail the original authorization to 48 Willow Lane, Apartment 3B, Fairview, NY 10016, and to include the reference number MP-7206 on the envelope. They said the request will be reviewed within seven business days after it arrives, but the copy sent by email is not enough for their archive. Please double-check the apartment number before mailing it, because the previous form listed 3D and was returned to us. I will scan the receipt from the post office and add it to the case folder once the package is accepted."
+    ]
+  }
+]

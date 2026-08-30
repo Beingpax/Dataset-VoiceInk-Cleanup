@@ -1,10 +1,12 @@
 # Transcript Cleanup Dataset: Authoring Guide
 
 - Active behavior: `polished-clean-v1`
-- Current generator collection: none (the previous 180 pairs were removed)
-- Active generation target: 5,000 synthetic, AI-reviewed pairs
+- Current generator collection: 5,000 synthetic drafts available for inspection; the previous 180 pairs remain removed
+- Delivered generation target: 5,000 synthetic pairs; full content review deferred by the user
 
-This is the active specification for future creation. Editing this guide does not regenerate or retrospectively relabel existing datasets. The 5,000-pair collection is being authored and is not complete until generation and foreground review finish.
+This is the active authoring specification. Editing this guide does not regenerate or retrospectively relabel existing datasets. Generation and delivery of the 5,000-pair draft collection are complete: known corrections are applied, structural checks pass, and the viewer copies are synchronized. This is not a fully content-reviewed training collection.
+
+The user has explicitly skipped the remaining full content review for now to limit resource use. Earlier revisions of 600 pairs received foreground AI review; those logs remain available. Subsequent paragraph-only revisions retain draft status wherever the original batch review hash no longer matches. Full review is not implied by targeted formatting work. Do not resume full content review or produce a fully reviewed export without a new request.
 
 ## 1. Purpose and boundaries
 
@@ -149,6 +151,8 @@ Here, “the phrase” identifies the quoted text. Emphasis alone is insufficien
 
 Infer paragraph boundaries from changes in topic, purpose, stage, or discourse context, even in one uninterrupted ASR block without spoken commands. Apply this to shorter as well as longer passages when a real structural boundary exists. A change in tone may support a boundary but does not require one by itself. Keep related sentences together; do not split every sentence or use a fixed word threshold.
 
+For targeted formatting passes, flag output paragraphs longer than 60 words with no line breaks for AI-selected boundaries. This is a selection threshold, not a rigid maximum: retain cohesive passages where no useful break exists. Insert breaks at existing sentence boundaries around meaningful information shifts; do not rewrite text, change raw inputs, or force a fixed number of sentences or paragraphs. Keep error labels truthful; changes affecting the agreed category/type totals require approval. The current pass is recorded in `generation/paragraph-pass/report.json`.
+
 Infer lists from genuine steps or a substantial enumeration. A short sentence naming several items can remain a sentence. Do not invent list content or shorten full statements to create bullets.
 
 Arrange email greetings, body paragraphs, and sign-offs already supported by the input. Never invent a greeting, recipient, signature, or closing phrase. Headings require an actual title-like phrase; do not turn an ordinary opening sentence into a heading.
@@ -192,8 +196,10 @@ Domain weighting belongs to the authoring plan, not this inference instruction: 
 2. Create varied, plausible raw dictation and one faithful target per input.
 3. Label only the actual cleanup behaviors. Do not invent extra errors to satisfy label coverage.
 4. Run one quick mechanical batch check after authoring: valid JSONL, roles/fields, count, unique IDs, duplicate inputs, 20–200 words in every newly generated raw input, category totals, and no-change equality. Fix concrete failures and recheck affected content; do not repeatedly check unchanged records. Check synchronized viewer copies during final assembly.
-5. For the approved 5,000-pair run, the foreground agent reviews every input/output pair once for naturalness, fidelity, local repair scope, formatting, normalization, and accurate labels. Revisit only concrete corrections before acceptance, not an entire unchanged batch. Record review evidence against the accepted content hash; automated checks alone are not semantic review. Run independent authoring batches concurrently within the live session's available agent slots.
-6. Deliver all 5,000 accepted records to the viewer with a verification report. This is synthetic, AI-reviewed data, not human-reviewed gold. Do not claim that AI review guarantees error-free targets.
+5. Content review checks naturalness, fidelity, local repair scope, formatting, normalization, and accurate labels. It is deferred for the remaining 4,400 pairs in this delivered run. If requested later, review each remaining pair once and revisit only concrete corrections. Record review evidence against the accepted content hash; automated checks alone are not semantic review.
+6. Deliver the structurally checked collection to the viewer with accurate per-record review status. Never promote unreviewed records merely because review was skipped. A fully reviewed export is optional follow-up work and remains gated on actual content review. This is synthetic data, not human-reviewed gold; AI review does not guarantee error-free targets.
+
+For early inspection, `node dataset-generator/generation/snapshot.mjs` creates separate synchronized `cleanup-dataset.jsonl` files in `dataset-generator/data/` and `public/data/`. It requires passing batch checks, but does not bypass final acceptance or claim that global diversity and semantic review are complete. Only records covered by a matching foreground-review content hash carry `ai_foreground_reviewed`; other records carry `synthetic_draft`. The snapshot's counts are recorded in `generation/draft-status.json`. Rerun this command after draft repairs to refresh the viewer copy. The gated final assembler remains separate.
 
 Generated records remain drafts until reviewed. Before promotion to gold/training data, review faithfulness, naturalness, local correction scope, critical names/numbers, and metadata. Resolve disputed targets rather than claiming unreviewed data is verified. Large unexplained deletions and artificial fragmentary inputs are useful review flags, not reasons for automatic rewriting.
 
@@ -209,9 +215,9 @@ Keep source provenance, consent, retention/deletion requirements, licenses, data
 
 ## 11. Files and viewer
 
-The previous 180-pair generator collection, its component files, and all four public viewer copies have been removed. No replacement collection has been generated.
+The previous 180-pair generator collection, its component files, and all four public viewer copies remain removed. The replacement 5,000-pair draft collection is directly selectable as **Cleanup dataset** in the viewer and downloadable there. It is not yet the accepted final collection.
 
-The viewer defaults to the unchanged 100 labeled benchmark cases in `public/data/benchmark-sample.jsonl` (relative to the repository root). Benchmark source snapshots and results in `comparison/` remain separate and intact, including their original IDs. Future generated JSONL can be opened through the local file picker; synchronize authoring and public copies if a future batch is added as a built-in source.
+The viewer defaults to the separate labeled benchmark in `public/data/benchmark-sample.jsonl` (relative to the repository root). Generator snapshots do not write benchmark files, source snapshots, or results in `comparison/`. The generation page links directly to `#/viewer?source=cleanup`; other JSONL can still be opened through the local file picker. Authoring and public draft copies are synchronized by the snapshot command.
 
 The primary interface is the root React application at `#/viewer`; authoring guidance is at `#/generator`. “Category” selects one principal category, sorted by count descending. Error checkboxes select multiple sub-errors, with “Match any” or “Match all.” No selected errors means no error restriction. Files opened locally are processed in the browser. The horizontal record selector and previous/next controls navigate results.
 

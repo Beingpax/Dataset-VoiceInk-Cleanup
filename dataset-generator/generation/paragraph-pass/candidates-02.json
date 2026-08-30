@@ -1,0 +1,492 @@
+[
+  {
+    "id": "sample_0694",
+    "file": "batch-007.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "The account settings guide should call the renewal field “billing cycle” because that is the exact label customers see on the invoice page. The field stores the month when a subscription renews, not the day a card is charged, so the old label “renewal date” caused repeated questions from support. Please replace it in the screenshot caption, the setup instructions, and the help center article before the next release notes are translated.",
+    "paragraphs": [
+      "The account settings guide should call the renewal field “billing cycle” because that is the exact label customers see on the invoice page. The field stores the month when a subscription renews, not the day a card is charged, so the old label “renewal date” caused repeated questions from support. Please replace it in the screenshot caption, the setup instructions, and the help center article before the next release notes are translated."
+    ]
+  },
+  {
+    "id": "sample_0703",
+    "file": "batch-008.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The support team says the checkout problem only happens when a returning customer has an expired discount code saved in their browser. The page accepts the code at first, then shows the full price after they choose express shipping. We checked the payment provider logs and did not see a failed charge. Please keep the banner turned off until Maya confirms whether the fix can go into Thursday's release because the campaign email is scheduled for Friday morning.",
+    "paragraphs": [
+      "The support team says the checkout problem only happens when a returning customer has an expired discount code saved in their browser. The page accepts the code at first, then shows the full price after they choose express shipping. We checked the payment provider logs and did not see a failed charge. Please keep the banner turned off until Maya confirms whether the fix can go into Thursday's release because the campaign email is scheduled for Friday morning."
+    ]
+  },
+  {
+    "id": "sample_0718",
+    "file": "batch-008.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "The neighbor said the water was dripping through her ceiling again after the upstairs washing machine started. She took photos before turning off the valve and asked whether our plumber can visit before the weekend. I told her we would call the building manager, but I did not promise a time because the emergency contractor is already handling another apartment. Please let me know once someone confirms the appointment so I can update her without making guesses.",
+    "paragraphs": [
+      "The neighbor said the water was dripping through her ceiling again after the upstairs washing machine started. She took photos before turning off the valve and asked whether our plumber can visit before the weekend. I told her we would call the building manager, but I did not promise a time because the emergency contractor is already handling another apartment. Please let me know once someone confirms the appointment so I can update her without making guesses."
+    ]
+  },
+  {
+    "id": "sample_0733",
+    "file": "batch-008.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "We planned to replace the old pump on Friday after the supplier called with the delivery window. The maintenance crew can still isolate the line in the morning, but they need the updated permit before they start. I already told the residents there could be a short interruption and asked them not to use the laundry room until we confirm the work is finished. Please send the revised notice once the contractor gives us an arrival time.",
+    "paragraphs": [
+      "We planned to replace the old pump on Friday after the supplier called with the delivery window. The maintenance crew can still isolate the line in the morning, but they need the updated permit before they start. I already told the residents there could be a short interruption and asked them not to use the laundry room until we confirm the work is finished. Please send the revised notice once the contractor gives us an arrival time."
+    ]
+  },
+  {
+    "id": "sample_0739",
+    "file": "batch-008.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "The new feature should open in the profile panel so it stays close to the privacy controls. Users already visit that panel when they change notification preferences and connected accounts. The design team also wants the entry point above the delete account link but below the password section so it remains visible without crowding the security options. Please update the prototype before Thursday's usability session because we need the revised flow in the participant guide and can brief the moderator on the intended placement.",
+    "paragraphs": [
+      "The new feature should open in the profile panel so it stays close to the privacy controls. Users already visit that panel when they change notification preferences and connected accounts. The design team also wants the entry point above the delete account link but below the password section so it remains visible without crowding the security options. Please update the prototype before Thursday's usability session because we need the revised flow in the participant guide and can brief the moderator on the intended placement."
+    ]
+  },
+  {
+    "id": "sample_0743",
+    "file": "batch-008.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The family meeting went well. Everyone agreed that Sam can keep the dog through the school term.\n\nWe still need to decide who covers the boarding cost during the winter break. I can call three local kennels tomorrow and compare their availability. If nobody has a preference, please send any dates you already know because the holiday weeks tend to fill up early, and I do not want to reserve a place before we agree on the budget.",
+    "paragraphs": [
+      "We still need to decide who covers the boarding cost during the winter break. I can call three local kennels tomorrow and compare their availability. If nobody has a preference, please send any dates you already know because the holiday weeks tend to fill up early, and I do not want to reserve a place before we agree on the budget."
+    ]
+  },
+  {
+    "id": "sample_0748",
+    "file": "batch-008.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The deadline is Tuesday, not Monday. Please send the signed form before noon so the clerk can add it to the file before the afternoon filing window closes. The witness statement must be attached as a separate PDF, and the exhibits need page numbers that match the index we served last week. If the courier cannot collect the originals by 11, please tell me immediately because I can arrange a hand delivery to the courthouse and ask the clerk to stamp our copy while I wait.",
+    "paragraphs": [
+      "The deadline is Tuesday, not Monday. Please send the signed form before noon so the clerk can add it to the file before the afternoon filing window closes. The witness statement must be attached as a separate PDF, and the exhibits need page numbers that match the index we served last week. If the courier cannot collect the originals by 11, please tell me immediately because I can arrange a hand delivery to the courthouse and ask the clerk to stamp our copy while I wait."
+    ]
+  },
+  {
+    "id": "sample_0765",
+    "file": "batch-008.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "The monitoring handoff needs:\n\n- Current alerts.\n- Recent deploys.\n- Owner contacts.\n- The link to the dashboard.\n- The open incident number.\n\nThe overnight engineer will need to know which alert is expected while the database repair continues. The repair is scheduled to finish before midnight, but the vendor has not confirmed whether the replica needs to be rebuilt. If that work starts, leave the maintenance banner visible and ask the morning engineer to compare the replication lag with the baseline from yesterday.",
+    "paragraphs": [
+      "The overnight engineer will need to know which alert is expected while the database repair continues. The repair is scheduled to finish before midnight, but the vendor has not confirmed whether the replica needs to be rebuilt. If that work starts, leave the maintenance banner visible and ask the morning engineer to compare the replication lag with the baseline from yesterday."
+    ]
+  },
+  {
+    "id": "sample_0767",
+    "file": "batch-008.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello team,\n\nThe test environment is unavailable after the overnight patch. Can someone check the database connection before the demo at 10? The status page shows a successful deploy, but the login screen returns an error. I tried two test accounts, and both fail after the password screen while the public landing page still loads normally. The release branch was merged late yesterday, so please check the connection settings before reverting anything.\n\nThanks,\nRina",
+    "paragraphs": [
+      "The test environment is unavailable after the overnight patch. Can someone check the database connection before the demo at 10? The status page shows a successful deploy, but the login screen returns an error. I tried two test accounts, and both fail after the password screen while the public landing page still loads normally. The release branch was merged late yesterday, so please check the connection settings before reverting anything."
+    ]
+  },
+  {
+    "id": "sample_0768",
+    "file": "batch-008.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hi Dana,\n\nI spoke with the venue manager this morning, and she can hold the upstairs room until Wednesday. The room includes chairs and a projector, but the catering quote is separate and may change if we add more than 40 guests. She also said the lift is available until 10, which matters if we use the upstairs room for the evening program.\n\nCould you ask the committee whether they prefer the room with windows or the quieter basement option? I can send the deposit as soon as we decide, but the manager needs the signed booking form before she will reserve the date.\n\nBest,\nMorgan",
+    "paragraphs": [
+      "I spoke with the venue manager this morning, and she can hold the upstairs room until Wednesday. The room includes chairs and a projector, but the catering quote is separate and may change if we add more than 40 guests. She also said the lift is available until 10, which matters if we use the upstairs room for the evening program."
+    ]
+  },
+  {
+    "id": "sample_0770",
+    "file": "batch-008.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hi Dr. Shah,\n\nThe pharmacy said the prescription has not reached them yet. Could you check whether it was sent after our appointment? I have enough of the current medication for only two more days, so I would appreciate an update before the weekend. I called the pharmacy this morning, and they checked both my name and date of birth but could not find an electronic order or a fax. If the prescription needs to be resent, could you use the branch on Oak Street because my usual branch closes early on Saturdays?\n\nThank you,\nCamila",
+    "paragraphs": [
+      "The pharmacy said the prescription has not reached them yet. Could you check whether it was sent after our appointment? I have enough of the current medication for only two more days, so I would appreciate an update before the weekend. I called the pharmacy this morning, and they checked both my name and date of birth but could not find an electronic order or a fax. If the prescription needs to be resent, could you use the branch on Oak Street because my usual branch closes early on Saturdays?"
+    ]
+  },
+  {
+    "id": "sample_0780",
+    "file": "batch-008.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The contractor sent a revised estimate for $14,500, which includes the new drain and the permit fee. She said the quote does not cover repairs behind the kitchen cabinets if the inspection finds additional water damage. We should keep the contingency amount separate until we know whether the wall needs to be opened. Could you ask for the estimate in writing before we approve the first payment?",
+    "paragraphs": [
+      "The contractor sent a revised estimate for $14,500, which includes the new drain and the permit fee. She said the quote does not cover repairs behind the kitchen cabinets if the inspection finds additional water damage. We should keep the contingency amount separate until we know whether the wall needs to be opened. Could you ask for the estimate in writing before we approve the first payment?"
+    ]
+  },
+  {
+    "id": "sample_0781",
+    "file": "batch-008.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "Please schedule the database backup for 02:30 UTC and send the confirmation to the operations channel. The maintenance window starts at two, and the reporting service must be quiet before the snapshot begins. After the backup completes, verify that the archive appears in the recovery bucket and leave the job enabled for the next run. If it fails, notify the database owner before the European support shift begins.",
+    "paragraphs": [
+      "Please schedule the database backup for 02:30 UTC and send the confirmation to the operations channel. The maintenance window starts at two, and the reporting service must be quiet before the snapshot begins. After the backup completes, verify that the archive appears in the recovery bucket and leave the job enabled for the next run. If it fails, notify the database owner before the European support shift begins."
+    ]
+  },
+  {
+    "id": "sample_0786",
+    "file": "batch-008.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "Please email the garden photos to nora_bloom@example.com before the neighborhood newsletter goes out. She is choosing only three pictures, so include the wide shot of the new path and the close-up of the sunflowers. The committee also wants one image of the raised beds after the volunteers finished spreading the compost, but avoid the photo with the parked van in the background. Nora will crop the pictures for the newsletter, so the original files do not need any editing before you send them. Please copy the garden group inbox so everyone can see which images were submitted.",
+    "paragraphs": [
+      "Please email the garden photos to nora_bloom@example.com before the neighborhood newsletter goes out. She is choosing only three pictures, so include the wide shot of the new path and the close-up of the sunflowers. The committee also wants one image of the raised beds after the volunteers finished spreading the compost, but avoid the photo with the parked van in the background. Nora will crop the pictures for the newsletter, so the original files do not need any editing before you send them. Please copy the garden group inbox so everyone can see which images were submitted."
+    ]
+  },
+  {
+    "id": "sample_0789",
+    "file": "batch-008.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "Please refer to Exhibit B-7, not B-11, when you describe the photographs in the witness statement. The correct exhibit shows the cracked window from the street, while the other set contains the landlord's inspection images taken after the repairs. Make sure the page reference in the index matches the exhibit label because opposing counsel has already flagged several numbering mistakes in the draft bundle, and we do not want another delay before the hearing.",
+    "paragraphs": [
+      "Please refer to Exhibit B-7, not B-11, when you describe the photographs in the witness statement. The correct exhibit shows the cracked window from the street, while the other set contains the landlord's inspection images taken after the repairs. Make sure the page reference in the index matches the exhibit label because opposing counsel has already flagged several numbering mistakes in the draft bundle, and we do not want another delay before the hearing."
+    ]
+  },
+  {
+    "id": "sample_0791",
+    "file": "batch-008.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "single_principal_error",
+    "output": "In the release announcement, use the phrase “ready for pilot users” because the wider launch has not been approved. The support team can invite the selected customers after the release notes are published, but it should not promise that every account will see the new dashboard this week. Please keep the sentence about feedback in the final paragraph so the product manager can add the survey link after legal reviews the wording.",
+    "paragraphs": [
+      "In the release announcement, use the phrase “ready for pilot users” because the wider launch has not been approved. The support team can invite the selected customers after the release notes are published, but it should not promise that every account will see the new dashboard this week. Please keep the sentence about feedback in the final paragraph so the product manager can add the survey link after legal reviews the wording."
+    ]
+  },
+  {
+    "id": "sample_0792",
+    "file": "batch-008.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "The note from the teacher says the message “please bring indoor shoes” should appear at the top of the class newsletter because the gym floor was cleaned over the weekend. Parents may not see the message if it is buried below the lunch menu, so please keep the wording exactly as she gave it and send me a proof before the newsletter goes out tomorrow afternoon.",
+    "paragraphs": [
+      "The note from the teacher says the message “please bring indoor shoes” should appear at the top of the class newsletter because the gym floor was cleaned over the weekend. Parents may not see the message if it is buried below the lunch menu, so please keep the wording exactly as she gave it and send me a proof before the newsletter goes out tomorrow afternoon."
+    ]
+  },
+  {
+    "id": "sample_0795",
+    "file": "batch-008.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "For the budget slide, use the heading “next quarter assumptions” above the three forecast numbers. Keep the note about exchange rates below the table, because it explains why the travel estimate is higher than last month's forecast. The board will ask why the regional meetings cost more, so keep the hotel and flight estimates separate rather than combining them into one travel line. Also retain the footnote that the supplier renewal has not been approved yet, because the forecast assumes the current discount remains available through June.",
+    "paragraphs": [
+      "For the budget slide, use the heading “next quarter assumptions” above the three forecast numbers. Keep the note about exchange rates below the table, because it explains why the travel estimate is higher than last month's forecast. The board will ask why the regional meetings cost more, so keep the hotel and flight estimates separate rather than combining them into one travel line. Also retain the footnote that the supplier renewal has not been approved yet, because the forecast assumes the current discount remains available through June."
+    ]
+  },
+  {
+    "id": "sample_0804",
+    "file": "batch-009.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The rail pass for the school trip is still marked pending, so could you ask the booking office whether they received the payment? I need an answer before Friday because the chaperones are reserving their seats that afternoon. If the pass cannot be issued in time, I will buy individual tickets, but I need to know whether those can be reimbursed. I have kept the receipt, the confirmation number, and the list of students who need the early train so we do not leave anyone at the station.",
+    "paragraphs": [
+      "The rail pass for the school trip is still marked pending, so could you ask the booking office whether they received the payment? I need an answer before Friday because the chaperones are reserving their seats that afternoon. If the pass cannot be issued in time, I will buy individual tickets, but I need to know whether those can be reimbursed. I have kept the receipt, the confirmation number, and the list of students who need the early train so we do not leave anyone at the station."
+    ]
+  },
+  {
+    "id": "sample_0806",
+    "file": "batch-009.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The volunteer schedule is still waiting for confirmation, and please let me know if I should call the community center before Friday afternoon because several people need to arrange rides and childcare. Last month they changed the start time after we had already sent the reminder, so I would rather confirm the room, the key pickup, and the closing time before anyone assumes the shift is settled. If you hear from them first, please forward the details to the group chat.",
+    "paragraphs": [
+      "The volunteer schedule is still waiting for confirmation, and please let me know if I should call the community center before Friday afternoon because several people need to arrange rides and childcare. Last month they changed the start time after we had already sent the reminder, so I would rather confirm the room, the key pickup, and the closing time before anyone assumes the shift is settled. If you hear from them first, please forward the details to the group chat."
+    ]
+  },
+  {
+    "id": "sample_0828",
+    "file": "batch-009.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "Could you check the deployment window today? I noticed that the calendar invitation lists Thursday evening, while the change ticket still says Wednesday. The infrastructure team has reserved the database maintenance slot, and the support rotation needs a final notice before people leave for the day. If Thursday is correct, please update the ticket, the status page draft, and the rollback checklist together. I do not want the on-call engineer to discover a different schedule after the release manager has already approved the announcement.",
+    "paragraphs": [
+      "Could you check the deployment window today? I noticed that the calendar invitation lists Thursday evening, while the change ticket still says Wednesday. The infrastructure team has reserved the database maintenance slot, and the support rotation needs a final notice before people leave for the day. If Thursday is correct, please update the ticket, the status page draft, and the rollback checklist together. I do not want the on-call engineer to discover a different schedule after the release manager has already approved the announcement."
+    ]
+  },
+  {
+    "id": "sample_0830",
+    "file": "batch-009.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "Could you review the neighborhood association agenda before noon? I found that the park-cleanup vote is listed for May 18, although the reservation confirmation says May 25. The printer proof also calls it a Saturday workshop, so please check which date the board approved and correct the agenda before it goes out. I want the volunteers to have the right weekend before they arrange childcare or sign up for equipment pickup, and the community room notice needs to match the final decision before the newsletter editor prepares her proof tonight.",
+    "paragraphs": [
+      "Could you review the neighborhood association agenda before noon? I found that the park-cleanup vote is listed for May 18, although the reservation confirmation says May 25. The printer proof also calls it a Saturday workshop, so please check which date the board approved and correct the agenda before it goes out. I want the volunteers to have the right weekend before they arrange childcare or sign up for equipment pickup, and the community room notice needs to match the final decision before the newsletter editor prepares her proof tonight."
+    ]
+  },
+  {
+    "id": "sample_0837",
+    "file": "batch-009.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "Please move the catering deposit deadline to Friday instead. The treasurer will be away Thursday, and she needs to approve the payment before the restaurant releases our date. I have already told the caterer that we expect to send the signed estimate this week, but I do not want them to charge the card without the final headcount. If Friday does not work for them, ask whether they can hold the room through Monday morning while we collect the last responses from the guests and confirm the number of children who need meals.",
+    "paragraphs": [
+      "Please move the catering deposit deadline to Friday instead. The treasurer will be away Thursday, and she needs to approve the payment before the restaurant releases our date. I have already told the caterer that we expect to send the signed estimate this week, but I do not want them to charge the card without the final headcount. If Friday does not work for them, ask whether they can hold the room through Monday morning while we collect the last responses from the guests and confirm the number of children who need meals."
+    ]
+  },
+  {
+    "id": "sample_0844",
+    "file": "batch-009.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "Reminder: the scholarship applications close Friday.\n\nPlease upload the signed recommendation separately from the essay because the portal treats them as different documents. If a teacher has not returned a letter, submit the application anyway and email the counselor with the teacher's name. The committee starts reading on Monday, and incomplete files may not be considered until the next round, so do not wait for a perfect scan of the transcript. The financial-aid office can answer questions about fee waivers, but it cannot accept late recommendations by phone or email.",
+    "paragraphs": [
+      "Please upload the signed recommendation separately from the essay because the portal treats them as different documents. If a teacher has not returned a letter, submit the application anyway and email the counselor with the teacher's name. The committee starts reading on Monday, and incomplete files may not be considered until the next round, so do not wait for a perfect scan of the transcript. The financial-aid office can answer questions about fee waivers, but it cannot accept late recommendations by phone or email."
+    ]
+  },
+  {
+    "id": "sample_0851",
+    "file": "batch-009.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The trial period ends Monday, and we need to decide whether to renew before the account manager sends the automatic reminder to the whole team. Please review the usage notes from finance and the feedback from the people who tested the reporting dashboard. If the renewal is not worth the cost, I can export the saved reports and cancel the recurring charge before it posts. Let me know by noon on Friday so I can update the shared plan before the afternoon meeting and give everyone the same information for the next discussion.",
+    "paragraphs": [
+      "The trial period ends Monday, and we need to decide whether to renew before the account manager sends the automatic reminder to the whole team. Please review the usage notes from finance and the feedback from the people who tested the reporting dashboard. If the renewal is not worth the cost, I can export the saved reports and cancel the recurring charge before it posts. Let me know by noon on Friday so I can update the shared plan before the afternoon meeting and give everyone the same information for the next discussion."
+    ]
+  },
+  {
+    "id": "sample_0852",
+    "file": "batch-009.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The trailhead map is in the calendar, but the pin sends people to the closed north entrance. Please replace it with the visitor center address before Saturday. The ranger said the south lot fills by nine, so the carpool group should meet at the grocery store at 8:15 instead. Also add that the creek crossing is muddy after rain and that anyone without boots can take the paved loop with the kids. The picnic shelter is past the playground, and the gate code will be posted in the group chat that morning.",
+    "paragraphs": [
+      "The trailhead map is in the calendar, but the pin sends people to the closed north entrance. Please replace it with the visitor center address before Saturday. The ranger said the south lot fills by nine, so the carpool group should meet at the grocery store at 8:15 instead. Also add that the creek crossing is muddy after rain and that anyone without boots can take the paved loop with the kids. The picnic shelter is past the playground, and the gate code will be posted in the group chat that morning."
+    ]
+  },
+  {
+    "id": "sample_0868",
+    "file": "batch-009.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hi Morgan,\n\nThe plumber can inspect the kitchen sink on Wednesday, but she needs someone to let her into the building between ten and noon. I left the keycard with the concierge and included her work order in this email. If that window conflicts with your meeting, tell me today and I will ask whether she can come Thursday instead. The building manager also asked us to keep the hallway clear while she brings in the equipment, so I will move the shoe rack before she arrives. The plumber said the repair itself should take less than an hour.\n\nThanks,\nElena",
+    "paragraphs": [
+      "The plumber can inspect the kitchen sink on Wednesday, but she needs someone to let her into the building between ten and noon. I left the keycard with the concierge and included her work order in this email. If that window conflicts with your meeting, tell me today and I will ask whether she can come Thursday instead. The building manager also asked us to keep the hallway clear while she brings in the equipment, so I will move the shoe rack before she arrives. The plumber said the repair itself should take less than an hour."
+    ]
+  },
+  {
+    "id": "sample_0884",
+    "file": "batch-009.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The deployment guide still calls the service REST, but the gateway team renamed the public interface REST API last month. Please update the two setup examples before Monday because new partners are using the guide to create their first test accounts. I also noticed that the error response example has an old callback address, which might send their questions to an inbox nobody watches anymore. The support article links to the same guide, so please make the wording match there too. That page is where teams find the authentication steps after they receive their invitation.",
+    "paragraphs": [
+      "The deployment guide still calls the service REST, but the gateway team renamed the public interface REST API last month. Please update the two setup examples before Monday because new partners are using the guide to create their first test accounts. I also noticed that the error response example has an old callback address, which might send their questions to an inbox nobody watches anymore. The support article links to the same guide, so please make the wording match there too. That page is where teams find the authentication steps after they receive their invitation."
+    ]
+  },
+  {
+    "id": "sample_0894",
+    "file": "batch-009.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "For the invitation, include the label “bring a guest if space allows” beneath the response deadline and parking note. The venue manager asked us not to promise additional seats, because the room has a strict capacity and the catering count is due three days before the event. Put the label after the RSVP instructions rather than in the opening paragraph, so people understand that it is a conditional option. I will send the final guest list to the manager once the responses are in.",
+    "paragraphs": [
+      "For the invitation, include the label “bring a guest if space allows” beneath the response deadline and parking note. The venue manager asked us not to promise additional seats, because the room has a strict capacity and the catering count is due three days before the event. Put the label after the RSVP instructions rather than in the opening paragraph, so people understand that it is a conditional option. I will send the final guest list to the manager once the responses are in."
+    ]
+  },
+  {
+    "id": "sample_0903",
+    "file": "batch-010.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "I need to leave the keys with the neighbor before the locksmith arrives, because I will be at the school pickup. The locksmith has a two-hour arrival window, and the building manager needs the neighbor’s number before she opens the gate. The locksmith warned that a damaged latch can take longer than expected, and I do not want the neighbor waiting outside with the envelope. If the work runs past noon, please ask the manager to lock the side gate again and leave the new key with the office.",
+    "paragraphs": [
+      "I need to leave the keys with the neighbor before the locksmith arrives, because I will be at the school pickup. The locksmith has a two-hour arrival window, and the building manager needs the neighbor’s number before she opens the gate. The locksmith warned that a damaged latch can take longer than expected, and I do not want the neighbor waiting outside with the envelope. If the work runs past noon, please ask the manager to lock the side gate again and leave the new key with the office."
+    ]
+  },
+  {
+    "id": "sample_0910",
+    "file": "batch-010.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "Our order needs three things before Thursday: the signed proof, the final color choice, and confirmation that the delivery gate will be open. The installer cannot unload on the street, and the building manager has asked us to reserve the loading bay. If you have the proof in your inbox, please forward it to me rather than replying to the whole group, because I am collecting the documents for the installer. The installer also needs the gate code, the loading-bay reservation, and a contact who can answer after five. The gate code changes at 5 PM, and facilities has not confirmed whether the driver can enter without calling security. Please keep the signed proof, final color choice, and loading-bay confirmation together in one message so the installer does not receive conflicting details. The estimate is $49.",
+    "paragraphs": [
+      "Our order needs three things before Thursday: the signed proof, the final color choice, and confirmation that the delivery gate will be open. The installer cannot unload on the street, and the building manager has asked us to reserve the loading bay. If you have the proof in your inbox, please forward it to me rather than replying to the whole group, because I am collecting the documents for the installer. The installer also needs the gate code, the loading-bay reservation, and a contact who can answer after five. The gate code changes at 5 PM, and facilities has not confirmed whether the driver can enter without calling security. Please keep the signed proof, final color choice, and loading-bay confirmation together in one message so the installer does not receive conflicting details. The estimate is $49."
+    ]
+  },
+  {
+    "id": "sample_0920",
+    "file": "batch-010.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "My prescription refill is ready at the pharmacy, but they close at 6 and I cannot get there before 5:30. The refund request lists the old invoice number, so keep that number in the reply for accounting. I can collect the prescription only after my train arrives, but the pharmacy may close before I get there. Could you ask whether they can hold it until Saturday, and mention that the insurer already approved the refill? I do not want the medication returned to stock while I am still travelling home.",
+    "paragraphs": [
+      "My prescription refill is ready at the pharmacy, but they close at 6 and I cannot get there before 5:30. The refund request lists the old invoice number, so keep that number in the reply for accounting. I can collect the prescription only after my train arrives, but the pharmacy may close before I get there. Could you ask whether they can hold it until Saturday, and mention that the insurer already approved the refill? I do not want the medication returned to stock while I am still travelling home."
+    ]
+  },
+  {
+    "id": "sample_0933",
+    "file": "batch-010.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "Please use version 9 of the config file, since version 8 does not include the new timeout setting. The deployment guide still points to the older sample, so update that link too and ask the on-call engineer to confirm the service starts with the revised value. The change is small, but it affects the payment worker during the overnight reconciliation, and the release window closes at 11 PM. If you see a mismatch between the guide and the repository, use the repository value and leave a note for documentation.",
+    "paragraphs": [
+      "Please use version 9 of the config file, since version 8 does not include the new timeout setting. The deployment guide still points to the older sample, so update that link too and ask the on-call engineer to confirm the service starts with the revised value. The change is small, but it affects the payment worker during the overnight reconciliation, and the release window closes at 11 PM. If you see a mismatch between the guide and the repository, use the repository value and leave a note for documentation."
+    ]
+  },
+  {
+    "id": "sample_0950",
+    "file": "batch-010.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The technician will inspect the heater tomorrow.\n\nIf it needs a part, she said she can return on Thursday afternoon, but she cannot promise the exact arrival time. I will stay home for the first visit and ask whether the old thermostat can be recycled. Please do not schedule anything else in the hallway until we know whether they need access to the utility closet. The building manager also asked me to confirm whether the boiler room door must remain unlocked.",
+    "paragraphs": [
+      "If it needs a part, she said she can return on Thursday afternoon, but she cannot promise the exact arrival time. I will stay home for the first visit and ask whether the old thermostat can be recycled. Please do not schedule anything else in the hallway until we know whether they need access to the utility closet. The building manager also asked me to confirm whether the boiler room door must remain unlocked."
+    ]
+  },
+  {
+    "id": "sample_0955",
+    "file": "batch-010.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "The orientation packets are ready for Mia, Devon, and Lee.\n\nMia needs the parking map before she drives in, Devon needs the key instructions because his desk is in the annex, and Lee needs the emergency contact number for the evening shift. They all start on Monday, but Devon will arrive an hour later because of a dentist appointment. If you update the shared calendar, please keep the arrival times separate so reception does not give the wrong badge to anyone. I will leave the printed packets with the front desk after lunch.",
+    "paragraphs": [
+      "Mia needs the parking map before she drives in, Devon needs the key instructions because his desk is in the annex, and Lee needs the emergency contact number for the evening shift. They all start on Monday, but Devon will arrive an hour later because of a dentist appointment. If you update the shared calendar, please keep the arrival times separate so reception does not give the wrong badge to anyone. I will leave the printed packets with the front desk after lunch."
+    ]
+  },
+  {
+    "id": "sample_0956",
+    "file": "batch-010.jsonl",
+    "category": "list_formatting",
+    "type": "natural_multi_error",
+    "output": "For the bug report, please collect:\n\n- the browser version,\n- the account ID, and\n- a screenshot of the error after the page reloads.\n\nAlso note whether the page was opened from a bookmark or the dashboard, because the support team saw different behavior in those two paths. If the customer can reproduce it, ask them to include the approximate time, but do not ask for their password or payment details. The screenshot should show the full address bar only if it does not expose private account information.",
+    "paragraphs": [
+      "Also note whether the page was opened from a bookmark or the dashboard, because the support team saw different behavior in those two paths. If the customer can reproduce it, ask them to include the approximate time, but do not ask for their password or payment details. The screenshot should show the full address bar only if it does not expose private account information."
+    ]
+  },
+  {
+    "id": "sample_0966",
+    "file": "batch-010.jsonl",
+    "category": "email_formatting",
+    "type": "single_principal_error",
+    "output": "Hi Elio,\n\nI attached the photos from the inspection and the receipt for the replacement lock. The locksmith noted that the old strike plate was bent, so I included a close-up in case the owner needs it for the claim. Could you let me know whether the owner needs anything else before the claim is closed? I can also send the tenant's move-in inventory, although it does not mention the lock. The tenant says the door now closes normally, but I have not asked them to remove the temporary wedge yet.\n\nThanks,\nMina",
+    "paragraphs": [
+      "I attached the photos from the inspection and the receipt for the replacement lock. The locksmith noted that the old strike plate was bent, so I included a close-up in case the owner needs it for the claim. Could you let me know whether the owner needs anything else before the claim is closed? I can also send the tenant's move-in inventory, although it does not mention the lock. The tenant says the door now closes normally, but I have not asked them to remove the temporary wedge yet."
+    ]
+  },
+  {
+    "id": "sample_0978",
+    "file": "batch-010.jsonl",
+    "category": "entity_normalization",
+    "type": "single_principal_error",
+    "output": "The meeting starts at 14:30, and the room is on the second floor beside the east staircase. Please arrive a few minutes early because the reception desk closes at 2:15 and visitors need to sign in before taking the lift. I left the printed agenda with the receptionist, but she will only hand it over after you show the booking confirmation. If the east entrance is locked, use the glass door beside the loading bay and call me from the intercom.",
+    "paragraphs": [
+      "The meeting starts at 14:30, and the room is on the second floor beside the east staircase. Please arrive a few minutes early because the reception desk closes at 2:15 and visitors need to sign in before taking the lift. I left the printed agenda with the receptionist, but she will only hand it over after you show the booking confirmation. If the east entrance is locked, use the glass door beside the loading bay and call me from the intercom."
+    ]
+  },
+  {
+    "id": "sample_0992",
+    "file": "batch-010.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "The error banner should say “session expired” when the token is too old, rather than showing the generic retry message. The support article tells customers to sign in again, but the banner should not promise that their draft was saved. This wording matters because the older banner says “retry” and leads people to repeat the same failed request. Please use the shorter message on both the desktop page and the mobile page until the new token refresh flow is released next month.",
+    "paragraphs": [
+      "The error banner should say “session expired” when the token is too old, rather than showing the generic retry message. The support article tells customers to sign in again, but the banner should not promise that their draft was saved. This wording matters because the older banner says “retry” and leads people to repeat the same failed request. Please use the shorter message on both the desktop page and the mobile page until the new token refresh flow is released next month."
+    ]
+  },
+  {
+    "id": "sample_1003",
+    "file": "batch-011.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The installer said the replacement window will arrive next Wednesday, but the fitter cannot confirm a morning slot until the depot checks its route. The old frame has been taped against the weather for now, so we do not need to stay home all day waiting. If the route check leaves only an afternoon option, ask them to call me before dispatching the fitter, because the dog will be at daycare after three and the back gate must remain closed while they carry the glass through.",
+    "paragraphs": [
+      "The installer said the replacement window will arrive next Wednesday, but the fitter cannot confirm a morning slot until the depot checks its route. The old frame has been taped against the weather for now, so we do not need to stay home all day waiting. If the route check leaves only an afternoon option, ask them to call me before dispatching the fitter, because the dog will be at daycare after three and the back gate must remain closed while they carry the glass through."
+    ]
+  },
+  {
+    "id": "sample_1010",
+    "file": "batch-011.jsonl",
+    "category": "filler_words",
+    "type": "natural_multi_error",
+    "output": "The pediatric clinic moved our paperwork review to Friday, and they asked us to bring the vaccination record. The nurse also asked us to bring the referral letter and a list of current medicines. We should arrive fifteen minutes early because the records team must scan the new insurance card before the clinician can see us. I will call on Thursday if the portal still shows the old appointment time, since the reminder text has not been updated yet.",
+    "paragraphs": [
+      "The pediatric clinic moved our paperwork review to Friday, and they asked us to bring the vaccination record. The nurse also asked us to bring the referral letter and a list of current medicines. We should arrive fifteen minutes early because the records team must scan the new insurance card before the clinician can see us. I will call on Thursday if the portal still shows the old appointment time, since the reminder text has not been updated yet."
+    ]
+  },
+  {
+    "id": "sample_1020",
+    "file": "batch-011.jsonl",
+    "category": "repetition_stutters",
+    "type": "natural_multi_error",
+    "output": "We should wait for the audit log before closing the incident because the retry service may have run twice. The first retry may have created a duplicate charge in the ledger, while the second one appears to have timed out before writing a response. Please keep the incident open until finance compares the transaction IDs with the provider report, and note that the customer has not contacted support yet. If the audit confirms only one charge, we can close the alert without issuing a refund.",
+    "paragraphs": [
+      "We should wait for the audit log before closing the incident because the retry service may have run twice. The first retry may have created a duplicate charge in the ledger, while the second one appears to have timed out before writing a response. Please keep the incident open until finance compares the transaction IDs with the provider report, and note that the customer has not contacted support yet. If the audit confirms only one charge, we can close the alert without issuing a refund."
+    ]
+  },
+  {
+    "id": "sample_1033",
+    "file": "batch-011.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "We should meet in Room D because Room B is reserved for the parent association this evening. The parent association has booked Room B from six until nine for its annual budget meeting, and they will need the projector as well. Room D is free, but its screen does not connect to the older laptop without the HDMI adapter from the media cupboard. Please tell everyone about the new room before they leave work, because several people usually wait outside Room B and may not see a last-minute sign on the door.",
+    "paragraphs": [
+      "We should meet in Room D because Room B is reserved for the parent association this evening. The parent association has booked Room B from six until nine for its annual budget meeting, and they will need the projector as well. Room D is free, but its screen does not connect to the older laptop without the HDMI adapter from the media cupboard. Please tell everyone about the new room before they leave work, because several people usually wait outside Room B and may not see a last-minute sign on the door."
+    ]
+  },
+  {
+    "id": "sample_1037",
+    "file": "batch-011.jsonl",
+    "category": "false_starts_self_corrections",
+    "type": "natural_multi_error",
+    "output": "I booked the table for 8 at Cedar House on Friday, and the manager said the patio is closed for a private event. Please use an inside table near the window if one is available. Two guests may need the step-free entrance, so ask whether that affects where the host seats us. If they cannot accommodate eight, have them call me before changing the booking; we would rather choose another time than split the group. I promised to confirm the final headcount once I hear back from the family traveling in that afternoon.",
+    "paragraphs": [
+      "I booked the table for 8 at Cedar House on Friday, and the manager said the patio is closed for a private event. Please use an inside table near the window if one is available. Two guests may need the step-free entrance, so ask whether that affects where the host seats us. If they cannot accommodate eight, have them call me before changing the booking; we would rather choose another time than split the group. I promised to confirm the final headcount once I hear back from the family traveling in that afternoon."
+    ]
+  },
+  {
+    "id": "sample_1042",
+    "file": "batch-011.jsonl",
+    "category": "punctuation_capitalization_dictated_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello team.\n\nThe access badges arrived this morning. Please collect yours from the cabinet beside reception. The security office counted forty-two badges, including temporary passes for the visiting maintenance crew. Put a temporary pass back in the labeled envelope when you leave, because the contractor will collect them after the lift inspection. Anyone without a badge should wait in the lobby instead of following another employee through the secure door. Reception needs the final collection list before the afternoon shift starts, and please tell them if your pass was damaged or missing from the envelope.",
+    "paragraphs": [
+      "The access badges arrived this morning. Please collect yours from the cabinet beside reception. The security office counted forty-two badges, including temporary passes for the visiting maintenance crew. Put a temporary pass back in the labeled envelope when you leave, because the contractor will collect them after the lift inspection. Anyone without a badge should wait in the lobby instead of following another employee through the secure door. Reception needs the final collection list before the afternoon shift starts, and please tell them if your pass was damaged or missing from the envelope."
+    ]
+  },
+  {
+    "id": "sample_1067",
+    "file": "batch-011.jsonl",
+    "category": "email_formatting",
+    "type": "natural_multi_error",
+    "output": "Hello Priya,\n\nThe error report is attached, and the screenshots are in the incident folder. The log captures the error immediately before the service restarted, and the screenshots show the same account in two browsers. I added the request IDs from both sessions to the report so you can match them against the gateway logs. Please leave the folder permissions unchanged until the incident owner downloads the originals, because the redacted copies omit the browser console. Let me know if the timestamps look out of order after you compare the server clock with the laptop clock.\n\nThanks,\nMateo",
+    "paragraphs": [
+      "The error report is attached, and the screenshots are in the incident folder. The log captures the error immediately before the service restarted, and the screenshots show the same account in two browsers. I added the request IDs from both sessions to the report so you can match them against the gateway logs. Please leave the folder permissions unchanged until the incident owner downloads the originals, because the redacted copies omit the browser console. Let me know if the timestamps look out of order after you compare the server clock with the laptop clock."
+    ]
+  },
+  {
+    "id": "sample_1080",
+    "file": "batch-011.jsonl",
+    "category": "entity_normalization",
+    "type": "natural_multi_error",
+    "output": "The reporting server uses PostgreSQL, and the connection pool should be set to 30 before tomorrow morning's load test. The smaller setting caused queued requests during last month's lunchtime peak, but we do not know whether the new index changes that result. Record the pool value, database version, and test date in the runbook before the traffic generator starts. Leave the monitoring graph open during the first synthetic cycle, and if connection wait time rises again, capture slow-query samples before increasing the pool. The on-call engineer needs those samples to decide whether the bottleneck is the database or the application workers.",
+    "paragraphs": [
+      "The reporting server uses PostgreSQL, and the connection pool should be set to 30 before tomorrow morning's load test. The smaller setting caused queued requests during last month's lunchtime peak, but we do not know whether the new index changes that result. Record the pool value, database version, and test date in the runbook before the traffic generator starts. Leave the monitoring graph open during the first synthetic cycle, and if connection wait time rises again, capture slow-query samples before increasing the pool. The on-call engineer needs those samples to decide whether the bottleneck is the database or the application workers."
+    ]
+  },
+  {
+    "id": "sample_1092",
+    "file": "batch-011.jsonl",
+    "category": "context_inferred_quotation",
+    "type": "natural_multi_error",
+    "output": "The release notes should say “fixed an issue with offline drafts” because the old wording makes it sound like every sync problem is resolved. The phrase is deliberately narrow because the offline editor can still fail when a device has no local storage space. Please keep the next sentence about broader synchronization problems, and ask the support writer to compare the wording with the open bug list before publishing. The product manager does not want customers to read this as a promise that every pending draft will upload automatically, especially when they have been working without a network connection for several days.",
+    "paragraphs": [
+      "The release notes should say “fixed an issue with offline drafts” because the old wording makes it sound like every sync problem is resolved. The phrase is deliberately narrow because the offline editor can still fail when a device has no local storage space. Please keep the next sentence about broader synchronization problems, and ask the support writer to compare the wording with the open bug list before publishing. The product manager does not want customers to read this as a promise that every pending draft will upload automatically, especially when they have been working without a network connection for several days."
+    ]
+  },
+  {
+    "id": "sample_1101",
+    "file": "batch-012.jsonl",
+    "category": "filler_words",
+    "type": "single_principal_error",
+    "output": "Please water the fern beside the kitchen window before you leave. The soil is dry, and the watering can is under the sink. Use the small green cup, not the cereal bowl, because the pot drains slowly onto the shelf. Move the newspaper away first, then leave the blinds halfway open so the leaves do not get scorched this afternoon. The building heat comes on early, and I will be back after dinner to check whether it needs another drink. The cat has been digging near the pot, so place the saucer flat again.",
+    "paragraphs": [
+      "Please water the fern beside the kitchen window before you leave. The soil is dry, and the watering can is under the sink. Use the small green cup, not the cereal bowl, because the pot drains slowly onto the shelf. Move the newspaper away first, then leave the blinds halfway open so the leaves do not get scorched this afternoon. The building heat comes on early, and I will be back after dinner to check whether it needs another drink. The cat has been digging near the pot, so place the saucer flat again."
+    ]
+  }
+]

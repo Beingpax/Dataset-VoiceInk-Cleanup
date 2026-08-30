@@ -52,8 +52,11 @@ Include at least 10 extended inputs of 80–200 words per batch, and at least 40
 - Normalize only text-supported values. Never guess AM/PM, acronyms, name spellings, file/identifier casing, or missing digits.
 - Email-address normalization uses the historical error key email_formatting; email message layout uses greeting_signoff.
 - No-change input/output strings must match exactly; errors must be empty.
+- Never reach word or length quotas by appending a shared scheduling, coordination, confirmation, or handoff sentence. Even if complete inputs differ, recycled boilerplate makes the dataset artificial. Add only unique, scenario-specific content that a speaker would naturally include, before any email sign-off. A flagged boilerplate repair means reauthoring the communication, not swapping the suffix for another template.
 - Use plausible fictional names, example.com email addresses if needed, and no private source material.
 
 ## Delivery
 
 Write actual independent records using apply_patch. Small writing chunks are fine; continue until the assigned batch is complete. Run one lightweight non-build batch check for count, quotas, IDs, valid JSON, word bounds, and duplicates after authoring. Fix concrete failures and recheck affected content; do not repeatedly audit unchanged records. The foreground agent performs one semantic review pass, with targeted rechecks only for corrections. Do not run builds. Notify the foreground agent when the batch is complete, including any uncertainty. Only the foreground agent accepts records after semantic review.
+
+For the current fast-delivery phase, finish only assigned known corrections and structural failures. The hard input bound is 20–200 words; preserve the batch's 80+ and 30–79 word coverage. Suggested repair bands such as 35–60 or 90–110 words are planning guidance, not additional hard limits that require expanding otherwise compliant records. Do not launch extra reviews or workers. Full semantic acceptance is deferred, not implied by passing structural checks.

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import RichText from '../components/RichText.jsx';
 import Picker from '../components/Picker.jsx';
 import ErrorTypeFilter from '../components/ErrorTypeFilter.jsx';
@@ -7,6 +8,7 @@ import useArrowNavigation from '../hooks/useArrowNavigation.js';
 
 const sources = [
   { id: 'benchmark', label: 'Benchmark corpus', detail: '100 labeled cases', paths: ['data/benchmark-sample.jsonl'] },
+  { id: 'cleanup', label: 'Cleanup dataset', detail: '5,000 transcript-cleanup pairs', paths: ['data/cleanup-dataset.jsonl'] },
 ];
 
 function unique(records, key, flatten = false) {
@@ -22,6 +24,7 @@ function MetaChip({ label, value }) {
 }
 
 export default function JsonlViewerPage() {
+  const [searchParams] = useSearchParams();
   const [records, setRecords] = useState([]);
   const [source, setSource] = useState('benchmark');
   const [sourceName, setSourceName] = useState('Benchmark corpus');
@@ -35,6 +38,7 @@ export default function JsonlViewerPage() {
   const [errorMatchMode, setErrorMatchMode] = useState('any');
   const [selectedId, setSelectedId] = useState('');
   const recordRailRef = useRef(null);
+  const loadRequestRef = useRef(0);
 
   const acceptText = (text, name) => {
     try {
@@ -54,6 +58,7 @@ export default function JsonlViewerPage() {
   const loadSource = async sourceId => {
     const item = sources.find(candidate => candidate.id === sourceId);
     if (!item) return;
+    const request = ++loadRequestRef.current;
     setSource(sourceId); setStatus(`Loading ${item.label}…`); setLoadError(false);
     try {
       const texts = await Promise.all(item.paths.map(async path => {
@@ -61,13 +66,27 @@ export default function JsonlViewerPage() {
         if (!response.ok) throw new Error(`HTTP ${response.status} (${path})`);
         return response.text();
       }));
-      acceptText(texts.join('\n'), item.label);
+      if (request === loadRequestRef.current) acceptText(texts.join('\n'), item.label);
     } catch (error) {
-      setLoadError(true); setStatus(`Could not load ${item.label}: ${error.message}`);
+      if (request === loadRequestRef.current) {
+        setLoadError(true); setStatus(`Could not load ${item.label}: ${error.message}`);
+      }
     }
   };
 
-  useEffect(() => { loadSource('benchmark'); }, []);
+  useEffect(() => {
+    const parameter = searchParams.get('source');
+    const requested = parameter === 'generated-draft' ? 'cleanup' : parameter;
+    loadSource(sources.some(item => item.id === requested) ? requested : 'benchmark');
+    return () => { loadRequestRef.current += 1; };
+  }, [searchParams]);
+
+  const reviewCounts = useMemo(() => records.reduce((counts, record) => {
+    if (record.metadata.source !== 'synthetic_generated') return counts;
+    counts.synthetic += 1;
+    if (record.metadata.review_status === 'ai_foreground_reviewed') counts.reviewed += 1;
+    return counts;
+  }, {synthetic: 0, reviewed: 0}), [records]);
 
   const categoryOptions = useMemo(() => {
     const counts = new Map();
@@ -101,8 +120,10 @@ export default function JsonlViewerPage() {
   const handleFile = async event => {
     const file = event.target.files[0];
     if (!file) return;
+    const request = ++loadRequestRef.current;
     setSource('local');
-    acceptText(await file.text(), file.name);
+    const text = await file.text();
+    if (request === loadRequestRef.current) acceptText(text, file.name);
   };
 
   return (
@@ -115,6 +136,11 @@ export default function JsonlViewerPage() {
           <div className={`load-status ${loadError ? 'is-error' : ''}`} role={loadError ? 'alert' : 'status'}>{status}</div>
         </section>
       </header>
+
+      {reviewCounts.synthetic > 0 && <section className="viewer-draft-notice" aria-label="Dataset provenance and review status">
+        <p><strong>Review status.</strong> {reviewCounts.reviewed.toLocaleString()} of {reviewCounts.synthetic.toLocaleString()} pairs have foreground AI review for this revision. These pairs were AI-generated, not transcribed from recorded audio. Full content review is deferred.</p>
+        {source === 'cleanup' && <a href={`${import.meta.env.BASE_URL}data/cleanup-dataset.jsonl`} download="cleanup-dataset.jsonl">Download cleanup dataset</a>}
+      </section>}
 
       <section className="filter-strip" aria-label="Dataset filters">
         <label className="search-field">Search records<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Input, output, ID, category, or metadata" /></label>
