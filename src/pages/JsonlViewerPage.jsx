@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import RichText from '../components/RichText.jsx';
 import Picker from '../components/Picker.jsx';
-import { asList, humanize, parseJsonl } from '../utils/jsonl.js';
+import ErrorTypeFilter from '../components/ErrorTypeFilter.jsx';
+import { asList, errorLabel, humanize, matchesErrors, parseJsonl } from '../utils/jsonl.js';
 import useArrowNavigation from '../hooks/useArrowNavigation.js';
 
 const sources = [
@@ -18,7 +19,7 @@ function FilterSelect({ label, value, onChange, options, allLabel }) {
 }
 
 function MetaChip({ label, value }) {
-  return <span><strong>{label}:</strong> {humanize(value)}</span>;
+  return <span><strong>{label === 'Error' ? 'Error type' : label}:</strong> {label === 'Error' ? errorLabel(value) : humanize(value)}</span>;
 }
 
 export default function JsonlViewerPage() {
@@ -31,7 +32,8 @@ export default function JsonlViewerPage() {
   const [type, setType] = useState('');
   const [category, setCategory] = useState('');
   const [language, setLanguage] = useState('');
-  const [errorType, setErrorType] = useState('');
+  const [errorTypes, setErrorTypes] = useState([]);
+  const [errorMatchMode, setErrorMatchMode] = useState('any');
   const [selectedId, setSelectedId] = useState('');
   const recordRailRef = useRef(null);
 
@@ -41,7 +43,7 @@ export default function JsonlViewerPage() {
       setRecords(result.records);
       setSourceName(name);
       setSelectedId(result.records[0]?.id || '');
-      setQuery(''); setType(''); setCategory(''); setLanguage(''); setErrorType('');
+      setQuery(''); setType(''); setCategory(''); setLanguage(''); setErrorTypes([]); setErrorMatchMode('any');
       setLoadError(false);
       setStatus(result.errors.length ? `Loaded ${result.records.length} records; skipped ${result.errors.length} invalid lines.` : `Loaded ${result.records.length} records from ${name}.`);
     } catch (error) {
@@ -68,13 +70,21 @@ export default function JsonlViewerPage() {
 
   useEffect(() => { loadSource('curated'); }, []);
 
+  const categoryOptions = useMemo(() => {
+    const counts = new Map();
+    records.forEach(record => counts.set(record.category, (counts.get(record.category) || 0) + 1));
+    return [...counts.entries()]
+      .sort(([a, countA], [b, countB]) => countB - countA || humanize(a).localeCompare(humanize(b)))
+      .map(([value, count]) => ({ value, label: `${humanize(value)} (${count.toLocaleString()})` }));
+  }, [records]);
+
   const filtered = useMemo(() => records.filter(record =>
     (!query || record.search.includes(query.toLocaleLowerCase())) &&
     (!type || record.recordType === type) &&
     (!category || record.category === category) &&
     (!language || record.language === language) &&
-    (!errorType || record.errorTypes.includes(errorType))
-  ), [records, query, type, category, language, errorType]);
+    matchesErrors(record, errorTypes, errorMatchMode)
+  ), [records, query, type, category, language, errorTypes, errorMatchMode]);
 
   useEffect(() => { if (!filtered.some(record => record.id === selectedId)) setSelectedId(filtered[0]?.id || ''); }, [filtered, selectedId]);
   useEffect(() => {
@@ -110,11 +120,12 @@ export default function JsonlViewerPage() {
       <section className="filter-strip" aria-label="Dataset filters">
         <label className="search-field">Search records<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Input, output, ID, category, or metadata" /></label>
         <FilterSelect label="Record type" value={type} onChange={setType} options={unique(records, 'recordType')} allLabel="All types" />
-        <FilterSelect label="Category" value={category} onChange={setCategory} options={unique(records, 'category')} allLabel="All categories" />
-        <FilterSelect label="Error type" value={errorType} onChange={setErrorType} options={unique(records, 'errorTypes', true)} allLabel="All errors" />
+        <Picker label="Category" value={category} onChange={setCategory} options={[{ value: '', label: 'All categories' }, ...categoryOptions]} />
         <FilterSelect label="Language" value={language} onChange={setLanguage} options={unique(records, 'language')} allLabel="All languages" />
-        <button type="button" onClick={() => { setQuery(''); setType(''); setCategory(''); setLanguage(''); setErrorType(''); }}>Clear filters</button>
+        <button type="button" onClick={() => { setQuery(''); setType(''); setCategory(''); setLanguage(''); setErrorTypes([]); setErrorMatchMode('any'); }}>Clear filters</button>
       </section>
+
+      <ErrorTypeFilter options={unique(records, 'errorTypes', true)} values={errorTypes} onChange={setErrorTypes} mode={errorMatchMode} onModeChange={setErrorMatchMode} />
 
       <div className="record-selector">
         <header><strong>{filtered.length.toLocaleString()}</strong><span>matching records</span><small>Scroll horizontally to select</small></header>

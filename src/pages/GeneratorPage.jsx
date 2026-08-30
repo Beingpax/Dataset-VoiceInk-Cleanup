@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const coverage = ['Everyday emails, messages, updates, and technical dictation', 'Filler removal as a primary focus', 'Repetition and stutter cleanup', 'Brief false starts and local self-corrections', 'Punctuation, capitalization, and natural dictated formatting', 'Names, numbers, acronyms, technical terms, and addresses', 'Long context as a minority across categories', 'Filename and quotation commands are not generation targets'];
+const coverage = ['Fillers', 'Repetition and stutters', 'Brief false starts and immediate self-corrections', 'Punctuation, capitalization, and dictated formatting', 'List formatting', 'Email layout: greeting, body, and sign-off', 'Names, numbers, percentages, acronyms, terms, and addresses', 'Already correct'];
 
 export default function GeneratorPage() {
   return (

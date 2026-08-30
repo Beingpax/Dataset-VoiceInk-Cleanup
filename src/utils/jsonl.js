@@ -9,7 +9,30 @@ export function asList(value) {
 }
 
 export function humanize(value) {
+  const categoryLabels = {
+    filler_words: 'Fillers',
+    repetition_stutters: 'Repetition and stutters',
+    false_starts_self_corrections: 'False starts and immediate corrections',
+    punctuation_capitalization_dictated_formatting: 'Punctuation, capitalization and dictated formatting',
+    list_formatting: 'List formatting',
+    email_formatting: 'Email formatting',
+    entity_normalization: 'Names, numbers, acronyms, terms and addresses',
+    no_change: 'Already correct',
+  };
+  if (categoryLabels[value]) return categoryLabels[value];
   return String(value || 'unspecified').replace(/[_-]+/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
+}
+
+export function matchesErrors(record, selectedErrors, mode = 'any') {
+  if (!selectedErrors.length) return true;
+  return mode === 'all'
+    ? selectedErrors.every(error => record.errorTypes.includes(error))
+    : selectedErrors.some(error => record.errorTypes.includes(error));
+}
+
+export function errorLabel(value) {
+  // This historical error label describes an address, not an email's layout.
+  return value === 'email_formatting' ? 'Email address normalization' : humanize(value);
 }
 
 export function normalizeRecord(raw, index) {

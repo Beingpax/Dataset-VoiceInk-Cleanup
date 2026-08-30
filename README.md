@@ -45,7 +45,7 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 
 [`dataset-generator/`](dataset-generator/) contains the transcript-cleanup dataset work:
 
-- The full research-backed authoring and fine-tuning plan.
+- The concise active authoring guide in `dataset-generator/README.md`.
 - The `polished-clean-v1` cleanup contract.
 - Dataset schema and category strategy.
 - The 50-example curated JSONL demonstration.
