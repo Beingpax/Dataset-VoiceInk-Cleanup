@@ -2,7 +2,7 @@
 
 All paths remain inside `comparison/`. The sample is deterministic and records the original validation row index. It contains the preserved original 20-case sample plus 30 cases sampled with seed `20260831` from the longest 30% of the remaining validation inputs.
 
-The second dataset is `../dataset-generator/data/sample-50.jsonl`. `benchmark/integrate_curated_sample.py` copies it to `artifacts/curated-sample-50.source.jsonl`, preserves its metadata, and appends normalized cases `C01`–`C50` to the benchmark corpus.
+The second dataset uses the preserved benchmark snapshot at `artifacts/curated-sample-50.source.jsonl`. `benchmark/integrate_curated_sample.py` reads that snapshot, preserves its metadata, and appends normalized cases `C01`–`C50` to the benchmark corpus. The separate generator collection has been removed; reproduction does not depend on it.
 
 ```sh
 export HF_HOME="$PWD/models/hf-cache"

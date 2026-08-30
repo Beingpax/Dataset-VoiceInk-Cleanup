@@ -31,7 +31,7 @@ export default function OverviewPage() {
         </div>
         <div className="split-copy">
           <article><h3>Comparison application</h3><p>Aggregate rankings, runtime measurements, per-case evidence, model outputs, and a dedicated JSONL review workspace.</p><Link to="/cases">Inspect benchmark cases</Link></article>
-          <article><h3>Dataset generator</h3><p>The cleanup contract, category system, schema, dataset composition, and curated 50-pair demonstration.</p><Link to="/generator">Read dataset guidance</Link></article>
+          <article><h3>Dataset generator</h3><p>The cleanup contract, category system, schema, and planned dataset composition.</p><Link to="/generator">Read dataset guidance</Link></article>
         </div>
       </section>
 

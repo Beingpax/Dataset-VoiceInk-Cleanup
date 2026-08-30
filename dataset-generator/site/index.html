@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="A curated instruction fine-tuning dataset for converting raw ASR dictation into polished, meaning-preserving text.">
+  <meta name="description" content="Authoring guidance for converting raw ASR dictation into polished, meaning-preserving text.">
   <title>VoiceInk Transcript Cleanup Dataset</title>
   <style>
     :root {
@@ -150,13 +150,13 @@
           <h1>Transcript cleanup, without rewriting.</h1>
           <p class="hero-copy">An instruction fine-tuning dataset for converting raw speech-recognition output into final polished writing while preserving the speaker’s meaning, tone, information, and order.</p>
           <div class="hero-actions">
-            <a class="button primary" href="../../comparison/site/index.html#viewer">Review the dataset</a>
-            <a class="button" href="../data/sample-50.jsonl" download>Download 50 examples</a>
+            <a class="button primary" href="../../comparison/site/index.html#viewer">Open the JSONL viewer</a>
+            <a class="button" href="../README.md">Read authoring guide</a>
           </div>
         </div>
-        <aside class="hero-aside" aria-label="Sample dataset facts">
+        <aside class="hero-aside" aria-label="Planned dataset facts">
           <dl>
-            <div><dt>Examples</dt><dd>50</dd></div>
+            <div><dt>Planned examples</dt><dd>2,000</dd></div>
             <div><dt>Language</dt><dd>en</dd></div>
             <div><dt>Style policies</dt><dd>1</dd></div>
             <div><dt>Speaker IDs</dt><dd>none</dd></div>
@@ -202,14 +202,14 @@
           </table>
           <aside class="distribution-note">
             <h3>The 50-example demonstration</h3>
-            <p>The included sample uses 25 single-principal records, 23 natural multi-error records, and 2 no-change records. This is the nearest whole-example allocation that keeps no-change data below five percent.</p>
+            <p>The planned 2,000-pair batch targets 1,000 single-principal records, 900 natural multi-error records, and 100 no-change records. The old generator collection has been removed; the replacement batch has not been generated. See the README for current authoring rules.</p>
           </aside>
         </div>
       </section>
 
       <section class="section">
         <div class="section-heading">
-          <h2>Coverage in the sample</h2>
+          <h2>Planned coverage</h2>
           <p>The examples cover both cleanup errors and dictated document structure. Formatting is treated as part of the target, not as a separate output style.</p>
         </div>
         <ul class="coverage">
@@ -246,12 +246,11 @@
       <section class="section">
         <div class="section-heading">
           <h2>Project contents</h2>
-          <p>The repository is intentionally dependency-free. Open the pages directly, or serve the folder with any static file server to enable automatic loading of the nearby sample.</p>
+          <p>This older overview is retained for reference. The README is the active authoring guide, and the root React application provides the primary viewer. Serve these static pages over HTTP to load the preserved benchmark.</p>
         </div>
         <div class="file-list">
           <article class="file"><code>site/index.html</code><p>Dataset generator and authoring overview.</p></article>
           <article class="file"><code>../comparison/site/jsonl-viewer.js</code><p>Integrated dataset review module in the comparison website.</p></article>
-          <article class="file"><code>data/sample-50.jsonl</code><p>Curated 50-record demonstration dataset.</p></article>
           <article class="file"><code>README.md</code><p>Research, dataset plan, schema, and authoring rules.</p></article>
           <article class="file"><code>PROJECT_SUMMARY.md</code><p>Concise record of completed work and decisions.</p></article>
           <article class="file"><code>PRODUCT.md / DESIGN.md</code><p>Product intent and visual-system context.</p></article>

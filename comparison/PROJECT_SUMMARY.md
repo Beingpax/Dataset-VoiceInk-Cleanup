@@ -14,7 +14,7 @@ The benchmark compares four transcript-cleanup systems across 100 cases:
 The 100 cases remain divided into two explicitly labeled sources:
 
 - `voiceink-validation`: 50 cases from the original 1,829-row validation set. The original 20-case fixed-seed random sample is preserved. Thirty additional cases were sampled with seed `20260831` from the longest 30 percent of the remaining inputs.
-- `curated-sample-50`: all 50 curated transcript-cleanup pairs from `../dataset-generator/data/sample-50.jsonl`, with their category metadata preserved.
+- `curated-sample-50`: the 50 transcript-cleanup benchmark pairs preserved in `artifacts/curated-sample-50.source.jsonl`, with their category metadata intact. This benchmark snapshot remains independent of the removed generator collection.
 
 The curated source follows the natural-dictation revision: lists, titles, email layout, greetings, and sign-offs are inferred from content rather than artificial `heading`, `bullet list`, or `numbered list` prefixes. Its length mix includes substantial 30-word-or-longer inputs, and intentional emphasis is preserved.
 

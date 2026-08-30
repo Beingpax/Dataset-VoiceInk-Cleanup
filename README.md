@@ -10,12 +10,12 @@ The primary website is now a React 19 application powered by Vite and React Rout
 - `#/benchmark` aggregate rankings and quality visualization.
 - `#/cases` 100-case benchmark evidence browser.
 - `#/viewer` full JSONL dataset review workspace.
-- `#/generator` dataset-authoring rules and curated sample.
+- `#/generator` dataset-authoring rules.
 - `#/methodology` reproduction details, limitations, and artifact downloads.
 
 `HashRouter` keeps every route compatible with static hosting and GitHub Pages without server rewrite rules.
 
-The JSONL viewer is implemented as the React page `src/pages/JsonlViewerPage.jsx`. It provides a prominent record number, searchable record list, metadata filters, previous/next navigation, and a large side-by-side Raw ASR Input versus Target Output comparison. The repository sample and benchmark corpus are available as built-in sources, and local generated JSONL can be selected without uploading it.
+The JSONL viewer is implemented as the React page `src/pages/JsonlViewerPage.jsx`. It provides a prominent record number, searchable record list, metadata filters, previous/next navigation, and a large side-by-side Raw ASR Input versus Target Output comparison. The 100-case benchmark corpus is the default built-in source, and local generated JSONL can be selected without uploading it.
 
 ### Local development
 
@@ -48,11 +48,11 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 - The concise active authoring guide in `dataset-generator/README.md`.
 - The `polished-clean-v1` cleanup contract.
 - Dataset schema and category strategy.
-- The 50-example curated JSONL demonstration.
+- The planned 2,000-pair composition and future generation rules.
 - Product, design, and implementation summaries.
 - The original dataset overview page, retained as a separate generator/authoring surface.
 
-Generated JSONL can be opened from the comparison website's **JSONL Dataset Viewer**. The built-in curated source loads all 180 pairs from `public/data/curated-180.jsonl`, synchronized with `dataset-generator/data/curated-180.jsonl`. Records are numbered sequentially from `sample_001` through `sample_180`. The viewer also accepts local JSONL files through its file picker.
+The previous 180-pair generator collection and its viewer copies have been removed. The **JSONL Dataset Viewer** defaults to the unchanged 100 labeled benchmark cases in `public/data/benchmark-sample.jsonl` and accepts future generated JSONL through its local file picker. Benchmark source snapshots and results remain intact.
 
 ## Repository structure
 
@@ -69,9 +69,8 @@ Generated JSONL can be opened from the comparison website's **JSONL Dataset View
 │   ├── PRODUCT.md
 │   └── DESIGN.md
 └── dataset-generator/
-    ├── data/sample-50.jsonl        # Curated generator demonstration
     ├── site/index.html             # Dataset authoring overview
-    ├── README.md                   # Full dataset plan
+    ├── README.md                   # Active dataset authoring guide
     ├── PROJECT_SUMMARY.md
     ├── PRODUCT.md
     └── DESIGN.md

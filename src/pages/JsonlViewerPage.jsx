@@ -6,7 +6,6 @@ import { asList, errorLabel, humanize, matchesErrors, parseJsonl } from '../util
 import useArrowNavigation from '../hooks/useArrowNavigation.js';
 
 const sources = [
-  { id: 'curated', label: 'Curated pairs', detail: '180 pairs', paths: ['data/curated-180.jsonl'] },
   { id: 'benchmark', label: 'Benchmark corpus', detail: '100 labeled cases', paths: ['data/benchmark-sample.jsonl'] },
 ];
 
@@ -24,9 +23,9 @@ function MetaChip({ label, value }) {
 
 export default function JsonlViewerPage() {
   const [records, setRecords] = useState([]);
-  const [source, setSource] = useState('curated');
-  const [sourceName, setSourceName] = useState('Curated pairs');
-  const [status, setStatus] = useState('Loading curated pairs…');
+  const [source, setSource] = useState('benchmark');
+  const [sourceName, setSourceName] = useState('Benchmark corpus');
+  const [status, setStatus] = useState('Loading benchmark corpus…');
   const [loadError, setLoadError] = useState(false);
   const [query, setQuery] = useState('');
   const [type, setType] = useState('');
@@ -68,7 +67,7 @@ export default function JsonlViewerPage() {
     }
   };
 
-  useEffect(() => { loadSource('curated'); }, []);
+  useEffect(() => { loadSource('benchmark'); }, []);
 
   const categoryOptions = useMemo(() => {
     const counts = new Map();

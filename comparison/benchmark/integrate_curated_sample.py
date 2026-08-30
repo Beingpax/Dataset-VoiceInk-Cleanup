@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-"""Append the external curated 50-pair sample to the validation benchmark."""
+"""Append the preserved 50-pair benchmark source to the validation benchmark."""
 
 import json
-import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-EXTERNAL = ROOT.parent / "dataset-generator" / "data" / "sample-50.jsonl"
 ARCHIVED_SOURCE = ROOT / "artifacts" / "curated-sample-50.source.jsonl"
 SAMPLE_PATH = ROOT / "artifacts" / "sample.jsonl"
 SITE_SAMPLE = ROOT / "site" / "data" / "sample.json"
@@ -22,10 +20,9 @@ def main() -> None:
     if len(validation) != 50:
         raise ValueError(f"Expected 50 validation cases before integration, found {len(validation)}")
 
-    source_rows = [json.loads(line) for line in EXTERNAL.read_text().splitlines() if line.strip()]
+    source_rows = [json.loads(line) for line in ARCHIVED_SOURCE.read_text().splitlines() if line.strip()]
     if len(source_rows) != 50:
         raise ValueError(f"Expected 50 curated cases, found {len(source_rows)}")
-    shutil.copyfile(EXTERNAL, ARCHIVED_SOURCE)
 
     for row in validation:
         row["dataset_id"] = "voiceink-validation"

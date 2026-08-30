@@ -7,15 +7,15 @@
 ## Current scope
 
 - Text-only ASR cleanup under `polished-clean-v1`, not speech recognition, summarization, or answering the dictated request.
-- Existing collection: 180 pairs, IDs `sample_001` through `sample_180`.
+- Current generator collection: none. The previous 180 pairs and their authoring/viewer copies have been removed.
 - Next planned dataset: 2,000 generated draft pairs. It has not been created by the documentation update.
 - Record-type target: 50% single-principal-error, 45% natural multi-error, and 5% unchanged.
-- The agreed 2,000-pair category allocation is 300 fillers, 300 repetition/stutters, 200 local repairs, 300 punctuation/dictated formatting, 200 lists, 250 email layout, 250 entity normalization, 100 context-inferred quotation, and 100 unchanged. This does not rebalance existing records; the extended-length share remains provisional.
+- The agreed 2,000-pair category allocation is 300 fillers, 300 repetition/stutters, 200 local repairs, 300 punctuation/dictated formatting, 200 lists, 250 email layout, 250 entity normalization, 100 context-inferred quotation, and 100 unchanged. This does not rebalance the benchmark; the extended-length share remains provisional.
 
 ## Authoring decisions
 
-- Everyday communication comes first: roughly 50% general conversation, personal/business emails, and correspondence; around 30–35% software engineering, engineering, and technical scenarios; the remaining roughly 15–20% medical/legal/financial scenarios combined. These are flexible planning ideas, not hard quotas. Scenario weighting is separate from error-category allocation and does not rebalance existing records.
-- Nine categories for future generation: fillers; repetition/stutters; brief false starts/immediate corrections; punctuation/capitalization/dictated formatting; lists; email layout; entity normalization; context-inferred quotation; already correct. The existing 180 retain their current category assignments.
+- Everyday communication comes first: roughly 50% general conversation, personal/business emails, and correspondence; around 30–35% software engineering, engineering, and technical scenarios; the remaining roughly 15–20% medical/legal/financial scenarios combined. These are flexible planning ideas, not hard quotas. Scenario weighting is separate from error-category allocation and does not rebalance the benchmark.
+- Nine categories for future generation: fillers; repetition/stutters; brief false starts/immediate corrections; punctuation/capitalization/dictated formatting; lists; email layout; entity normalization; context-inferred quotation; already correct. The separate benchmark retains its current category assignments.
 - Each pair has one category and multiple actual error labels. Domain, scenario, length, and difficulty are separate dimensions.
 - Email layout means greeting, body, and sign-off, not email-address normalization. Filename and URL handling are incidental, not generation quotas.
 - Remove filler uses of “basically,” “actually,” “like,” and “I mean.” Preserve meaningful clarification and ordinary lexical uses. Conversational “like” before a number is removed under this policy; explicit “about” or “roughly” remains.
@@ -32,14 +32,10 @@
 
 ## Data and viewer
 
-`data/curated-180.jsonl` combines three retained component files:
+All eight JSONL files belonging to the previous 180-pair generator collection (combined files, component files, and public copies) have been removed.
 
-- `data/sample-50.jsonl`: IDs 001–050.
-- `data/sample-30.jsonl`: IDs 051–080.
-- `data/sample-50-additional.jsonl`: IDs 081–180; its historical filename is retained.
-
-The React JSONL Viewer at `#/viewer` loads `public/data/curated-180.jsonl`. Keep component files, their public copies, and the combined file synchronized when changing records. Benchmark artifacts remain separate.
+The React JSONL Viewer at `#/viewer` now defaults to `public/data/benchmark-sample.jsonl`, containing the unchanged 100 labeled benchmark cases. Their archived sources and benchmark results remain intact. Future generated files can be opened through the local JSONL picker.
 
 The viewer offers a count-sorted Category selector, multi-select error checkboxes with any/all matching, a horizontal record selector, and side-by-side transcripts. The generator page is at `#/generator`. Older static pages remain historical artifacts.
 
-This documentation consolidation changed no generated records or viewer code.
+The generator README remains the active specification for future creation; removing the old collection does not change those rules.
