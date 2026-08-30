@@ -1,0 +1,27 @@
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+const BenchmarkContext = createContext(null);
+
+export function BenchmarkProvider({ children }) {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${import.meta.env.BASE_URL}data/benchmark.json`)
+      .then(response => {
+        if (!response.ok) throw new Error(`Benchmark data returned HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(payload => { if (!cancelled) setData(payload); })
+      .catch(reason => { if (!cancelled) setError(reason.message); });
+    return () => { cancelled = true; };
+  }, []);
+
+  const value = useMemo(() => ({ data, error, loading: !data && !error }), [data, error]);
+  return <BenchmarkContext.Provider value={value}>{children}</BenchmarkContext.Provider>;
+}
+
+export function useBenchmark() {
+  return useContext(BenchmarkContext);
+}

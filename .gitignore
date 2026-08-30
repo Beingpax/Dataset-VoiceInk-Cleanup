@@ -19,6 +19,12 @@ dist/
 coverage/
 *.log.tmp
 
+# React and Vite
+node_modules/
+dist/
+.vite/
+*.local
+
 # Local model directories and caches
 model/
 models/

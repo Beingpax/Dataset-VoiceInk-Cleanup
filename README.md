@@ -1,6 +1,30 @@
 # VoiceInk Cleanup Research
 
-This repository contains two related but separate projects:
+This repository contains two related but separate projects presented through a React application.
+
+## React application
+
+The primary website is now a React 19 application powered by Vite and React Router. It replaces the previous single long static page with dedicated routes:
+
+- `#/` overview and project navigation.
+- `#/benchmark` aggregate rankings and quality visualization.
+- `#/cases` 100-case benchmark evidence browser.
+- `#/viewer` full JSONL dataset review workspace.
+- `#/generator` dataset-authoring rules and curated sample.
+- `#/methodology` reproduction details, limitations, and artifact downloads.
+
+`HashRouter` keeps every route compatible with static hosting and GitHub Pages without server rewrite rules.
+
+The JSONL viewer is implemented as the React page `src/pages/JsonlViewerPage.jsx`. It provides a prominent record number, searchable record list, metadata filters, previous/next navigation, and a large side-by-side Raw ASR Input versus Target Output comparison. The repository sample and benchmark corpus are available as built-in sources, and local generated JSONL can be selected without uploading it.
+
+### Local development
+
+```sh
+npm install
+npm run dev
+```
+
+The build command is documented in `package.json` but was not run during this migration.
 
 ## 1. Dataset comparison application
 
@@ -15,7 +39,7 @@ This repository contains two related but separate projects:
 - The modular comparison website.
 - An integrated JSONL dataset viewer implemented as a JavaScript application module, not a standalone viewer HTML file.
 
-The repository root opens the comparison website at [`comparison/site/index.html`](comparison/site/index.html).
+The earlier dependency-free comparison website remains under [`comparison/site/`](comparison/site/) as preserved benchmark-task source. The React application at the repository root is now the primary interface.
 
 ## 2. Dataset generator and authoring project
 
