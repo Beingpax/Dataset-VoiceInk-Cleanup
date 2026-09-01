@@ -1,0 +1,63 @@
+{
+  "id": "cleanup-2b-4bit",
+  "source_archive": "ft-30b873e1-16c9-2026-08-31-06-15-24.tar.zst",
+  "source_archive_sha256": "7a0b2c10e289f7b640b37b6cf8287bf0a7c737e5260e37504bfda10d3d79260f",
+  "source_files_sha256": {
+    "tokenizer_config.json": "4ed764fafae09ed7390f85ab1ddc28baa34a4805b4119048ba8d922abaaebcaf",
+    "config.json": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "model.safetensors-00001-of-00001.safetensors": "9d883bd23f11e199f05d3eb0121283c92a5b7dfe4e1152893f71f209263998a3",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "chat_template.jinja": "d78de6bee4c952ca3145eb161921560a6ede7b59a34e7e4be815f3c5386b4364",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+    "model.safetensors.index.json": "aca8afed9da75b0f050b408d270766fd77627f1af401e240f61c3b47d0db02f9",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+  },
+  "output_files_sha256": {
+    "model.safetensors": "e825b8a076a775533703fa42731bb033411f558377b7ad69caed9a64d7ca3911",
+    "tokenizer_config.json": "386ba246ba3dfa4d3a21d8bc8712eba38de558e5ac94c2c90436d8f94d519d5e",
+    "config.json": "8893a91e9b7763d7b94c6db181f5b7c79c6f4881a69cefb11549eefcab1823bf",
+    "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+    "README.md": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+    "chat_template.jinja": "d78de6bee4c952ca3145eb161921560a6ede7b59a34e7e4be815f3c5386b4364",
+    "model.safetensors.index.json": "3b2dffa510d1d73decdbc12d5e1bc7d6a9f7b2deb631bfd84238a1f8fc4e0fd1"
+  },
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.16.1"
+  },
+  "official_sources": [
+    "https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/convert.py",
+    "https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/models/qwen3_5.py"
+  ],
+  "method": "mlx_lm.convert.convert; native Qwen3.5 text-only sanitizer",
+  "started_at": "2026-08-31T06:25:20.887772+00:00",
+  "completed_at": "2026-08-31T06:25:31.348737+00:00",
+  "conversion_seconds": 10.460796542000026,
+  "quantization": {
+    "bits": 4,
+    "group_size": 64,
+    "mode": "affine",
+    "calibration": false,
+    "activation_quantization": false,
+    "kv_cache_quantization": false
+  },
+  "quantized_module_count": 187,
+  "source_tensor_bytes": {
+    "text": 3763655360,
+    "vision": 662833152,
+    "mtp": 121656320
+  },
+  "source_parameters": {
+    "text": 1881825088,
+    "vision": 331416576,
+    "mtp": 60828160
+  },
+  "quantized_text_tensor_bytes": 1059315904,
+  "quantized_weight_file_bytes": 1059404951,
+  "effective_bits_per_text_parameter": 4.503355431936934,
+  "validation": "Strict reload; all quantized modules are affine 4-bit/group64; no vision/MTP tensors; identical prompt token IDs on 100 cases and identical EOS IDs; source hashes unchanged.",
+  "scope": "Text-only MLX weights. Floating norms, scales/biases and sensitive tensors are not all 4-bit. Original multimodal config/tokenizer metadata is retained by the official converter but no vision parameters are saved."
+}

@@ -22,7 +22,7 @@ CHRF = CHRF(word_order=2)
 
 METRIC_KEYS = ("exact_match", "edit_similarity", "chrf", "wer", "length_ratio")
 REFERENCE_BLIND_MODELS = {"gpt-5.6-sol-low", "voiceink-refine-v1", "speakoflow-mini"}
-FLUID_MODELS = {"fluid-1-mini-2b-6bit"}
+DATASET_SYSTEM_PROMPT_MODELS = {"fluid-1-mini-2b-6bit", "old-cleanup-0.8b", "new-cleanup-0.8b", "new-cleanup-0.8b-4bit", "cleanup-2b-4bit"}
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -89,12 +89,12 @@ def summarize_cases(cases: list[dict]) -> dict:
 
 
 def comparison_context(model: dict) -> dict:
-    if model["id"] in FLUID_MODELS:
+    if model["id"] in DATASET_SYSTEM_PROMPT_MODELS:
         known = model.get("prompt_policy") == "dataset-system-input-only-v1"
         return {
             "reference_blind": known,
             "context_source": "dataset_system_prompt" if known else "unverified",
-            "note": None if known else "Fluid prompt provenance must be recorded before ranking.",
+            "note": None if known else "Dataset system-prompt provenance must be recorded before ranking.",
         }
     known = model["id"] in REFERENCE_BLIND_MODELS
     return {
@@ -181,6 +181,10 @@ def main() -> None:
                 "Model-native prompts and settings differ; rankings compare configurations, not isolated model capability.",
                 "Quality means use successful cases only. Exact-match and completion rates include every expected case, including failed or missing results.",
                 "Fluid-1 Mini 2B 6-bit uses the existing dataset cleanup instructions and standard MLX target decoding without DFlash; these are not FluidVoice application or FluidDecode speed measurements.",
+                "Old Cleanup 0.8B is the user-supplied Aug 1 checkpoint evaluated at original BF16/FP32 precision. Its training dataset and any benchmark overlap are not documented in the archive; original training-prompt compatibility is unverified.",
+                "New Cleanup 0.8B is the user-supplied Aug 31 checkpoint, described by the user as trained on a new dataset. It uses the same evaluation protocol as Old Cleanup 0.8B; training-data overlap is unverified and differences cannot be attributed solely to the dataset without training records.",
+                "New Cleanup 0.8B 4-bit uses local affine weight quantization with group size 64, without calibration, activation quantization or KV-cache quantization. It uses the same 100-case inference protocol as the original Aug 31 checkpoint; speed and RSS were measured in separate sessions.",
+                "Cleanup Qwen3.5 2B 4-bit is the supplied ft-30b873e1 checkpoint converted with official MLX-LM affine 4-bit/group64 text-only conversion. Native sanitization omits vision/MTP tensors. It uses the fixed 100-case protocol without retries; no full-precision 2B benchmark was run, so quantization-only quality impact is unknown. Training overlap is unverified.",
             ],
         },
         "models": models,

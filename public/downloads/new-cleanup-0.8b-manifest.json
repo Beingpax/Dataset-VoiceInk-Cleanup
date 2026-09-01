@@ -1,0 +1,119 @@
+{
+  "model_id": "new-cleanup-0.8b",
+  "archive_sha256": "422fc5eb8e3d1a4cc778a328c5ea0c4ccc6d763119574492d37f3dfe43e28f6b",
+  "corpus_sha256": "ab445a000fb5908a8ad57bd24b74530ce4071387537126eaef154d56c25f0f70",
+  "case_count": 100,
+  "attempts": {
+    "1": 100
+  },
+  "finish_reasons": {
+    "stop": 100
+  },
+  "summary": {
+    "case_count": 100,
+    "successful_cases": 100,
+    "failed_cases": 0,
+    "success_rate": 1.0,
+    "exact_matches": 18,
+    "exact_match_rate": 0.18,
+    "mean_edit_similarity": 0.9346166633313819,
+    "mean_chrf": 0.8623860327845244,
+    "mean_wer": 0.23899664204715645,
+    "median_tokens_per_second": 44.299707269636144,
+    "mean_generation_seconds": 0.6271978995699464,
+    "median_generation_seconds": 0.6470195619999686,
+    "peak_memory_gib": 1.3982696533203125,
+    "memory_scope": "process peak RSS"
+  },
+  "dataset_summaries": {
+    "curated-sample-50": {
+      "case_count": 50,
+      "successful_cases": 50,
+      "failed_cases": 0,
+      "success_rate": 1.0,
+      "exact_matches": 18,
+      "exact_match_rate": 0.36,
+      "mean_edit_similarity": 0.9409321449883425,
+      "mean_chrf": 0.8878093848890196,
+      "mean_wer": 0.22166977173153643,
+      "median_tokens_per_second": 33.90508456838643,
+      "mean_generation_seconds": 0.553459675759932,
+      "median_generation_seconds": 0.5154650204999598
+    },
+    "voiceink-validation": {
+      "case_count": 50,
+      "successful_cases": 50,
+      "failed_cases": 0,
+      "success_rate": 1.0,
+      "exact_matches": 0,
+      "exact_match_rate": 0.0,
+      "mean_edit_similarity": 0.9283011816744213,
+      "mean_chrf": 0.8369626806800292,
+      "mean_wer": 0.25632351236277645,
+      "median_tokens_per_second": 47.321286149729275,
+      "mean_generation_seconds": 0.7009361233799609,
+      "median_generation_seconds": 0.6888337084999421
+    }
+  },
+  "paired_counts": {
+    "both_completed": 95,
+    "new_higher_edit_similarity": 64,
+    "same_edit_similarity": 11,
+    "new_lower_edit_similarity": 20,
+    "old_failures_now_completed": [
+      "C04",
+      "C13",
+      "C24",
+      "C34",
+      "C45"
+    ],
+    "new_failures_previously_completed": [],
+    "both_failed": []
+  },
+  "common_case_summaries": {
+    "old": {
+      "case_count": 95,
+      "successful_cases": 95,
+      "failed_cases": 0,
+      "success_rate": 1.0,
+      "exact_matches": 6,
+      "exact_match_rate": 0.06315789473684211,
+      "mean_edit_similarity": 0.8527329514528732,
+      "mean_chrf": 0.7651151778804021,
+      "mean_wer": 0.540613581487153,
+      "median_tokens_per_second": 49.59907415059781,
+      "mean_generation_seconds": 0.6054448336841616,
+      "median_generation_seconds": 0.5930309159998615
+    },
+    "new": {
+      "case_count": 95,
+      "successful_cases": 95,
+      "failed_cases": 0,
+      "success_rate": 1.0,
+      "exact_matches": 14,
+      "exact_match_rate": 0.14736842105263157,
+      "mean_edit_similarity": 0.9318514370170994,
+      "mean_chrf": 0.8574629858249629,
+      "mean_wer": 0.24689705010811788,
+      "median_tokens_per_second": 44.5635342729142,
+      "mean_generation_seconds": 0.632140864031532,
+      "median_generation_seconds": 0.6544635419995757
+    }
+  },
+  "files_sha256": {
+    "results-new-cleanup-0.8b.json": "72fff2855ee4d30e9632ed7dd9eacfbfa3719fa811f688d7762885ccd1e45353",
+    "new-cleanup-0.8b.jsonl": "cdd3af2f1dd6b1d071cd33b5fb7bfd71985f30dacb7449028c0d15f167637f97",
+    "new-cleanup-0.8b.csv": "b02844aad98ed243b0e3dbf3b3dfa3abae61b273e9fa2435919bdad459470241",
+    "new-cleanup-0.8b.md": "646d3bc3dcb8465b82df304a56f28349eda734b4cb18f68e8ea299401533f601",
+    "cleanup-old-vs-new.csv": "2dd119979240146a077fb2ae20e6a3cdf673e8a470607904af57ea7912440707",
+    "cleanup-old-vs-new.json": "f6aa96411fc947a460f3c76aa35ecadca4f9ed6ad6138b602bf397783e16bfeb"
+  },
+  "script_sha256": {
+    "run_old_cleanup.py": "840181da3687ab35919284c360933f9396844c34e004f9422ee9e64c272b165f",
+    "run_new_cleanup.py": "5ea4d0487bd9e62536c14cc6aef692b5a8187f1cec545ee745d488b9e3680802",
+    "report_new_cleanup.py": "49acfeb60b3793e28f25f4155c95859079d6f296feeb45bd876d5358106bd47c",
+    "score_results.py": "6859818e73bda231caf22785adec53bdf5df33dcfd16c404e651acca8e8fcba6",
+    "requirements-fluid.txt": "468d203a18ad37f1036a788c4887a678bceb199f91a8938b5070daacaab5dd6f",
+    "README.md": "65c434a736b40b14675f8fe32fa9be9101826fa0bb8c2c3f8dc1298566370c4d"
+  }
+}

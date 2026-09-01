@@ -2,8 +2,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { qualityPercent, qualityPlotLayout } from '../src/components/quality-plot-layout.js';
+import { isRanked, normalizeBenchmarkFairness } from '../src/lib/benchmarkFairness.js';
 
-const data = JSON.parse(readFileSync(new URL('../public/data/benchmark.json', import.meta.url), 'utf8'));
+const data = normalizeBenchmarkFairness(JSON.parse(readFileSync(new URL('../public/data/benchmark.json', import.meta.url), 'utf8')));
 const datasets = ['all', ...data.benchmark.datasets.map(dataset => dataset.id)];
 const overlaps = (a, b) => a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
 
@@ -11,10 +12,15 @@ for (const width of [280, 350, 600, 900, 1178, 1312]) {
   for (const dataset of datasets) {
     test(`${dataset} at ${width}px: accurate points and separate, contained labels`, () => {
       const summaryFor = model => dataset === 'all' ? model.summary : model.dataset_summaries[dataset];
-      const layout = qualityPlotLayout(data.models, summaryFor, width);
-      assert.equal(layout.points.length, data.models.length);
-      assert.deepEqual(layout.xTicks.map(tick => tick.value), [.8, .9, 1]);
-      assert.deepEqual(layout.yTicks.map(tick => tick.value), [.4, .7, 1]);
+      const rankedModels = data.models.filter(model => isRanked(model, summaryFor(model)));
+      const layout = qualityPlotLayout(rankedModels, summaryFor, width);
+      assert.deepEqual(new Set(layout.points.map(point => point.id)), new Set(rankedModels.map(model => model.id)));
+      // Bounds adapt when another benchmark model extends the measured range.
+      for (const ticks of [layout.xTicks, layout.yTicks]) {
+        assert.equal(ticks.at(-1).value, 1);
+        assert.ok(ticks.every(tick => Number.isFinite(tick.value) && Number.isFinite(tick.position)));
+        assert.ok(ticks.every((tick, index) => index === 0 || tick.value > ticks[index - 1].value));
+      }
       assert.equal(layout.points.filter(point => point.isLeader).length, 1);
       for (const point of layout.points) {
         const summary = summaryFor(data.models.find(model => model.id === point.id));

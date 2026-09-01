@@ -32,7 +32,13 @@ export function qualityPlotLayout(models, summaryFor, width, height = 560) {
     const before = point.x - labelWidth - 15;
     const after = point.x + 15;
     const sides = point.x > (left + right) / 2 ? [before, after] : [after, before];
-    const candidates = [point.y - 10, point.y - 36, point.y + 16].flatMap(labelY => sides.map(labelX => ({
+    // Dense clusters need more than the immediate row above/below the point.
+    // Search outward without moving the measured coordinates themselves.
+    const labelRows = [point.y - 10];
+    for (let offset = 26; offset < bottom; offset += 26) {
+      labelRows.push(point.y - 10 - offset, point.y - 10 + offset);
+    }
+    const candidates = labelRows.flatMap(labelY => sides.map(labelX => ({
       x: Math.max(left, Math.min(width - labelWidth - 4, labelX)),
       y: Math.max(2, Math.min(bottom - 22, labelY)),
       width: labelWidth,

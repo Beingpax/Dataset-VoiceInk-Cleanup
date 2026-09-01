@@ -6,6 +6,7 @@ const navigation = [
   ['/benchmark', 'Benchmark'],
   ['/cases', 'Cases'],
   ['/viewer', 'JSONL Viewer'],
+  ['/prompt-output', 'Prompt Output'],
   ['/generator', 'Dataset Generator'],
   ['/methodology', 'Methodology'],
 ];

@@ -6,6 +6,8 @@ const BenchmarkContext = createContext(null);
 export function BenchmarkProvider({ children }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
+  const [dataset, setDataset] = useState('all');
+  const [hiddenModelIds, setHiddenModelIds] = useState(() => new Set());
 
   useEffect(() => {
     let cancelled = false;
@@ -19,7 +21,7 @@ export function BenchmarkProvider({ children }) {
     return () => { cancelled = true; };
   }, []);
 
-  const value = useMemo(() => ({ data, error, loading: !data && !error }), [data, error]);
+  const value = useMemo(() => ({ data, error, loading: !data && !error, dataset, setDataset, hiddenModelIds, setHiddenModelIds }), [data, error, dataset, hiddenModelIds]);
   return <BenchmarkContext.Provider value={value}>{children}</BenchmarkContext.Provider>;
 }
 

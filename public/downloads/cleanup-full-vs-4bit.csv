@@ -1,0 +1,477 @@
+case_id,dataset_id,input,reference,full_output,q4_output,full_error,q4_error,both_completed,identical_raw_output,full_exact_match,q4_exact_match,full_edit_similarity,q4_edit_similarity,delta_edit_similarity,full_chrf,q4_chrf,delta_chrf,full_wer,q4_wer,delta_wer,full_seconds,full_tokens_per_second,full_finish_reason,q4_seconds,q4_tokens_per_second,q4_finish_reason
+V01,voiceink-validation,mina where should i return the folding chairs the parish hall or the sports pavilion question mark and who has the storage key i can go tomorrow,"Mina, where should I return the folding chairs, the parish hall or the sports pavilion? And who has the storage key? I can go tomorrow.","Where should I return the folding chairs? The parish hall or the sports pavilion?
+
+Question: Who has the storage key?
+I can go tomorrow.","Where should I return the folding chairs? The parish hall or the sports pavilion?
+
+Who has the storage key? I can go tomorrow.",,,True,False,False,False,0.8929889298892989,0.9195402298850575,0.02655129999575856,0.8176226954888203,0.8273825692490084,0.009759873760188165,0.32,0.24,-0.08000000000000002,1.0540694159999475,30.358531909061284,stop,0.4940008339999622,58.70435433313908,stop
+V02,voiceink-validation,message to dev colon the freezer door looks shut but it isnt sealing comma so push it until you hear two clicks not one full stop,"Message to Dev: The freezer door looks shut, but it isn’t sealing, so push it until you hear 2 clicks, not one.","Message to dev: The freezer door looks shut, but it isnt sealing, so push it until you hear two clicks.","Message to dev: The freezer door looks shut, but it isn't sealing, so push it until you hear two clicks, not one full stop.",,,True,False,False,False,0.9252336448598131,0.923076923076923,-0.0021567217828900587,0.7811571994483819,0.8368532426261962,0.05569604317781429,0.2727272727272727,0.2727272727272727,0.0,0.586302582999906,40.93449474024208,stop,0.48176566700021795,62.27093804089287,stop
+V03,voiceink-validation,dear ken we heard about your new house period may we visit next sunday around tea time question mark warm wishes comma lou and fay,"Dear Ken,
+
+We heard about your new house. May we visit next Sunday around teatime?
+
+Warm wishes,
+Lou and Fay","Dear Ken,
+
+We heard about your new house. May we visit next Sunday around tea time?
+
+Warm wishes,
+Lou and Fay","Dear Ken,
+
+We heard about your new house. We may visit next Sunday around tea time.
+
+Warm wishes,
+Lou and Fay",,,True,False,False,False,0.9953917050691244,0.9493087557603687,-0.04608294930875578,0.9819977433574129,0.8524202101091505,-0.12957753324826238,0.10526315789473684,0.21052631578947367,0.10526315789473684,0.5795653749996745,48.31206488140484,stop,0.46533562500007974,60.171623438448755,stop
+V04,voiceink-validation,can the taxi take four passengers plus a folding wheelchair and two medium cases or should we request a larger car question mark for the airport run,"Can the taxi take 4 passengers, a folding wheelchair, and 2 medium cases, or should we request a larger car for the airport run?","Can the taxi take four passengers plus a folding wheelchair and two medium cases, or should we request a larger car?","Can the taxi take four passengers plus a folding wheelchair and two medium cases, or should we request a larger car for the airport run?",,,True,False,False,False,0.8524590163934427,0.9393939393939393,0.08693492300049666,0.7076558470661475,0.8384756457152036,0.13081979864905613,0.4166666666666667,0.20833333333333334,-0.20833333333333334,0.5570846669997991,41.286363388652184,stop,0.422650665999754,63.882544550434275,stop
+V05,voiceink-validation,before the guests arrive saturday morning comma separate the white laundry wash the towels at sixty and hang the linen shirts instead of machine drying them,"Before the guests arrive Saturday morning, separate the white laundry, wash the towels at 60 degrees, and hang the linen shirts instead of machine-drying them.","Before the guests arrive, Saturday morning:
+
+- Separate the white laundry.
+- Wash the towels at sixty.
+- Hang the linen shirts instead of machine drying them.","Before the guests arrive, Saturday morning:
+
+- Separate the white laundry.
+- Wash the towels at 60 and hang the linen shirts instead of machine drying them.",,,True,False,False,False,0.8769716088328076,0.9206349206349206,0.043663311802113025,0.7188907789185063,0.7808884846901971,0.061997705771690836,0.48,0.36,-0.12,0.7320684589999473,47.80973632959444,stop,0.48874125000020285,71.61253526274992,stop
+V06,voiceink-validation,dear neighbors please collect your post from the lower lobby shelf by friday evening period anything remaining there will move to reception before mondays delivery,"Dear Neighbors,
+
+Please collect your post from the lower lobby shelf by Friday evening. Anything remaining there will move to Reception before Monday’s delivery.","Dear neighbors,
+
+Please collect your post from the lower lobby shelf by Friday evening. Anything remaining there will move to reception before Monday’s delivery.
+
+Best,
+[Your Name]","Dear neighbors, please collect your post from the lower lobby shelf by Friday evening. Anything remaining there will move to reception before Monday’s delivery.",,,True,False,False,False,0.9325513196480939,0.9719626168224299,0.039411297174336,0.9101226412703347,0.8992894327117655,-0.010833208558569174,0.16666666666666666,0.125,-0.04166666666666666,0.749956249999741,49.33621127900832,stop,0.46132399999987683,60.69486954940015,stop
+V07,voiceink-validation,support closed the incident at eleven forty p m utc service had been stable since ten oh five and monitoring continued overnight with the incident commander remaining on call,"Support closed the incident at 11:40 PM UTC. Service had been stable since 10:05, and monitoring continued overnight. The Incident Commander remained on call.","Support closed the incident at 11:40 UTC. Service had been stable since 10:05, and monitoring continued overnight with the incident commander remaining on call.","Support closed the incident at 11:40 PM UTC. Service had been stable since 10:55, and monitoring continued overnight with the incident commander remaining on call.",,,True,False,False,False,0.9371069182389937,0.940809968847352,0.0037030506083582937,0.8247407882006729,0.8270524623240818,0.0023116741234089355,0.2916666666666667,0.2916666666666667,0.0,0.7218661249999059,51.25604141627345,stop,0.43965087499964284,86.432217381646,stop
+V08,voiceink-validation,the sales manager approved the five percent discount but not the free implementation package shown in the latest quote despite a separate verbal concession request,"The Sales manager approved the 5% discount, but not the free implementation package shown in the latest quote. A separate verbal concession request remains unapproved.",The sales manager approved the five percent discount but not the free implementation package shown in the latest quote despite a separate verbal concession request.,"The sales manager approved the five percent discount but not the free implementation package shown in the latest quote, despite a separate verbal concession request.",,,True,False,False,False,0.8580060422960725,0.8554216867469878,-0.0025843555490846493,0.7465118579215112,0.74880992440151,0.0022980664799987505,0.4,0.4,0.0,0.552065209000375,47.095885732553626,stop,0.4307371670001885,62.68323717694922,stop
+V09,voiceink-validation,why did the nightly pipe line finish green even though the schema validation step logged seventeen errors is continue on error set somewhere question mark,Why did the nightly pipeline finish green even though the schema validation step logged 17 errors? Is continue-on-error set somewhere?,Why did the nightly pipe line finish green even though the schema validation step logged seventeen errors? Is it continue on error set somewhere question mark?,Why did the nightly pipeline finish green even though the schema validation step logged seventeen errors?,,,True,False,False,False,0.8873720136518771,0.8368200836820082,-0.0505519299698689,0.8170944176459985,0.7241162689931855,-0.09297814865281306,0.5,0.25,-0.25,0.613450875000126,45.64342662319008,stop,0.4096383750002133,41.50001815623634,stop
+V10,voiceink-validation,please shorten the permission dialog it currently says in order to continue we need to be able to access your microphone period keep the reason visible though,"Please shorten the permission dialog. It currently says, “In order to continue, we need to be able to access your microphone.” Keep the reason visible, though.",Please shorten the permission dialog. It currently says “in order to continue” and “we need to be able to access your microphone.” Keep the reason visible though.,Please shorten the permission dialog to continue we need to be able to access your microphone. Keep the reason visible though.,,,True,False,False,False,0.9657320872274142,0.8842105263157894,-0.08152156091162477,0.8681592857556026,0.7204347906846843,-0.14772449507091834,0.23076923076923078,0.34615384615384615,0.11538461538461536,0.6424710420001247,51.36418272995655,stop,0.3728438329999335,61.68802582824027,stop
+V11,voiceink-validation,the search index skipped records with emoji in the title reprocessing succeeds after unicode normalization form c is applied period existing records need back filling,The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode Normalization Form C is applied. Existing records need backfilling.,The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode normalization (form C) is applied. Existing records need back-filling.,The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode normalization is applied. Existing records need backfilling.,,,True,False,False,False,0.9784615384615385,0.9714285714285714,-0.007032967032967075,0.8840035492542944,0.9134653398525647,0.029461790598270365,0.17391304347826086,0.13043478260869565,-0.043478260869565216,0.6605760000002192,46.92874097755551,stop,0.37622458300029393,71.76564536182609,stop
+V12,voiceink-validation,paragraph break the tablet layout is usable in portrait period in landscape the sticky footer overlaps the final form field by twenty four pixels period rotation does not recalculate it,"The tablet layout is usable in portrait. In landscape, the sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.",The tablet layout is usable in portrait and landscape. The sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.,The tablet layout is usable in portrait mode in landscape mode. The sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.,,,True,False,False,False,0.9733333333333334,0.9449838187702265,-0.02834951456310686,0.9027577914451161,0.8970694299688404,-0.005688361476275716,0.16,0.24,0.07999999999999999,0.6273594579997734,49.41345763533734,stop,0.44465791699985857,74.21435386252325,stop
+V13,voiceink-validation,can you check whether the variance calculation uses n or n minus one results differ from the published table by point zero three before correcting the published appendix,Can you check whether the variance calculation uses n or n−1? Results differ from the published table by 0.03. Check this before correcting the published appendix.,Can you check whether the variance calculation uses n or n minus one? Results differ from the published table by 0.3 before correcting the published appendix.,Can you check whether the variance calculation uses n or n minus one results differ from the published table by 0.3 before correcting the published appendix?,,,True,False,False,False,0.9221183800623052,0.90625,-0.015868380062305176,0.8516110385088289,0.8158412881377332,-0.035769750371095754,0.23076923076923078,0.3076923076923077,0.07692307692307693,0.655062541999996,47.32372561763757,stop,0.3749451660005434,80.01169963065085,stop
+V14,voiceink-validation,during the quarterly structural survey inspection at pier two found minor scaling above the water line comma no exposed reinforcement and no measurable change since march,"During the quarterly structural survey, inspection at Pier 2 found minor scaling above the waterline, no exposed reinforcement, and no measurable change since March.","During the quarterly structural survey inspection at Pier Two, found minor scaling above the water line, no exposed reinforcement, and no measurable change since March.","During the quarterly structural survey inspection at Pier Two, found minor scaling above the water line, no exposed reinforcement, and no measurable change since March.",,,True,True,False,False,0.978978978978979,0.978978978978979,0.0,0.9227448467995751,0.9227448467995751,0.0,0.16666666666666666,0.16666666666666666,0.0,0.6234821660000307,46.51295831932195,stop,0.377550125000198,76.81099297738224,stop
+V15,voiceink-validation,thirty minute discharge test reading colon battery bank voltage was twenty five point six at rest comma then dropped to twenty two point nine under inverter load,"30-minute discharge-test reading: Battery-bank voltage was 25.6 at rest, then dropped to 22.9 under inverter load.","Thirty-minute discharge test reading:
+- Battery bank voltage at rest: 25.6 V
+- Battery bank voltage under inverter load: 22.9 V","Thirty-minute discharge test reading: Battery bank voltage was 25.6V at rest, then dropped to 22.9V under inverter load.",,,True,False,False,False,0.7302904564315353,0.94017094017094,0.2098804837394047,0.5407612952762484,0.794446151070333,0.2536848557940846,1.0,0.4375,-0.5625,0.7481411660000958,48.11926095775806,stop,0.47193725000033737,69.92455035065872,stop
+V16,voiceink-validation,dear nina before the accessibility review meeting note that the attached screen reader transcript timestamps correspond to build one eighty four not the latest beta,"Dear Nina,
+
+Before the accessibility-review meeting, note that the attached screen-reader transcript timestamps correspond to Build 184, not the latest beta.","Dear Nina,
+
+Before the accessibility review meeting, note that the attached screen reader transcript timestamps correspond to build 1.84, not the latest beta.","Dear Nina,
+
+Before the accessibility review meeting, note that the attached screen reader transcript timestamps correspond to build 184, not the latest beta.",,,True,False,False,False,0.9777777777777777,0.9808917197452228,0.0031139419674450775,0.8680909552798406,0.8934070470681518,0.02531609178831118,0.2857142857142857,0.23809523809523808,-0.047619047619047616,0.690527917000054,46.34135595707928,stop,0.4166983329996583,74.3943460892737,stop
+V17,voiceink-validation,dear garden club saturdays seed swap moves indoors to room four because rain is likely period label packets with variety and harvest year cheers comma monica,"Dear Garden Club,
+
+Saturday’s seed swap moves indoors to Room 4 because rain is likely. Label packets with the variety and harvest year.
+
+Cheers,
+Monica","Dear Garden Club,
+
+Saturdays seed swap moves indoors to Room Four because rain is likely.
+
+Please label packets with variety and harvest year.
+
+Cheers,
+Monica","Dear Garden Club,
+
+Saturdays seed swap moves indoors to Room Four because rain is likely.
+
+Please label packets with variety and harvest year.
+
+Cheers,
+Monica",,,True,True,False,False,0.9354838709677421,0.9354838709677421,0.0,0.8450737303585424,0.8450737303585424,0.0,0.20833333333333334,0.20833333333333334,0.0,0.845120124999994,41.41423090593216,stop,0.4297811670003284,81.43679315751231,stop
+V18,voiceink-validation,event recap colon one hundred eighty four attendees checked in and seventeen walk ins paid at the door period the west room session filled first but but no one was turned away,"Event recap: 184 attendees checked in, and 17 walk-ins paid at the door. The West Room session filled first, but no one was turned away.","Event recap: 184 attendees checked in, and 17 walked in. Paid at the door. The West Room session filled first, but no one was turned away.","184 attendees checked in, and 17 walk-ins paid at the door. The West Room session filled first, but no one was turned away.",,,True,False,False,False,0.9708029197080292,0.9498069498069498,-0.020995969901079437,0.9262783097987256,0.917707652448807,-0.008570657349918576,0.12,0.08,-0.039999999999999994,0.7423647919999894,49.840725743901565,stop,0.4363034170000901,73.34345492873688,stop
+V19,voiceink-validation,our pickup window was one to three and and no driver came can you reschedule for tomorrow morning without creating a second charge question mark there are seven boxes,"Our pickup window was 1:00 to 3:00, and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are 7 boxes.","Our pickup window was one to three, and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are seven boxes.","Our pickup window was one to three, and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are seven boxes.",,,True,True,False,False,0.9266666666666665,0.9266666666666665,0.0,0.8605101330453455,0.8605101330453455,0.0,0.11538461538461539,0.11538461538461539,0.0,0.6447048750001159,48.08401673710693,stop,0.37485650000053283,82.69831255415322,stop
+V20,voiceink-validation,lock report colon rear office lever sticks when pulled upward latch works from inside but but key rotation outside stops halfway do not force it,"Lock report: The rear-office lever sticks when pulled upward. The latch works from inside, but key rotation outside stops halfway. Do not force it.","Lock report: Rear office lever sticks when pulled upward. Latch works from inside, but key rotation outside stops halfway. Do not force it.","Lock report: rear office lever sticks when pulled upward, latch works from inside but key rotation outside stops halfway, do not force it.",,,True,False,False,False,0.951048951048951,0.9403508771929825,-0.010698073855968548,0.8658507062443855,0.7918257433828799,-0.07402496286150562,0.16666666666666666,0.2916666666666667,0.12500000000000003,0.6079977499998677,47.69754493335923,stop,0.36263891699945816,74.45422632353699,stop
+V21,voiceink-validation,please ask the bus station whether the midnight coach has under floor luggage storage and um whether bicycles need a separate reservation question mark for next friday night,Please ask the bus station whether the midnight coach has underfloor luggage storage and whether bicycles need a separate reservation for next Friday night.,Please ask the bus station whether the midnight coach has under-floor luggage storage and whether bicycles need a separate reservation. Question mark for next Friday night.,"Please ask the bus station whether the midnight coach has under-floor luggage storage, and whether bicycles need a separate reservation for next Friday night.",,,True,False,False,False,0.951219512195122,0.9936305732484076,0.042411061053285626,0.9297610552340997,0.9463355930659283,0.016574537831828606,0.16666666666666666,0.08333333333333333,-0.08333333333333333,0.666688540999985,43.4985727465813,stop,0.3924874579997777,68.79200710667115,stop
+V22,voiceink-validation,ask operations why the overnight shipment went to phoenix instead of tucson comma include tracking number nine three six zero zero one and request a corrected delivery estimate,"Ask Operations why the overnight shipment went to Phoenix instead of Tucson, include tracking number 936001, and request a corrected delivery estimate.",Ask operations why the overnight shipment went to Phoenix instead of Tucson. Include tracking number 936-0001 and request a corrected delivery estimate.,Ask operations why the overnight shipment went to Phoenix instead of Tucson. Include tracking number 936-0-01 and request a corrected delivery estimate.,,,True,False,False,False,0.9702970297029703,0.9702970297029703,0.0,0.8569209910259797,0.8549784239597659,-0.0019425670662138739,0.18181818181818182,0.18181818181818182,0.0,0.6217294590001075,51.4693320973785,stop,0.3747356670000954,85.39352620521134,stop
+V23,voiceink-validation,the budget deck accidentally labels fiscal year twenty twenty six as calendar year twenty twenty six period the underlying numbers are fiscal and the footnote uses the same incorrect label,The budget deck accidentally labels fiscal year 2026 as calendar year 2026. The underlying numbers are fiscal-year figures. The footnote uses the same incorrect label.,"The budget deck accidentally labels fiscal year 2026 as calendar year 2026. The underlying numbers are fiscal, and the footnote uses the same incorrect label.","The budget deck accidentally labels fiscal year 2026 as calendar year 2026, when the underlying numbers are fiscal. The footnote uses the same incorrect label.",,,True,False,False,False,0.9415384615384617,0.9325153374233127,-0.00902312411514894,0.8803745271713368,0.8611390164806313,-0.019235510690705504,0.12,0.2,0.08000000000000002,0.6672150420004073,53.95561810487184,stop,0.4208009159992798,85.55114457037354,stop
+V24,voiceink-validation,the monday notes should say decision deferred pending tax advice comma not decision denied and the follow up owner is casey from treasury before circulating the revised record,"The Monday notes should say, “Decision deferred pending tax advice,” not “Decision denied,” and the follow-up owner is Casey from Treasury. Circulate the revised record afterward.","The Monday notes should say “decision deferred pending tax advice,” not “decision denied,” and the follow-up owner is Casey from Treasury before circulating the revised record.",The Monday notes should say “decision deferred pending tax advice” and the follow-up owner is Casey from Treasury before circulating the revised record.,,,True,False,False,False,0.9183098591549296,0.8459214501510575,-0.07238840900387211,0.8078436397523352,0.7068436963919089,-0.10099994336042628,0.3076923076923077,0.4230769230769231,0.11538461538461536,0.7206499159997293,44.40436235340104,stop,0.45283179099988047,59.62478902018416,stop
+V25,voiceink-validation,the service report lists priority one downtime as forty eight minutes the incident timeline supports only thirty eight because monitoring recovered earlier and customer success disputes the longer figure,The service report lists Priority 1 downtime as 48 minutes. The incident timeline supports only 38 minutes because monitoring recovered earlier. Customer Success disputes the longer figure.,"The service report lists priority one downtime as 48 minutes. The incident timeline supports only 38 because monitoring recovered earlier, and customer success disputes the longer figure.","The service report lists priority one downtime as 48 minutes, but the incident timeline supports only 38 because monitoring recovered earlier and customer success disputes the longer figure.",,,True,False,False,False,0.9361702127659575,0.9182058047493403,-0.01796440801661714,0.825178938738624,0.7835095185951911,-0.04166942014343289,0.25925925925925924,0.37037037037037035,0.1111111111111111,0.8350139169997419,40.71788422660566,stop,0.45848512500015204,74.1572586460438,stop
+V26,voiceink-validation,the investigation scope covers expense approvals from january through april it does not include vendor selection or contract negotiation unless new evidence expands the review,The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation. New evidence could expand the review.,The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation unless new evidence expands the review.,The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation unless new evidence expands the review.,,,True,True,False,False,0.9518413597733713,0.9518413597733713,0.0,0.8836023501462565,0.8836023501462565,0.0,0.2,0.2,0.0,0.7543280410000079,35.793445997587824,stop,0.4465837499992631,60.45898445710251,stop
+V27,voiceink-validation,following the latest litigation update the controller approved a two hundred fifty thousand reserve comma subject to receiving counsels final estimate before close by noon tomorrow,"Following the latest litigation update, the Controller approved a $250,000 reserve, subject to receiving counsel’s final estimate before close. Counsel’s estimate is due by noon tomorrow.","Following the latest litigation update, the controller approved a $250,000 reserve, subject to receiving counsel. Final estimate before close by noon tomorrow.","The controller approved a $250,000 reserve, subject to receiving counsel final estimate before close by noon tomorrow.",,,True,False,False,False,0.9017341040462428,0.7606557377049179,-0.14107836634132487,0.7912526923041164,0.6034328588034076,-0.18781983350070885,0.3076923076923077,0.5,0.1923076923076923,0.6871394999998302,48.02518265942819,stop,0.43729499999972177,59.45643101342696,stop
+V28,voiceink-validation,would you send the customer the maintenance window in both eastern and greenwich mean time comma make clear that service may be intermittent before the maintenance notice is translated,"Would you send the customer the maintenance window in both Eastern Time and Greenwich Mean Time, and make clear that service may be intermittent? The maintenance notice will be translated afterward.",Would you send the customer the maintenance window in both Eastern and Greenwich Mean Time? Make clear that service may be intermittent before the maintenance notice is translated.,"Would you send the customer the maintenance window in both Eastern and Greenwich Mean Time, make clear that service may be intermittent before the maintenance notice is translated.",,,True,False,False,False,0.8941798941798942,0.9047619047619048,0.010582010582010581,0.7735029588958372,0.7935074179501254,0.02000445905428816,0.3548387096774194,0.2903225806451613,-0.06451612903225806,0.7138920839997809,42.02315822290195,stop,0.3906507080000665,76.79494593414353,stop
+V29,voiceink-validation,who owns the response to the accessibility questionnaire question mark product answered the first section but legal and security sections remain blank before friday afternoons submission deadline,"Who owns the response to the accessibility questionnaire? Product answered the first section, but the Legal and Security sections remain blank. Friday afternoon’s submission deadline is approaching.","Who owns the response to the accessibility questionnaire?
+
+Product answered the first section, but legal and security sections remain blank before Friday afternoons submission deadline.","Who owns the response to the accessibility questionnaire? The product answered the first section, but legal and security sections remain blank before Friday afternoons submission deadline.",,,True,False,False,False,0.9086161879895562,0.9015544041450777,-0.007061783844478531,0.800225730297492,0.7722395544315697,-0.027986175865922336,0.3333333333333333,0.4074074074074074,0.07407407407407407,0.6744744590000664,45.96171076063971,stop,0.41313733399965713,75.03558126757368,stop
+V30,voiceink-validation,please route the exception request to ethics and compliance comma not employee relations and attach the original disclosure from february because the reporting path was incorrect,"Please route the exception request to Ethics and Compliance, not Employee Relations, and attach the original disclosure from February. The reporting path was incorrect.","Please route the exception request to ethics and compliance, and attach the original disclosure from February because the reporting path was incorrect.","Please route the exception request to ethics and compliance, and attach the original disclosure from February because the reporting path was incorrect.",,,True,True,False,False,0.877742946708464,0.877742946708464,0.0,0.7555488210815176,0.7555488210815176,0.0,0.3333333333333333,0.3333333333333333,0.0,0.6176424159998533,38.85743494664023,stop,0.4348923329998797,55.18607291705609,stop
+V31,voiceink-validation,can we use the clients logo in the investor presentation question mark the marketing consent covers our website but does not mention fundraising materials before marketing finalizes the presentation,Can we use the client’s logo in the investor presentation? The marketing consent covers our website but does not mention fundraising materials. Marketing has not finalized the presentation.,"Can we use the clients logo in the investor presentation? The marketing consent covers our website, but does not mention fundraising materials before marketing finalizes the presentation.","Can we use the clients logo in the investor presentation? The marketing consent covers our website, but does not mention fundraising materials before marketing finalizes the presentation.",,,True,True,False,False,0.9414893617021276,0.9414893617021276,0.0,0.8356766595341927,0.8356766595341927,0.0,0.25,0.25,0.0,0.744246917000055,41.652843017417176,stop,0.39585404099943844,78.31169266766176,stop
+V32,voiceink-validation,could you request wheelchair access for the site tour comma including the production floor and emergency assembly area not only the lobby because the full group will participate,"Could you request wheelchair access for the site tour, including the production floor and emergency-assembly area, not only the lobby? The full group will participate.","Could you request wheelchair access for the site tour, including the production floor and emergency assembly area? Not only the lobby because the full group will participate.","Could you request wheelchair access for the site tour, including the production floor and emergency assembly area, not only the lobby because the full group will participate.",,,True,False,False,False,0.9501466275659824,0.9618768328445748,0.011730205278592365,0.8746480834149735,0.9153230702542069,0.04067498683923343,0.28,0.2,-0.08000000000000002,0.6544635419995757,45.83906982555715,stop,0.42455654199966375,70.66196615108043,stop
+V33,voiceink-validation,for all three finalists this week ask procurement for the evaluation rubric before vendor presentations we should not change weighting after seeing demonstrations before scoring begins,"For all 3 finalists this week, ask Procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations. Finalize the rubric before scoring begins.","For all three finalists this week, ask procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations before scoring begins.","For all three finalists this week, ask procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations before scoring begins.",,,True,True,False,False,0.9258312020460358,0.9258312020460358,0.0,0.842586499297147,0.842586499297147,0.0,0.20689655172413793,0.20689655172413793,0.0,0.8658806250000453,34.646808271057495,stop,0.4503889590005201,66.60909287513275,stop
+V34,voiceink-validation,before approving reimbursement can you change coding from client entertainment to employee meal question mark all attendees were internal and no customer joined in the expense system,"Before approving reimbursement, can you change coding from Client Entertainment to Employee Meal? All attendees were internal, and no customer joined. Make the change in the expense system.","Before approving reimbursement, can you change coding from “client entertainment” to “employee meal”? All attendees were internal, and no customer joined in the expense system.","Before approving reimbursement, can you change coding from ""client entertainment"" to ""employee meal""? All attendees were internal, and no customer joined in the expense system.",,,True,False,False,False,0.9205479452054794,0.9205479452054794,0.0,0.7806943429394083,0.7772614034039738,-0.0034329395354345538,0.2857142857142857,0.2857142857142857,0.0,0.7550066670000888,42.38373169226099,stop,0.40060799999992014,79.87858455149767,stop
+V35,voiceink-validation,inspection item bullet point north anchor secure bullet point south anchor needs re torque bullet point conduit label missing near junction box four new line photos saved in folder seven,"Inspection items:
+- North anchor secure
+- South anchor needs retorquing
+- Conduit label missing near Junction Box 4
+
+Photos are saved in Folder 7.","- Inspection item: North anchor secure
+- Inspection item: South anchor needs re-torque
+- Inspection item: Conduit label missing near junction box
+- Photos saved in folder seven","- North anchor: secure
+- South anchor: needs re-torque
+- Conduit label: missing near junction box
+- Four new lines
+- Photos saved in folder 7",,,True,False,False,False,0.7950310559006211,0.8013937282229965,0.006362672322375418,0.6182020763592904,0.5709537200840197,-0.047248356275270686,0.5909090909090909,0.6363636363636364,0.045454545454545414,0.7825559590000921,47.28096383966791,stop,0.4468752079992555,82.79716425902429,stop
+V36,voiceink-validation,sample c twelve was thawed for approximately eighteen minutes comma returned to minus eighty and flagged for sensitivity analysis period no visible leakage occurred afterward,"Sample C12 was thawed for approximately 18 minutes, returned to −80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.","Sample C-12 was thawed for approximately 18 minutes, returned to -80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.","Sample C was thawed for approximately 18 minutes, returned to -80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.",,,True,False,False,False,0.9898305084745763,0.9863013698630136,-0.0035291386115626766,0.9315904583265516,0.9229500585536937,-0.00864039977285791,0.09523809523809523,0.09523809523809523,0.0,0.7330769999998665,46.37984822877568,stop,0.4332928339999853,71.54514814800987,stop
+V37,voiceink-validation,for our final storage comparison write this technical question to the vendor colon what is the maximum sustained write rate with encryption enabled and raid six active question mark,"For our final storage comparison, write this technical question to the vendor: What is the maximum sustained write rate with encryption enabled and RAID 6 active?","For our final storage comparison, write this technical question to the vendor:
+
+What is the maximum sustained write rate with encryption enabled and raid 6 active?","Write this technical question to the vendor:
+
+What is the maximum sustained write rate with encryption enabled and raid 6 active?",,,True,False,False,False,0.9661538461538461,0.8384879725085911,-0.12766587364525506,0.9503889299050193,0.7577964197181258,-0.1925925101868935,0.038461538461538464,0.2692307692307692,0.23076923076923075,0.7360217499999635,42.11832055234989,stop,0.35376104199986,70.66917221487009,stop
+V38,voiceink-validation,for the production system prompt please turn the model instructions into a numbered priority list colon safety constraints first output schema second and style preferences third,"For the production system prompt, please turn the model instructions into a numbered priority list:
+1. Safety constraints
+2. Output schema
+3. Style preferences","For the production system prompt, please turn the model instructions into a numbered priority list:
+
+1. Safety constraints
+2. Output schema
+3. Style preferences","For the production system prompt, please turn the model instructions into a numbered priority list:
+
+1. safety constraints
+2. output schema
+3. style preferences",,,True,False,False,False,0.9968652037617555,0.9780564263322884,-0.018808777429467072,1.0,0.9009165068843842,-0.09908349311561582,0.09523809523809523,0.23809523809523808,0.14285714285714285,0.7912377080001534,40.44296635063024,stop,0.4462185419997695,71.71373887017123,stop
+V39,voiceink-validation,class reminder colon the ecology quiz is next monday not this friday and chapters six through eight are included new line bring a pencil your field notebook and the calculator you used in lab,"Class reminder: The ecology quiz is next Monday, not this Friday, and Chapters 6 through 8 are included.
+Bring a pencil, your field notebook, and the calculator you used in lab.","The ecology quiz is next Monday, not this Friday, and chapters six through eight are included.
+
+Bring a pencil, your field notebook, and the calculator you used in lab.","The ecology quiz is next Monday, not this Friday, and chapters six through eight are included.
+
+Bring a pencil, your field notebook, and the calculator you used in lab.",,,True,True,False,False,0.9159420289855071,0.9159420289855071,0.0,0.8394737960514366,0.8394737960514366,0.0,0.23333333333333334,0.23333333333333334,0.0,0.6910283750003146,52.096268839877396,stop,0.5142965840004763,69.99852054231545,stop
+V40,voiceink-validation,can you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow comma or is the regional team still using all the deep lanes question mark,"Can you ask the pool manager whether Lane 4 will be open for lap swimming from 6:00 to 7:00 tomorrow, or is the regional team still using all the deep lanes?",Can you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow? Or is the regional team still using all the deep lanes?,"Can you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow, or is the regional team still using all the deep lanes?",,,True,False,False,False,0.9148264984227129,0.9274447949526814,0.012618296529968487,0.7971313176336904,0.8425706328102245,0.0454393151765341,0.1935483870967742,0.12903225806451613,-0.06451612903225806,0.6476532080000652,50.953194691805926,stop,0.3975234579993412,83.01396895187678,stop
+V41,voiceink-validation,dispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked,"Dispatch, this is Unit 46. We have smoke showing from a detached garage at 812 Birch Lane. No visible flames yet. Send 1 additional engine, and advise police that the driveway is blocked.","Dispatch this is Unit 46. We have smoke showing from a detached garage at 8:12 Birch Lane. No visible flames yet.
+
+Send one additional engine and advise police. The driveway is blocked.","Dispatch this is Unit 46. We have smoke showing from a detached garage at 8:22 Birch Lane. No visible flames yet.
+
+Send one additional engine and advise police the driveway is blocked.",,,True,False,False,False,0.9516129032258065,0.954177897574124,0.002564994348317473,0.8470664556923841,0.8630516550463609,0.015985199353976798,0.21212121212121213,0.15151515151515152,-0.06060606060606061,0.800058750000062,54.99596123409261,stop,0.4789917499992953,89.77190108193568,stop
+V42,voiceink-validation,radio check colon team bravo can hear command clearly but but command is not receiving bravo on channel three should we switch to channel five or return to the staging area question mark,"Radio check: Team Bravo can hear Command clearly, but Command is not receiving Bravo on Channel 3. Should we switch to Channel 5 or return to the staging area?","Radio check: Team Bravo can hear command clearly, but command is not receiving Bravo on channel 3. Should we switch to channel 5 or return to the staging area?","Radio check: Team Bravo can hear command clearly, but command is not receiving on channel 3. Should we switch to channel 5 or return to the staging area?",,,True,False,False,False,0.9748427672955975,0.9551282051282051,-0.019714562167392424,0.8713419131067006,0.8278724670867177,-0.04346944601998293,0.13793103448275862,0.1724137931034483,0.03448275862068967,0.6801882089998799,51.456346253726636,stop,0.45539308299976256,74.66077388799015,stop
+V43,voiceink-validation,the boarding reservation is for two rabbits from october six through october tenth can they share the larger enclosure and do we need to bring their usual pellets question mark,"The boarding reservation is for 2 rabbits from October 6 through October 10. Can they share the larger enclosure, and do we need to bring their usual pellets?","The boarding reservation is for two rabbits from October 6 through October 10. Can they share the larger enclosure, and do we need to bring their usual pellets?","The boarding reservation is for two rabbits from October 6 through October 10. Can they share the larger enclosure, and do we need to bring their usual pellets?",,,True,True,False,False,0.9874213836477987,0.9874213836477987,0.0,0.9648136060662919,0.9648136060662919,0.0,0.03571428571428571,0.03571428571428571,0.0,0.6720352499996807,50.59258424318688,stop,0.42355016700003034,80.27384392460307,stop
+V44,voiceink-validation,can you transcribe the handwritten caption exactly comma including the crossed out surname but mark uncertain letters with square brackets question mark dont modernize the spelling,"Can you transcribe the handwritten caption exactly, including the crossed-out surname, but mark uncertain letters with square brackets? Don’t modernize the spelling.","Can you transcribe the handwritten caption exactly, including the crossed-out surname, but mark uncertain letters with square brackets? Question mark. Don't modernize the spelling.","Can you transcribe the handwritten caption exactly, including the crossed-out surname, but mark uncertain letters with square brackets? Don't modernize the spelling.",,,True,False,False,False,0.9507246376811593,0.9939393939393939,0.043214756258234566,0.9374666382665054,0.9665290868597745,0.029062448593269008,0.13636363636363635,0.045454545454545456,-0.0909090909090909,0.6973965409997618,47.31884668182097,stop,0.4153004999998302,72.2368501844141,stop
+V45,voiceink-validation,could you categorize the bike lock under transportation comma not recreation and split the ninety dollar hardware store purchase into sixty five home repair and twenty five garden question mark,"Could you categorize the bike lock under Transportation, not Recreation, and split the $90 hardware-store purchase into $65 for Home Repair and $25 for Garden?","Could you categorize the bike lock under transportation? Not recreation, and split the $90 hardware store purchase into $65 home repair and $25 garden.","Could you categorize the bike lock under transportation, not recreation, and split the $90 hardware store purchase into $65 home repair and $25 garden?",,,True,False,False,False,0.9161290322580645,0.9354838709677421,0.01935483870967758,0.7359708660335055,0.7721997114666039,0.036228845433098456,0.4,0.36,-0.040000000000000036,0.6703214169997409,50.7219359813669,stop,0.44049616600023,77.18568883067701,stop
+V46,voiceink-validation,dear loan officer ive attached pay stubs for may and june but the april file is missing from my employers portal period is a bank statement acceptable instead question mark sincerely comma remy,"Dear Loan Officer,
+
+I’ve attached pay stubs for May and June, but the April file is missing from my employer’s portal. Is a bank statement acceptable instead?
+
+Sincerely,
+Remy","Dear Loan Officer,
+
+I have attached pay stubs for May and June, but the April file is missing from my employers portal.
+
+Please accept my sincere apologies,
+Remy","Dear Loan Officer,
+
+I attached pay stubs for May and June, but the April file is missing from my employers portal. The April file is acceptable instead.
+
+Sincerely,
+Remy",,,True,False,False,False,0.8392857142857143,0.9011627906976745,0.061877076411960164,0.6994735872047905,0.7774861237220609,0.07801253651727047,0.35714285714285715,0.25,-0.10714285714285715,0.7019592920000832,52.70960926320441,stop,0.43272158299987495,92.43819021620551,stop
+V47,voiceink-validation,could you explain why the estimate lists three point five labor hours for the alternator the phone quote said two hours and and did not mention a diagnostic fee question mark,Could you explain why the estimate lists 3.5 labor hours for the alternator? The phone quote said 2 hours and did not mention a diagnostic fee.,"Could you explain why the estimate lists three 1.5 labor hours for the alternator? The phone quote said two hours, and did not mention a diagnostic fee. Question mark","Could you explain why the estimate lists 3.5 labor hours for the alternator, the phone quote said 2 hours, and did not mention a diagnostic fee?",,,True,False,False,False,0.912621359223301,0.975609756097561,0.06298839687425994,0.8765798544373635,0.9139350077381,0.037355153300736466,0.23076923076923078,0.15384615384615385,-0.07692307692307693,0.7139994169997408,50.420209236687754,stop,0.42353491699941515,80.2767343029877,stop
+V48,voiceink-validation,the accessible shuttle was booked for eight forty five but arrived at nine thirty passenger missed appointment r six one four can you document the delay and reschedule the ride question mark,The accessible shuttle was booked for 8:45 but arrived at 9:30. The passenger missed Appointment R614. Can you document the delay and reschedule the ride?,"The accessible shuttle was booked for 8:45, but arrived at 9:30. The passenger missed appointment R-6-14. Can you document the delay and reschedule the ride?","The accessible shuttle was booked for 8:45, but arrived at 9:30, and the passenger missed appointment R-6-1-4. Can you document the delay and reschedule the ride?",,,True,False,False,False,0.9839228295819936,0.9556962025316456,-0.028226627050348063,0.9123640798701945,0.8528180287560906,-0.05954605111410394,0.12,0.24,0.12,0.7878621249997195,54.57807735079955,stop,0.5088550410000607,88.43382962574331,stop
+V49,voiceink-validation,application checklist bullet point two passport photos next item proof of address next item signed declaration page next item fee receipt new line bring originals and one copy of each,"Application checklist:
+- 2 passport photos
+- Proof of address
+- Signed declaration page
+- Fee receipt
+
+Bring the originals and 1 copy of each.","Application Checklist
+
+1. Passport photos
+2. Proof of address
+3. Signed declaration page
+4. Fee receipt
+
+Bring originals and one copy of each.","Application checklist:
+- Passport photos
+- Proof of address
+- Signed declaration page
+- Fee receipt
+- Bring originals and one copy of each",,,True,False,False,False,0.9014084507042255,0.9428571428571427,0.041448692152917244,0.692830000964468,0.8277353789830366,0.1349053780185686,0.38095238095238093,0.2857142857142857,-0.09523809523809523,0.6463859159998719,51.05309256151327,stop,0.3802676249997603,78.8918067900703,stop
+V50,voiceink-validation,dear costume rental the return sheet lists four hats but we received three period could you check the packing photo before charging the missing item fee question mark regards comma tessa,"Dear Costume Rental,
+
+The return sheet lists 4 hats, but we received 3. Could you check the packing photo before charging the missing-item fee?
+
+Regards,
+Tessa","Dear Costume Rental,
+
+The return sheet lists four hats, but we received three. Could you check the packing photo before charging the missing item fee?
+
+Regards,
+Tessa","Dear Costume Rental,
+
+The return sheet lists four hats, but we received three. Could you check the packing photo before charging the missing item fee?
+
+Regards,
+Tessa",,,True,True,False,False,0.96,0.96,0.0,0.8939875531656591,0.8939875531656591,0.0,0.16,0.16,0.0,0.6824173340000925,52.75364239208367,stop,0.43451050000021496,82.85185283205398,stop
+C01,curated-sample-50,the deployment finished successfully all services are healthy and no customer action is required,"The deployment finished successfully. All services are healthy, and no customer action is required.","The deployment finished successfully. All services are healthy, and no customer action is required.","The deployment finished successfully. All services are healthy, and no customer action is required.",,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.5081495839999661,33.45471596411094,stop,0.4129153750000114,41.17066360146926,stop
+C02,curated-sample-50,Can we move the review to Friday. because Maya is unavailable Thursday?,Can we move the review to Friday because Maya is unavailable Thursday?,Can we move the review to Friday? Because Maya is unavailable Thursday?,"Can we move the review to Friday, because Maya is unavailable Thursday?",,,True,False,False,False,0.9787234042553191,0.9929078014184397,0.014184397163120588,0.9165228893301787,0.9494851257433504,0.03296223641317175,0.16666666666666666,0.08333333333333333,-0.08333333333333333,0.4608409589995972,30.3792441331419,stop,0.36877979199925903,37.96303459064842,stop
+C03,curated-sample-50,uh please send the revised contract to Priya this afternoon,Please send the revised contract to Priya this afternoon.,Please send the revised contract to Priya this afternoon.,Please send the revised contract to Priya this afternoon.,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.4196981249997407,26.209314135026922,stop,0.3432706670000698,32.044683852925196,stop
+C04,curated-sample-50,I mean the main issue is basically that the export takes too long,The main issue is that the export takes too long.,The main issue is that the export takes too long.,The main issue is that the export takes too long.,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.4601324579998618,23.906159647627604,stop,0.3649483330000294,30.14125289893875,stop
+C05,curated-sample-50,the important thing the important thing is that we keep the existing backup,The important thing is that we keep the existing backup.,The important thing is that we keep the existing backup.,The important thing is that we keep the existing backup.,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.47537054199983686,23.13984361278275,stop,0.3455417499999385,31.834069255023334,stop
+C06,curated-sample-50,p please confirm that the customer received the refund,Please confirm that the customer received the refund.,Please confirm that the customer received the refund.,Please confirm that the customer received the refund.,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.43341237499998897,20.765443072547775,stop,0.3321919159998288,27.09277248036535,stop
+C07,curated-sample-50,I wanted to ask whether actually please cancel tomorrow's check-in,Please cancel tomorrow's check-in.,I wanted to ask whether please cancel tomorrow's check-in.,I wanted to ask whether please cancel tomorrow's check-in.,,,True,True,False,False,0.7173913043478263,0.7173913043478263,0.0,0.7982753601306356,0.7982753601306356,0.0,1.5,1.5,0.0,0.5188632919998781,23.127479212776567,stop,0.3853800000006231,31.13809746219471,stop
+C08,curated-sample-50,schedule the review for Tuesday no sorry Thursday,Schedule the review for Thursday.,Schedule the review for Thursday.,Schedule the review for Thursday.,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.4074983750001593,14.723985095640332,stop,0.33824058300069737,17.738853057699554,stop
+C09,curated-sample-50,please review the sight migration plan before lunch,Please review the site migration plan before lunch.,Please review the sight migration plan before lunch.,Please review the sight migration plan before lunch.,,,True,True,False,False,0.970873786407767,0.970873786407767,0.0,0.871767392252351,0.871767392252351,0.0,0.125,0.125,0.0,0.4100112910000462,21.950615013670408,stop,0.33101237500068237,27.189315807245716,stop
+C10,curated-sample-50,store the session token in red is for fifteen minutes,Store the session token in Redis for 15 minutes.,Store the session token in red. It is for 15 minutes.,Store the session token in red for 15 minutes.,,,True,False,False,False,0.9306930693069306,0.9574468085106383,0.026753739203707716,0.8357739223824224,0.8239159626087488,-0.011857959773673654,0.3333333333333333,0.1111111111111111,-0.2222222222222222,0.5069406669999807,29.589261577234186,stop,0.43538045900004363,27.56210057649555,stop
+C11,curated-sample-50,we received one thousand two hundred and forty six responses,"We received 1,246 responses.","We received 1,246 responses.","We received 1,246 responses.",,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.46603449999975055,21.45763886580361,stop,0.37664549999954033,26.550164544677166,stop
+C12,curated-sample-50,the workshop starts on September twenty third twenty twenty six,"The workshop starts on September 23, 2026.","The workshop starts on September 23, 2026.","The workshop starts on September 23, 2026.",,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.48874879100003454,30.690613002455365,stop,0.4139535829999659,36.23594677280819,stop
+C13,curated-sample-50,the call begins at four thirty p m,The call begins at 4:30 PM.,The call begins at 4:30 PM.,The call begins at 4:30 PM.,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.47657254099976853,23.08148089464798,stop,0.4531111670003156,24.276603185090643,stop
+C14,curated-sample-50,the replacement costs forty nine dollars and weighs two point five kilograms,The replacement costs $49 and weighs 2.5 kilograms.,The replacement costs $49 and weighs 2.5 kilograms.,The replacement costs $49 and weighs 2.5 kg.,,,True,False,True,False,1.0,0.9263157894736842,-0.0736842105263158,1.0,0.823979269414735,-0.17602073058526502,0.0,0.125,0.125,0.5091168749995632,27.49859744879211,stop,0.39191979200040805,35.72159478994984,stop
+C15,curated-sample-50,send the receipt to finance at acme dot com,Send the receipt to finance@acme.com.,Send the receipt to finance@acme.com,Send the receipt to finance@acme.com,,,True,True,False,False,0.9863013698630136,0.9863013698630136,0.0,0.942792549390486,0.942792549390486,0.0,0.2,0.2,0.0,0.39006595799992283,23.073020896639694,stop,0.3743243330000041,24.0433207423892,stop
+C16,curated-sample-50,the documentation is available at docs dot example dot com slash setup,The documentation is available at docs.example.com/setup.,The documentation is available at docs.example.com/setup.,The documentation is available at docs.example.com/setup,,,True,False,True,False,1.0,0.9911504424778761,-0.008849557522123908,1.0,0.9564427493121079,-0.04355725068789207,0.0,0.16666666666666666,0.16666666666666666,0.4153329170003417,24.07707068397801,stop,0.4169767499997761,21.583937233922114,stop
+C17,curated-sample-50,yes comma I can send the draft today semicolon the figures will follow tomorrow period great work everyone exclamation mark,"Yes, I can send the draft today; the figures will follow tomorrow. Great work, everyone!","Yes, I can send the draft today. The figures will follow tomorrow.
+
+Great work,
+Everyone!","I can send the draft today, the figures will follow tomorrow. Great work! Everyone.",,,True,False,False,False,0.9378531073446328,0.9239766081871346,-0.013876499157498223,0.8635346217738593,0.805785027667054,-0.05774959410680536,0.26666666666666666,0.26666666666666666,0.0,0.5763497079997251,38.17126944742114,stop,0.4105667909998374,43.841831328260376,stop
+C18,curated-sample-50,Maya said open quote the release is ready close quote,"Maya said, “The release is ready.”","Maya said: ""The release is ready.""",Maya said the release is ready.,,,True,False,False,False,0.9117647058823529,0.923076923076923,0.011312217194570096,0.6982261554967412,0.6884216413172528,-0.009804514179488355,0.5,0.5,0.0,0.407683583999642,24.528826748169436,stop,0.3603720000000976,22.19928296315428,stop
+C19,curated-sample-50,the migration is complete period new paragraph customers do not need to take any action period,"The migration is complete.
+
+Customers do not need to take any action.","The migration is complete.
+
+Customers do not need to take any action.",The migration is complete. Customers do not need to take any action.,,,True,False,True,False,1.0,0.978102189781022,-0.021897810218977964,1.0,1.0,0.0,0.0,0.0,0.0,0.47673120799981916,31.464271162222065,stop,0.449585708000086,31.13977991488404,stop
+C20,curated-sample-50,bullet list apples new line rice new line olive oil,"- Apples
+- Rice
+- Olive oil","Apples
+Rice
+Olive oil","Apple, rice, and olive oil.",,,True,False,False,False,0.875,0.6666666666666667,-0.20833333333333326,0.5346175061005084,0.321243834012092,-0.2133736720884164,0.8,1.0,0.19999999999999996,0.4280544580001333,21.025362151460637,stop,0.4860850830000345,16.458024078059257,stop
+C21,curated-sample-50,numbered list first back up the database second deploy the service third run the smoke tests,"1. Back up the database.
+2. Deploy the service.
+3. Run the smoke tests.","1. Back up the database.
+2. Deploy the service.
+3. Run the smoke tests.","First, back up the database.
+Second, deploy the service.
+Third, run the smoke tests.",,,True,False,True,False,1.0,0.8,-0.19999999999999996,1.0,0.6563868088148379,-0.3436131911851621,0.0,0.5,0.5,0.5739554589999898,38.33050048575353,stop,0.5800252919998456,37.92938050019697,stop
+C22,curated-sample-50,dear Anika new paragraph thank you for reviewing the proposal new paragraph best regards new line Sam,"Dear Anika,
+
+Thank you for reviewing the proposal.
+
+Best regards,
+Sam","Dear Anika,
+
+Thank you for reviewing the proposal.
+
+Best regards,
+Sam","Dear Anika,
+
+Thank you for reviewing the proposal.
+
+Best regards,
+Sam",,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.5239342909999323,34.355453172661925,stop,0.5239154579994647,34.356688135776274,stop
+C23,curated-sample-50,heading weekly status new paragraph all planned work is complete,"# Weekly Status
+
+All planned work is complete.",Weekly status: All planned work is complete.,"Weekly status:
+- All planned work is complete",,,True,False,False,False,0.9111111111111111,0.9010989010989011,-0.010012210012209977,0.7736307480986274,0.7229410069773848,-0.05068974112124258,0.25,0.375,0.125,0.4065095829996608,22.1396994717527,stop,0.5309051669992186,18.835755652034777,stop
+C24,curated-sample-50,the word comma appears twice in the first paragraph,The word “comma” appears twice in the first paragraph.,The word “comma” appears twice in the first paragraph.,The word comma appears once in the first paragraph.,,,True,False,True,False,1.0,0.9333333333333332,-0.06666666666666676,1.0,0.7075976657986803,-0.29240233420131967,0.0,0.2222222222222222,0.2222222222222222,0.45467133300007845,26.39269100345486,stop,0.4166552500000762,24.000657618014344,stop
+C25,curated-sample-50,attach the file quarterly report final dot pdf and reference ticket a c m e dash four two seven,Attach the file quarterly-report-final.pdf and reference ticket ACME-427.,Attach the file “quarterly report” final.pdf and reference ticket AMC427.,"Attach the file ""quarterly report.pdf"" and reference ticket ""A CME-427"".",,,True,False,False,False,0.9315068493150684,0.9103448275862069,-0.021162021728861502,0.7218650962150943,0.6616347263323411,-0.06023036988275321,0.5,0.5,0.0,0.5110382910002045,35.22240958651139,stop,0.5819774169995071,36.08387436795986,stop
+C26,curated-sample-50,hi Priya comma new paragraph um could you send the revised budget to finance at acme dot com by four p m question mark new paragraph thanks comma new line Daniel,"Hi Priya,
+
+Could you send the revised budget to finance@acme.com by 4:00 PM?
+
+Thanks,
+Daniel","Hi Priya,
+
+Could you send the revised budget to finance@acme.com by 4 PM?
+
+Thanks,
+Daniel","Hi Priya,
+
+Could you send the revised budget to finance@acme.com by 4:00?
+
+Thanks,
+Daniel",,,True,False,False,False,0.9834254143646409,0.9834254143646409,0.0,0.927545478452293,0.9385175493006108,0.01097207084831786,0.07142857142857142,0.14285714285714285,0.07142857142857142,0.6058765409998159,44.5635342729142,stop,0.5699939999994967,50.877728537538296,stop
+C27,curated-sample-50,numbered list first archive the last thirty days of logs second increase the time out to forty five seconds third restart the a p i gateway,"1. Archive the last 30 days of logs.
+2. Increase the timeout to 45 seconds.
+3. Restart the API gateway.","1. Archive the last 30 days of logs.
+2. Increase the time-out to 45 seconds.
+3. Restart the API gateway.","First, archive the last 30 days of logs.
+Second, increase the timeout to 45 seconds.
+Third, restart the API gateway.",,,True,False,False,False,0.9951690821256038,0.8584474885844748,-0.136721593541129,0.960071954644991,0.7534678511626838,-0.20660410348230718,0.05555555555555555,0.3333333333333333,0.2777777777777778,0.7270239170002242,45.390528741009526,stop,0.6252705419992708,51.17784678881821,stop
+C28,curated-sample-50,okay bullet list um coffee beans new line coffee filters coffee filters new line oat milk new line dish soap,"- Coffee beans
+- Coffee filters
+- Oat milk
+- Dish soap","Okay,
+
+- Coffee beans
+- Coffee filters
+- Oat milk
+- Dish soap","Okay, here is the list:
+
+- Coffee beans
+- Coffee filters
+- Oat milk
+- Dish soap",,,True,False,False,False,0.9391304347826087,0.81203007518797,-0.12710035959463872,0.9735438320288626,0.908709731167501,-0.06483410086136165,0.1111111111111111,0.5555555555555556,0.4444444444444445,0.5134244999999282,37.00641476984962,stop,0.45428137500039156,52.83069331200143,stop
+C29,curated-sample-50,heading meeting notes new paragraph date August thirtieth twenty twenty six new line time ten thirty a m new paragraph bullet list finalize the launch copy new line confirm the support schedule new line send the customer notice,"# Meeting Notes
+
+Date: August 30, 2026
+Time: 10:30 AM
+
+- Finalize the launch copy.
+- Confirm the support schedule.
+- Send the customer notice.","Meeting Notes
+
+Date: August 30, 2026
+Time: 10:30 AM
+
+Finalize the launch copy.
+Confirm the support schedule.
+Send the customer notice.","Meeting notes
+- Date: August 30, 2026
+- Time: 10:30 a.m.
+- Bullet list:
+  - Finalize the launch copy.
+  - Confirm the support schedule.
+  - Send the customer notice.",,,True,False,False,False,0.9710144927536232,0.8859934853420195,-0.08502100741160368,0.8887449677611201,0.8459186884603912,-0.04282627930072891,0.2727272727272727,0.5,0.2272727272727273,0.8097751250002148,54.33607262261647,stop,0.7342228329998761,80.35707601047862,stop
+C30,curated-sample-50,Ravi said open quote we can launch on Monday no Tuesday close quote,"Ravi said, “We can launch on Tuesday.”","Ravi said: “We can launch on Monday, no Tuesday.”","Ravi said: ""We can launch on Monday.""",,,True,False,False,False,0.850574712643678,0.8266666666666667,-0.02390804597701135,0.7439654312340054,0.5726903110818468,-0.17127512015215862,0.42857142857142855,0.42857142857142855,0.0,0.47371445799990397,29.55366838308076,stop,0.40921912500016333,26.880464103420408,stop
+C31,curated-sample-50,uh upgrade the service to version two point four point one comma then check the guide at docs dot example dot com slash upgrade,"Upgrade the service to version 2.4.1, then check the guide at docs.example.com/upgrade.","Upgrade the service to version 2.4.1, then check the guide at docs.example.com/slash/upgrade.","Upgrade the service to version 2.4.1, then check the guide at docs.example.com/slug/upgrade.",,,True,False,False,False,0.9666666666666667,0.9720670391061452,0.005400372439478551,0.9428800562081346,0.944763247309927,0.0018831911017923586,0.08333333333333333,0.08333333333333333,0.0,0.6442565000002105,38.8044202891113,stop,0.5823247500002253,42.93137119792749,stop
+C32,curated-sample-50,ship three boxes to twenty four lake view road apartment seven b Kathmandu,"Ship 3 boxes to 24 Lake View Road, Apartment 7B, Kathmandu.","Ship three boxes to 24 Lake View Road, Apartment 7B, Kathmandu.","Ship three boxes to 24 Lake View Road, Apartment 7B, Kathmandu.",,,True,True,False,False,0.9508196721311475,0.9508196721311475,0.0,0.9055702551444229,0.9055702551444229,0.0,0.09090909090909091,0.09090909090909091,0.0,0.5182264579998446,38.593166541886596,stop,0.4638106249994962,43.12104751809367,stop
+C33,curated-sample-50,move the demo from September tenth at two p m no make that September eleventh at three thirty p m,Move the demo to September 11 at 3:30 PM.,Move the demo from September 10 at 2:00 PM to September 11 at 3:30 PM.,Move the demo from September 10 at 2:30 PM.,,,True,False,False,False,0.7387387387387387,0.9047619047619048,0.16602316602316602,0.8060538339699757,0.6121642681200258,-0.19388956584994987,0.6666666666666666,0.3333333333333333,-0.3333333333333333,0.6335550839999087,44.19505218587124,stop,0.4770135829994615,33.542021800285006,stop
+C34,curated-sample-50,heading quarterly results new paragraph bullet list revenue increased by twelve percent new line support costs fell by eight point five percent new line cash balance is two point three million dollars,"# Quarterly Results
+
+- Revenue increased by 12%.
+- Support costs fell by 8.5%.
+- Cash balance is $2.3 million.","**Quarterly Results**
+
+Revenue increased by 12%.
+Support costs fell by $8.50%.
+Cash balance is $2.3 million.","Quarterly results:
+- Revenue increased by 12%.
+- Support costs fell by 8.5%.
+- Cash balance is $2.3 million.",,,True,False,False,False,0.9357798165137613,0.9724770642201834,0.03669724770642213,0.779619625080968,0.9126843075106286,0.13306468242966052,0.4444444444444444,0.16666666666666666,-0.2777777777777778,0.7240067499997167,46.960888140909326,stop,0.5190509999993083,67.43075343279686,stop
+C35,curated-sample-50,okay steps colon first download the archive second unzip it into the tools folder third run setup dot sh,"Steps:
+
+1. Download the archive.
+2. Unzip it into the tools folder.
+3. Run setup.sh.","Okay, steps:
+
+1. Download the archive.
+2. Unzip it into the tools folder.
+3. Run setup.sh.","Step 1: Download the archive.
+Step 2: Unzip it into the tools folder.
+Step 3: Run setup.sh",,,True,False,False,False,0.9540229885057472,0.8735632183908046,-0.08045977011494254,0.9617820329858802,0.719275741882082,-0.24250629110379818,0.15384615384615385,0.5384615384615384,0.3846153846153846,0.6362990419997914,45.57605478841741,stop,0.5253265410001404,55.20375944605519,stop
+C36,curated-sample-50,the pilot went well period new paragraph um twelve people completed onboarding comma and ten activated their accounts period new paragraph the next session is Friday at nine a m full stop,"The pilot went well.
+
+Twelve people completed onboarding, and 10 activated their accounts.
+
+The next session is Friday at 9:00 AM.","The pilot went well.
+
+12 people completed onboarding, and 10 activated their accounts.
+
+The next session is Friday at 9:00.","The pilot went well.
+
+12 people completed onboarding, and 10 activated their accounts.
+
+The next session is Friday at 9:00 a.m.",,,True,False,False,False,0.9565217391304348,0.9494163424124512,-0.007105396717983603,0.897861096519465,0.8922013756724848,-0.005659720846980187,0.14285714285714285,0.09523809523809523,-0.047619047619047616,0.6975396249999903,48.74275063585165,stop,0.5724297090000618,62.889817621251574,stop
+C37,curated-sample-50,hello Marcus comma new paragraph please send the invoice to billing at north star dot io no sorry accounts at north star dot io new paragraph kind regards comma new line Lena,"Hello Marcus,
+
+Please send the invoice to accounts@northstar.io.
+
+Kind regards,
+Lena","Hello Marcus,
+
+Please send the invoice to billing@northstar.io.
+
+No sorry, accounts@northstar.io
+
+Kind regards,
+Lena","Hello Marcus,
+
+Please send the invoice to billing@northstar.io.
+
+Kind regards,
+Lena",,,True,False,False,False,0.83,0.9221556886227544,0.09215568862275447,0.8523320395663151,0.8615915116470677,0.009259472080752618,0.4,0.1,-0.30000000000000004,0.6772909580004125,45.77058003479373,stop,0.5370691250000164,40.96306969796361,stop
+C38,curated-sample-50,bug report colon the app crashes when opening settings dot j son period attach crash log dash two zero two six zero eight three zero dot text and reference issue v o i dash nine one eight,Bug report: The app crashes when opening settings.json. Attach crash-log-20260830.txt and reference issue VOI-918.,"Bug report: The app crashes when opening settings.
+
+Attach crash log:
+- Two-02-60830.txt
+- reference issue: v9.1.8","Bug report: The app crashes when opening settings.
+- Attach crash log:
+  - Two zero two six zero eight three zero dot text and reference issue v o i dash nine one eight",,,True,False,False,False,0.8508771929824561,0.6453900709219857,-0.20548712206047037,0.6950265398667197,0.621785463836967,-0.07324107602975272,0.42857142857142855,1.5,1.0714285714285714,0.7498359579999487,52.01137606687391,stop,0.5749052499995742,67.83726535812447,stop
+C39,curated-sample-50,note colon the trial period ends tomorrow comma but the word period in the heading should remain lowercase period,"Note: The trial period ends tomorrow, but the word “period” in the heading should remain lowercase.","The trial period ends tomorrow, but the word “period” in the heading should remain lowercase.","The trial period ends tomorrow, but the word period in the heading should remain lowercase.",,,True,False,False,False,0.96875,0.9578947368421052,-0.010855263157894757,0.9406694141357091,0.8569952670840536,-0.08367414705165555,0.0625,0.125,0.0625,0.5175055409999914,36.71458273332829,stop,0.5797830420005994,29.321312919639386,stop
+C40,curated-sample-50,open quote good writing is clear writing close quote new line dash Maya Chen,"“Good writing is clear writing.”
+—Maya Chen","Good writing is clear.
+
+Maya Chen","Good writing is clear writing.
+
+Maya Chen",,,True,False,False,False,0.8421052631578947,0.9523809523809522,0.11027568922305753,0.5999254324992727,0.7499566976077031,0.15003126510843046,0.5,0.5,0.0,0.39816779199964003,22.60353594850318,stop,0.6174616250000327,16.195338455243224,stop
+C41,curated-sample-50,recipe colon new paragraph numbered list first mix two cups of flour and one teaspoon of salt second add three hundred milliliters of water third bake for forty minutes at two hundred degrees Celsius,"Recipe:
+
+1. Mix 2 cups of flour and 1 teaspoon of salt.
+2. Add 300 milliliters of water.
+3. Bake for 40 minutes at 200 degrees Celsius.","Recipe:
+
+1. Mix two cups of flour and one teaspoon of salt.
+2. Add three hundred milliliters of water.
+3. Bake for forty minutes at two hundred degrees Celsius.","Recipe:
+- 2 cups of flour
+- 1 teaspoon of salt
+- 300 milliliters of water
+- Bake for 40 minutes at 200 degrees Celsius",,,True,False,False,False,0.847457627118644,0.8932806324110671,0.045823005292423113,0.7563899041140523,0.7179338147914959,-0.0384560893225564,0.28,0.36,0.07999999999999996,0.7759191250002004,52.84055860846246,stop,0.6014770410001802,69.82810171799628,stop
+C42,curated-sample-50,travel plan colon new paragraph September fifth flight at seven fifteen a m new line September sixth workshop at nine a m new line hotel budget one hundred eighty dollars per night,"Travel Plan:
+
+- September 5: Flight at 7:15 AM.
+- September 6: Workshop at 9:00 AM.
+- Hotel budget: $180 per night.","September 5: Flight at 7:15 a.m.
+New line September 6: Workshop at 9 a.m.
+Hotel budget: $180 per night.","September 5: Flight at 7:15 a.m.
+September 6: Workshop at 9 a.m.
+Hotel: $180 per night",,,True,False,False,False,0.8165137614678899,0.7960199004975125,-0.02049386097037742,0.6970868260758246,0.610684142690048,-0.08640268338577661,0.4,0.5,0.09999999999999998,0.7408165830001963,52.64460987368268,stop,0.4864342500004568,71.95217030866377,stop
+C43,curated-sample-50,heading customer update new paragraph um three updates colon the mobile fix is live comma the desktop release is in review in review comma and support has answered all open tickets,"# Customer Update
+
+- The mobile fix is live.
+- The desktop release is in review.
+- Support has answered all open tickets.","Customer Update
+
+Three updates:
+
+- The mobile fix is live.
+- The desktop release is in review.
+- Support has answered all open tickets.","Customer update:
+- The mobile fix is live.
+- The desktop release is in review.
+- And support has answered all open tickets.",,,True,False,False,False,0.9296875,0.9508196721311475,0.021132172131147486,0.9361739815064751,0.8715738260990858,-0.06460015540738928,0.14285714285714285,0.23809523809523808,0.09523809523809523,0.6922068750000108,46.228954313693436,stop,0.5117426249998971,58.62321904493696,stop
+C44,curated-sample-50,the c c d n cache cache should expire after three hundred seconds and the key belongs in red is,"The CDN cache should expire after 300 seconds, and the key belongs in Redis.","The C/C++ cache should expire after 300 seconds, and the key belongs in red.","The C/C++ cache should expire after 300 seconds, and the key belongs in red.",,,True,True,False,False,0.9342105263157895,0.9342105263157895,0.0,0.827836287666551,0.827836287666551,0.0,0.14285714285714285,0.14285714285714285,0.0,0.5330006669996692,39.39957546059325,stop,0.40662049999991723,51.64520726329409,stop
+C45,curated-sample-50,question colon are we still planning to launch Friday question mark new paragraph answer colon yes comma assuming the final review passes period,"Question: Are we still planning to launch Friday?
+
+Answer: Yes, assuming the final review passes.","Question: Are we still planning to launch Friday?
+
+Answer: Yes, assuming the final review passes.","Are we still planning to launch Friday?
+
+Answer: Yes, assuming the final review passes.",,,True,False,True,False,1.0,0.9456521739130435,-0.05434782608695654,1.0,0.909516234046174,-0.09048376595382601,0.0,0.06666666666666667,0.06666666666666667,0.55102479199968,38.11080790719158,stop,0.45754350000061095,41.5261062608793,stop
+C46,curated-sample-50,hello this is Nina from Acme support comma I'm calling about ticket a c dash seven four two period please call me back at five p m period thank you,"Hello, this is Nina from Acme Support. I'm calling about ticket AC-742. Please call me back at 5:00 PM. Thank you.","Hello,
+
+This is Nina from Acme support. I'm calling about ticket #742. Please call me back at 5 PM.
+
+Thank you,
+Nina","Hello,
+
+This is Nina from Acme support. I'm calling about ticket #742. Please call me back at 5:30.
+
+Thank you,
+Nina",,,True,False,False,False,0.8956521739130436,0.8869565217391304,-0.008695652173913215,0.774069395576045,0.7574463122156919,-0.01662308336035312,0.23809523809523808,0.2857142857142857,0.047619047619047616,0.7741778340000565,47.79263674965576,stop,0.5509641669996199,70.7850026116615,stop
+C47,curated-sample-50,heading launch checklist new paragraph bullet list open quote release approved close quote from Maya new line deploy version three point two new line email status at acme dot com after launch,"# Launch Checklist
+
+- “Release approved,” from Maya.
+- Deploy version 3.2.
+- Email status@acme.com after launch.","Launch Checklist
+
+- Open quote release approved close quote from Maya
+- New line
+- deploy version 3.2
+- New line
+- email status at acme.com after launch","Launch checklist:
+- Release approved: from Maya
+- Deploy version 3.2
+- Email status: @acme.com after launch",,,True,False,False,False,0.7575757575757575,0.9315068493150684,0.17393109173931098,0.6065367056193031,0.6734004551864179,0.06686374956711483,1.2666666666666666,0.6666666666666666,-0.6,0.7447247909999533,51.025560662451994,stop,0.5538384159999623,52.36184266423652,stop
+C48,curated-sample-50,dear team comma uh the launch is complete period the launch is complete and all systems are healthy period please report issues at status dot example dot com slash support period best comma Arjun,"Dear Team,
+
+The launch is complete, and all systems are healthy.
+
+Please report issues at status.example.com/support.
+
+Best,
+Arjun","Dear team,
+
+The launch is complete, and all systems are healthy. Please report issues at status.example.com/support.
+
+Best,
+Arjun","Dear team,
+
+The launch is complete, and all systems are healthy. Please report issues at status.example.com/support.
+
+Best,
+Arjun",,,True,True,False,False,0.9806949806949806,0.9806949806949806,0.0,0.9597779126236939,0.9597779126236939,0.0,0.058823529411764705,0.058823529411764705,0.0,0.6590177909997692,45.52229152188473,stop,0.5029245410005387,59.6510958489255,stop
+C49,curated-sample-50,"The migration completed successfully, and no customer action is required.","The migration completed successfully, and no customer action is required.","The migration completed successfully, and no customer action is required.","The migration completed successfully, and no customer action is required.",,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.4294846249999864,27.940464690675203,stop,0.642495374999271,18.67717724818426,stop
+C50,curated-sample-50,Could you send the revised proposal before Friday afternoon?,Could you send the revised proposal before Friday afternoon?,Could you send the revised proposal before Friday afternoon?,Could you send the revised proposal before Friday afternoon?,,,True,True,True,True,1.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.7403952909999134,13.506298758997874,stop,0.9098447090000263,10.990886577766219,stop

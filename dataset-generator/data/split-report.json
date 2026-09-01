@@ -1,0 +1,219 @@
+{
+  "source": "cleanup-dataset.jsonl",
+  "source_sha256": "d9de04554d1c4a6e6c4cdd57f943312294b940058d6e6e5c4a153ba8dfd294e1",
+  "seed": 20260831,
+  "ratio": "90/10",
+  "method": "Whole-batch holdout selected by deterministic coverage balancing; seeded row shuffle within each file. Existing validation batch membership is frozen on subsequent runs.",
+  "validation_batches": [
+    "batch-004",
+    "batch-009",
+    "batch-017",
+    "batch-020",
+    "batch-033"
+  ],
+  "training_batches": [
+    "batch-001",
+    "batch-002",
+    "batch-003",
+    "batch-005",
+    "batch-006",
+    "batch-007",
+    "batch-008",
+    "batch-010",
+    "batch-011",
+    "batch-012",
+    "batch-013",
+    "batch-014",
+    "batch-015",
+    "batch-016",
+    "batch-018",
+    "batch-019",
+    "batch-021",
+    "batch-022",
+    "batch-023",
+    "batch-024",
+    "batch-025",
+    "batch-026",
+    "batch-027",
+    "batch-028",
+    "batch-029",
+    "batch-030",
+    "batch-031",
+    "batch-032",
+    "batch-034",
+    "batch-035",
+    "batch-036",
+    "batch-037",
+    "batch-038",
+    "batch-039",
+    "batch-040",
+    "batch-041",
+    "batch-042",
+    "batch-043",
+    "batch-044",
+    "batch-045",
+    "batch-046",
+    "batch-047",
+    "batch-048",
+    "batch-049",
+    "batch-050"
+  ],
+  "checks": {
+    "source_unchanged": true,
+    "source_records_preserved_verbatim": true,
+    "id_overlap": 0,
+    "batch_overlap": 0,
+    "normalized_input_overlap": 0,
+    "normalized_output_overlap": 0,
+    "every_observed_marginal_label_in_both": true
+  },
+  "limitations": [
+    "Authoring batches are grouping proxies, not independently recorded sessions. Semantic template families across batches are not annotated.",
+    "Coverage applies to individual categories, types, errors, domains, presentation, formats and length bands, not every rare combination.",
+    "Existing generation and review metadata are preserved; splitting does not certify training quality. Unapproved paragraph reclassifications are not applied by this operation."
+  ],
+  "training": {
+    "file": "cleanup-training.jsonl",
+    "records": 4500,
+    "sha256": "e32312879fc759adfb8fca29f65ffba5843d9af791114121c7e00efcd3bdcac0",
+    "coverage": {
+      "category": {
+        "false_starts_self_corrections": 450,
+        "punctuation_capitalization_dictated_formatting": 675,
+        "repetition_stutters": 675,
+        "filler_words": 675,
+        "no_change": 225,
+        "entity_normalization": 563,
+        "email_formatting": 562,
+        "list_formatting": 450,
+        "context_inferred_quotation": 225
+      },
+      "type": {
+        "natural_multi_error": 3825,
+        "no_change": 225,
+        "single_principal_error": 450
+      },
+      "domain": {
+        "medical": 358,
+        "general": 2069,
+        "financial": 385,
+        "technical": 1310,
+        "legal": 378
+      },
+      "presentation": {
+        "correct": 2427,
+        "absent": 1366,
+        "partial": 707
+      },
+      "length": {
+        "30–79": 2695,
+        "20–29": 1332,
+        "80–200": 473
+      },
+      "error": {
+        "self_correction": 422,
+        "filler": 1506,
+        "punctuation": 2211,
+        "capitalization": 1718,
+        "paragraph_formatting": 831,
+        "repetition": 890,
+        "number_normalization": 454,
+        "dictated_formatting": 353,
+        "greeting_signoff": 590,
+        "date_normalization": 258,
+        "time_normalization": 467,
+        "currency_or_measurement": 318,
+        "email_formatting": 82,
+        "quotation_formatting": 273,
+        "list_formatting": 456,
+        "acronym": 161,
+        "technical_term": 149,
+        "address_formatting": 75,
+        "name_or_entity": 56,
+        "false_start": 135,
+        "spelling": 18,
+        "stutter": 20,
+        "asr_substitution": 3
+      },
+      "format": {
+        "paragraphs": 919,
+        "email_layout": 584,
+        "quotation": 289,
+        "unordered_list": 346,
+        "ordered_list": 111
+      }
+    }
+  },
+  "validation": {
+    "file": "cleanup-validation.jsonl",
+    "records": 500,
+    "sha256": "85526c536f52e2521bf4e5490d6d33a6d106795b1dcef1340c73c12c1abbc7b4",
+    "coverage": {
+      "category": {
+        "filler_words": 75,
+        "punctuation_capitalization_dictated_formatting": 75,
+        "list_formatting": 50,
+        "false_starts_self_corrections": 50,
+        "entity_normalization": 62,
+        "repetition_stutters": 75,
+        "context_inferred_quotation": 25,
+        "no_change": 25,
+        "email_formatting": 63
+      },
+      "type": {
+        "single_principal_error": 50,
+        "natural_multi_error": 425,
+        "no_change": 25
+      },
+      "domain": {
+        "general": 238,
+        "medical": 41,
+        "technical": 141,
+        "financial": 44,
+        "legal": 36
+      },
+      "presentation": {
+        "correct": 260,
+        "absent": 153,
+        "partial": 87
+      },
+      "length": {
+        "80–200": 53,
+        "30–79": 315,
+        "20–29": 132
+      },
+      "error": {
+        "filler": 168,
+        "punctuation": 223,
+        "capitalization": 175,
+        "list_formatting": 51,
+        "dictated_formatting": 43,
+        "quotation_formatting": 29,
+        "false_start": 15,
+        "repetition": 105,
+        "time_normalization": 43,
+        "address_formatting": 12,
+        "paragraph_formatting": 87,
+        "acronym": 13,
+        "stutter": 5,
+        "technical_term": 9,
+        "currency_or_measurement": 25,
+        "number_normalization": 56,
+        "email_formatting": 7,
+        "greeting_signoff": 67,
+        "date_normalization": 33,
+        "self_correction": 37,
+        "name_or_entity": 7,
+        "asr_substitution": 1,
+        "spelling": 1
+      },
+      "format": {
+        "ordered_list": 20,
+        "quotation": 30,
+        "unordered_list": 31,
+        "paragraphs": 93,
+        "email_layout": 67
+      }
+    }
+  }
+}

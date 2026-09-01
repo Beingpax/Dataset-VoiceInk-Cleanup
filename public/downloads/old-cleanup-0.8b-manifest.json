@@ -1,0 +1,66 @@
+{
+  "model_id": "old-cleanup-0.8b",
+  "corpus_sha256": "ab445a000fb5908a8ad57bd24b74530ce4071387537126eaef154d56c25f0f70",
+  "archive_sha256": "6fe2bde2c13df97a67e873e11c4738e408281d5cd3cc62154fef37cd789bd7ad",
+  "case_count": 100,
+  "unique_case_count": 100,
+  "attempts": {
+    "1": 100
+  },
+  "finish_reasons": {
+    "stop": 95,
+    "length": 5
+  },
+  "summary": {
+    "case_count": 100,
+    "successful_cases": 95,
+    "failed_cases": 5,
+    "success_rate": 0.95,
+    "exact_matches": 6,
+    "exact_match_rate": 0.06,
+    "mean_edit_similarity": 0.8527329514528732,
+    "mean_chrf": 0.7651151778804021,
+    "mean_wer": 0.540613581487153,
+    "median_tokens_per_second": 49.59907415059781,
+    "mean_generation_seconds": 0.6054448336841616,
+    "median_generation_seconds": 0.5930309159998615,
+    "peak_memory_gib": 1.1764984130859375,
+    "memory_scope": "process peak RSS"
+  },
+  "dataset_summaries": {
+    "curated-sample-50": {
+      "case_count": 50,
+      "successful_cases": 45,
+      "failed_cases": 5,
+      "success_rate": 0.9,
+      "exact_matches": 6,
+      "exact_match_rate": 0.12,
+      "mean_edit_similarity": 0.803539154365299,
+      "mean_chrf": 0.7372981532354858,
+      "mean_wer": 0.765652617897716,
+      "median_tokens_per_second": 41.3435429960068,
+      "mean_generation_seconds": 0.5784702331999546,
+      "median_generation_seconds": 0.5489261660000011
+    },
+    "voiceink-validation": {
+      "case_count": 50,
+      "successful_cases": 50,
+      "failed_cases": 0,
+      "success_rate": 1.0,
+      "exact_matches": 0,
+      "exact_match_rate": 0.0,
+      "mean_edit_similarity": 0.8970073688316902,
+      "mean_chrf": 0.7901505000608264,
+      "mean_wer": 0.33807844871764636,
+      "median_tokens_per_second": 52.246737761599675,
+      "mean_generation_seconds": 0.6297219741199478,
+      "median_generation_seconds": 0.6073393750000378
+    }
+  },
+  "files_sha256": {
+    "results-old-cleanup-0.8b.json": "61dbe67af1b66bdd041ed356f592480ede668cff03d3e699d38784647dd39d00",
+    "old-cleanup-0.8b.jsonl": "8ece6cea9e4d1d30b1e99a55b527be82c24ceea72d7ddb3dd5e45bcbaa5fac00",
+    "old-cleanup-0.8b.csv": "b49d4ed2eee7e279b53e94fc1fa4201cda516c130d86f7619886bf19eab1b760",
+    "old-cleanup-0.8b.md": "a8fc4273fa699838cf50c43ba5c22035990012eb5512fb95f4a584322998b482"
+  }
+}

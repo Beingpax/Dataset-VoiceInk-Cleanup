@@ -1,0 +1,45 @@
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 4.503 bits per weight.
+{
+  "id": "cleanup-2b-4bit",
+  "source_archive": "ft-30b873e1-16c9-2026-08-31-06-15-24.tar.zst",
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.16.1"
+  },
+  "official_sources": [
+    "https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/convert.py",
+    "https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/models/qwen3_5.py"
+  ],
+  "method": "mlx_lm.convert.convert; native Qwen3.5 text-only sanitizer",
+  "started_at": "2026-08-31T06:25:20.887772+00:00",
+  "completed_at": "2026-08-31T06:25:31.348737+00:00",
+  "conversion_seconds": 10.460796542000026,
+  "quantization": {
+    "bits": 4,
+    "group_size": 64,
+    "mode": "affine",
+    "calibration": false,
+    "activation_quantization": false,
+    "kv_cache_quantization": false
+  },
+  "quantized_module_count": 187,
+  "source_tensor_bytes": {
+    "text": 3763655360,
+    "vision": 662833152,
+    "mtp": 121656320
+  },
+  "source_parameters": {
+    "text": 1881825088,
+    "vision": 331416576,
+    "mtp": 60828160
+  },
+  "quantized_text_tensor_bytes": 1059315904,
+  "quantized_weight_file_bytes": 1059404951,
+  "effective_bits_per_text_parameter": 4.503355431936934,
+  "validation": "Strict reload; all quantized modules are affine 4-bit/group64; no vision/MTP tensors; identical prompt token IDs on 100 cases and identical EOS IDs; source hashes unchanged.",
+  "scope": "Text-only MLX weights. Floating norms, scales/biases and sensitive tensors are not all 4-bit. Original multimodal config/tokenizer metadata is retained by the official converter but no vision parameters are saved."
+}

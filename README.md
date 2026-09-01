@@ -33,6 +33,7 @@ The build command is documented in `package.json` but was not run during this mi
 - A 100-case benchmark across two labeled 50-case datasets.
 - VoiceInk Refine V1, SpeakoFlow Mini, and GPT-5.6 Sol low-reasoning outputs.
 - Fluid-1 Mini 2B 6-bit, evaluated on all 100 cases with standard MLX target decoding and no DFlash acceleration.
+- The supplied fine-tuned Qwen3.5 2B, converted with official MLX-LM to text-only 4-bit weights and evaluated on all 100 cases. See [`cleanup-2b-4bit.md`](comparison/artifacts/cleanup-2b-4bit.md) for results and [`comparison/benchmark/README.md`](comparison/benchmark/README.md) for reproduction.
 - Aggregate quality, latency, throughput, exact-match, WER, chrF++, edit-similarity, and peak-memory data where available.
 - Every raw input, human reference, model output, prompt configuration, and per-case score.
 - Reproducible sampling, model-running, dataset-integration, and scoring scripts.
@@ -54,6 +55,8 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 - The original dataset overview page, retained as a separate generator/authoring surface.
 
 The previous 180-pair generator collection and its viewer copies have been removed. Its replacement is a delivered 5,000-pair **draft**, not a fully reviewed training collection. Open `#/viewer?source=cleanup` to inspect it. The user has skipped remaining full content review; requested paragraph-only updates are tracked separately in `dataset-generator/generation/paragraph-pass/report.json`. Earlier content-review logs for 600 pairs are retained, but only matching current batch hashes qualify for the viewer's reviewed status. Refresh synchronized authoring/public copies after edits with `node dataset-generator/generation/snapshot.mjs`; current counts are recorded in `dataset-generator/generation/draft-status.json`. Skipping review does not bypass the separate fully reviewed export gate.
+
+Training and validation copies are available in `dataset-generator/data/cleanup-training.jsonl` (4,500 pairs) and `dataset-generator/data/cleanup-validation.jsonl` (500 pairs). The combined cleanup dataset is unchanged. Whole authoring batches stay in one split, with coverage balanced across categories, errors, domains, presentation, formats, and lengths. `dataset-generator/data/split-report.json` records coverage, hashes, and the frozen validation batches; regenerate these files after approved source edits with `node dataset-generator/generation/split.mjs`.
 
 The viewer defaults to the fixed 100-case comparison corpus in `public/data/benchmark-sample.jsonl`. Generator commands do not modify benchmark source snapshots or results. The fixed corpus matches the original published baselines; newer working-sample revisions and the initial Fluid runs on that expanded sample are preserved separately under `comparison/artifacts/`.
 

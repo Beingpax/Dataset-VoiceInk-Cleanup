@@ -1,0 +1,333 @@
+case_id,dataset_id,dataset_name,source_record_id,source_index,model_id,model_name,input,reference,output,error,context_source,exact_match,edit_similarity,chrf,wer,length_ratio,input_tokens,output_tokens,generation_seconds,tokens_per_second
+V01,voiceink-validation,VoiceInk validation sample,59,59,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,mina where should i return the folding chairs the parish hall or the sports pavilion question mark and who has the storage key i can go tomorrow,"Mina, where should I return the folding chairs, the parish hall or the sports pavilion? And who has the storage key? I can go tomorrow.",Where should I return the folding chairs: the parish hall or the sports pavilion? Who has the storage key? I can go tomorrow.,,dataset_system_prompt,False,0.9384615384615383,0.8430541711685214,0.2,0.9259259259259259,102,28,0.6868321250003646,40.76687589414245
+V02,voiceink-validation,VoiceInk validation sample,67,67,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,message to dev colon the freezer door looks shut but it isnt sealing comma so push it until you hear two clicks not one full stop,"Message to Dev: The freezer door looks shut, but it isn’t sealing, so push it until you hear 2 clicks, not one.","Message to Dev: The freezer door looks shut, but it isn’t sealing. So push it until you hear two clicks.",,dataset_system_prompt,False,0.9209302325581397,0.8066944853765727,0.2727272727272727,0.9369369369369369,100,25,0.5835767919998034,42.839263560036194
+V03,voiceink-validation,VoiceInk validation sample,113,113,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear ken we heard about your new house period may we visit next sunday around tea time question mark warm wishes comma lou and fay,"Dear Ken,
+
+We heard about your new house. May we visit next Sunday around teatime?
+
+Warm wishes,
+Lou and Fay","Dear Ken,
+
+We heard about your new house. May we visit next Sunday around tea time? Warm wishes, Lou and Fay",,dataset_system_prompt,False,0.9722222222222221,0.9819977433574129,0.21052631578947367,1.0,100,26,0.6225055000004431,41.766699250017055
+V04,voiceink-validation,VoiceInk validation sample,213,213,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,can the taxi take four passengers plus a folding wheelchair and two medium cases or should we request a larger car question mark for the airport run,"Can the taxi take 4 passengers, a folding wheelchair, and 2 medium cases, or should we request a larger car for the airport run?","Can the taxi take four passengers plus a folding wheelchair and two medium cases, or should we request a larger car?",,dataset_system_prompt,False,0.8524590163934427,0.7076558470661475,0.4166666666666667,0.90625,101,23,0.5136878749999596,44.774270757318945
+V05,voiceink-validation,VoiceInk validation sample,426,426,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,before the guests arrive saturday morning comma separate the white laundry wash the towels at sixty and hang the linen shirts instead of machine drying them,"Before the guests arrive Saturday morning, separate the white laundry, wash the towels at 60 degrees, and hang the linen shirts instead of machine-drying them.","Before the guests arrive Saturday morning, separate the white laundry, wash the towels at sixty, and hang the linen shirts instead of machine drying them.",,dataset_system_prompt,False,0.952076677316294,0.8856037628468175,0.16,0.9685534591194969,101,29,0.6496267920001628,44.64101597582005
+V06,voiceink-validation,VoiceInk validation sample,465,465,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear neighbors please collect your post from the lower lobby shelf by friday evening period anything remaining there will move to reception before mondays delivery,"Dear Neighbors,
+
+Please collect your post from the lower lobby shelf by Friday evening. Anything remaining there will move to Reception before Monday’s delivery.","Dear neighbors,
+
+Please collect your post from the lower lobby shelf by Friday evening. Anything remaining there will be moved to reception before Monday's delivery.",,dataset_system_prompt,False,0.9693251533742331,0.8591032282242432,0.20833333333333334,1.0248447204968945,101,30,0.5607733329998155,53.49755103281609
+V07,voiceink-validation,VoiceInk validation sample,582,582,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,support closed the incident at eleven forty p m utc service had been stable since ten oh five and monitoring continued overnight with the incident commander remaining on call,"Support closed the incident at 11:40 PM UTC. Service had been stable since 10:05, and monitoring continued overnight. The Incident Commander remained on call.","Support closed the incident at 11:40 UTC. Service had been stable since 10:05, and monitoring continued overnight with the incident commander remaining on call.",,dataset_system_prompt,False,0.9371069182389937,0.8247407882006729,0.2916666666666667,1.0126582278481013,103,37,0.7363970000005793,50.24463706393548
+V08,voiceink-validation,VoiceInk validation sample,650,650,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the sales manager approved the five percent discount but not the free implementation package shown in the latest quote despite a separate verbal concession request,"The Sales manager approved the 5% discount, but not the free implementation package shown in the latest quote. A separate verbal concession request remains unapproved.","The sales manager approved the 5% discount, but not the free implementation package shown in the latest quote despite a separate verbal concession request.",,dataset_system_prompt,False,0.9006211180124224,0.8269121004510483,0.28,0.9281437125748503,99,28,0.6359163750003063,44.03094667909206
+V09,voiceink-validation,VoiceInk validation sample,948,948,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,why did the nightly pipe line finish green even though the schema validation step logged seventeen errors is continue on error set somewhere question mark,Why did the nightly pipeline finish green even though the schema validation step logged 17 errors? Is continue-on-error set somewhere?,Why did the nightly pipeline finish green even though the schema validation step logged seventeen errors? Is it continue on error set somewhere?,,dataset_system_prompt,False,0.935251798561151,0.8637206332109523,0.25,1.0746268656716418,99,25,0.5633887089998098,44.374336227615885
+V10,voiceink-validation,VoiceInk validation sample,1001,1001,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,please shorten the permission dialog it currently says in order to continue we need to be able to access your microphone period keep the reason visible though,"Please shorten the permission dialog. It currently says, “In order to continue, we need to be able to access your microphone.” Keep the reason visible, though.","Please shorten the permission dialog. It currently says: “In order to continue, we need to be able to access your microphone.” Keep the reason visible though.",,dataset_system_prompt,False,0.9905362776025235,0.9376704584932898,0.07692307692307693,0.9937106918238994,101,32,0.6662800839994816,48.027850101587156
+V11,voiceink-validation,VoiceInk validation sample,1107,1107,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the search index skipped records with emoji in the title reprocessing succeeds after unicode normalization form c is applied period existing records need back filling,The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode Normalization Form C is applied. Existing records need backfilling.,The search index skipped records with emoji in the title. Reprocessing succeeds after Unicode normalization from C is applied. Existing records need backfilling.,,dataset_system_prompt,False,0.9813664596273292,0.9274900124776114,0.08695652173913043,1.0,100,29,0.6313215000000127,45.93539108045491
+V12,voiceink-validation,VoiceInk validation sample,1111,1111,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,paragraph break the tablet layout is usable in portrait period in landscape the sticky footer overlaps the final form field by twenty four pixels period rotation does not recalculate it,"The tablet layout is usable in portrait. In landscape, the sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.","The tablet layout is usable in portrait. In landscape, the sticky footer overlaps the final form field by 24 pixels. Rotation does not recalculate it.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,105,32,0.5852821669996047,54.67448318824587
+V13,voiceink-validation,VoiceInk validation sample,1211,1211,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,can you check whether the variance calculation uses n or n minus one results differ from the published table by point zero three before correcting the published appendix,Can you check whether the variance calculation uses n or n−1? Results differ from the published table by 0.03. Check this before correcting the published appendix.,Can you check whether the variance calculation uses n or n minus one? Results differ from the published table by 0.3 before correcting the published appendix.,,dataset_system_prompt,False,0.9221183800623052,0.8516110385088289,0.23076923076923078,0.9693251533742331,102,31,0.6846627499999158,45.277766316341605
+V14,voiceink-validation,VoiceInk validation sample,1257,1257,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,during the quarterly structural survey inspection at pier two found minor scaling above the water line comma no exposed reinforcement and no measurable change since march,"During the quarterly structural survey, inspection at Pier 2 found minor scaling above the waterline, no exposed reinforcement, and no measurable change since March.","During the quarterly structural survey inspection at Pier Two, minor scaling was found above the water line, no exposed reinforcement, and no measurable change since March.",,dataset_system_prompt,False,0.9376854599406528,0.8821719746649548,0.2916666666666667,1.0424242424242425,100,30,0.5881565409999894,51.00682880954399
+V15,voiceink-validation,VoiceInk validation sample,1368,1368,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,thirty minute discharge test reading colon battery bank voltage was twenty five point six at rest comma then dropped to twenty two point nine under inverter load,"30-minute discharge-test reading: Battery-bank voltage was 25.6 at rest, then dropped to 22.9 under inverter load.","Thirty-minute discharge test reading:
+
+- Battery bank voltage was 25.6 V at rest.
+- Then dropped to 22.9 V under inverter load.",,dataset_system_prompt,False,0.8962655601659751,0.7293383600341763,0.625,1.1140350877192982,103,37,0.6861702090000108,53.92248091610083
+V16,voiceink-validation,VoiceInk validation sample,1396,1396,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear nina before the accessibility review meeting note that the attached screen reader transcript timestamps correspond to build one eighty four not the latest beta,"Dear Nina,
+
+Before the accessibility-review meeting, note that the attached screen-reader transcript timestamps correspond to Build 184, not the latest beta.","Dear Nina,
+
+Before the accessibility review meeting, note that the attached screen reader transcript timestamps correspond to build 1.84, not the latest beta.",,dataset_system_prompt,False,0.9777777777777777,0.8680909552798406,0.2857142857142857,1.0063694267515924,101,32,0.7001390420000462,45.705207223678705
+V17,voiceink-validation,VoiceInk validation sample,1605,1605,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear garden club saturdays seed swap moves indoors to room four because rain is likely period label packets with variety and harvest year cheers comma monica,"Dear Garden Club,
+
+Saturday’s seed swap moves indoors to Room 4 because rain is likely. Label packets with the variety and harvest year.
+
+Cheers,
+Monica","Dear Garden Club,
+
+Saturdays seed swap moves indoors to Room 4 because rain is likely.
+
+Label packets with variety and harvest year.
+
+Cheers,
+Monica",,dataset_system_prompt,False,0.9733333333333334,0.9246787582623088,0.08333333333333333,0.9736842105263158,103,35,0.6669513750002807,52.4775887897154
+V18,voiceink-validation,VoiceInk validation sample,1616,1616,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,event recap colon one hundred eighty four attendees checked in and seventeen walk ins paid at the door period the west room session filled first but but no one was turned away,"Event recap: 184 attendees checked in, and 17 walk-ins paid at the door. The West Room session filled first, but no one was turned away.","Event recap: 184 attendees checked in and 17 walk-ins paid at the door. The west room session filled first, but no one was turned away.",,dataset_system_prompt,False,0.981549815498155,0.8996949716468303,0.12,0.9926470588235294,106,35,0.6253207910003766,55.97127187152637
+V19,voiceink-validation,VoiceInk validation sample,1711,1711,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,our pickup window was one to three and and no driver came can you reschedule for tomorrow morning without creating a second charge question mark there are seven boxes,"Our pickup window was 1:00 to 3:00, and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are 7 boxes.","Our pickup window was one to three, and no driver came. Can you reschedule for tomorrow morning without creating a second charge? There are seven boxes.",,dataset_system_prompt,False,0.9266666666666665,0.8605101330453455,0.11538461538461539,1.027027027027027,104,31,0.7228452500003186,42.886081080267644
+V20,voiceink-validation,VoiceInk validation sample,1826,1826,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,lock report colon rear office lever sticks when pulled upward latch works from inside but but key rotation outside stops halfway do not force it,"Lock report: The rear-office lever sticks when pulled upward. The latch works from inside, but key rotation outside stops halfway. Do not force it.","Lock report: rear office lever sticks when pulled upward. Latch works from inside, but key rotation outside stops halfway. Do not force it.",,dataset_system_prompt,False,0.958041958041958,0.869979894533478,0.16666666666666666,0.9455782312925171,99,29,0.5865850830005002,49.43869327815019
+V21,voiceink-validation,VoiceInk validation sample,57,57,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,please ask the bus station whether the midnight coach has under floor luggage storage and um whether bicycles need a separate reservation question mark for next friday night,Please ask the bus station whether the midnight coach has underfloor luggage storage and whether bicycles need a separate reservation for next Friday night.,Please ask the bus station whether the midnight coach has under-floor luggage storage and whether bicycles need a separate reservation.,,dataset_system_prompt,False,0.9209621993127147,0.838937936312235,0.25,0.8653846153846154,102,22,0.5697399159998895,38.61411037243223
+V22,voiceink-validation,VoiceInk validation sample,550,550,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,ask operations why the overnight shipment went to phoenix instead of tucson comma include tracking number nine three six zero zero one and request a corrected delivery estimate,"Ask Operations why the overnight shipment went to Phoenix instead of Tucson, include tracking number 936001, and request a corrected delivery estimate.",Ask operations why the overnight shipment went to Phoenix instead of Tucson. Include tracking number 936001 and request a corrected delivery estimate.,,dataset_system_prompt,False,0.9767441860465115,0.8811646928713389,0.18181818181818182,0.9933774834437086,103,30,0.6466750829995362,46.39114879894254
+V23,voiceink-validation,VoiceInk validation sample,629,629,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the budget deck accidentally labels fiscal year twenty twenty six as calendar year twenty twenty six period the underlying numbers are fiscal and the footnote uses the same incorrect label,The budget deck accidentally labels fiscal year 2026 as calendar year 2026. The underlying numbers are fiscal-year figures. The footnote uses the same incorrect label.,"The budget deck accidentally labels fiscal year 2026 as calendar year 2026. The underlying numbers are fiscal, and the footnote uses the same incorrect label.",,dataset_system_prompt,False,0.9415384615384617,0.8803745271713368,0.12,0.9461077844311377,104,36,0.6525045419994058,55.17202974509377
+V24,voiceink-validation,VoiceInk validation sample,652,652,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the monday notes should say decision deferred pending tax advice comma not decision denied and the follow up owner is casey from treasury before circulating the revised record,"The Monday notes should say, “Decision deferred pending tax advice,” not “Decision denied,” and the follow-up owner is Casey from Treasury. Circulate the revised record afterward.","The Monday notes should say “decision deferred pending tax advice,” not “decision denied,” and the follow-up owner is Casey from Treasury before circulating the revised record.",,dataset_system_prompt,False,0.9183098591549296,0.8078436397523352,0.3076923076923077,0.9832402234636871,103,32,0.6391137499995239,50.069334293032874
+V25,voiceink-validation,VoiceInk validation sample,658,658,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the service report lists priority one downtime as forty eight minutes the incident timeline supports only thirty eight because monitoring recovered earlier and customer success disputes the longer figure,The service report lists Priority 1 downtime as 48 minutes. The incident timeline supports only 38 minutes because monitoring recovered earlier. Customer Success disputes the longer figure.,"The service report lists priority one downtime as 48 minutes. The incident timeline supports only 38 because monitoring recovered earlier, and customer success disputes the longer figure.",,dataset_system_prompt,False,0.9361702127659575,0.825178938738624,0.25925925925925924,0.9894179894179894,103,34,0.7368806250005946,46.14044506866029
+V26,voiceink-validation,VoiceInk validation sample,669,669,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the investigation scope covers expense approvals from january through april it does not include vendor selection or contract negotiation unless new evidence expands the review,The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation. New evidence could expand the review.,The investigation scope covers expense approvals from January through April. It does not include vendor selection or contract negotiation unless new evidence expands the review.,,dataset_system_prompt,False,0.9518413597733713,0.8836023501462565,0.2,1.0056818181818181,100,27,0.5291517919995385,51.02505634153375
+V27,voiceink-validation,VoiceInk validation sample,704,704,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,following the latest litigation update the controller approved a two hundred fifty thousand reserve comma subject to receiving counsels final estimate before close by noon tomorrow,"Following the latest litigation update, the Controller approved a $250,000 reserve, subject to receiving counsel’s final estimate before close. Counsel’s estimate is due by noon tomorrow.","Following the latest litigation update, the controller approved a $250,000 reserve, subject to receiving counsel's final estimate before close by noon tomorrow.",,dataset_system_prompt,False,0.9106628242074928,0.8048897371736682,0.2692307692307692,0.8556149732620321,102,33,0.7174847090000185,45.99401156018107
+V28,voiceink-validation,VoiceInk validation sample,811,811,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,would you send the customer the maintenance window in both eastern and greenwich mean time comma make clear that service may be intermittent before the maintenance notice is translated,"Would you send the customer the maintenance window in both Eastern Time and Greenwich Mean Time, and make clear that service may be intermittent? The maintenance notice will be translated afterward.","Would you send the customer the maintenance window in both Eastern and Greenwich Mean Time, make clear that service may be intermittent before the maintenance notice is translated.",,dataset_system_prompt,False,0.9047619047619048,0.7935074179501254,0.2903225806451613,0.9090909090909091,104,30,0.6418289999992339,46.74142178062351
+V29,voiceink-validation,VoiceInk validation sample,813,813,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,who owns the response to the accessibility questionnaire question mark product answered the first section but legal and security sections remain blank before friday afternoons submission deadline,"Who owns the response to the accessibility questionnaire? Product answered the first section, but the Legal and Security sections remain blank. Friday afternoon’s submission deadline is approaching.","Who owns the response to the accessibility questionnaire? The product answered the first section, but legal and security sections remain blank before Friday afternoon's submission deadline.",,dataset_system_prompt,False,0.8992248062015504,0.7715165877345175,0.4074074074074074,0.9545454545454546,103,30,0.5756920409994564,52.11119463787815
+V30,voiceink-validation,VoiceInk validation sample,817,817,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,please route the exception request to ethics and compliance comma not employee relations and attach the original disclosure from february because the reporting path was incorrect,"Please route the exception request to Ethics and Compliance, not Employee Relations, and attach the original disclosure from February. The reporting path was incorrect.","Please route the exception request to Ethics and Compliance, not Employee Relations, and attach the original disclosure from February because the reporting path was incorrect.",,dataset_system_prompt,False,0.967930029154519,0.9473708135651926,0.125,1.0416666666666667,101,28,0.6493252919999577,43.12168391555865
+V31,voiceink-validation,VoiceInk validation sample,840,840,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,can we use the clients logo in the investor presentation question mark the marketing consent covers our website but does not mention fundraising materials before marketing finalizes the presentation,Can we use the client’s logo in the investor presentation? The marketing consent covers our website but does not mention fundraising materials. Marketing has not finalized the presentation.,"Can we use the client's logo in the investor presentation? The marketing consent covers our website, but does not mention fundraising materials before marketing finalizes the presentation.",,dataset_system_prompt,False,0.9389920424403183,0.8348758744039598,0.25,0.9947089947089947,104,32,0.6341220000003887,50.463475482604906
+V32,voiceink-validation,VoiceInk validation sample,856,856,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,could you request wheelchair access for the site tour comma including the production floor and emergency assembly area not only the lobby because the full group will participate,"Could you request wheelchair access for the site tour, including the production floor and emergency-assembly area, not only the lobby? The full group will participate.","Could you request wheelchair access for the site tour, including the production floor and emergency assembly area, not only the lobby because the full group will participate.",,dataset_system_prompt,False,0.9618768328445748,0.9153230702542069,0.2,1.0419161676646707,102,30,0.5783064580000428,51.875609523277674
+V33,voiceink-validation,VoiceInk validation sample,902,902,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,for all three finalists this week ask procurement for the evaluation rubric before vendor presentations we should not change weighting after seeing demonstrations before scoring begins,"For all 3 finalists this week, ask Procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations. Finalize the rubric before scoring begins.","For all three finalists this week, ask procurement for the evaluation rubric before vendor presentations. We should not change weighting after seeing demonstrations before scoring begins.",,dataset_system_prompt,False,0.9258312020460358,0.842586499297147,0.20689655172413793,0.9166666666666666,101,30,0.6914624159999221,43.386306046174724
+V34,voiceink-validation,VoiceInk validation sample,926,926,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,before approving reimbursement can you change coding from client entertainment to employee meal question mark all attendees were internal and no customer joined in the expense system,"Before approving reimbursement, can you change coding from Client Entertainment to Employee Meal? All attendees were internal, and no customer joined. Make the change in the expense system.","Before approving reimbursement, can you change coding from ""client entertainment"" to ""employee meal""? All attendees were internal, and no customer joined in the expense system.",,dataset_system_prompt,False,0.9205479452054794,0.7772614034039738,0.2857142857142857,0.9312169312169312,101,32,0.5915077090003251,54.099041336386726
+V35,voiceink-validation,VoiceInk validation sample,1083,1083,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,inspection item bullet point north anchor secure bullet point south anchor needs re torque bullet point conduit label missing near junction box four new line photos saved in folder seven,"Inspection items:
+- North anchor secure
+- South anchor needs retorquing
+- Conduit label missing near Junction Box 4
+
+Photos are saved in Folder 7.","- Inspection item: North anchor secure
+- Inspection item: South anchor needs re-torque
+- Inspection item: Conduit label missing near junction box
+- Photos saved in folder 7",,dataset_system_prompt,False,0.8113207547169812,0.6319312217375971,0.5909090909090909,1.178082191780822,104,38,0.7267650419998972,52.28649949292054
+V36,voiceink-validation,VoiceInk validation sample,1100,1100,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,sample c twelve was thawed for approximately eighteen minutes comma returned to minus eighty and flagged for sensitivity analysis period no visible leakage occurred afterward,"Sample C12 was thawed for approximately 18 minutes, returned to −80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.","Sample C-12 was thawed for approximately 18 minutes, returned to -80°C, and flagged for sensitivity analysis. No visible leakage occurred afterward.",,dataset_system_prompt,False,0.9898305084745763,0.9315904583265516,0.09523809523809523,1.0068027210884354,100,34,0.70986854199964,47.89619202482879
+V37,voiceink-validation,VoiceInk validation sample,1177,1177,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,for our final storage comparison write this technical question to the vendor colon what is the maximum sustained write rate with encryption enabled and raid six active question mark,"For our final storage comparison, write this technical question to the vendor: What is the maximum sustained write rate with encryption enabled and RAID 6 active?","For our final storage comparison, write this technical question to the vendor: What is the maximum sustained write rate with encryption enabled and RAID 6 active?",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,103,30,0.5818893750001735,51.55619141523431
+V38,voiceink-validation,VoiceInk validation sample,1209,1209,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,for the production system prompt please turn the model instructions into a numbered priority list colon safety constraints first output schema second and style preferences third,"For the production system prompt, please turn the model instructions into a numbered priority list:
+1. Safety constraints
+2. Output schema
+3. Style preferences","For the production system, please turn the model instructions into a numbered priority list:
+
+1. Safety constraints
+2. Output schema
+3. Style preferences",,dataset_system_prompt,False,0.9743589743589743,0.9469221080257276,0.19047619047619047,0.9622641509433962,100,31,0.6004602500006513,51.62706440595589
+V39,voiceink-validation,VoiceInk validation sample,1412,1412,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,class reminder colon the ecology quiz is next monday not this friday and chapters six through eight are included new line bring a pencil your field notebook and the calculator you used in lab,"Class reminder: The ecology quiz is next Monday, not this Friday, and Chapters 6 through 8 are included.
+Bring a pencil, your field notebook, and the calculator you used in lab.","Class reminder: The ecology quiz is next Monday, not this Friday. Chapters six through eight are included.
+
+Bring a pencil, your field notebook, and the calculator you used in lab.",,dataset_system_prompt,False,0.9523809523809522,0.8911926351845676,0.2,1.0169491525423728,108,38,0.7448447920005492,51.01733999903161
+V40,voiceink-validation,VoiceInk validation sample,1434,1434,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,can you ask the pool manager whether lane four will be open for lap swimming from six to seven tomorrow comma or is the regional team still using all the deep lanes question mark,"Can you ask the pool manager whether Lane 4 will be open for lap swimming from 6:00 to 7:00 tomorrow, or is the regional team still using all the deep lanes?","Can you ask the pool manager whether Lane 4 will be open for lap swimming from 6:00 to 7:00 tomorrow, or is the regional team still using all the deep lanes?",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,108,42,0.7048749579998912,59.58503635762087
+V41,voiceink-validation,VoiceInk validation sample,1465,1465,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dispatch this is unit forty six we have smoke showing from a detached garage at eight twelve birch lane no visible flames yet send one additional engine and advise police the driveway is blocked,"Dispatch, this is Unit 46. We have smoke showing from a detached garage at 812 Birch Lane. No visible flames yet. Send 1 additional engine, and advise police that the driveway is blocked.",Dispatch this is Unit 46. We have smoke showing from a detached garage at 8:12 Birch Lane. No visible flames yet. Send one additional engine and advise police. The driveway is blocked.,,dataset_system_prompt,False,0.9595687331536388,0.8470664556923841,0.21212121212121213,0.983957219251337,109,43,0.6797653329995228,63.257124058178746
+V42,voiceink-validation,VoiceInk validation sample,1469,1469,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,radio check colon team bravo can hear command clearly but but command is not receiving bravo on channel three should we switch to channel five or return to the staging area question mark,"Radio check: Team Bravo can hear Command clearly, but Command is not receiving Bravo on Channel 3. Should we switch to Channel 5 or return to the staging area?","Radio check. Command, Bravo, can hear you clearly, but Command is not receiving Bravo on channel three. Should we switch to channel five or return to the staging area?",,dataset_system_prompt,False,0.8895705521472392,0.7526336268189253,0.27586206896551724,1.050314465408805,107,35,0.7136116669998955,49.04628331981171
+V43,voiceink-validation,VoiceInk validation sample,1479,1479,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the boarding reservation is for two rabbits from october six through october tenth can they share the larger enclosure and do we need to bring their usual pellets question mark,"The boarding reservation is for 2 rabbits from October 6 through October 10. Can they share the larger enclosure, and do we need to bring their usual pellets?","The boarding reservation is for two rabbits from October 6 through October 10. Can they share the larger enclosure, and do we need to bring their usual pellets?",,dataset_system_prompt,False,0.9874213836477987,0.9648136060662919,0.03571428571428571,1.0126582278481013,106,34,0.6567106249995049,51.77318396519872
+V44,voiceink-validation,VoiceInk validation sample,1510,1510,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,can you transcribe the handwritten caption exactly comma including the crossed out surname but mark uncertain letters with square brackets question mark dont modernize the spelling,"Can you transcribe the handwritten caption exactly, including the crossed-out surname, but mark uncertain letters with square brackets? Don’t modernize the spelling.","Can you transcribe the handwritten caption exactly, including the crossed-out surname, but mark uncertain letters with square brackets? Don't modernize the spelling.",,dataset_system_prompt,False,0.9939393939393939,0.9665290868597745,0.045454545454545456,1.0,102,30,0.5594394999998258,53.62510155255276
+V45,voiceink-validation,VoiceInk validation sample,1544,1544,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,could you categorize the bike lock under transportation comma not recreation and split the ninety dollar hardware store purchase into sixty five home repair and twenty five garden question mark,"Could you categorize the bike lock under Transportation, not Recreation, and split the $90 hardware-store purchase into $65 for Home Repair and $25 for Garden?","Could you categorize the bike lock under transportation, not recreation, and split the $90 hardware store purchase into $65 home repair and $25 garden?",,dataset_system_prompt,False,0.9354838709677421,0.7721997114666039,0.36,0.949685534591195,105,34,0.7215831670000625,47.118615781120425
+V46,voiceink-validation,VoiceInk validation sample,1545,1545,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear loan officer ive attached pay stubs for may and june but the april file is missing from my employers portal period is a bank statement acceptable instead question mark sincerely comma remy,"Dear Loan Officer,
+
+I’ve attached pay stubs for May and June, but the April file is missing from my employer’s portal. Is a bank statement acceptable instead?
+
+Sincerely,
+Remy","Dear Loan Officer,
+
+I have attached pay stubs for May and June, but the April file is missing from my employer's portal. A bank statement is acceptable instead.
+
+Sincerely,
+Remy",,dataset_system_prompt,False,0.9545454545454546,0.8463567328505124,0.25,1.0114285714285713,111,42,0.7419010000003254,56.611326848166506
+V47,voiceink-validation,VoiceInk validation sample,1621,1621,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,could you explain why the estimate lists three point five labor hours for the alternator the phone quote said two hours and and did not mention a diagnostic fee question mark,Could you explain why the estimate lists 3.5 labor hours for the alternator? The phone quote said 2 hours and did not mention a diagnostic fee.,Could you explain why the estimate lists three.5 labor hours for the alternator? The phone quote said two hours and did not mention a diagnostic fee.,,dataset_system_prompt,False,0.9657534246575342,0.919591873591407,0.07692307692307693,1.0419580419580419,106,31,0.557612832999439,55.594129412784135
+V48,voiceink-validation,VoiceInk validation sample,1639,1639,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the accessible shuttle was booked for eight forty five but arrived at nine thirty passenger missed appointment r six one four can you document the delay and reschedule the ride question mark,The accessible shuttle was booked for 8:45 but arrived at 9:30. The passenger missed Appointment R614. Can you document the delay and reschedule the ride?,The accessible shuttle was booked for 8:45 but arrived at 9:30. Passenger missed appointment R614. Can you document the delay and reschedule the ride?,,dataset_system_prompt,False,0.9736842105263157,0.9091891700283302,0.12,0.974025974025974,107,39,0.7295402919999106,53.45832221697877
+V49,voiceink-validation,VoiceInk validation sample,1673,1673,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,application checklist bullet point two passport photos next item proof of address next item signed declaration page next item fee receipt new line bring originals and one copy of each,"Application checklist:
+- 2 passport photos
+- Proof of address
+- Signed declaration page
+- Fee receipt
+
+Bring the originals and 1 copy of each.","Application checklist:
+
+- Passport photos
+- Proof of address
+- Signed declaration page
+- Fee receipt
+
+Bring originals and one copy of each.",,dataset_system_prompt,False,0.9537366548042705,0.8653854356049167,0.23809523809523808,0.9788732394366197,104,30,0.6692064589997244,44.82921465647772
+V50,voiceink-validation,VoiceInk validation sample,1691,1691,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear costume rental the return sheet lists four hats but we received three period could you check the packing photo before charging the missing item fee question mark regards comma tessa,"Dear Costume Rental,
+
+The return sheet lists 4 hats, but we received 3. Could you check the packing photo before charging the missing-item fee?
+
+Regards,
+Tessa","Dear Costume Rental,
+
+The return sheet lists four hats, but we received three. Could you check the packing photo before charging the missing item fee?
+
+Regards,
+Tessa",,dataset_system_prompt,False,0.96,0.8939875531656591,0.16,1.0440251572327044,107,36,0.6038800830001492,59.61448475191904
+C01,curated-sample-50,Curated transcript cleanup sample,sample_001,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the deployment finished successfully all services are healthy and no customer action is required,"The deployment finished successfully. All services are healthy, and no customer action is required.","The deployment finished successfully. All services are healthy, and no customer action is required.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,217,17,0.6751302920001763,25.18032474833104
+C02,curated-sample-50,Curated transcript cleanup sample,sample_002,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,Can we move the review to Friday. because Maya is unavailable Thursday?,Can we move the review to Friday because Maya is unavailable Thursday?,Can we move the review to Friday because Maya is unavailable Thursday?,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,217,13,0.5571110410000983,23.33466588036568
+C03,curated-sample-50,Curated transcript cleanup sample,sample_003,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,uh please send the revised contract to Priya this afternoon,Please send the revised contract to Priya this afternoon.,Please send the revised contract to Priya this afternoon.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,214,11,0.5613436670000738,19.595838782302597
+C04,curated-sample-50,Curated transcript cleanup sample,sample_004,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,I mean the main issue is basically that the export takes too long,The main issue is that the export takes too long.,I mean the main issue is that the export takes too long.,,dataset_system_prompt,False,0.9142857142857143,0.9288600483975062,0.3,1.1428571428571428,216,13,0.5908374170003299,22.00266879846701
+C05,curated-sample-50,Curated transcript cleanup sample,sample_005,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the important thing the important thing is that we keep the existing backup,The important thing is that we keep the existing backup.,The important thing is that we keep the existing backup.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,216,11,0.49635637500068697,22.161496364350665
+C06,curated-sample-50,Curated transcript cleanup sample,sample_006,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,p please confirm that the customer received the refund,Please confirm that the customer received the refund.,Please confirm that the customer received the refund.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,212,9,0.5722452910003994,15.727521294698985
+C07,curated-sample-50,Curated transcript cleanup sample,sample_007,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,I wanted to ask whether actually please cancel tomorrow's check-in,Please cancel tomorrow's check-in.,I wanted to ask whether I should cancel tomorrow's check-in.,,dataset_system_prompt,False,0.6808510638297872,0.6956930238104253,1.75,1.7647058823529411,215,13,0.5063510829995721,25.673886037705948
+C08,curated-sample-50,Curated transcript cleanup sample,sample_008,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,schedule the review for Tuesday no sorry Thursday,Schedule the review for Thursday.,Schedule the review for Thursday.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,211,6,0.5288555420002012,11.345253142866218
+C09,curated-sample-50,Curated transcript cleanup sample,sample_009,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,please review the sight migration plan before lunch,Please review the site migration plan before lunch.,Please review the sight migration plan before lunch.,,dataset_system_prompt,False,0.970873786407767,0.871767392252351,0.125,1.0196078431372548,211,9,0.4755652080002619,18.92484952346439
+C10,curated-sample-50,Curated transcript cleanup sample,sample_010,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,store the session token in red is for fifteen minutes,Store the session token in Redis for 15 minutes.,Store the session token in red for 15 minutes.,,dataset_system_prompt,False,0.9574468085106383,0.8239159626087488,0.1111111111111111,0.9583333333333334,213,12,0.5790322499997274,20.72423427193503
+C11,curated-sample-50,Curated transcript cleanup sample,sample_011,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,we received one thousand two hundred and forty six responses,"We received 1,246 responses.","We received 1,246 responses.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,213,10,0.5061626669994439,19.756494605341935
+C12,curated-sample-50,Curated transcript cleanup sample,sample_012,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the workshop starts on September twenty third twenty twenty six,"The workshop starts on September 23, 2026.","The workshop starts on September 23, 2026.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,213,15,0.5726434999996854,26.194307627709456
+C13,curated-sample-50,Curated transcript cleanup sample,sample_013,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the call begins at four thirty p m,The call begins at 4:30 PM.,The call begins at 4:30 PM.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,211,11,0.5538002089997462,19.862758845591262
+C14,curated-sample-50,Curated transcript cleanup sample,sample_014,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the replacement costs forty nine dollars and weighs two point five kilograms,The replacement costs $49 and weighs 2.5 kilograms.,The replacement costs $49 and weighs 2.5 kilograms.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,215,14,0.5374945829998978,26.046774130936054
+C15,curated-sample-50,Curated transcript cleanup sample,sample_015,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,send the receipt to finance at acme dot com,Send the receipt to finance@acme.com.,Send the receipt to finance@acme.com,,dataset_system_prompt,False,0.9863013698630136,0.942792549390486,0.2,0.972972972972973,213,9,0.5494945410000582,16.378688646515684
+C16,curated-sample-50,Curated transcript cleanup sample,sample_016,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the documentation is available at docs dot example dot com slash setup,The documentation is available at docs.example.com/setup.,The documentation is available at docs.example.com/setup.,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,215,10,0.4805010830004903,20.811607619185732
+C17,curated-sample-50,Curated transcript cleanup sample,sample_017,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,yes comma I can send the draft today semicolon the figures will follow tomorrow period great work everyone exclamation mark,"Yes, I can send the draft today; the figures will follow tomorrow. Great work, everyone!","Yes, I can send the draft today; the figures will follow tomorrow. Great work, everyone!",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,225,20,0.6737962079996578,29.68256538482947
+C18,curated-sample-50,Curated transcript cleanup sample,sample_018,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,Maya said open quote the release is ready close quote,"Maya said, “The release is ready.”","Maya said: ""The release is ready.""",,dataset_system_prompt,False,0.9117647058823529,0.6982261554967412,0.5,1.0,214,10,0.4882062910000968,20.48314449106109
+C19,curated-sample-50,Curated transcript cleanup sample,sample_019,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the migration is complete period new paragraph customers do not need to take any action period,"The migration is complete.
+
+Customers do not need to take any action.","The migration is complete.
+
+Customers do not need to take any action.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,219,15,0.5967970829997284,25.13417110654146
+C20,curated-sample-50,Curated transcript cleanup sample,sample_020,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,bullet list apples new line rice new line olive oil,"- Apples
+- Rice
+- Olive oil","- Apples
+- Rice
+- Olive oil",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,213,10,0.5273853750004491,18.96146627120914
+C21,curated-sample-50,Curated transcript cleanup sample,sample_021,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,numbered list first back up the database second deploy the service third run the smoke tests,"1. Back up the database.
+2. Deploy the service.
+3. Run the smoke tests.","1. Back up the database.
+2. Deploy the service.
+3. Run the smoke tests.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,220,22,0.6162487080000574,35.69987200686829
+C22,curated-sample-50,Curated transcript cleanup sample,sample_022,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear Anika new paragraph thank you for reviewing the proposal new paragraph best regards new line Sam,"Dear Anika,
+
+Thank you for reviewing the proposal.
+
+Best regards,
+Sam","Dear Anika,
+
+Thank you for reviewing the proposal.
+
+Best regards,
+Sam",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,222,18,0.6693754580001041,26.890737903326595
+C23,curated-sample-50,Curated transcript cleanup sample,sample_023,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,heading weekly status new paragraph all planned work is complete,"# Weekly Status
+
+All planned work is complete.","**Weekly Status**
+
+All planned work is complete.",,dataset_system_prompt,False,0.9361702127659575,0.8207070067739164,0.375,1.0434782608695652,213,11,0.5517927089995283,19.935022374515288
+C24,curated-sample-50,Curated transcript cleanup sample,sample_024,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the word comma appears twice in the first paragraph,The word “comma” appears twice in the first paragraph.,"The word ""comma"" appears twice in the first paragraph.",,dataset_system_prompt,False,0.962962962962963,0.8324602890769888,0.1111111111111111,1.0,212,12,0.5564946249996865,21.56355059135883
+C25,curated-sample-50,Curated transcript cleanup sample,sample_025,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,attach the file quarterly report final dot pdf and reference ticket a c m e dash four two seven,Attach the file quarterly-report-final.pdf and reference ticket ACME-427.,Attach the file quarterly_report_final.pdf and reference ticket ACM-4-2-7.,,dataset_system_prompt,False,0.9523809523809522,0.7701716698634662,0.25,1.0136986301369864,222,18,0.6081004999996367,29.600370333539857
+C26,curated-sample-50,Curated transcript cleanup sample,sample_026,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,hi Priya comma new paragraph um could you send the revised budget to finance at acme dot com by four p m question mark new paragraph thanks comma new line Daniel,"Hi Priya,
+
+Could you send the revised budget to finance@acme.com by 4:00 PM?
+
+Thanks,
+Daniel","Hi Priya,
+
+Could you send the revised budget to finance at acme.com by 4:00 PM?
+
+Thanks,
+Daniel",,dataset_system_prompt,False,0.9732620320855615,0.9354211830030705,0.21428571428571427,1.0326086956521738,236,30,0.6913747079997847,43.39181004580419
+C27,curated-sample-50,Curated transcript cleanup sample,sample_027,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,numbered list first archive the last thirty days of logs second increase the time out to forty five seconds third restart the a p i gateway,"1. Archive the last 30 days of logs.
+2. Increase the timeout to 45 seconds.
+3. Restart the API gateway.","1. Archive the last 30 days of logs.
+2. Increase the timeout to 45 seconds.
+3. Restart the API gateway.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,230,32,0.811649834000491,39.42586896405457
+C28,curated-sample-50,Curated transcript cleanup sample,sample_028,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,okay bullet list um coffee beans new line coffee filters coffee filters new line oat milk new line dish soap,"- Coffee beans
+- Coffee filters
+- Oat milk
+- Dish soap","Okay.
+
+- Coffee beans
+- Coffee filters
+- Oat milk
+- Dish soap",,dataset_system_prompt,False,0.9391304347826087,0.9735438320288626,0.1111111111111111,1.1296296296296295,223,19,0.6631873750002342,28.64952005455968
+C29,curated-sample-50,Curated transcript cleanup sample,sample_029,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,heading meeting notes new paragraph date August thirtieth twenty twenty six new line time ten thirty a m new paragraph bullet list finalize the launch copy new line confirm the support schedule new line send the customer notice,"# Meeting Notes
+
+Date: August 30, 2026
+Time: 10:30 AM
+
+- Finalize the launch copy.
+- Confirm the support schedule.
+- Send the customer notice.","**Meeting Notes**
+
+**Date:** August 30, 2026
+**Time:** 10:30 AM
+
+- Finalize the launch copy.
+- Confirm the support schedule.
+- Send the customer notice.",,dataset_system_prompt,False,0.9523809523809522,0.8510636317757537,0.22727272727272727,1.0704225352112675,243,51,0.9494872909999685,53.71319920068492
+C30,curated-sample-50,Curated transcript cleanup sample,sample_030,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,Ravi said open quote we can launch on Monday no Tuesday close quote,"Ravi said, “We can launch on Tuesday.”","Ravi said, “We can launch on Monday.” No, Tuesday.",,dataset_system_prompt,False,0.8409090909090909,0.8321815170416216,0.42857142857142855,1.3157894736842106,217,15,0.5329180419994373,28.14691719522575
+C31,curated-sample-50,Curated transcript cleanup sample,sample_031,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,uh upgrade the service to version two point four point one comma then check the guide at docs dot example dot com slash upgrade,"Upgrade the service to version 2.4.1, then check the guide at docs.example.com/upgrade.","Upgrade the service to version 2.4.1, then check the guide at docs.example.com/upgrade.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,227,23,0.6911336250004751,33.27865866746707
+C32,curated-sample-50,Curated transcript cleanup sample,sample_032,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,ship three boxes to twenty four lake view road apartment seven b Kathmandu,"Ship 3 boxes to 24 Lake View Road, Apartment 7B, Kathmandu.","Ship three boxes to 24 Lake View Road, Apartment 7, Kathmandu.",,dataset_system_prompt,False,0.9421487603305785,0.8234242547408347,0.18181818181818182,1.0508474576271187,218,19,0.6492159999997966,29.26606861199655
+C33,curated-sample-50,Curated transcript cleanup sample,sample_033,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,move the demo from September tenth at two p m no make that September eleventh at three thirty p m,Move the demo to September 11 at 3:30 PM.,Move the demo from September 11 at 3:30 PM.,,dataset_system_prompt,False,0.9523809523809522,0.8419696847095278,0.1111111111111111,1.048780487804878,224,16,0.553681499999584,28.89747986886327
+C34,curated-sample-50,Curated transcript cleanup sample,sample_034,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,heading quarterly results new paragraph bullet list revenue increased by twelve percent new line support costs fell by eight point five percent new line cash balance is two point three million dollars,"# Quarterly Results
+
+- Revenue increased by 12%.
+- Support costs fell by 8.5%.
+- Cash balance is $2.3 million.","Heading: Quarterly Results
+
+- Revenue increased by 12%.
+- Support costs fell by 8.5%.
+- Cash balance is $2.3 million.",,dataset_system_prompt,False,0.960352422907489,0.9671186418641013,0.05555555555555555,1.0636363636363637,235,35,0.8247947909994764,42.4347975786649
+C35,curated-sample-50,Curated transcript cleanup sample,sample_035,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,okay steps colon first download the archive second unzip it into the tools folder third run setup dot sh,"Steps:
+
+1. Download the archive.
+2. Unzip it into the tools folder.
+3. Run setup.sh.","Okay, steps:
+
+1. Download the archive.
+2. Unzip it into the tools folder.
+3. Run setup.sh",,dataset_system_prompt,False,0.9479768786127167,0.9434222790631268,0.23076923076923078,1.0595238095238095,222,28,0.7556632089999766,37.05354404782312
+C36,curated-sample-50,Curated transcript cleanup sample,sample_036,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the pilot went well period new paragraph um twelve people completed onboarding comma and ten activated their accounts period new paragraph the next session is Friday at nine a m full stop,"The pilot went well.
+
+Twelve people completed onboarding, and 10 activated their accounts.
+
+The next session is Friday at 9:00 AM.","The pilot went well.
+
+12 people completed onboarding, and 10 activated their accounts.
+
+The next session is Friday at 9:00 AM.",,dataset_system_prompt,False,0.96875,0.9292526490259928,0.047619047619047616,0.9692307692307692,236,35,0.8102421660005348,43.19696193147383
+C37,curated-sample-50,Curated transcript cleanup sample,sample_037,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,hello Marcus comma new paragraph please send the invoice to billing at north star dot io no sorry accounts at north star dot io new paragraph kind regards comma new line Lena,"Hello Marcus,
+
+Please send the invoice to accounts@northstar.io.
+
+Kind regards,
+Lena","Hello Marcus,
+
+Please send the invoice to billing@northstar.io.
+
+Kind regards,
+Lena",,dataset_system_prompt,False,0.9221556886227544,0.8615915116470677,0.1,0.9880952380952381,235,22,0.6094412910006213,36.09863710395949
+C38,curated-sample-50,Curated transcript cleanup sample,sample_038,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,bug report colon the app crashes when opening settings dot j son period attach crash log dash two zero two six zero eight three zero dot text and reference issue v o i dash nine one eight,Bug report: The app crashes when opening settings.json. Attach crash-log-20260830.txt and reference issue VOI-918.,"Bug report: The app crashes when opening settings.j.
+
+Attach crash log: 2026-03-08-30.txt and reference issue v-o-i-9-1-8.",,dataset_system_prompt,False,0.8898305084745762,0.7492286906827565,0.35714285714285715,1.0701754385964912,240,44,0.8661140840004009,50.801621648701456
+C39,curated-sample-50,Curated transcript cleanup sample,sample_039,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,note colon the trial period ends tomorrow comma but the word period in the heading should remain lowercase period,"Note: The trial period ends tomorrow, but the word “period” in the heading should remain lowercase.","Note: The trial period ends tomorrow, but the word ""period"" in the heading should remain lowercase.",,dataset_system_prompt,False,0.9797979797979798,0.9120492259293733,0.0625,1.0,222,21,0.6809980000007272,30.83709496940898
+C40,curated-sample-50,Curated transcript cleanup sample,sample_040,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,open quote good writing is clear writing close quote new line dash Maya Chen,"“Good writing is clear writing.”
+—Maya Chen","Good writing is clear writing.
+
+Maya Chen",,dataset_system_prompt,False,0.9523809523809522,0.7499566976077031,0.5,0.9534883720930233,217,10,0.5098069579998992,19.6152677853447
+C41,curated-sample-50,Curated transcript cleanup sample,sample_041,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,recipe colon new paragraph numbered list first mix two cups of flour and one teaspoon of salt second add three hundred milliliters of water third bake for forty minutes at two hundred degrees Celsius,"Recipe:
+
+1. Mix 2 cups of flour and 1 teaspoon of salt.
+2. Add 300 milliliters of water.
+3. Bake for 40 minutes at 200 degrees Celsius.","Recipe:
+
+1. Mix two cups of flour and one teaspoon of salt.
+2. Add three hundred milliliters of water.
+3. Bake for forty minutes at two hundred degrees Celsius.",,dataset_system_prompt,False,0.847457627118644,0.7563899041140523,0.28,1.1851851851851851,239,41,0.8315512499993929,49.305439682797584
+C42,curated-sample-50,Curated transcript cleanup sample,sample_042,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,travel plan colon new paragraph September fifth flight at seven fifteen a m new line September sixth workshop at nine a m new line hotel budget one hundred eighty dollars per night,"Travel Plan:
+
+- September 5: Flight at 7:15 AM.
+- September 6: Workshop at 9:00 AM.
+- Hotel budget: $180 per night.","Travel Plan
+
+- September 5: Flight at 7:15 AM
+- September 6: Workshop at 9:00 AM
+- Hotel budget: $180 per night",,dataset_system_prompt,False,0.9823008849557522,0.8687513031806242,0.2,0.9652173913043478,235,41,0.8543366670000978,47.990448711474194
+C43,curated-sample-50,Curated transcript cleanup sample,sample_043,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,heading customer update new paragraph um three updates colon the mobile fix is live comma the desktop release is in review in review comma and support has answered all open tickets,"# Customer Update
+
+- The mobile fix is live.
+- The desktop release is in review.
+- Support has answered all open tickets.","Customer Update
+
+Three updates:
+
+- The mobile fix is live.
+- The desktop release is in review.
+- Support has answered all open tickets.",,dataset_system_prompt,False,0.9296875,0.9361739815064751,0.14285714285714285,1.115702479338843,234,32,0.8035916670005463,39.82121930089433
+C44,curated-sample-50,Curated transcript cleanup sample,sample_044,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,the c c d n cache cache should expire after three hundred seconds and the key belongs in red is,"The CDN cache should expire after 300 seconds, and the key belongs in Redis.","The CDN cache should expire after 300 seconds, and the key belongs in red.",,dataset_system_prompt,False,0.9733333333333334,0.9136307991162588,0.07142857142857142,0.9736842105263158,223,19,0.6251628749996598,30.392079824014402
+C45,curated-sample-50,Curated transcript cleanup sample,sample_045,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,question colon are we still planning to launch Friday question mark new paragraph answer colon yes comma assuming the final review passes period,"Question: Are we still planning to launch Friday?
+
+Answer: Yes, assuming the final review passes.","Are we still planning to launch Friday?
+
+Yes, assuming the final review passes.",,dataset_system_prompt,False,0.8977272727272727,0.7994799747547151,0.13333333333333333,0.8144329896907216,226,17,0.5797483750002357,29.323066235404436
+C46,curated-sample-50,Curated transcript cleanup sample,sample_046,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,hello this is Nina from Acme support comma I'm calling about ticket a c dash seven four two period please call me back at five p m period thank you,"Hello, this is Nina from Acme Support. I'm calling about ticket AC-742. Please call me back at 5:00 PM. Thank you.","Hello, this is Nina from Acme Support. I'm calling about ticket AC-742. Please call me back at 5:00 PM. Thank you.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,235,36,0.8371007499999905,43.00557609105046
+C47,curated-sample-50,Curated transcript cleanup sample,sample_047,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,heading launch checklist new paragraph bullet list open quote release approved close quote from Maya new line deploy version three point two new line email status at acme dot com after launch,"# Launch Checklist
+
+- “Release approved,” from Maya.
+- Deploy version 3.2.
+- Email status@acme.com after launch.","**Launch Checklist**
+
+- [ ] Release approved
+- [ ] Deploy version 3.2
+- [ ] Email status at acme.com after launch",,dataset_system_prompt,False,0.8266666666666667,0.5971018573981197,1.0666666666666667,1.0089285714285714,236,32,0.8131745830005457,39.35194319763746
+C48,curated-sample-50,Curated transcript cleanup sample,sample_048,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,dear team comma uh the launch is complete period the launch is complete and all systems are healthy period please report issues at status dot example dot com slash support period best comma Arjun,"Dear Team,
+
+The launch is complete, and all systems are healthy.
+
+Please report issues at status.example.com/support.
+
+Best,
+Arjun","Dear team,
+
+The launch is complete, and all systems are healthy. Please report issues at status.example.com/support.
+
+Best,
+Arjun",,dataset_system_prompt,False,0.9806949806949806,0.9597779126236939,0.058823529411764705,0.9923076923076923,239,30,0.7713515420000476,38.89277244745321
+C49,curated-sample-50,Curated transcript cleanup sample,sample_049,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,"The migration completed successfully, and no customer action is required.","The migration completed successfully, and no customer action is required.","The migration completed successfully, and no customer action is required.",,dataset_system_prompt,True,1.0,1.0,0.0,1.0,215,12,0.49836054100069305,24.078952912091232
+C50,curated-sample-50,Curated transcript cleanup sample,sample_050,,cleanup-2b-4bit,Cleanup Qwen3.5 2B 4-bit,Could you send the revised proposal before Friday afternoon?,Could you send the revised proposal before Friday afternoon?,Could you send the revised proposal before Friday afternoon?,,dataset_system_prompt,True,1.0,1.0,0.0,1.0,213,10,0.5757331659997362,17.36915743360976

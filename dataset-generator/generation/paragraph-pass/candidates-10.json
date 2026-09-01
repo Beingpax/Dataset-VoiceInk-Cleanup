@@ -304,9 +304,9 @@
     "file": "batch-049.jsonl",
     "category": "entity_normalization",
     "type": "natural_multi_error",
-    "output": "The purchase agreement needs three corrections before it goes back to the buyer. The closing date should be written as November 6, 2026, not November 6, 2026, because the lender's checklist uses the first format. The deposit amount is $12,500, and the escrow reference must be ES-41072. Please make sure the property address reads 93 Juniper Avenue, Suite 200, not 39 Juniper Avenue, Suite 200. The seller is Meera K. Shah, and her middle initial is required on the signature page. Send the revised PDF to counsel before 3:00 PM so they can circulate it to both parties.",
+    "output": "The purchase agreement needs three corrections before it goes back to the buyer. The closing date should be written as November 6, 2026 because the lender's checklist uses the first format. The deposit amount is $12,500, and the escrow reference must be ES-41072. Please make sure the property address reads 93 Juniper Avenue, Suite 200, not 39 Juniper Avenue, Suite 200. The seller is Meera K. Shah, and her middle initial is required on the signature page. Send the revised PDF to counsel before 3:00 PM so they can circulate it to both parties.",
     "paragraphs": [
-      "The purchase agreement needs three corrections before it goes back to the buyer. The closing date should be written as November 6, 2026, not November 6, 2026, because the lender's checklist uses the first format. The deposit amount is $12,500, and the escrow reference must be ES-41072. Please make sure the property address reads 93 Juniper Avenue, Suite 200, not 39 Juniper Avenue, Suite 200. The seller is Meera K. Shah, and her middle initial is required on the signature page. Send the revised PDF to counsel before 3:00 PM so they can circulate it to both parties."
+      "The purchase agreement needs three corrections before it goes back to the buyer. The closing date should be written as November 6, 2026 because the lender's checklist uses the first format. The deposit amount is $12,500, and the escrow reference must be ES-41072. Please make sure the property address reads 93 Juniper Avenue, Suite 200, not 39 Juniper Avenue, Suite 200. The seller is Meera K. Shah, and her middle initial is required on the signature page. Send the revised PDF to counsel before 3:00 PM so they can circulate it to both parties."
     ]
   },
   {
@@ -374,7 +374,7 @@
     "file": "batch-050.jsonl",
     "category": "email_formatting",
     "type": "natural_multi_error",
-    "output": "Hello everyone,\n\nI wanted to share the plan for Saturday's volunteer shift. We will meet at the library courtyard at nine, then walk to the food pantry together so nobody has to find the entrance alone. Please wear closed shoes because the storage room floor can be dusty, and bring a water bottle if you have one. We still need one person to drive the donated boxes to the west side location after noon.\n\nIf you cannot come after all, please reply by Friday evening so I can adjust the sign-in sheet.\n\nThank you for helping with this.\n\nWarmly,\nRina",
+    "output": "Hello everyone,\n\nI wanted to share the plan for Saturday's volunteer shift. We will meet at the library courtyard at nine, then walk to the food pantry together so nobody has to find the entrance alone. Please wear closed shoes because the storage room floor can be dusty, and bring a water bottle if you have one. We still need one person to drive the donated boxes to the west side location after noon.\n\nIf you cannot come after all, please reply by Friday evening so I can adjust the sign-in sheet.\n\nThank you for helping",
     "paragraphs": [
       "I wanted to share the plan for Saturday's volunteer shift. We will meet at the library courtyard at nine, then walk to the food pantry together so nobody has to find the entrance alone. Please wear closed shoes because the storage room floor can be dusty, and bring a water bottle if you have one. We still need one person to drive the donated boxes to the west side location after noon."
     ]

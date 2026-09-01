@@ -1,0 +1,33 @@
+[INFO] Quantized model with 4.508 bits per weight.
+{
+  "id": "new-cleanup-0.8b-4bit",
+  "source_model_id": "new-cleanup-0.8b",
+  "source_archive": "ft-bc3f05f0-41ba-2026-08-31-05-31-47.tar.zst",
+  "source_archive_sha256": "422fc5eb8e3d1a4cc778a328c5ea0c4ccc6d763119574492d37f3dfe43e28f6b",
+  "started_at": "2026-08-31T05:48:03.122384+00:00",
+  "completed_at": "2026-08-31T05:48:07.258829+00:00",
+  "conversion_seconds": 4.13646716600033,
+  "versions": {
+    "mlx": "0.32.2",
+    "mlx-lm": "0.31.3",
+    "transformers": "5.16.1"
+  },
+  "quantization": {
+    "bits": 4,
+    "group_size": 64,
+    "mode": "affine",
+    "calibration": false,
+    "activation_quantization": false,
+    "kv_cache_quantization": false
+  },
+  "quantized_module_count": 187,
+  "unchanged_tensor_count": 133,
+  "text_parameter_count": 752393024,
+  "source_text_tensor_bytes": 1504791232,
+  "quantized_text_tensor_bytes": 423942848,
+  "quantized_weight_file_bytes": 424031372,
+  "effective_bits_per_text_parameter": 4.507674414588937,
+  "source_all_weight_file_bytes": 1746942600,
+  "validation": "Strict reload; exact equality of every saved/reloaded tensor; unchanged nonquantized tensors; tokenizer bytes and EOS preserved; source hashes unchanged. No inference or calibration during conversion.",
+  "scope": "Text-only MLX checkpoint. Eligible linear/embedding weights use 4-bit affine groups of 64; scales, biases, norms and other nonquantized tensors retain floating precision. Vision/MTP tensors are omitted, as in the baseline text inference."
+}

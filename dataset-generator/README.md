@@ -207,7 +207,21 @@ No builds are authorized merely by generation or verification requests.
 
 ## 10. Training, evaluation, and governance
 
-The intended downstream model is approximately 2B parameters, using task-specific supervised fine-tuning, potentially LoRA/QLoRA. Training is separate from authoring. Use the selected model's supported chat template and loss on cleaned assistant output, not metadata or reasoning traces. Hyperparameters, final split sizes, and production corpus size require a separate decision.
+The intended downstream model is approximately 2B parameters, using task-specific supervised fine-tuning, potentially LoRA/QLoRA. Training is separate from authoring. Use the selected model's supported chat template and loss on cleaned assistant output, not metadata or reasoning traces. Hyperparameters and production corpus size require a separate decision.
+
+### Current training/validation files
+
+The combined `data/cleanup-dataset.jsonl` remains unchanged. Its 5,000 records are partitioned into:
+
+- `data/cleanup-training.jsonl`: 4,500 records (90%).
+- `data/cleanup-validation.jsonl`: 500 records (10%).
+- `data/split-report.json`: source/output hashes, held-out batches, coverage counts, seed, and separation checks.
+
+Validation holds out entire authoring batches 004, 009, 017, 020, and 033; the other 45 batches belong only to training. Deterministic coverage balancing includes all nine categories, all three record types, all 23 observed error labels, every domain, presentation style, formatting feature, and input-length band in both files. Training has 450 single-error, 3,825 multi-error, and 225 no-change pairs; validation has 50, 425, and 25 respectively. Rare combinations are not guaranteed in both sets, and some rare validation error types have only one example.
+
+Original JSONL record lines, IDs, messages, and provenance are preserved. Only row order changes, using seeded shuffling (seed 20260831). The splits have no shared IDs, authoring batches, or normalized input/output text. Batch grouping reduces shared-authoring leakage, but does not prove that unannotated semantic template families are independent across batches. These are development splits, not a new human-reviewed or real-audio benchmark.
+
+Reproduce or refresh after approved source edits with `node dataset-generator/generation/split.mjs`. The existing report freezes validation batch membership on later runs. Check its source hash against the combined file before training; refreshing the viewer alone does not refresh the training/validation files. Do not change the holdout after evaluating models on it. The separate benchmark and the pending paragraph reclassifications are untouched.
 
 Keep related documents, sessions, recordings, and synthetic template families in the same split. Do not leak benchmark or locked-test material into training. Evaluate meaning preservation, edit precision/recall, entity and number preservation, no-change corruption, and category/combination performance, including domain, recognizer, context, and length holdouts. Aggregate metrics alone are insufficient.
 
