@@ -1,0 +1,221 @@
+{
+  "source": "cleanup-dataset.jsonl",
+  "source_sha256": "33d4e0a1dfefa8bd355d0f4e32c919060d0a23579c81094841e502925aea9109",
+  "seed": 20260831,
+  "ratio": "90/10",
+  "method": "Whole-batch holdout selected by deterministic coverage balancing; seeded row shuffle within each file. Existing validation batch membership is frozen on subsequent runs.",
+  "validation_batches": [
+    "batch-004",
+    "batch-006",
+    "batch-011",
+    "batch-022",
+    "batch-033"
+  ],
+  "training_batches": [
+    "batch-001",
+    "batch-002",
+    "batch-003",
+    "batch-005",
+    "batch-007",
+    "batch-008",
+    "batch-009",
+    "batch-010",
+    "batch-012",
+    "batch-013",
+    "batch-014",
+    "batch-015",
+    "batch-016",
+    "batch-017",
+    "batch-018",
+    "batch-019",
+    "batch-020",
+    "batch-021",
+    "batch-023",
+    "batch-024",
+    "batch-025",
+    "batch-026",
+    "batch-027",
+    "batch-028",
+    "batch-029",
+    "batch-030",
+    "batch-031",
+    "batch-032",
+    "batch-034",
+    "batch-035",
+    "batch-036",
+    "batch-037",
+    "batch-038",
+    "batch-039",
+    "batch-040",
+    "batch-041",
+    "batch-042",
+    "batch-043",
+    "batch-044",
+    "batch-045",
+    "batch-046",
+    "batch-047",
+    "batch-048",
+    "batch-049",
+    "batch-050",
+    "batch-051"
+  ],
+  "checks": {
+    "source_unchanged": true,
+    "source_records_preserved_verbatim": true,
+    "id_overlap": 0,
+    "batch_overlap": 1,
+    "normalized_input_overlap": 0,
+    "normalized_output_overlap": 0,
+    "every_observed_marginal_label_in_both": true
+  },
+  "limitations": [
+    "The 50 original authoring batches remain whole-batch holdouts. Batch 051 is deliberately stratified 90/10 so explicit dictated-parenthesis behavior is represented in both training and validation.",
+    "Authoring batches are grouping proxies, not independently recorded sessions. Semantic template families across batches are not annotated.",
+    "Coverage applies to individual categories, types, errors, domains, presentation, formats and length bands, not every rare combination.",
+    "Existing generation and review metadata are preserved; splitting does not certify training quality."
+  ],
+  "training": {
+    "file": "cleanup-training.jsonl",
+    "records": 4590,
+    "sha256": "6e8ee84131decc2e866af056d234ddbd5abba56bc8443332df0129751fe04b36",
+    "coverage": {
+      "category": {
+        "punctuation_capitalization_dictated_formatting": 765,
+        "entity_normalization": 562,
+        "no_change": 225,
+        "list_formatting": 450,
+        "repetition_stutters": 675,
+        "filler_words": 675,
+        "false_starts_self_corrections": 450,
+        "email_formatting": 563,
+        "context_inferred_quotation": 225
+      },
+      "type": {
+        "single_principal_error": 458,
+        "natural_multi_error": 3907,
+        "no_change": 225
+      },
+      "domain": {
+        "general": 2131,
+        "financial": 391,
+        "medical": 362,
+        "technical": 1328,
+        "legal": 378
+      },
+      "presentation": {
+        "absent": 1370,
+        "correct": 2449,
+        "partial": 771
+      },
+      "length": {
+        "30–79": 2710,
+        "20–29": 1394,
+        "80–200": 486
+      },
+      "error": {
+        "punctuation": 2235,
+        "capitalization": 1723,
+        "currency_or_measurement": 316,
+        "quotation_formatting": 273,
+        "list_formatting": 456,
+        "repetition": 889,
+        "time_normalization": 463,
+        "filler": 1530,
+        "self_correction": 414,
+        "date_normalization": 257,
+        "paragraph_formatting": 830,
+        "greeting_signoff": 595,
+        "technical_term": 146,
+        "acronym": 155,
+        "number_normalization": 463,
+        "dictated_formatting": 429,
+        "address_formatting": 76,
+        "email_formatting": 82,
+        "false_start": 137,
+        "name_or_entity": 56,
+        "stutter": 20,
+        "spelling": 18,
+        "asr_substitution": 3
+      },
+      "format": {
+        "quotation": 290,
+        "ordered_list": 118,
+        "unordered_list": 339,
+        "paragraphs": 892,
+        "email_layout": 588
+      }
+    }
+  },
+  "validation": {
+    "file": "cleanup-validation.jsonl",
+    "records": 510,
+    "sha256": "87ae701e1d9b0001471d03c2609a7869f4f45bd0fd3cfae94874aaf197228e46",
+    "coverage": {
+      "category": {
+        "email_formatting": 62,
+        "entity_normalization": 63,
+        "repetition_stutters": 75,
+        "filler_words": 75,
+        "punctuation_capitalization_dictated_formatting": 85,
+        "list_formatting": 50,
+        "context_inferred_quotation": 25,
+        "no_change": 25,
+        "false_starts_self_corrections": 50
+      },
+      "type": {
+        "single_principal_error": 52,
+        "natural_multi_error": 433,
+        "no_change": 25
+      },
+      "domain": {
+        "general": 227,
+        "legal": 44,
+        "medical": 45,
+        "technical": 147,
+        "financial": 47
+      },
+      "presentation": {
+        "correct": 280,
+        "absent": 147,
+        "partial": 83
+      },
+      "length": {
+        "30–79": 305,
+        "20–29": 151,
+        "80–200": 54
+      },
+      "error": {
+        "greeting_signoff": 62,
+        "paragraph_formatting": 84,
+        "address_formatting": 11,
+        "date_normalization": 34,
+        "time_normalization": 48,
+        "repetition": 106,
+        "filler": 148,
+        "capitalization": 210,
+        "punctuation": 242,
+        "dictated_formatting": 67,
+        "list_formatting": 51,
+        "acronym": 19,
+        "number_normalization": 57,
+        "currency_or_measurement": 27,
+        "quotation_formatting": 29,
+        "self_correction": 45,
+        "technical_term": 12,
+        "false_start": 13,
+        "name_or_entity": 7,
+        "spelling": 1,
+        "email_formatting": 7,
+        "stutter": 5,
+        "asr_substitution": 1
+      },
+      "format": {
+        "email_layout": 63,
+        "paragraphs": 114,
+        "unordered_list": 38,
+        "quotation": 29,
+        "ordered_list": 13
+      }
+    }
+  }
+}

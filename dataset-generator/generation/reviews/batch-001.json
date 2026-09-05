@@ -1,6 +1,6 @@
 {
   "batch": "batch-001",
-  "sha256": "a0a6fe42fa3e4cf51856cb06dc90facdce66fe4c6ed19895aedcb4a58abf98e1",
+  "sha256": "898d93c5c9d38fbf7064039a917a3f20f54b34d951a15157039fb0c13a387f96",
   "reviewer": "foreground",
   "status": "accepted",
   "accepted_ids": [
@@ -113,10 +113,6 @@
     "entities",
     "metadata"
   ],
-  "notes": [
-    "Reviewed all 100 raw/target pairs and metadata. Corrected unsupported identifier separators and an under-specified email address, preserved lexical like, removed misleading unchanged-entity labels, and constrained self-corrections to short local spans.",
-    "Restored full substantive list content; arranged email body text before existing signatures; added context-supported paragraph boundaries.",
-    "Spread ten extended inputs across eight primary categories instead of concentrating them in entity normalization. Rechecked changed records and automated counts, word limits, IDs, and duplicates.",
-    "Synthetic AI review only; no human review or guarantee of error-free targets."
-  ]
+  "review_method": "Full semantic audit, targeted remediation, and independent correction cross-check.",
+  "human_reviewed": false
 }

@@ -127,7 +127,7 @@ function main() {
   if (!process.argv.includes('--write')) return;
   const records = canonicalRecords(result.rows);
   const jsonl = records.map(row=>JSON.stringify(row)).join('\n')+'\n';
-  const targets = ['dataset-generator/data/generated-5000.jsonl','public/data/generated-5000.jsonl'];
+  const targets = ['dataset-generator/data/generated-5100.jsonl','public/data/generated-5100.jsonl'];
   for (const target of targets) fs.writeFileSync(path.join(root,target),jsonl);
   const report = {...result.report,passed:true,dataset_sha256:hash(jsonl),outputs:targets};
   fs.writeFileSync(path.join(directory,'verification.json'),JSON.stringify(report,null,2)+'\n');

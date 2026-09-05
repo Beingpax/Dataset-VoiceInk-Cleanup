@@ -5,11 +5,11 @@ import {config, expectedBatch, validateRecord, validateBatch, words, normalized}
 const text = 'Please leave the small parcel beside the kitchen door because I will be upstairs working when the delivery driver arrives.';
 const fixture = {id:'sample_0001', input:text, output:text, category:'no_change', type:'no_change', errors:[], features:[], domain:'general', scenario:'Parcel delivery instruction', presentation:'correct'};
 
-test('batch categories sum exactly to the approved 5,000 allocation', () => {
-  assert.equal(Object.values(config.categories).reduce((a,b)=>a+b,0),5000);
-  assert.equal(Object.values(config.record_types).reduce((a,b)=>a+b,0),5000);
+test('batch categories sum exactly to the approved 5,100 allocation', () => {
+  assert.equal(Object.values(config.categories).reduce((a,b)=>a+b,0),5100);
+  assert.equal(Object.values(config.record_types).reduce((a,b)=>a+b,0),5100);
   const totals = {};
-  for (let batch=1; batch<=50; batch++) for (const [key,count] of Object.entries(expectedBatch(batch))) totals[key]=(totals[key]||0)+count;
+  for (let batch=1; batch<=51; batch++) for (const [key,count] of Object.entries(expectedBatch(batch))) totals[key]=(totals[key]||0)+count;
   assert.deepEqual(totals, config.categories);
 });
 

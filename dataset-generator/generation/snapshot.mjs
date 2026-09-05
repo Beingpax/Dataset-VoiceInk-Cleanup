@@ -28,14 +28,16 @@ export function draftSnapshot() {
   return {
     records: canonicalRecords(rows, {reviewedIds}),
     status: {
-      collection_status: 'draft',
+      collection_status: reviewedIds.size === rows.length ? 'ai_reviewed' : 'draft',
       target: config.target_pairs,
       generated: rows.length,
       batch_checks_passed: batchPassed,
       foreground_reviewed: reviewedIds.size,
       awaiting_foreground_review: rows.length - reviewedIds.size,
       human_reviewed: false,
-      note: 'Review snapshot only. Cross-batch corrections and full semantic review may still be in progress. Batch checks do not certify naturalness or faithfulness.',
+      note: reviewedIds.size === rows.length
+        ? 'All records are covered by hash-bound foreground AI review. This remains synthetic data, not human-reviewed gold data.'
+        : 'Review snapshot only. Batch checks do not certify naturalness or faithfulness.',
     },
   };
 }

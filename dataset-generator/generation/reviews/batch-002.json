@@ -1,6 +1,6 @@
 {
   "batch": "batch-002",
-  "sha256": "ae867fc4492fe0c37f2cd4bfd211b1ae2e6c83057e964292191724c1c9f594f1",
+  "sha256": "bdc4fcc151647f675e6d098501adc1979356c7c7a00af109752c1d4165f5357f",
   "reviewer": "foreground",
   "status": "accepted",
   "accepted_ids": [
@@ -113,11 +113,6 @@
     "entities",
     "metadata"
   ],
-  "notes": [
-    "Reviewed all 100 raw/target pairs and metadata once; applied targeted corrections rather than repeating the full review.",
-    "Fixed an unsupported identifier separator, a meaning-changing database-term correction, a contradicted delivery instruction, and a dropped shopping-location qualifier.",
-    "Converted artificial compressed status dictation into full spoken statements, honored the dictated question mark, retained complete list introductions and substantive details.",
-    "Reauthored false multi-error examples with actual independent cleanup behaviors; corrected entity/error and presentation labels; retained all quotas and no-change equality.",
-    "Synthetic AI review only, not human-reviewed gold."
-  ]
+  "review_method": "Full semantic audit, targeted remediation, and independent correction cross-check.",
+  "human_reviewed": false
 }

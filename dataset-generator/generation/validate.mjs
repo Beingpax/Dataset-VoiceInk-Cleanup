@@ -24,6 +24,7 @@ const fields = ['id', 'input', 'output', 'category', 'type', 'errors', 'features
 const tally = (rows, key) => rows.reduce((acc, row) => { acc[row[key]] = (acc[row[key]] || 0) + 1; return acc; }, {});
 
 export function expectedBatch(batch) {
+  if (batch === 51) return {punctuation_capitalization_dictated_formatting: 100};
   return {filler_words: 15, repetition_stutters: 15, false_starts_self_corrections: 10, punctuation_capitalization_dictated_formatting: 15, list_formatting: 10, email_formatting: batch % 2 ? 13 : 12, entity_normalization: batch % 2 ? 12 : 13, context_inferred_quotation: 5, no_change: 5};
 }
 
@@ -81,8 +82,8 @@ export function validateBatch(rows, batch) {
   const start = (batch - 1) * 100 + 1;
   rows.forEach((row, i) => { if (row.id !== `sample_${String(start + i).padStart(4, '0')}`) failures.push(`batch ${batch}: unexpected ID/order at row ${i + 1}`); });
   checkCounts(tally(rows, 'category'), expectedBatch(batch), `batch ${batch} categories`, failures);
-  checkCounts(tally(rows, 'type'), {single_principal_error: 10, natural_multi_error: 85, no_change: 5}, `batch ${batch} types`, failures);
-  const single = {filler_words: 2, repetition_stutters: 2, false_starts_self_corrections: 1, punctuation_capitalization_dictated_formatting: 1, list_formatting: 1, email_formatting: 1, entity_normalization: 1, context_inferred_quotation: 1};
+  checkCounts(tally(rows, 'type'), batch === 51 ? {single_principal_error: 10, natural_multi_error: 90} : {single_principal_error: 10, natural_multi_error: 85, no_change: 5}, `batch ${batch} types`, failures);
+  const single = batch === 51 ? {punctuation_capitalization_dictated_formatting: 10} : {filler_words: 2, repetition_stutters: 2, false_starts_self_corrections: 1, punctuation_capitalization_dictated_formatting: 1, list_formatting: 1, email_formatting: 1, entity_normalization: 1, context_inferred_quotation: 1};
   checkCounts(tally(rows.filter(row => row.type === 'single_principal_error'), 'category'), single, `batch ${batch} single-error categories`, failures);
   const extended = rows.filter(row => words(row.input).length >= 80).length;
   const medium = rows.filter(row => words(row.input).length >= 30 && words(row.input).length < 80).length;

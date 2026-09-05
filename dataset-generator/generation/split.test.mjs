@@ -11,11 +11,11 @@ const read = name => fs.readFileSync(new URL(`cleanup-${name}.jsonl`, base), 'ut
 
 test('split files preserve every source record exactly once and the source hash', () => {
   const training = read('training'), validation = read('validation');
-  assert.equal(training.length, 4500);
-  assert.equal(validation.length, 500);
+  assert.equal(training.length, 4590);
+  assert.equal(validation.length, 510);
   assert.equal(crypto.createHash('sha256').update(source).digest('hex'), report.source_sha256);
   assert.deepEqual([...training, ...validation].sort(), source.trimEnd().split('\n').sort());
-  assert.equal(new Set([...training, ...validation].map(line => JSON.parse(line).id)).size, 5000);
+  assert.equal(new Set([...training, ...validation].map(line => JSON.parse(line).id)).size, 5100);
 });
 
 test('frozen batch membership and shuffled output are reproducible', () => {
@@ -23,7 +23,7 @@ test('frozen batch membership and shuffled output are reproducible', () => {
   assert.deepEqual(result.training.map(r => r.line), read('training'));
   assert.deepEqual(result.validation.map(r => r.line), read('validation'));
   const trainBatches = new Set(result.training.map(r => r.row.metadata.generation_batch));
-  assert.ok(result.validation.every(r => !trainBatches.has(r.row.metadata.generation_batch)));
+  assert.ok(result.validation.every(r => r.row.metadata.generation_batch === 'batch-051' || !trainBatches.has(r.row.metadata.generation_batch)));
 });
 
 test('both files cover every observed label and contain no normalized transcript overlap', () => {

@@ -1,12 +1,10 @@
 # Transcript Cleanup Dataset: Authoring Guide
 
 - Active behavior: `polished-clean-v1`
-- Current generator collection: 5,000 synthetic drafts available for inspection; the previous 180 pairs remain removed
-- Delivered generation target: 5,000 synthetic pairs; full content review deferred by the user
+- Current generator collection: 5,100 synthetic, AI-reviewed pairs; the previous 180 pairs remain removed
+- Delivered collection: 5,100 pairs, including 100 high-confidence explicit dictated-parenthesis examples
 
-This is the active authoring specification. Editing this guide does not regenerate or retrospectively relabel existing datasets. Generation and delivery of the 5,000-pair draft collection are complete: known corrections are applied, structural checks pass, and the viewer copies are synchronized. This is not a fully content-reviewed training collection.
-
-The user has explicitly skipped the remaining full content review for now to limit resource use. Earlier revisions of 600 pairs received foreground AI review; those logs remain available. Subsequent paragraph-only revisions retain draft status wherever the original batch review hash no longer matches. Full review is not implied by targeted formatting work. Do not resume full content review or produce a fully reviewed export without a new request.
+This is the active authoring specification. Editing this guide does not regenerate or retrospectively relabel existing datasets. Generation, semantic review, remediation, and delivery of the 5,100-pair collection are complete. Structural checks pass, review hashes cover all 51 batches, and the authoring/public copies are synchronized. The collection is AI-reviewed synthetic data, not human-reviewed gold data.
 
 ## 1. Purpose and boundaries
 
@@ -60,28 +58,28 @@ A category of email formatting can therefore have errors `greeting_signoff`, `pa
 
 ## 4. Composition and length
 
-The record-type composition is 10% `single_principal_error`, 85% `natural_multi_error`, and 5% `no_change`. For 5,000 pairs, that is 500 / 4,250 / 250. A single-principal-error example centers on one behavior; multi-error examples normally combine two or three meaningful behaviors. Do not overload examples to fill quotas.
+The record-type composition is 510 `single_principal_error`, 4,340 `natural_multi_error`, and 250 `no_change` pairs. A single-principal-error example centers on one behavior; multi-error examples normally combine two or three meaningful behaviors. Do not overload examples to fill quotas.
 
-The following is the agreed principal-category allocation for the planned 5,000-pair batch, not a claim about measured production frequencies:
+The following is the principal-category allocation for the 5,100-pair collection, not a claim about measured production frequencies:
 
 | Principal category | Planned pairs |
 |---|---:|
 | Fillers | 750 |
 | Repetition and stutters | 750 |
 | Brief false starts and immediate corrections | 500 |
-| Punctuation, capitalization, dictated formatting | 750 |
+| Punctuation, capitalization, dictated formatting | 850 |
 | List formatting | 500 |
 | Email formatting | 625 |
 | Entity normalization | 625 |
 | Context-inferred quotation | 250 |
 | Already correct | 250 |
-| **Total** | **5,000** |
+| **Total** | **5,100** |
 
-These are two views of the same 5,000 pairs, not separate pools. Do not rebalance the separate benchmark corpus to fit future quotas.
+These are two views of the same 5,100 pairs, not separate pools. Do not rebalance the separate benchmark corpus to fit future quotas.
 
 Every newly created raw ASR input must contain 20–200 words inclusive, across every category, including no-change examples. Count words as non-empty whitespace-separated tokens in the user message, not in the system instruction or metadata. There is no minimum word count for the cleaned output. Do not pad inputs with meaningless filler, duplicate ideas, or unsupported facts to reach the minimum; author a naturally complete message instead. This rule applies from now on and does not require rewriting existing records.
 
-Not everything should stop at 20 words. Mix shorter inputs of 20+ words, multi-sentence messages, and extended explanations. Retain at least 20% inputs of 30 words or more within sufficiently populated changed-record groups, spread across categories. Target approximately 500 extended inputs of 80–200 words, included within the 5,000 and the 30+ word coverage, not added on top. No raw input may exceed 200 words.
+Not everything should stop at 20 words. Mix shorter inputs of 20+ words, multi-sentence messages, and extended explanations. Retain at least 20% inputs of 30 words or more within sufficiently populated changed-record groups, spread across categories. The current collection contains 540 extended inputs of 80–200 words, included within the 5,100 and the 30+ word coverage, not added on top. No raw input may exceed 200 words.
 
 Both shorter and longer passages may need multiple paragraphs when the topic, purpose, or discourse structure changes; cohesive passages may remain together at either length. Length alone never mandates or prevents a paragraph break.
 
@@ -151,7 +149,7 @@ Here, “the phrase” identifies the quoted text. Emphasis alone is insufficien
 
 Infer paragraph boundaries from changes in topic, purpose, stage, or discourse context, even in one uninterrupted ASR block without spoken commands. Apply this to shorter as well as longer passages when a real structural boundary exists. A change in tone may support a boundary but does not require one by itself. Keep related sentences together; do not split every sentence or use a fixed word threshold.
 
-For targeted formatting passes, flag output paragraphs longer than 60 words with no line breaks for AI-selected boundaries. This is a selection threshold, not a rigid maximum: retain cohesive passages where no useful break exists. Insert breaks at existing sentence boundaries around meaningful information shifts; do not rewrite text, change raw inputs, or force a fixed number of sentences or paragraphs. Keep error labels truthful; changes affecting the agreed category/type totals require approval. The current pass is recorded in `generation/paragraph-pass/report.json`.
+For targeted formatting passes, flag output paragraphs longer than 60 words with no line breaks for AI-selected boundaries. This is a selection threshold, not a rigid maximum: retain cohesive passages where no useful break exists. Insert breaks at existing sentence boundaries around meaningful information shifts; do not rewrite text, change raw inputs, or force a fixed number of sentences or paragraphs. Keep error labels truthful; changes affecting the agreed category/type totals require approval.
 
 Infer lists from genuine steps or a substantial enumeration. A short sentence naming several items can remain a sentence. Do not invent list content or shorten full statements to create bullets.
 
@@ -211,13 +209,13 @@ The intended downstream model is approximately 2B parameters, using task-specifi
 
 ### Current training/validation files
 
-The combined `data/cleanup-dataset.jsonl` remains unchanged. Its 5,000 records are partitioned into:
+The combined `data/cleanup-dataset.jsonl` contains 5,100 records partitioned into:
 
-- `data/cleanup-training.jsonl`: 4,500 records (90%).
-- `data/cleanup-validation.jsonl`: 500 records (10%).
+- `data/cleanup-training.jsonl`: 4,590 records (90%).
+- `data/cleanup-validation.jsonl`: 510 records (10%).
 - `data/split-report.json`: source/output hashes, held-out batches, coverage counts, seed, and separation checks.
 
-Validation holds out entire authoring batches 004, 009, 017, 020, and 033; the other 45 batches belong only to training. Deterministic coverage balancing includes all nine categories, all three record types, all 23 observed error labels, every domain, presentation style, formatting feature, and input-length band in both files. Training has 450 single-error, 3,825 multi-error, and 225 no-change pairs; validation has 50, 425, and 25 respectively. Rare combinations are not guaranteed in both sets, and some rare validation error types have only one example.
+Five original authoring batches are held out in full. Batch 051 is deliberately divided 90/10 so explicit dictated-parenthesis behavior appears in both training and validation. Deterministic coverage balancing includes every observed category, record type, error label, domain, presentation style, formatting feature, and input-length band in both files. Rare combinations are not guaranteed in both sets.
 
 Original JSONL record lines, IDs, messages, and provenance are preserved. Only row order changes, using seeded shuffling (seed 20260831). The splits have no shared IDs, authoring batches, or normalized input/output text. Batch grouping reduces shared-authoring leakage, but does not prove that unannotated semantic template families are independent across batches. These are development splits, not a new human-reviewed or real-audio benchmark.
 
@@ -229,7 +227,7 @@ Keep source provenance, consent, retention/deletion requirements, licenses, data
 
 ## 11. Files and viewer
 
-The previous 180-pair generator collection, its component files, and all four public viewer copies remain removed. The replacement 5,000-pair draft collection is directly selectable as **Cleanup dataset** in the viewer and downloadable there. It is not yet the accepted final collection.
+The previous 180-pair generator collection and its viewer copies remain removed. The reviewed 5,100-pair replacement is directly selectable as **Cleanup dataset** in the viewer and downloadable there.
 
 The viewer defaults to the separate labeled benchmark in `public/data/benchmark-sample.jsonl` (relative to the repository root). Generator snapshots do not write benchmark files, source snapshots, or results in `comparison/`. The generation page links directly to `#/viewer?source=cleanup`; other JSONL can still be opened through the local file picker. Authoring and public draft copies are synchronized by the snapshot command.
 

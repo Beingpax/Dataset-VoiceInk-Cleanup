@@ -8,7 +8,7 @@ import useArrowNavigation from '../hooks/useArrowNavigation.js';
 
 const sources = [
   { id: 'benchmark', label: 'Benchmark corpus', detail: '100 labeled cases', paths: ['data/benchmark-sample.jsonl'] },
-  { id: 'cleanup', label: 'Cleanup dataset', detail: '5,000 transcript-cleanup pairs', paths: ['data/cleanup-dataset.jsonl'] },
+  { id: 'cleanup', label: 'Cleanup dataset', detail: '5,100 transcript-cleanup pairs', paths: ['data/cleanup-dataset.jsonl'] },
 ];
 
 function unique(records, key, flatten = false) {

@@ -1,4 +1,4 @@
-# Active 5,000-pair generation contract
+# Active 5,100-pair generation contract
 
 Read ../README.md completely. Its cleanup behavior is authoritative. Author genuinely distinct communications, not templates with swapped names/numbers. Never copy benchmark cases or old datasets.
 

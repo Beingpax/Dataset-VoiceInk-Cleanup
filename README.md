@@ -15,7 +15,7 @@ The primary website is now a React 19 application powered by Vite and React Rout
 
 `HashRouter` keeps every route compatible with static hosting and GitHub Pages without server rewrite rules.
 
-The JSONL viewer is implemented as the React page `src/pages/JsonlViewerPage.jsx`. It provides a prominent record number, horizontal record selection, metadata filters, previous/next navigation, and a large side-by-side Raw ASR Input versus Target Output comparison. The benchmark corpus is the default built-in source. **Cleanup dataset** directly opens the separate 5,000-pair review snapshot, with per-record AI-review status and a JSONL download. Local JSONL can also be selected without uploading it.
+The JSONL viewer is implemented as the React page `src/pages/JsonlViewerPage.jsx`. It provides a prominent record number, horizontal record selection, metadata filters, previous/next navigation, and a large side-by-side Raw ASR Input versus Target Output comparison. The benchmark corpus is the default built-in source. **Cleanup dataset** directly opens the separate 5,100-pair dataset, with per-record review status and a JSONL download. Local JSONL can also be selected without uploading it.
 
 ### Local development
 
@@ -50,13 +50,13 @@ The earlier dependency-free comparison website remains under [`comparison/site/`
 - The concise active authoring guide in `dataset-generator/README.md`.
 - The `polished-clean-v1` cleanup contract.
 - Dataset schema and category strategy.
-- The approved 5,000-pair composition and generation rules.
+- The approved 5,100-pair composition and generation rules, including 100 explicit dictated-parenthesis examples.
 - Product, design, and implementation summaries.
 - The original dataset overview page, retained as a separate generator/authoring surface.
 
-The previous 180-pair generator collection and its viewer copies have been removed. Its replacement is a delivered 5,000-pair **draft**, not a fully reviewed training collection. Open `#/viewer?source=cleanup` to inspect it. The user has skipped remaining full content review; requested paragraph-only updates are tracked separately in `dataset-generator/generation/paragraph-pass/report.json`. Earlier content-review logs for 600 pairs are retained, but only matching current batch hashes qualify for the viewer's reviewed status. Refresh synchronized authoring/public copies after edits with `node dataset-generator/generation/snapshot.mjs`; current counts are recorded in `dataset-generator/generation/draft-status.json`. Skipping review does not bypass the separate fully reviewed export gate.
+The previous 180-pair generator collection has been replaced by a reviewed 5,100-pair cleanup dataset. Open `#/viewer?source=cleanup` to inspect it. Refresh synchronized authoring/public copies after approved source edits with `node dataset-generator/generation/snapshot.mjs`; current counts and the source hash are recorded in `dataset-generator/generation/draft-status.json`.
 
-Training and validation copies are available in `dataset-generator/data/cleanup-training.jsonl` (4,500 pairs) and `dataset-generator/data/cleanup-validation.jsonl` (500 pairs). The combined cleanup dataset is unchanged. Whole authoring batches stay in one split, with coverage balanced across categories, errors, domains, presentation, formats, and lengths. `dataset-generator/data/split-report.json` records coverage, hashes, and the frozen validation batches; regenerate these files after approved source edits with `node dataset-generator/generation/split.mjs`.
+Training and validation copies are available in `dataset-generator/data/cleanup-training.jsonl` (4,590 pairs) and `dataset-generator/data/cleanup-validation.jsonl` (510 pairs). The original 50 authoring batches remain whole-batch holdouts; the parenthesis-focused batch is deliberately divided 90/10 so that behavior is represented in both partitions. `dataset-generator/data/split-report.json` records coverage and hashes; regenerate the split after approved source edits with `node dataset-generator/generation/split.mjs`.
 
 The viewer defaults to the fixed 100-case comparison corpus in `public/data/benchmark-sample.jsonl`. Generator commands do not modify benchmark source snapshots or results. The fixed corpus matches the original published baselines; newer working-sample revisions and the initial Fluid runs on that expanded sample are preserved separately under `comparison/artifacts/`.
 

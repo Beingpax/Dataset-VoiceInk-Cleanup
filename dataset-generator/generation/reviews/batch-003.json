@@ -1,6 +1,6 @@
 {
   "batch": "batch-003",
-  "sha256": "82701e59ece6e555d09e5d792af65063b6e6dd6e1bb5db978eca75d3890ee206",
+  "sha256": "f0174c3a115aa33a9c2bd905561a9f7204677add96664de4dc319da098a69aaa",
   "reviewer": "foreground",
   "status": "accepted",
   "accepted_ids": [
@@ -113,11 +113,6 @@
     "entities",
     "metadata"
   ],
-  "notes": [
-    "Reviewed all 100 pairs and metadata, then rechecked targeted corrections.",
-    "Removed unrelated room-number content and unsupported case-number separators; made the dictated email address explicit and preserved lexical Like I said.",
-    "Reauthored unsupported list labels as actual full-content lists, corrected the single-error email, and gave other false multi-error records genuine independent behaviors.",
-    "Preserved dictation context and conjunctions; normalized only supported terms; corrected existing-capitalization labels and added context-supported paragraphs to long messages.",
-    "Synthetic foreground AI review only, not human review or a guarantee of error-free data."
-  ]
+  "review_method": "Full semantic audit, targeted remediation, and independent correction cross-check.",
+  "human_reviewed": false
 }

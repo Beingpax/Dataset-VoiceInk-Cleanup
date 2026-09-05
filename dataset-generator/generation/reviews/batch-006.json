@@ -1,6 +1,6 @@
 {
   "batch": "batch-006",
-  "sha256": "e87e5c81d5d88fd5718d95dbec19471d77cebf59dc1f61809795ccc77dfd2b60",
+  "sha256": "05364f94ee65fa3bda014fc57e222d571d54d55a4299c9e50b61e0223dcb2033",
   "reviewer": "foreground",
   "status": "accepted",
   "accepted_ids": [
@@ -113,10 +113,6 @@
     "entities",
     "metadata"
   ],
-  "notes": [
-    "Read every reauthored input/output pair and its metadata after replacing the original shared padding.",
-    "Targeted corrections retained causal wording and conjunctions, narrowed an upload-time repair, clarified quotation boundaries, and removed unsupported behavior labels.",
-    "Added real independent cleanup needs to layout-only multi-error examples and applied discourse-based paragraph boundaries. The mechanical batch check passes with all category/type/length requirements retained.",
-    "Synthetic foreground AI review, not human review or a guarantee of error-free targets."
-  ]
+  "review_method": "Full semantic audit, targeted remediation, and independent correction cross-check.",
+  "human_reviewed": false
 }

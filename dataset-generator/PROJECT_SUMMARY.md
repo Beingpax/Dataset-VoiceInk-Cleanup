@@ -7,10 +7,10 @@
 ## Current scope
 
 - Text-only ASR cleanup under `polished-clean-v1`, not speech recognition, summarization, or answering the dictated request.
-- Current generator collection: 5,000-pair authoring run in progress; drafts are not accepted until foreground review. The previous 180 pairs remain removed.
-- Approved target: 5,000 synthetic, AI-reviewed pairs in 50 batches. Do not describe unfinished batches as complete or human-reviewed.
-- Record-type target: 500 single-principal-error (10%), 4,250 natural multi-error (85%), and 250 unchanged (5%).
-- The agreed 5,000-pair category allocation is 750 fillers, 750 repetition/stutters, 500 local repairs, 750 punctuation/dictated formatting, 500 lists, 625 email layout, 625 entity normalization, 250 context-inferred quotation, and 250 unchanged. This does not rebalance the benchmark. Target approximately 500 extended inputs.
+- Current generator collection: 5,100 synthetic, AI-reviewed pairs in 51 batches. The previous 180 pairs remain removed.
+- Record types: 510 single-principal-error, 4,340 natural multi-error, and 250 unchanged.
+- Category allocation: 750 fillers, 750 repetition/stutters, 500 local repairs, 850 punctuation/dictated formatting, 500 lists, 625 email layout, 625 entity normalization, 250 context-inferred quotation, and 250 unchanged.
+- Batch 051 adds 100 high-confidence explicit dictated-parenthesis examples; no automatic parenthesis inference examples are included.
 
 ## Authoring decisions
 

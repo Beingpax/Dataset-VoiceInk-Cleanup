@@ -1,6 +1,6 @@
 {
   "batch": "batch-004",
-  "sha256": "2ade9dc8ebcd762cdaaefe07f09809beef903378451844a80e3c702be646090c",
+  "sha256": "5187f1e7c489b85bc15fe0e1badaafa61c503c8e5ee0658ddf7c34ff90169bb7",
   "reviewer": "foreground",
   "status": "accepted",
   "accepted_ids": [
@@ -113,10 +113,6 @@
     "entities",
     "metadata"
   ],
-  "notes": [
-    "Reviewed all 100 input/output pairs and metadata; rechecked the specific corrections.",
-    "Fixed a supplier-name target that reversed the intended entity, unsupported identifier separators, sentence-concatenation artifacts, and a dictated question mark rendered as a period.",
-    "Removed unsupported technical/acronym/time labels, made false multi-error examples demonstrate independent cleanup behaviors, and preserved full list and email content.",
-    "Added context-supported paragraphs and kept corrections local; synthetic AI review only, not human review or a guarantee of error-free data."
-  ]
+  "review_method": "Full semantic audit, targeted remediation, and independent correction cross-check.",
+  "human_reviewed": false
 }

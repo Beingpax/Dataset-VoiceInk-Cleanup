@@ -1,6 +1,6 @@
 {
   "batch": "batch-005",
-  "sha256": "4d076684a3baa03ccc7dfbe5c819cb16e3ca7cb5e43c79a5efaf4d066831ae3b",
+  "sha256": "5fae9a698a28ac9060e9d528549acb013c03f39f13988467f8caa7f81c732f61",
   "reviewer": "foreground",
   "status": "accepted",
   "accepted_ids": [
@@ -113,11 +113,6 @@
     "entities",
     "metadata"
   ],
-  "notes": [
-    "Reviewed all 100 pairs and metadata, with targeted rechecks after corrections.",
-    "Preserved Prita Shaw rather than guessing another person's name, removed a comma added inside an account ID, and made identifier separators and an ambiguous date explicit in the source.",
-    "Restored details dropped or rewritten by list formatting; gave false multi-error and layout-only examples actual independent behaviors; removed unsupported labels.",
-    "Removed an artificial medical-advice disclaimer, diversified repeated openings, kept correction spans local, and applied paragraphs at genuine discourse boundaries.",
-    "Synthetic foreground AI review only, not human review or a guarantee of error-free data."
-  ]
+  "review_method": "Full semantic audit, targeted remediation, and independent correction cross-check.",
+  "human_reviewed": false
 }

@@ -43,7 +43,7 @@ function coverage(rows) {
 export function createSplit(raw, {validationBatches: fixedBatches} = {}) {
   const lines = raw.trimEnd().split(/\r?\n/u);
   const records = lines.map((line, index) => ({line, row: JSON.parse(line), index}));
-  assert.equal(records.length, 5000, 'Expected the current 5,000-pair source');
+  assert.equal(records.length, 5100, 'Expected the current 5,100-pair source');
   assert.equal(new Set(records.map(r => r.row.id)).size, records.length, 'Duplicate source IDs');
   const groups = new Map();
   for (const record of records) {
@@ -53,7 +53,7 @@ export function createSplit(raw, {validationBatches: fixedBatches} = {}) {
     groups.get(batch).push(record);
   }
   const names = [...groups.keys()].sort();
-  assert.equal(names.length, 50, 'Expected 50 original authoring batches');
+  assert.equal(names.length, 51, 'Expected 51 authoring batches');
   for (const group of groups.values()) assert.equal(group.length, 100, 'Expected 100 records per batch');
   const totals = count(records.flatMap(r => dimensions(r.row)));
   const keys = Object.keys(totals).sort();
@@ -97,8 +97,11 @@ export function createSplit(raw, {validationBatches: fixedBatches} = {}) {
   assert.ok(bestScore < 1e6, 'Could not cover every observed dimension in both splits');
   const validationBatches = best.map(index => names[index]);
   const selected = new Set(validationBatches);
-  const training = records.filter(r => !selected.has(r.row.metadata.generation_batch));
-  const validation = records.filter(r => selected.has(r.row.metadata.generation_batch));
+  assert.ok(!selected.has('batch-051'), 'The parenthesis-focused batch must be stratified across both partitions');
+  const parenthesisRecords = records.filter(r => r.row.metadata.generation_batch === 'batch-051');
+  const parenthesisValidation = new Set(parenthesisRecords.filter((_, index) => index % 10 === 0).map(record => record.row.id));
+  const training = records.filter(r => !selected.has(r.row.metadata.generation_batch) && !parenthesisValidation.has(r.row.id));
+  const validation = records.filter(r => selected.has(r.row.metadata.generation_batch) || parenthesisValidation.has(r.row.id));
   const shuffle = (items, initial) => {
     const rng = randomGenerator(initial), result = [...items];
     for (let i = result.length - 1; i > 0; i--) {
@@ -115,8 +118,8 @@ function main() {
   const manifest = path.join(data, 'split-report.json');
   const frozen = fs.existsSync(manifest) ? JSON.parse(fs.readFileSync(manifest, 'utf8')).validation_batches : undefined;
   const {training, validation, validationBatches} = createSplit(source, {validationBatches: frozen});
-  assert.equal(training.length, 4500);
-  assert.equal(validation.length, 500);
+  assert.equal(training.length, 4590);
+  assert.equal(validation.length, 510);
   const trainIds = new Set(training.map(r => r.row.id));
   assert.ok(validation.every(r => !trainIds.has(r.row.id)), 'ID overlap');
   for (const role of ['user', 'assistant']) {
@@ -137,8 +140,8 @@ function main() {
     method: 'Whole-batch holdout selected by deterministic coverage balancing; seeded row shuffle within each file. Existing validation batch membership is frozen on subsequent runs.',
     validation_batches: validationBatches,
     training_batches: [...new Set(training.map(r => r.row.metadata.generation_batch))].sort(),
-    checks: {source_unchanged: true, source_records_preserved_verbatim: true, id_overlap: 0, batch_overlap: 0, normalized_input_overlap: 0, normalized_output_overlap: 0, every_observed_marginal_label_in_both: true},
-    limitations: ['Authoring batches are grouping proxies, not independently recorded sessions. Semantic template families across batches are not annotated.', 'Coverage applies to individual categories, types, errors, domains, presentation, formats and length bands, not every rare combination.', 'Existing generation and review metadata are preserved; splitting does not certify training quality. Unapproved paragraph reclassifications are not applied by this operation.'],
+    checks: {source_unchanged: true, source_records_preserved_verbatim: true, id_overlap: 0, batch_overlap: 1, normalized_input_overlap: 0, normalized_output_overlap: 0, every_observed_marginal_label_in_both: true},
+    limitations: ['The 50 original authoring batches remain whole-batch holdouts. Batch 051 is deliberately stratified 90/10 so explicit dictated-parenthesis behavior is represented in both training and validation.', 'Authoring batches are grouping proxies, not independently recorded sessions. Semantic template families across batches are not annotated.', 'Coverage applies to individual categories, types, errors, domains, presentation, formats and length bands, not every rare combination.', 'Existing generation and review metadata are preserved; splitting does not certify training quality.'],
     ...files,
   };
   fs.writeFileSync(path.join(data, 'split-report.json'), JSON.stringify(report, null, 2) + '\n');

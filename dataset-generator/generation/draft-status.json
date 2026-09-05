@@ -1,13 +1,13 @@
 {
-  "collection_status": "draft",
-  "target": 5000,
-  "generated": 5000,
-  "batch_checks_passed": 5000,
-  "foreground_reviewed": 0,
-  "awaiting_foreground_review": 5000,
+  "collection_status": "ai_reviewed",
+  "target": 5100,
+  "generated": 5100,
+  "batch_checks_passed": 5100,
+  "foreground_reviewed": 5100,
+  "awaiting_foreground_review": 0,
   "human_reviewed": false,
-  "note": "Review snapshot only. Cross-batch corrections and full semantic review may still be in progress. Batch checks do not certify naturalness or faithfulness.",
-  "dataset_sha256": "d9de04554d1c4a6e6c4cdd57f943312294b940058d6e6e5c4a153ba8dfd294e1",
+  "note": "All records are covered by hash-bound foreground AI review. This remains synthetic data, not human-reviewed gold data.",
+  "dataset_sha256": "33d4e0a1dfefa8bd355d0f4e32c919060d0a23579c81094841e502925aea9109",
   "outputs": [
     "dataset-generator/data/cleanup-dataset.jsonl",
     "public/data/cleanup-dataset.jsonl"
