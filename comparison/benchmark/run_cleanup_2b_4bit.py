@@ -4,7 +4,7 @@
 import json
 import os
 
-from run_old_cleanup import ROOT, main, sha256
+from mlx_benchmark_runner import ROOT, main, sha256
 
 
 if __name__ == "__main__":

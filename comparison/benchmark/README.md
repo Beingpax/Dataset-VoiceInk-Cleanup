@@ -19,7 +19,6 @@ export HF_HOME="$PWD/models/hf-cache"
 .venv/bin/python benchmark/prepare_sample.py
 .venv/bin/python benchmark/integrate_curated_sample.py
 .venv/bin/python benchmark/run_voiceink.py
-.venv/bin/python benchmark/run_speakoflow.py
 .venv/bin/python benchmark/score_results.py
 ```
 
@@ -49,55 +48,6 @@ The model uses the stored dataset system instruction plus raw ASR input through 
 
 The public checkpoint includes DFlash draft tensors. The runner excludes only those auxiliary tensors in memory and strictly loads the target model, preserving its published quantization. DFlash, cross-case prompt caching, and warmup are disabled. Latency includes prompt processing and generation, excludes download/load/tokenization/checkpoint writes, and includes first-case cold-start costs. Throughput uses output token count divided by that same interval; peak memory is process RSS. These timings describe standard MLX LM, not FluidVoice's private FluidDecode/DFlash implementation or its application-level formatting.
 
-## Supplied older 0.8B cleanup checkpoint
-
-`run_old_cleanup.py` evaluates the user-supplied `ft-6eba5e4b-6bba-2026-08-01-04-18-33.tar.zst` archive on the same frozen 100 cases. Its configuration identifies Qwen3.5, with 752,393,024 text parameters at original mixed BF16/FP32 precision. The archive does not identify its training dataset; “Old Cleanup 0.8B” is a descriptive label. The built-in MLX sanitizer strictly loads the text model and omits vision/MTP weights. No quantization is applied.
-
-The completed run attempted each case exactly once: 95 stopped normally and five reached the token budget. Failed partial outputs are preserved, excluded from conditional quality means, and prevent ranking the configuration. The older checkpoint is distinct from the existing VoiceInk Refine V1 baseline; no baseline inference was repeated.
-
-From the repository root, after extracting the archive into the ignored `comparison/models/old-cleanup-0.8b/` directory:
-
-```sh
-comparison/.venv/bin/python comparison/benchmark/run_old_cleanup.py --archive /path/to/ft-6eba5e4b-6bba-2026-08-01-04-18-33.tar.zst
-comparison/.venv/bin/python comparison/benchmark/score_results.py
-comparison/.venv/bin/python comparison/benchmark/report_old_cleanup.py
-```
-
-The inference runner refuses to overwrite an existing run. It uses the stored dataset system prompt and raw input, the bundled chat template with thinking disabled, greedy decoding, and the existing local token-budget rule. No retries, warmup or cross-case prompt cache are used. Archive/model/corpus hashes, actual prompts, token IDs, outputs, stop reasons, timestamps and versions are recorded in `artifacts/results-old-cleanup-0.8b.json`. The report and dedicated 100-case JSONL/CSV exports are under `artifacts/old-cleanup-0.8b.*` and copied to the public downloads folder.
-
-## New-dataset 0.8B checkpoint comparison
-
-The user-supplied `ft-bc3f05f0-41ba-2026-08-31-05-31-47.tar.zst` is recorded separately as **New Cleanup 0.8B (Aug 31 checkpoint)**. Its config, parameter counts/dtypes, tokenizer and chat template match the older checkpoint; weight hashes differ. The user identifies it as trained on a new dataset, but the archive contains no training manifest to confirm dataset identity or benchmark overlap.
-
-`run_new_cleanup.py` reuses the older checkpoint's inference implementation with a separate identity, model directory and result path. All 100 prompts, token budgets, precision and generation settings are identical. Every case was attempted once: 100 stopped normally, with 18 exact matches. The older model and all existing baselines are preserved without rerunning inference.
-
-From the repository root, after extraction to `comparison/models/new-cleanup-0.8b/`:
-
-```sh
-comparison/.venv/bin/python comparison/benchmark/run_new_cleanup.py --archive /path/to/ft-bc3f05f0-41ba-2026-08-31-05-31-47.tar.zst
-comparison/.venv/bin/python comparison/benchmark/score_results.py
-comparison/.venv/bin/python comparison/benchmark/report_new_cleanup.py
-```
-
-`artifacts/new-cleanup-0.8b.md` documents the comparison. Dedicated JSONL/CSV exports contain all 100 scored cases; `cleanup-old-vs-new.json` and `.csv` include paired outputs, errors and metric deltas. Paired quality summaries use the 95 cases both models completed, while headline exact-match rates include all 100 expected cases. The complete ZIP includes raw evidence, corpus, baseline results, logs and reproduction scripts, excluding weights. New exports are also copied to `public/downloads/`. The old report, ZIP and raw evidence remain unchanged.
-
-## New Cleanup 0.8B 4-bit
-
-`quantize_new_cleanup.py` creates `models/new-cleanup-0.8b-4bit/` from the evaluated Aug 31 checkpoint using the installed MLX quantizer directly: affine 4-bit weights, group size 64, no calibration, activation quantization or KV-cache quantization. It preserves the original model, copies tokenizer files unchanged, and avoids a global dtype cast. The 187 eligible linear/embedding modules are quantized; 133 other tensors retain their exact loaded values and dtypes. Vision/MTP tensors are omitted, just as they are unused in baseline text inference. Strict reloading checks every saved tensor.
-
-The 752,393,024-parameter text model uses 423,942,848 bytes of tensor storage after conversion versus 1,504,791,232 bytes before (71.83% smaller). Scales/biases and remaining floating tensors give 4.508 effective bits per text parameter. These sizes exclude vision/MTP tensors on both sides.
-
-From the repository root:
-
-```sh
-comparison/.venv/bin/python comparison/benchmark/quantize_new_cleanup.py
-comparison/.venv/bin/python comparison/benchmark/run_new_cleanup_4bit.py --archive /path/to/ft-bc3f05f0-41ba-2026-08-31-05-31-47.tar.zst
-comparison/.venv/bin/python comparison/benchmark/score_results.py
-comparison/.venv/bin/python comparison/benchmark/report_cleanup_4bit.py
-```
-
-The conversion script and inference runner refuse existing destinations/results. The quantized model completed all 100 unchanged cases once, with 12 exact matches. `artifacts/new-cleanup-0.8b-4bit.md` reports quality, timing, RSS and storage; `cleanup-full-vs-4bit.json`/`.csv` preserve every paired output and score. The reusable model ZIP is kept in ignored `models/`, and the evidence ZIP in `artifacts/` and public downloads excludes weights. All earlier outputs and reports remain unchanged. This is MLX text-model quantization, not a GGUF or multimodal export.
-
 ## Supplied Qwen3.5 2B — text-only 4-bit
 
 The supplied `ft-30b873e1-16c9-2026-08-31-06-15-24.tar.zst` is preserved unchanged. Its merged checkpoint is extracted to ignored `models/cleanup-2b-source/`. `quantize_cleanup_2b.py` uses the official `mlx_lm.convert.convert` implementation (MLX-LM 0.31.3, MLX 0.32.2), with affine 4-bit weights and group size 64. The native Qwen3.5 sanitizer removes vision and auxiliary MTP tensors; no hand-selected language layers are removed. See the official [converter](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/convert.py) and [Qwen3.5 implementation](https://github.com/ml-explore/mlx-lm/blob/main/mlx_lm/models/qwen3_5.py).
@@ -119,9 +69,29 @@ Conversion and inference refuse existing destinations/results. The text-only mod
 
 ## Measurement notes
 
+## Qwen3.5 2B Original — downloaded MLX 4-bit
+
+The upstream post-trained model is evaluated separately from the cleanup-tuned
+Qwen3.5 checkpoint. `mlx-community/Qwen3.5-2B-4bit` is downloaded at revision
+`674aaa7240b91e8012fcad5d791b7dfe5ba90207` and used at its published affine
+4-bit/group-size-64 precision. It is labeled **Qwen3.5 2B Original 4-bit** in the
+benchmark: this means the original upstream post-trained configuration, not the
+raw `Qwen/Qwen3.5-2B-Base` checkpoint and not a cleanup fine-tune.
+
+```sh
+HF_HOME="$PWD/comparison/models/hf-cache" comparison/.venv-benchmark/bin/hf download mlx-community/Qwen3.5-2B-4bit --revision 674aaa7240b91e8012fcad5d791b7dfe5ba90207 --local-dir comparison/models/qwen3.5-2b-original-4bit
+comparison/.venv-benchmark/bin/python comparison/benchmark/run_qwen35_2b_original_4bit.py
+comparison/.venv-benchmark/bin/python comparison/benchmark/score_results.py
+```
+
+The one-attempt run completed 99 of 100 cases. Case C47 reached its unchanged
+97-token budget and remains a recorded failure, making the model ineligible for
+ranking. Across the 99 successful cases it produced 7 exact matches, 86.37% mean
+edit similarity, 77.80% mean chrF++, and 41.53% mean WER. Mean latency was 0.709
+seconds, median throughput was 41.3 tokens/s, and peak process RSS was 1.104 GiB.
+
 - All local models run sequentially on an Apple M2 Pro with 16 GB unified memory.
 - VoiceInk uses its native 4-bit MLX repository.
-- SpeakoFlow uses the Q8_0 GGUF identified by its model card and a persistent llama.cpp server.
 - Per-case speed is decoded output tokens divided by wall-clock request/generation time. Tokenizers differ by model, so rates are operational throughput, not a normalized linguistic measure.
 - Peak local memory is macOS peak RSS for the inference process or server process tree. Unified-memory accounting and framework allocation strategies make it an approximate footprint, not a model-weight-only measurement.
 

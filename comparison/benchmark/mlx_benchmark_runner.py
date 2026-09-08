@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate the supplied older cleanup checkpoint exactly once per fixed case."""
+"""Shared one-attempt MLX inference runner for the fixed benchmark corpus."""
 
 import argparse
 import hashlib
@@ -16,7 +16,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MODEL_ID = "old-cleanup-0.8b"
 CORPUS = ROOT / "artifacts" / "benchmark-corpus.jsonl"
 
 
@@ -35,12 +34,7 @@ def save(path, payload):
     temporary.replace(path)
 
 
-def main(spec=None):
-    spec = spec or {
-        "id": MODEL_ID, "name": "Old Cleanup 0.8B (Aug 1 checkpoint)",
-        "short_name": "Old Cleanup 0.8B", "runner_version": "old-cleanup-mlx-v1",
-        "training_dataset": "Not recorded in the supplied archive; old-dataset association supplied by user, unverified.",
-    }
+def main(spec):
     model_id = spec["id"]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--archive", type=Path, required=True)
@@ -75,13 +69,15 @@ def main(spec=None):
     tokenizer = load_tokenizer(args.model_path, tokenizer_config_extra={
         "trust_remote_code": False, "local_files_only": True,
     })
+    if spec.get("eos_token_ids"):
+        tokenizer._eos_token_ids = set(spec["eos_token_ids"])
     mx.synchronize()
     load_seconds = time.perf_counter() - started
     payload = {
         "id": model_id, "name": spec["name"],
         "short_name": spec["short_name"], "family": "Qwen3.5 local cleanup checkpoint",
         "runtime": spec.get("runtime", "MLX LM BF16 (original mixed BF16/FP32 weights)"),
-        "source_url": None,
+        "source_url": spec.get("source_url"),
         "prompt_mode": "Dataset cleanup system prompt and raw input only; bundled chat template; thinking disabled; greedy decoding",
         "prompt_policy": "dataset-system-input-only-v1", "runner_version": spec["runner_version"],
         "sample_sha256": sha256(CORPUS), "started_at": now(), "status": "running",

@@ -6,7 +6,7 @@ import json
 import shutil
 import zipfile
 
-from run_old_cleanup import ROOT, sha256
+from mlx_benchmark_runner import ROOT, sha256
 
 MODEL_ID = "cleanup-2b-4bit"
 

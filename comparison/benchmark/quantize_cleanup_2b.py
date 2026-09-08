@@ -10,7 +10,7 @@ import struct
 import time
 from collections import Counter
 
-from run_old_cleanup import ROOT, now, sha256
+from mlx_benchmark_runner import ROOT, now, sha256
 
 MODEL_ID = "cleanup-2b-4bit"
 SOURCES = [

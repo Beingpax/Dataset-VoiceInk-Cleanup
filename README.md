@@ -31,7 +31,7 @@ The build command is documented in `package.json` but was not run during this mi
 [`comparison/`](comparison/) contains the transcript-cleanup benchmark:
 
 - A 100-case benchmark across two labeled 50-case datasets.
-- VoiceInk Refine V1, SpeakoFlow Mini, and GPT-5.6 Sol low-reasoning outputs.
+- VoiceInk Refine V1 and GPT-5.6 Sol low-reasoning outputs.
 - Fluid-1 Mini 2B 6-bit, evaluated on all 100 cases with standard MLX target decoding and no DFlash acceleration.
 - The supplied fine-tuned Qwen3.5 2B, converted with official MLX-LM to text-only 4-bit weights and evaluated on all 100 cases. See [`cleanup-2b-4bit.md`](comparison/artifacts/cleanup-2b-4bit.md) for results and [`comparison/benchmark/README.md`](comparison/benchmark/README.md) for reproduction.
 - Aggregate quality, latency, throughput, exact-match, WER, chrF++, edit-similarity, and peak-memory data where available.

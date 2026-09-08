@@ -2,12 +2,12 @@
 
 ## Benchmark created
 
-The benchmark compares four transcript-cleanup configurations across 100 cases:
+The benchmark compares the retained transcript-cleanup configurations across 100 cases:
 
 1. VoiceInk Refine V1, running locally through MLX LM with 4-bit weights.
-2. SpeakoFlow Mini, running locally as Q8_0 GGUF through a persistent llama.cpp server.
-3. GPT-5.6 Sol at low reasoning as a hosted reference configuration.
-4. Fluid-1 Mini 2B with 6-bit weights through MLX LM.
+2. GPT-5.6 Sol at low reasoning as a hosted reference configuration.
+3. Fluid-1 Mini 2B with 6-bit weights through MLX LM.
+4. Cleanup Qwen3.5 2B and the original upstream Qwen3.5 2B, both using 4-bit MLX weights.
 
 The Fluid run uses the existing dataset cleanup instructions, no reference-derived context, and greedy target-model decoding with thinking disabled. It does not use FluidVoice's private FluidDecode/DFlash engine. The model revision and environment versions are recorded, and ALTIC permission was confirmed by the user before execution.
 
@@ -57,7 +57,6 @@ The JSONL viewer understands both chat-message training records and benchmark-st
 - `benchmark/prepare_sample.py`: deterministic validation sampling.
 - `benchmark/integrate_curated_sample.py`: curated generator-sample integration.
 - `benchmark/run_voiceink.py`: VoiceInk local inference.
-- `benchmark/run_speakoflow.py`: SpeakoFlow local inference and process-tree memory monitoring.
 - `benchmark/run_fluid.py`: pinned Fluid-1 Mini 2B 6-bit checkpoint, resumable inference, and recorded prompt/runtime provenance.
 - `benchmark/score_results.py`: scoring and website-data generation.
 - `artifacts/`: complete model results, combined benchmark JSON, sampled JSONL, and CSV exports.

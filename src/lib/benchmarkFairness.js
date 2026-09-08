@@ -1,4 +1,4 @@
-const nativePromptModels = new Set(['gpt-5.6-sol-low', 'voiceink-refine-v1', 'speakoflow-mini']);
+const nativePromptModels = new Set(['gpt-5.6-sol-low', 'voiceink-refine-v1']);
 
 export const hasRecordedOutput = result => Boolean(result && !result.error && typeof result.output === 'string');
 
